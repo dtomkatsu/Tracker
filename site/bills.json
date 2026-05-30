@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-05-30T07:34:50+00:00",
+  "generated_at": "2026-05-30T07:51:20+00:00",
   "last_scrape": {
-    "id": 2,
-    "started_at": "2026-05-30T07:33:26+00:00",
-    "completed_at": "2026-05-30T07:33:27+00:00",
-    "council": "honolulu",
-    "bills_seen": 179,
-    "bills_new": 179,
+    "id": 8,
+    "started_at": "2026-05-30T07:51:19+00:00",
+    "completed_at": "2026-05-30T07:51:20+00:00",
+    "council": "maui",
+    "bills_seen": 48,
+    "bills_new": 0,
     "bills_updated": 0,
     "errors": null
   },
@@ -1023,6 +1023,26 @@
       "last_updated": "2026-05-30T07:33:27+00:00"
     },
     {
+      "id": 194,
+      "council": "maui",
+      "bill_number": "HLU-13 Bill 84 (2026)",
+      "title": "BILL 84 (2026), AMENDING SECTION 19.64.030, MAUI COUNTY CODE, ON BED AND BREAKFAST HOMES ON MOLOKAI  (HLU-13)",
+      "bill_type": "Bill",
+      "introducer": null,
+      "introduced_date": "2026-05-01",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16298&GUID=E4CD2DC4-33F8-4933-8411-222D7BD1292D",
+      "raw_subject": "Housing and Land Use Committee (2025-2027)",
+      "subjects": [
+        "affordable_housing"
+      ],
+      "classification_confidence": 0.043,
+      "first_seen": "2026-05-30T07:50:24+00:00",
+      "last_updated": "2026-05-30T07:50:24+00:00"
+    },
+    {
       "id": 21,
       "council": "honolulu",
       "bill_number": "BILL035(26)",
@@ -1039,6 +1059,27 @@
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:26+00:00",
       "last_updated": "2026-05-30T07:33:26+00:00"
+    },
+    {
+      "id": 195,
+      "council": "maui",
+      "bill_number": "WAI-1(9)",
+      "title": "DISCUSSION ON BILL 76 (2026), RELATING TO THE WATER SYSTEM DEVELOPMENT FEE  (WAI-1(9))",
+      "bill_type": "Rule 7(B)",
+      "introducer": null,
+      "introduced_date": "2026-04-30",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16296&GUID=C2851406-8AC9-4E83-99BC-B57C199843B9",
+      "raw_subject": "Water and Infrastructure Committee (2025-2027)",
+      "subjects": [
+        "tax",
+        "affordable_housing"
+      ],
+      "classification_confidence": 0.111,
+      "first_seen": "2026-05-30T07:50:24+00:00",
+      "last_updated": "2026-05-30T07:50:24+00:00"
     },
     {
       "id": 90,
@@ -1137,6 +1178,24 @@
       "last_updated": "2026-05-30T07:33:27+00:00"
     },
     {
+      "id": 196,
+      "council": "maui",
+      "bill_number": "GREAT-11(29) Reso 26-82",
+      "title": "RESOLUTION 26-82, AUTHORIZING ADDITIONAL COMPENSATION FOR SPECIAL COUNSEL MEYERS NAVE FOR LITIGATION MATTERS ARISING FROM THE AUGUST 2023 WILDFIRES ON THE ISLAND OF MAUI  (GREAT-11(29))",
+      "bill_type": "Resolution",
+      "introducer": null,
+      "introduced_date": "2026-04-29",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16293&GUID=7CA94DEA-A4C6-4581-A8A8-2FE1FCA72C3A",
+      "raw_subject": "Government Relations, Ethics, and Transparency Committee (2025-2027)",
+      "subjects": [],
+      "classification_confidence": 0.0,
+      "first_seen": "2026-05-30T07:50:25+00:00",
+      "last_updated": "2026-05-30T07:50:25+00:00"
+    },
+    {
       "id": 95,
       "council": "honolulu",
       "bill_number": "RES26-099",
@@ -1209,6 +1268,44 @@
       "classification_confidence": 0.111,
       "first_seen": "2026-05-30T07:33:27+00:00",
       "last_updated": "2026-05-30T07:33:27+00:00"
+    },
+    {
+      "id": 197,
+      "council": "maui",
+      "bill_number": "GREAT-11(28) Reso 26-81",
+      "title": "RESOLUTION 26-81, SETTLEMENT AUTHORIZATION: CHARLOTTE MARTIN V. COUNTY OF MAUI, ET AL.; CIVIL 2CCV-24-0000903  (GREAT-11(28))",
+      "bill_type": "Resolution",
+      "introducer": null,
+      "introduced_date": "2026-04-24",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16289&GUID=D3E29814-229F-4144-919A-62637C202E66",
+      "raw_subject": "Government Relations, Ethics, and Transparency Committee (2025-2027)",
+      "subjects": [],
+      "classification_confidence": 0.0,
+      "first_seen": "2026-05-30T07:50:25+00:00",
+      "last_updated": "2026-05-30T07:50:25+00:00"
+    },
+    {
+      "id": 198,
+      "council": "maui",
+      "bill_number": "HLU-12 Bill 78 (2026)",
+      "title": "BILL 78 (2026), AMENDING TITLE 19, MAUI COUNTY CODE, ON ACCESSORY DWELLINGS ON RESIDENTIALLY ZONED LOTS  (HLU-12)",
+      "bill_type": "Bill",
+      "introducer": null,
+      "introduced_date": "2026-04-24",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16290&GUID=BC1CA1F0-784F-4BF0-AE04-A9133DAA3C93",
+      "raw_subject": "Housing and Land Use Committee (2025-2027)",
+      "subjects": [
+        "affordable_housing"
+      ],
+      "classification_confidence": 0.043,
+      "first_seen": "2026-05-30T07:50:26+00:00",
+      "last_updated": "2026-05-30T07:50:26+00:00"
     },
     {
       "id": 99,
@@ -1359,6 +1456,46 @@
       "last_updated": "2026-05-30T07:33:27+00:00"
     },
     {
+      "id": 199,
+      "council": "maui",
+      "bill_number": "BFED-56 Bill 69 (2026)",
+      "title": "BILL 69 (2026), AMENDING SECTION 3.36.190, MAUI COUNTY CODE, REGARDING UPFRONT DISBURSEMENTS AND INSTALLMENT PAYMENTS FOR GRANT RECIPIENTS  (BFED-56)",
+      "bill_type": "Bill",
+      "introducer": null,
+      "introduced_date": "2026-04-21",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16286&GUID=79159CE6-194C-46DC-8027-984B6879BCEB",
+      "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
+      "subjects": [
+        "affordable_housing"
+      ],
+      "classification_confidence": 0.038,
+      "first_seen": "2026-05-30T07:50:26+00:00",
+      "last_updated": "2026-05-30T07:50:26+00:00"
+    },
+    {
+      "id": 200,
+      "council": "maui",
+      "bill_number": "BFED-57 Bill 70 (2026)",
+      "title": "BILLS 70 (2026) AND 80 (2026), RELATING TO THE HĀLAU OF ‘ŌIWI ARTS (BFED-57)",
+      "bill_type": "Bill",
+      "introducer": null,
+      "introduced_date": "2026-04-21",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16287&GUID=0DDC760F-2402-426B-8C3C-3284BAD4BA89",
+      "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
+      "subjects": [
+        "affordable_housing"
+      ],
+      "classification_confidence": 0.048,
+      "first_seen": "2026-05-30T07:50:27+00:00",
+      "last_updated": "2026-05-30T07:50:27+00:00"
+    },
+    {
       "id": 107,
       "council": "honolulu",
       "bill_number": "RES26-084",
@@ -1431,6 +1568,27 @@
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
       "last_updated": "2026-05-30T07:33:27+00:00"
+    },
+    {
+      "id": 201,
+      "council": "maui",
+      "bill_number": "HLU-11 Reso 26-68",
+      "title": "RESOLUTION 26-68, REFERRING TO THE LĀNA‘I, MAUI, AND MOLOKAI PLANNING COMMISSIONS A PROPOSED BILL TO AMEND THE COMPREHENSIVE ZONING ORDINANCE ON NOTICE FOR AGRICULTURAL SUBDIVISIONS  (HLU-11)",
+      "bill_type": "Resolution",
+      "introducer": null,
+      "introduced_date": "2026-04-17",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16285&GUID=53C6CA01-98E5-4E2B-9022-A82D175167C7",
+      "raw_subject": "Housing and Land Use Committee (2025-2027)",
+      "subjects": [
+        "food_security",
+        "affordable_housing"
+      ],
+      "classification_confidence": 0.094,
+      "first_seen": "2026-05-30T07:50:27+00:00",
+      "last_updated": "2026-05-30T07:50:27+00:00"
     },
     {
       "id": 22,
@@ -1613,6 +1771,24 @@
       "last_updated": "2026-05-30T07:33:27+00:00"
     },
     {
+      "id": 202,
+      "council": "maui",
+      "bill_number": "GREAT-10(7) Reso 26-61",
+      "title": "RESOLUTION 26-61, PROPOSED CHARTER AMENDMENT ON THE PROCESSING OF CLAIMS  (GREAT-10(7))",
+      "bill_type": "Resolution",
+      "introducer": null,
+      "introduced_date": "2026-03-25",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16282&GUID=20AB165B-7060-48B7-BB5B-82A4B1CD5120",
+      "raw_subject": "Government Relations, Ethics, and Transparency Committee (2025-2027)",
+      "subjects": [],
+      "classification_confidence": 0.0,
+      "first_seen": "2026-05-30T07:50:28+00:00",
+      "last_updated": "2026-05-30T07:50:28+00:00"
+    },
+    {
       "id": 120,
       "council": "honolulu",
       "bill_number": "RES26-073",
@@ -1647,6 +1823,26 @@
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
       "last_updated": "2026-05-30T07:33:27+00:00"
+    },
+    {
+      "id": 203,
+      "council": "maui",
+      "bill_number": "WAI-23 Bill 49 (2026)",
+      "title": "BILL 49 (2026), AMENDING SECTION 10.48.040, MAUI COUNTY CODE, ON PARKING PROHIBITIONS FOR CERTAIN STREETS AND HIGHWAYS  (WAI-23)",
+      "bill_type": "Bill",
+      "introducer": null,
+      "introduced_date": "2026-03-20",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16280&GUID=0BCA4D08-2D70-4FBA-A762-DC73862D9094",
+      "raw_subject": "Water and Infrastructure Committee (2025-2027)",
+      "subjects": [
+        "transportation"
+      ],
+      "classification_confidence": 0.043,
+      "first_seen": "2026-05-30T07:50:29+00:00",
+      "last_updated": "2026-05-30T07:50:29+00:00"
     },
     {
       "id": 122,
@@ -2004,6 +2200,26 @@
       "last_updated": "2026-05-30T07:33:27+00:00"
     },
     {
+      "id": 204,
+      "council": "maui",
+      "bill_number": "HLU-3(4)",
+      "title": "COMMUNITY FACILITIES DISTRICT FOR WAIKAPŪ COUNTRY TOWN  (HLU-3(4))",
+      "bill_type": "Rule 7(B)",
+      "introducer": null,
+      "introduced_date": "2026-03-09",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16278&GUID=22DCF5FF-0D61-4639-A9AE-0FB06D26C067",
+      "raw_subject": "Housing and Land Use Committee (2025-2027)",
+      "subjects": [
+        "affordable_housing"
+      ],
+      "classification_confidence": 0.071,
+      "first_seen": "2026-05-30T07:50:29+00:00",
+      "last_updated": "2026-05-30T07:50:29+00:00"
+    },
+    {
       "id": 136,
       "council": "honolulu",
       "bill_number": "RES26-058",
@@ -2041,6 +2257,26 @@
       "classification_confidence": 0.158,
       "first_seen": "2026-05-30T07:33:27+00:00",
       "last_updated": "2026-05-30T07:33:27+00:00"
+    },
+    {
+      "id": 205,
+      "council": "maui",
+      "bill_number": "KAʻĀ-1(13) Rule 7(B)",
+      "title": "AGRICULTURAL MICRO GRANT PROGRAM  (KAʻĀ-1(13))",
+      "bill_type": "Rule 7(B)",
+      "introducer": null,
+      "introduced_date": "2026-03-06",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16277&GUID=EB306C6E-CBB5-42B1-B005-0046754E99DE",
+      "raw_subject": "Kōmike Aloha ʻĀina (2025-2027)",
+      "subjects": [
+        "food_security"
+      ],
+      "classification_confidence": 0.111,
+      "first_seen": "2026-05-30T07:50:30+00:00",
+      "last_updated": "2026-05-30T07:50:30+00:00"
     },
     {
       "id": 138,
@@ -2135,6 +2371,46 @@
       "last_updated": "2026-05-30T07:33:27+00:00"
     },
     {
+      "id": 206,
+      "council": "maui",
+      "bill_number": "HLU-3(2)",
+      "title": "OPERATIONAL AND BUDGETARY REVIEW OF THE DEPARTMENT OF HOUSING  (HLU-3(2))",
+      "bill_type": "Rule 7(B)",
+      "introducer": null,
+      "introduced_date": "2026-03-05",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16275&GUID=47B31056-700A-40F6-90B4-138F51779FCC",
+      "raw_subject": "Housing and Land Use Committee (2025-2027)",
+      "subjects": [
+        "affordable_housing"
+      ],
+      "classification_confidence": 0.062,
+      "first_seen": "2026-05-30T07:50:30+00:00",
+      "last_updated": "2026-05-30T07:50:30+00:00"
+    },
+    {
+      "id": 207,
+      "council": "maui",
+      "bill_number": "HLU-3(3)",
+      "title": "OPERATIONAL AND BUDGETARY REVIEW OF THE DEPARTMENT OF PLANNING  (HLU-3(3))",
+      "bill_type": "Rule 7(B)",
+      "introducer": null,
+      "introduced_date": "2026-03-05",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16276&GUID=DE9AE484-4CEE-48CE-AE54-ABE6D79274B7",
+      "raw_subject": "Housing and Land Use Committee (2025-2027)",
+      "subjects": [
+        "affordable_housing"
+      ],
+      "classification_confidence": 0.062,
+      "first_seen": "2026-05-30T07:50:31+00:00",
+      "last_updated": "2026-05-30T07:50:31+00:00"
+    },
+    {
       "id": 143,
       "council": "honolulu",
       "bill_number": "RES26-050",
@@ -2169,6 +2445,42 @@
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
       "last_updated": "2026-05-30T07:33:27+00:00"
+    },
+    {
+      "id": 208,
+      "council": "maui",
+      "bill_number": "GREAT-5(5)",
+      "title": "BOARD OF ETHICS PRIORITIES  (GREAT-5(5))",
+      "bill_type": "Rule 7(B)",
+      "introducer": null,
+      "introduced_date": "2026-03-04",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16273&GUID=ADD55CCB-4CAE-4066-9643-EC714D537FD5",
+      "raw_subject": "Government Relations, Ethics, and Transparency Committee (2025-2027)",
+      "subjects": [],
+      "classification_confidence": 0.0,
+      "first_seen": "2026-05-30T07:50:31+00:00",
+      "last_updated": "2026-05-30T07:50:31+00:00"
+    },
+    {
+      "id": 209,
+      "council": "maui",
+      "bill_number": "GREAT-5(6)",
+      "title": "CASE UPDATE REGARDING CHELSIE EVANS, INDIVIDUALLY AND AS THE PERSONAL REPRESENTATIVE OF THE ESTATE OF TRE’ PUʻUWAILAʻAHIAOLOPAKAAMELEHUANANI EVANS-DUMARAN, DECEASED, V. SCOTT MARTIN, CIVIL 2CCV-24-0000034  (GREAT-5(6))",
+      "bill_type": "Rule 7(B)",
+      "introducer": null,
+      "introduced_date": "2026-03-04",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16274&GUID=799DE6D2-B4B0-4536-8C03-2608E1FC886C",
+      "raw_subject": "Government Relations, Ethics, and Transparency Committee (2025-2027)",
+      "subjects": [],
+      "classification_confidence": 0.0,
+      "first_seen": "2026-05-30T07:50:32+00:00",
+      "last_updated": "2026-05-30T07:50:32+00:00"
     },
     {
       "id": 28,
@@ -2321,6 +2633,27 @@
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
       "last_updated": "2026-05-30T07:33:27+00:00"
+    },
+    {
+      "id": 210,
+      "council": "maui",
+      "bill_number": "DRIP-23 Bill 47 (2026)",
+      "title": "BILL 47 (2026), AMENDING THE COMPREHENSIVE ZONING ORDINANCE ON OFF-STREET PARKING REQUIREMENTS FOR HOUSING  (DRIP-23)",
+      "bill_type": "Bill",
+      "introducer": null,
+      "introduced_date": "2026-02-27",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16271&GUID=79A05BC4-62CA-4EC7-B293-C5978FEAFFD3",
+      "raw_subject": "Disaster Recovery, International Affairs, and Planning Committee (2025-2027)",
+      "subjects": [
+        "transportation",
+        "affordable_housing"
+      ],
+      "classification_confidence": 0.174,
+      "first_seen": "2026-05-30T07:50:33+00:00",
+      "last_updated": "2026-05-30T07:50:33+00:00"
     },
     {
       "id": 145,
@@ -2525,6 +2858,27 @@
       "last_updated": "2026-05-30T07:33:27+00:00"
     },
     {
+      "id": 211,
+      "council": "maui",
+      "bill_number": "HLU-10 Bill 37 (2026)",
+      "title": "BILL 37 (2026), TO ESTABLISH A REAL PROPERTY TAX EXEMPTION FOR RESIDENTIAL WORKFORCE HOUSING UNIT DEVELOPMENTS INTENDED FOR HOME OWNERSHIP  (HLU-10)",
+      "bill_type": "Bill",
+      "introducer": null,
+      "introduced_date": "2026-02-23",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16269&GUID=747FB742-2431-4806-A1D4-FBAE26340499",
+      "raw_subject": "Housing and Land Use Committee (2025-2027)",
+      "subjects": [
+        "tax",
+        "affordable_housing"
+      ],
+      "classification_confidence": 0.222,
+      "first_seen": "2026-05-30T07:50:33+00:00",
+      "last_updated": "2026-05-30T07:50:33+00:00"
+    },
+    {
       "id": 155,
       "council": "honolulu",
       "bill_number": "RES26-039",
@@ -2543,6 +2897,24 @@
       "classification_confidence": 0.053,
       "first_seen": "2026-05-30T07:33:27+00:00",
       "last_updated": "2026-05-30T07:33:27+00:00"
+    },
+    {
+      "id": 212,
+      "council": "maui",
+      "bill_number": "DRIP-9(10)",
+      "title": "2025 ANNUAL GENERAL PLAN IMPLEMENTATION REPORT  (DRIP-9(10))",
+      "bill_type": "Rule 7(B)",
+      "introducer": null,
+      "introduced_date": "2026-02-19",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16268&GUID=8445A6F6-375F-4440-8DC9-FE8BB9296AF0",
+      "raw_subject": "Disaster Recovery, International Affairs, and Planning Committee (2025-2027)",
+      "subjects": [],
+      "classification_confidence": 0.0,
+      "first_seen": "2026-05-30T07:50:34+00:00",
+      "last_updated": "2026-05-30T07:50:34+00:00"
     },
     {
       "id": 156,
@@ -2601,6 +2973,204 @@
       "last_updated": "2026-05-30T07:33:27+00:00"
     },
     {
+      "id": 213,
+      "council": "maui",
+      "bill_number": "RPTR-2026 File",
+      "title": "NOTE: THE COMMITTEE MAY RECOMMEND THE FOLLOWING BILLS BE FILED OR REFERRED TO ANOTHER COMMITTEE",
+      "bill_type": "Rule 7(B)",
+      "introducer": null,
+      "introduced_date": "2026-02-18",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16264&GUID=F73E016A-5EB1-4D0D-9CB5-692A9266443B",
+      "raw_subject": "Special Committee on Real Property Tax Reform",
+      "subjects": [
+        "tax"
+      ],
+      "classification_confidence": 0.136,
+      "first_seen": "2026-05-30T07:50:34+00:00",
+      "last_updated": "2026-05-30T07:50:34+00:00"
+    },
+    {
+      "id": 214,
+      "council": "maui",
+      "bill_number": "RPTR-1(2)",
+      "title": "REAL PROPERTY TAX PROPOSAL CALCULATION SOFTWARE  (RPTR-1(2))",
+      "bill_type": "Rule 7(B)",
+      "introducer": null,
+      "introduced_date": "2026-02-18",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16265&GUID=BC07C633-A8A0-4A0D-839B-93F4C283F972",
+      "raw_subject": "Special Committee on Real Property Tax Reform",
+      "subjects": [
+        "tax"
+      ],
+      "classification_confidence": 0.214,
+      "first_seen": "2026-05-30T07:50:35+00:00",
+      "last_updated": "2026-05-30T07:50:35+00:00"
+    },
+    {
+      "id": 215,
+      "council": "maui",
+      "bill_number": "BFED-20(27)",
+      "title": "DISCUSSION ON BILL 29 (2026), AMENDING FISCAL YEAR 2026 BUDGET:  DEPARTMENT OF MANAGEMENT, OFFICE OF RECOVERY PROGRAM, CONDITIONAL LANGUAGE FOR NATIVE HAWAIIAN EDUCATION ASSOCIATION AND IMUA FAMILY SERVICES (BFED-20(27))",
+      "bill_type": "Rule 7(B)",
+      "introducer": null,
+      "introduced_date": "2026-02-18",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16266&GUID=20403325-0873-4909-8A7A-6540AE52EFCD",
+      "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
+      "subjects": [
+        "affordable_housing"
+      ],
+      "classification_confidence": 0.028,
+      "first_seen": "2026-05-30T07:50:35+00:00",
+      "last_updated": "2026-05-30T07:50:35+00:00"
+    },
+    {
+      "id": 216,
+      "council": "maui",
+      "bill_number": "RPTR-2026 Ref",
+      "title": "NOTE: THE COMMITTEE MAY RECOMMEND THE FOLLOWING BILLS BE REFERRED TO THE BUDGET, FINANCE, AND ECONOMIC DEVELOPMENT COMMITTEE",
+      "bill_type": "Rule 7(B)",
+      "introducer": null,
+      "introduced_date": "2026-02-17",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16258&GUID=EC971F90-1A12-4CAE-94FB-1CE18DC9DD2E",
+      "raw_subject": "Special Committee on Real Property Tax Reform",
+      "subjects": [
+        "tax",
+        "affordable_housing"
+      ],
+      "classification_confidence": 0.16,
+      "first_seen": "2026-05-30T07:50:36+00:00",
+      "last_updated": "2026-05-30T07:50:36+00:00"
+    },
+    {
+      "id": 217,
+      "council": "maui",
+      "bill_number": "BFED-20(25)",
+      "title": "COUNTY OF MAUI AND STATE OF HAWAIʻI ECONOMIC OUTLOOK (BFED-20(25))",
+      "bill_type": "Rule 7(B)",
+      "introducer": null,
+      "introduced_date": "2026-02-17",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16259&GUID=D30C8AD9-FA2D-4528-9D57-2D36BE03CCAD",
+      "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
+      "subjects": [
+        "affordable_housing"
+      ],
+      "classification_confidence": 0.059,
+      "first_seen": "2026-05-30T07:50:36+00:00",
+      "last_updated": "2026-05-30T07:50:36+00:00"
+    },
+    {
+      "id": 218,
+      "council": "maui",
+      "bill_number": "BFED-20(26)",
+      "title": "DISCUSSION ON BILL 34 (2026), AMENDING FISCAL YEAR 2026 BUDGET: AFFORDABLE HOUSING FUND REPAYMENT TO KAMALANI VENTURES LLC  (BFED-20(26))",
+      "bill_type": "Rule 7(B)",
+      "introducer": null,
+      "introduced_date": "2026-02-17",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16260&GUID=3222EFAB-C478-4263-A107-DC0199DD64B5",
+      "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
+      "subjects": [
+        "affordable_housing"
+      ],
+      "classification_confidence": 0.115,
+      "first_seen": "2026-05-30T07:50:37+00:00",
+      "last_updated": "2026-05-30T07:50:37+00:00"
+    },
+    {
+      "id": 219,
+      "council": "maui",
+      "bill_number": "WAI-1(7)",
+      "title": "OPERATIONAL AND BUDGETARY REVIEW OF THE DEPARTMENT OF PUBLIC WORKS  (WAI-1(7))",
+      "bill_type": "Rule 7(B)",
+      "introducer": null,
+      "introduced_date": "2026-02-17",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16261&GUID=07743A68-E963-4CF0-B278-306E5680F101",
+      "raw_subject": "Water and Infrastructure Committee (2025-2027)",
+      "subjects": [],
+      "classification_confidence": 0.0,
+      "first_seen": "2026-05-30T07:50:37+00:00",
+      "last_updated": "2026-05-30T07:50:37+00:00"
+    },
+    {
+      "id": 220,
+      "council": "maui",
+      "bill_number": "WAI-1(8)",
+      "title": "OPERATIONAL AND BUDGETARY REVIEW OF THE DEPARTMENT OF WATER SUPPLY  (WAI-1(8))",
+      "bill_type": "Rule 7(B)",
+      "introducer": null,
+      "introduced_date": "2026-02-17",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16262&GUID=0B3673D6-3AC6-4961-917A-1CF0066BBA8A",
+      "raw_subject": "Water and Infrastructure Committee (2025-2027)",
+      "subjects": [],
+      "classification_confidence": 0.0,
+      "first_seen": "2026-05-30T07:50:38+00:00",
+      "last_updated": "2026-05-30T07:50:38+00:00"
+    },
+    {
+      "id": 221,
+      "council": "maui",
+      "bill_number": "BFED-1",
+      "title": "PROPOSED FISCAL YEAR 2027 BUDGET FOR THE COUNTY OF MAUI (BFED-1)",
+      "bill_type": "Direct Referral",
+      "introducer": null,
+      "introduced_date": "2026-02-16",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16255&GUID=36C3042B-E480-49C3-B507-20E8AF0C7977",
+      "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
+      "subjects": [
+        "affordable_housing"
+      ],
+      "classification_confidence": 0.056,
+      "first_seen": "2026-05-30T07:50:38+00:00",
+      "last_updated": "2026-05-30T07:50:38+00:00"
+    },
+    {
+      "id": 222,
+      "council": "maui",
+      "bill_number": "BFED-47 Bill 30 (2026)",
+      "title": "BILL 30 (2026), AMENDING THE FISCAL YEAR 2026 BUDGET: INCREASE ESTIMATED REVENUES, CARRYOVER/SAVINGS, GENERAL FUND; TRANSFER TO THE GENERAL EXCISE TAX FUND; DEPARTMENT OF ENVIRONMENTAL MANAGEMENT (CENTRAL MAUI REGIONAL WASTEWATER RECLAMATION FACILITY) (BFED-47)",
+      "bill_type": "Bill",
+      "introducer": null,
+      "introduced_date": "2026-02-16",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16256&GUID=E50E1721-5B92-490D-88EA-70108A22DFC8",
+      "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
+      "subjects": [
+        "tax",
+        "affordable_housing"
+      ],
+      "classification_confidence": 0.075,
+      "first_seen": "2026-05-30T07:50:39+00:00",
+      "last_updated": "2026-05-30T07:50:39+00:00"
+    },
+    {
       "id": 37,
       "council": "honolulu",
       "bill_number": "BILL019(26)",
@@ -2653,6 +3223,28 @@
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
       "last_updated": "2026-05-30T07:33:27+00:00"
+    },
+    {
+      "id": 223,
+      "council": "maui",
+      "bill_number": "HLU-9 Bill 28 (2026)",
+      "title": "BILL 28 (2026), GRANTING APPROVAL TO ANDREA M. KAIO, AS TRUSTEE FOR SPECIFIED TRUSTS, TO CREATE ADDITIONAL LOTS ON PROPERTY IN THE AGRICULTURAL DISTRICT AT 201 HEʻAHEʻA PLACE, WAILUKU, HAWAIʻI, TAX MAP KEY (2) 3-2-008:067  (HLU-9)",
+      "bill_type": "Bill",
+      "introducer": null,
+      "introduced_date": "2026-02-12",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16254&GUID=B9448E15-7D19-454C-9FDB-8F072C3A3C04",
+      "raw_subject": "Housing and Land Use Committee (2025-2027)",
+      "subjects": [
+        "tax",
+        "food_security",
+        "affordable_housing"
+      ],
+      "classification_confidence": 0.071,
+      "first_seen": "2026-05-30T07:50:39+00:00",
+      "last_updated": "2026-05-30T07:50:39+00:00"
     },
     {
       "id": 38,
@@ -2821,6 +3413,96 @@
       "classification_confidence": 0.019,
       "first_seen": "2026-05-30T07:33:27+00:00",
       "last_updated": "2026-05-30T07:33:27+00:00"
+    },
+    {
+      "id": 224,
+      "council": "maui",
+      "bill_number": "DRIP-22 Bill 27 (2026)",
+      "title": "BILL 27 (2026), AMENDING CHAPTER 19.35, MAUI COUNTY CODE, ON THE SIZE OF ACCESSORY DWELLINGS  (DRIP-22)",
+      "bill_type": "Direct Referral",
+      "introducer": null,
+      "introduced_date": "2026-02-03",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16253&GUID=2FB0E708-867A-4F0E-81E0-878935CD6D7E",
+      "raw_subject": "Disaster Recovery, International Affairs, and Planning Committee (2025-2027)",
+      "subjects": [],
+      "classification_confidence": 0.0,
+      "first_seen": "2026-05-30T07:50:40+00:00",
+      "last_updated": "2026-05-30T07:50:40+00:00"
+    },
+    {
+      "id": 225,
+      "council": "maui",
+      "bill_number": "WASSP-1(18)",
+      "title": "OPERATIONAL AND BUDGETARY REVIEW OF THE EAST MAUI WATER AUTHORITY  (WASSP-1(18))",
+      "bill_type": "Rule 7(B)",
+      "introducer": null,
+      "introduced_date": "2026-02-02",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16250&GUID=2FFE0B0F-D34D-4835-AF19-50A352BD47A6",
+      "raw_subject": "Water Authority, Social Services, and Parks Committee (2025-2027)",
+      "subjects": [],
+      "classification_confidence": 0.0,
+      "first_seen": "2026-05-30T07:50:41+00:00",
+      "last_updated": "2026-05-30T07:50:41+00:00"
+    },
+    {
+      "id": 226,
+      "council": "maui",
+      "bill_number": "GREAT-1(1) Reso 26-38",
+      "title": "RESOLUTION 26-38, APPROVING THE APPOINTMENT OF JACALYN M.C. TAKAKURA AS DIRECTOR OF PLANNING  (GREAT-1(1))",
+      "bill_type": "Resolution",
+      "introducer": null,
+      "introduced_date": "2026-02-02",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16251&GUID=CFF0EC22-A9EA-43D8-A566-43BFD402BE92",
+      "raw_subject": "Government Relations, Ethics, and Transparency Committee (2025-2027)",
+      "subjects": [],
+      "classification_confidence": 0.0,
+      "first_seen": "2026-05-30T07:50:41+00:00",
+      "last_updated": "2026-05-30T07:50:41+00:00"
+    },
+    {
+      "id": 227,
+      "council": "maui",
+      "bill_number": "GREAT-1(2) Reso 26-39",
+      "title": "RESOLUTION 26-39, APPROVING THE APPOINTMENT OF MARGARET T. WILLIS AS DIRECTOR OF HUMAN CONCERNS  (GREAT-1(2))",
+      "bill_type": "Resolution",
+      "introducer": null,
+      "introduced_date": "2026-02-02",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16252&GUID=4335C00D-CBB4-4CC5-AF47-9D6AD7F74649",
+      "raw_subject": "Government Relations, Ethics, and Transparency Committee (2025-2027)",
+      "subjects": [],
+      "classification_confidence": 0.0,
+      "first_seen": "2026-05-30T07:50:42+00:00",
+      "last_updated": "2026-05-30T07:50:42+00:00"
+    },
+    {
+      "id": 228,
+      "council": "maui",
+      "bill_number": "WAI-1(6)",
+      "title": "OPERATIONAL AND BUDGETARY REVIEW OF THE DEPARTMENT OF ENVIRONMENTAL MANAGEMENT, EXCLUDING ENVIRONMENTAL PROTECTION AND SUSTAINABILITY DIVISION  (WAI-1(6))",
+      "bill_type": "Rule 7(B)",
+      "introducer": null,
+      "introduced_date": "2026-01-30",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16247&GUID=2E93DD9A-3CF3-4864-9177-0876E4D8C844",
+      "raw_subject": "Water and Infrastructure Committee (2025-2027)",
+      "subjects": [],
+      "classification_confidence": 0.0,
+      "first_seen": "2026-05-30T07:50:42+00:00",
+      "last_updated": "2026-05-30T07:50:42+00:00"
     },
     {
       "id": 169,
