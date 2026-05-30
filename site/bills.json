@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-05-30T08:55:02+00:00",
+  "generated_at": "2026-05-30T13:01:24+00:00",
   "last_scrape": {
-    "id": 11,
-    "started_at": "2026-05-30T08:55:00+00:00",
-    "completed_at": "2026-05-30T08:55:01+00:00",
-    "council": "honolulu",
-    "bills_seen": 137,
+    "id": 16,
+    "started_at": "2026-05-30T13:01:23+00:00",
+    "completed_at": "2026-05-30T13:01:24+00:00",
+    "council": "maui",
+    "bills_seen": 48,
     "bills_new": 0,
     "bills_updated": 0,
     "errors": null
