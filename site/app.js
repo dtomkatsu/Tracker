@@ -97,6 +97,56 @@
     return { label: "Tracking", cls: "st-unknown" };
   }
 
+  // The 5 steps of a county bill's life. We place each bill on this track and
+  // mark whether it's still moving (active), done (enacted), or off-track
+  // (stalled / failed).
+  const STEP_NAMES = ["Introduced", "Committee", "1st reading", "Final reading", "Enacted"];
+
+  // Step derived from the normalized label so the stepper always agrees with
+  // the stage badge (council status fields can disagree with last-action text).
+  const STEP_OF = {
+    "Introduced": 0, "Scheduled": 0, "Tracking": 0,
+    "In committee": 1, "In progress": 1,
+    "Passed 1st reading": 2,
+    "Passed final reading": 3,
+    "Adopted / enacted": 4,
+    "Stalled": 1, "Failed": 1,
+  };
+
+  function billProgress(b) {
+    const st = normalizeStatus(b);
+    let step = STEP_OF[st.label] ?? 0;
+    let state = "active";
+    if (st.cls === "st-law") { state = "done"; step = 4; }
+    else if (st.cls === "st-failed") state = "failed";
+    else if (st.cls === "st-stalled") state = "stalled";
+    else if (st.cls === "st-unknown") state = "unknown";
+    // For off-track bills, place the marker at the furthest stage reached.
+    if (state === "failed" || state === "stalled") {
+      const t = ((b.last_action || "") + " " + (b.status || "")).toLowerCase();
+      if (/second.*reading|final reading|passes second/.test(t)) step = 3;
+      else if (/first reading|passes first/.test(t)) step = 2;
+      else if (/committee|referred|forwarded|recommend/.test(t)) step = 1;
+    }
+    return { step, state, label: st.label };
+  }
+
+  function renderStepper(prog, labeled) {
+    const { step, state } = prog;
+    let html = `<div class="stepper${labeled ? " stepper-labeled" : ""}">`;
+    for (let i = 0; i < 5; i++) {
+      let dot;
+      if (state === "done" || i < step) dot = "done";
+      else if (i === step) dot = "current-" + state;
+      else dot = "future";
+      const seg = (state === "done" || i < step) && i < 4 ? " seg-done" : "";
+      html += `<div class="step ${dot}${seg}"><span class="dot"></span>${
+        labeled ? `<span class="step-name">${STEP_NAMES[i]}</span>` : ""
+      }</div>`;
+    }
+    return html + "</div>";
+  }
+
   // Escape, then wrap recognized acronyms in <abbr> tooltips. One pass per
   // pattern over already-escaped text — no nesting or double substitution.
   function annotate(raw) {
@@ -270,7 +320,7 @@
     } else if (b.last_action_date) {
       lastAction = b.last_action_date;
     }
-    const st = normalizeStatus(b);
+    const prog = billProgress(b);
 
     const tr = document.createElement("tr");
     tr.className = "bill-row";
@@ -288,14 +338,17 @@
       <td class="col-subj">${pills || '<span class="muted">—</span>'}</td>
       <td class="col-date">${escapeHtml(b.introduced_date)}</td>
       <td class="col-action">${escapeHtml(lastAction)}</td>
-      <td class="col-status"><span class="status-badge ${st.cls}" title="${escapeHtml(b.last_action || b.status || "")}">${st.label}</span></td>
+      <td class="col-status" title="${escapeHtml(b.last_action || b.status || "")}">
+        ${renderStepper(prog, false)}
+        <div class="stage-label">${prog.label}</div>
+      </td>
     `;
 
     const detail = document.createElement("tr");
     detail.className = "detail-row";
     detail.hidden = true;
     const summaryLabel = b.council === "honolulu" ? "Summary" : "Committee / body";
-    const parts = [];
+    const parts = [`<div class="detail-progress">${renderStepper(prog, true)}</div>`];
     if (b.raw_subject) {
       parts.push(
         `<div class="detail-summary"><span class="detail-label">${summaryLabel}</span>${annotate(b.raw_subject)}</div>`

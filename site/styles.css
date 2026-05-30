@@ -165,7 +165,7 @@ tbody .bill-row.open > td { background: var(--primary-bg); border-bottom-color: 
 .col-title { width: 40%; min-width: 15rem; }
 .col-subj { width: 11rem; }
 .col-date, .col-action { width: 7rem; white-space: nowrap; }
-.col-status { width: 8rem; }
+.col-status { width: 10rem; }
 
 .bill-link { color: var(--link); text-decoration: none; font-weight: 700; }
 .bill-link:hover { text-decoration: underline; }
@@ -265,22 +265,67 @@ tbody .bill-row.open > td { background: var(--primary-bg); border-bottom-color: 
   cursor: pointer;
 }
 
-/* Status badges — one plain-language stage per bill */
-.status-badge {
-  display: inline-block;
-  padding: 2px 9px;
-  border-radius: 12px;
-  font-size: 11.5px;
-  font-weight: 700;
-  white-space: nowrap;
+/* Progress stepper — bill's position on the 5-step legislative track.
+   --done = completed steps, --pending = not-yet-reached. */
+.stepper {
+  --done: var(--primary);
+  --pending: #d4d8d4;
+  display: flex;
+  align-items: flex-start;
 }
-.status-badge.st-early    { background: #eef1f3; color: #4a575b; }
-.status-badge.st-progress { background: #e3eef7; color: #1a5e86; }
-.status-badge.st-pass     { background: #dcefe4; color: #1f6b46; }
-.status-badge.st-law      { background: var(--primary); color: #fff; }
-.status-badge.st-stalled  { background: #fbf0d8; color: #8a5a12; }
-.status-badge.st-failed   { background: #f7e0db; color: #a23b27; }
-.status-badge.st-unknown  { background: #f0f0ec; color: #8a8a82; }
+.stepper .step {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 14px;
+}
+/* connector line to the next step */
+.stepper .step::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  background: var(--pending);
+  z-index: 0;
+}
+.stepper .step:last-child::after { display: none; }
+.stepper .step.seg-done::after { background: var(--done); }
+.stepper .step .dot {
+  position: relative;
+  z-index: 1;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  background: #fff;
+  border: 2px solid var(--pending);
+}
+.stepper .step.done .dot { background: var(--done); border-color: var(--done); }
+.stepper .step.current-active .dot { background: #fff; border-color: var(--done); box-shadow: 0 0 0 3px rgba(58,119,16,.18); }
+.stepper .step.current-stalled .dot { background: #e8a317; border-color: #b9810f; box-shadow: 0 0 0 3px rgba(184,129,15,.2); }
+.stepper .step.current-failed .dot { background: #c0392b; border-color: #962d22; box-shadow: 0 0 0 3px rgba(192,57,43,.18); }
+.stepper .step.current-unknown .dot { border-color: #b3b3ad; border-style: dashed; }
+
+.stage-label { margin-top: 4px; font-size: 11.5px; font-weight: 600; color: var(--text-muted); white-space: nowrap; }
+
+/* Labeled stepper in the expanded detail row */
+.detail-progress { margin: 2px 0 12px; }
+.stepper-labeled { max-width: 560px; }
+.stepper-labeled .step { min-width: 70px; }
+.stepper-labeled .step::after { top: 6px; }
+.stepper-labeled .step .step-name {
+  margin-top: 6px;
+  font-size: 11px;
+  line-height: 1.2;
+  text-align: center;
+  color: var(--text-muted);
+}
+.stepper-labeled .step.done .step-name,
+.stepper-labeled .step.current-active .step-name { color: var(--text); font-weight: 600; }
 
 /* Acronym tooltips */
 abbr.gloss {
