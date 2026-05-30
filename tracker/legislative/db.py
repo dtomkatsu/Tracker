@@ -87,7 +87,7 @@ def upsert_bill(
     subjects_json = json.dumps(subjects)
 
     existing = conn.execute(
-        "SELECT id, status, last_action, last_action_date, title FROM bills "
+        "SELECT id, status, last_action, last_action_date, title, url FROM bills "
         "WHERE council = ? AND bill_number = ?",
         (bill.council, bill.bill_number),
     ).fetchone()
@@ -116,20 +116,21 @@ def upsert_bill(
         or existing["last_action"] != bill.last_action
         or existing["last_action_date"] != bill.last_action_date
         or existing["title"] != bill.title
+        or existing["url"] != bill.url
     )
     if changed:
         conn.execute(
             """
             UPDATE bills SET
               title = ?, bill_type = ?, introducer = ?, status = ?,
-              last_action = ?, last_action_date = ?,
+              last_action = ?, last_action_date = ?, url = ?,
               raw_subject = ?, subjects = ?, classification_confidence = ?,
               last_updated = ?
             WHERE id = ?
             """,
             (
                 bill.title, bill.bill_type, bill.introducer, bill.status,
-                bill.last_action, bill.last_action_date,
+                bill.last_action, bill.last_action_date, bill.url,
                 bill.raw_subject, subjects_json, confidence,
                 now, existing["id"],
             ),

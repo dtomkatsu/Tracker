@@ -250,6 +250,38 @@ tbody .bill-row.open > td { background: var(--primary-bg); border-bottom-color: 
 .subject-pill.food_security { background: var(--food_security); }
 .subject-pill.affordable_housing { background: var(--affordable_housing); }
 
+/* Subject filter checkboxes — checkbox + the same colored subject pill */
+.subj-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  margin: 0 10px 4px 0;
+}
+.subj-check input {
+  accent-color: var(--primary);
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+/* Status badges — one plain-language stage per bill */
+.status-badge {
+  display: inline-block;
+  padding: 2px 9px;
+  border-radius: 12px;
+  font-size: 11.5px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.status-badge.st-early    { background: #eef1f3; color: #4a575b; }
+.status-badge.st-progress { background: #e3eef7; color: #1a5e86; }
+.status-badge.st-pass     { background: #dcefe4; color: #1f6b46; }
+.status-badge.st-law      { background: var(--primary); color: #fff; }
+.status-badge.st-stalled  { background: #fbf0d8; color: #8a5a12; }
+.status-badge.st-failed   { background: #f7e0db; color: #a23b27; }
+.status-badge.st-unknown  { background: #f0f0ec; color: #8a8a82; }
+
 /* Acronym tooltips */
 abbr.gloss {
   text-decoration: underline dotted;

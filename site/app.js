@@ -68,6 +68,35 @@
       .replace(/"/g, "&quot;");
   }
 
+  // Each council reports status differently (Honolulu uses committee codes,
+  // Maui says "Agenda Ready", Hawaii County has real reading stages, Kauai is
+  // sparse). Collapse the mess into a small set of plain-language stages that
+  // a regular person can follow, derived from the status field + last action.
+  // Order matters: terminal/late stages are checked before earlier ones.
+  function normalizeStatus(b) {
+    const s = (b.status || "").toLowerCase().trim();
+    const a = (b.last_action || "").toLowerCase();
+    // Strong signals from the status field first.
+    if (/adopt|enact|became law|approved/.test(s)) return { label: "Adopted / enacted", cls: "st-law" };
+    if (/fail|defeat|withdraw|died|reject/.test(s)) return { label: "Failed", cls: "st-failed" };
+    if (/postpone|defer|tabled|held/.test(s)) return { label: "Stalled", cls: "st-stalled" };
+    if (/second.*reading|final reading/.test(s)) return { label: "Passed final reading", cls: "st-pass" };
+    if (/first reading/.test(s)) return { label: "Passed 1st reading", cls: "st-progress" };
+    if (/committee/.test(s)) return { label: "In committee", cls: "st-progress" };
+    // Then the descriptive last-action text.
+    if (/became law|enacted|signed by the mayor/.test(a)) return { label: "Adopted / enacted", cls: "st-law" };
+    if (/second\s*(?:&|and)?\s*(?:final\s*)?reading|passes second|final reading/.test(a)) return { label: "Passed final reading", cls: "st-pass" };
+    if (/first reading|passes first/.test(a)) return { label: "Passed 1st reading", cls: "st-progress" };
+    if (/postpone|deferred|tabled|recommit|continued/.test(a)) return { label: "Stalled", cls: "st-stalled" };
+    if (/\bfail|defeat|withdraw|killed|not adopt/.test(a)) return { label: "Failed", cls: "st-failed" };
+    if (/adopts? res|\badopted\b/.test(a)) return { label: "Adopted / enacted", cls: "st-law" };
+    if (/committee|referred|forwarded|recommend/.test(a)) return { label: "In committee", cls: "st-progress" };
+    if (/introduc/.test(a)) return { label: "Introduced", cls: "st-early" };
+    if (/agenda|scheduled/.test(a) || /agenda ready/.test(s)) return { label: "Scheduled", cls: "st-early" };
+    if (s) return { label: "In progress", cls: "st-progress" };
+    return { label: "Tracking", cls: "st-unknown" };
+  }
+
   // Escape, then wrap recognized acronyms in <abbr> tooltips. One pass per
   // pattern over already-escaped text — no nesting or double substitution.
   function annotate(raw) {
@@ -126,6 +155,31 @@
     }
   }
 
+  // Subject filter as checkboxes (multi-select), styled with the same colored
+  // subject pills as the legend.
+  function renderSubjectChecks(items, selectedSet) {
+    const c = document.getElementById("f-subject");
+    c.innerHTML = "";
+    for (const it of items) {
+      const label = document.createElement("label");
+      label.className = "subj-check";
+      const cb = document.createElement("input");
+      cb.type = "checkbox";
+      cb.checked = selectedSet.has(it.value);
+      cb.addEventListener("change", () => {
+        if (cb.checked) selectedSet.add(it.value);
+        else selectedSet.delete(it.value);
+        applyFilters();
+      });
+      const pill = document.createElement("span");
+      pill.className = "subject-pill " + it.value;
+      pill.textContent = it.label;
+      label.appendChild(cb);
+      label.appendChild(pill);
+      c.appendChild(label);
+    }
+  }
+
   function uniqueSorted(arr) {
     return [...new Set(arr.filter(Boolean))].sort();
   }
@@ -151,13 +205,12 @@
       payload.councils.map((c) => ({ value: c, label: COUNCIL_LABEL[c] || c })),
       state.councils
     );
-    renderChips(
-      "f-subject",
+    renderSubjectChecks(
       payload.subjects.map((s) => ({ value: s, label: SUBJECT_LABEL[s] || s })),
       state.subjects
     );
     populateSelect("f-type", uniqueSorted(payload.bills.map((b) => b.bill_type)));
-    populateSelect("f-status", uniqueSorted(payload.bills.map((b) => b.status)));
+    populateSelect("f-status", uniqueSorted(payload.bills.map((b) => normalizeStatus(b).label)));
 
     if (filtersWired) return;
     filtersWired = true;
@@ -188,7 +241,7 @@
         return false;
       }
       if (state.type && b.bill_type !== state.type) return false;
-      if (state.status && b.status !== state.status) return false;
+      if (state.status && normalizeStatus(b).label !== state.status) return false;
       if (state.search) {
         const hay = [b.bill_number, b.title, b.introducer, b.raw_subject]
           .filter(Boolean)
@@ -217,6 +270,7 @@
     } else if (b.last_action_date) {
       lastAction = b.last_action_date;
     }
+    const st = normalizeStatus(b);
 
     const tr = document.createElement("tr");
     tr.className = "bill-row";
@@ -234,7 +288,7 @@
       <td class="col-subj">${pills || '<span class="muted">—</span>'}</td>
       <td class="col-date">${escapeHtml(b.introduced_date)}</td>
       <td class="col-action">${escapeHtml(lastAction)}</td>
-      <td class="col-status">${escapeHtml(b.status)}</td>
+      <td class="col-status"><span class="status-badge ${st.cls}" title="${escapeHtml(b.last_action || b.status || "")}">${st.label}</span></td>
     `;
 
     const detail = document.createElement("tr");
