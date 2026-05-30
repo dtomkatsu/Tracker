@@ -34,11 +34,20 @@ def _build_adapter(council: str) -> CouncilAdapter:
     if council == "honolulu":
         from tracker.legislative.adapters.honolulu import HonoluluAdapter
         return HonoluluAdapter()
-    if council in ("hawaii", "kauai"):
-        # No working public data source; entries are hand-maintained in
-        # data/manual/{council}.json. See adapters/manual.py.
-        from tracker.legislative.adapters.manual import ManualAdapter
-        return ManualAdapter(council_id=council)
+    if council == "hawaii":
+        # No bill API; bills live in Granicus meeting agendas (served as PDFs).
+        from tracker.legislative.adapters.granicus import GranicusAdapter
+        return GranicusAdapter(
+            council_id="hawaii", host="hawaiicounty.granicus.com",
+            view_ids=[1, 2], mode="pdf", max_meetings=30,
+        )
+    if council == "kauai":
+        # No bill API; bills live in Granicus meeting agendas (HTML).
+        from tracker.legislative.adapters.granicus import GranicusAdapter
+        return GranicusAdapter(
+            council_id="kauai", host="kauai.granicus.com",
+            view_ids=[2], mode="html", max_meetings=30,
+        )
     raise ValueError(f"unknown council: {council}")
 
 
