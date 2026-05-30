@@ -2,8 +2,9 @@ name: Daily scrape
 
 on:
   schedule:
-    # 06:00 HST = 16:00 UTC
-    - cron: "0 16 * * *"
+    # Every 6 hours (UTC). Council data moves slowly, but frequent runs keep the
+    # dashboard's "last update" fresh and catch same-day status changes.
+    - cron: "0 */6 * * *"
   workflow_dispatch:
 
 permissions:

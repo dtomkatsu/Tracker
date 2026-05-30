@@ -11,62 +11,80 @@
   <header>
     <h1>Hawaii County Legislative Tracker</h1>
     <p class="tagline">
-      Bills before Hawaii's four county councils, classified into <strong>Tax</strong>,
-      <strong>Transportation</strong>, <strong>Food Security</strong>, and
-      <strong>Affordable Housing</strong>.
+      Bills before Hawaii's four county councils, classified into four subject areas.
     </p>
+    <div class="legend" id="legend">
+      <span class="subject-pill tax">Tax</span>
+      <span class="subject-pill transportation">Transportation</span>
+      <span class="subject-pill food_security">Food Security</span>
+      <span class="subject-pill affordable_housing">Affordable Housing</span>
+      <span class="legend-note">Auto-classified by keyword — a bill can match more than one area.</span>
+    </div>
     <p id="meta" class="meta">Loading…</p>
   </header>
 
-  <section class="filters">
+  <section class="filters" aria-label="Filters">
     <div class="filter-group">
-      <label>Council</label>
+      <span class="group-label">Council</span>
       <div id="f-council" class="chips"></div>
     </div>
     <div class="filter-group">
-      <label>Subject</label>
+      <span class="group-label">Subject</span>
       <div id="f-subject" class="chips"></div>
     </div>
     <div class="filter-group">
-      <label>Type</label>
+      <label class="group-label" for="f-type">Type</label>
       <select id="f-type"><option value="">All</option></select>
     </div>
     <div class="filter-group">
-      <label>Status</label>
+      <label class="group-label" for="f-status">Status</label>
       <select id="f-status"><option value="">All</option></select>
     </div>
     <div class="filter-group filter-search">
-      <label>Search</label>
+      <label class="group-label" for="f-search">Search</label>
       <input id="f-search" type="search" placeholder="title, number, introducer…">
     </div>
     <div class="filter-group">
-      <label>&nbsp;</label>
+      <span class="group-label">&nbsp;</span>
       <label class="checkbox-inline"><input id="f-classified" type="checkbox" checked> Only classified bills</label>
     </div>
   </section>
 
   <section class="results">
     <p id="result-count" class="meta"></p>
-    <table id="results">
-      <thead>
-        <tr>
-          <th>Council</th>
-          <th>Number</th>
-          <th>Type</th>
-          <th>Title</th>
-          <th>Subjects</th>
-          <th>Introduced</th>
-          <th>Last action</th>
-          <th>Status</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
+    <div class="table-wrap">
+      <table id="results">
+        <thead>
+          <tr>
+            <th class="col-council">Council</th>
+            <th class="col-num">Number</th>
+            <th class="col-type">Type</th>
+            <th class="col-title">Title</th>
+            <th class="col-subj">Subjects</th>
+            <th class="col-date">Introduced</th>
+            <th class="col-action">Last action</th>
+            <th class="col-status">Status</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="glossary">
+    <details>
+      <summary>Glossary — common acronyms in council bills</summary>
+      <dl id="glossary-list"></dl>
+    </details>
   </section>
 
   <footer>
     <p>Source: <a href="https://github.com/dtomkatsu/Tracker">github.com/dtomkatsu/Tracker</a>. All data is public record.</p>
-    <p class="meta">Maui via Legistar API. Honolulu via hnldoc.ehawaii.gov. Hawaii County &amp; Kauai are hand-maintained pending a viable scrape path.</p>
+    <p class="meta">
+      Maui via the Legistar API. Honolulu via hnldoc.ehawaii.gov.
+      Hawaii County &amp; Kauai are hand-maintained entries pending a viable data source.
+      Hover any underlined acronym for its meaning.
+    </p>
   </footer>
 
   <script src="app.js"></script>
