@@ -1,0 +1,4 @@
+{
+  "_note": "Hand-maintained entries for Hawaii County (Big Island). See tracker/legislative/adapters/manual.py for schema. Edit and rerun `python -m tracker.legislative scrape --council hawaii`.",
+  "bills": []
+}

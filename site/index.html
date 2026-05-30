@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Hawaii County Legislative Tracker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Track bills before Honolulu, Maui, Hawaii County, and Kauai councils — Tax, Transportation, Food Security, Affordable Housing.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Hawaii County Legislative Tracker</h1>
+    <p class="tagline">
+      Bills before Hawaii's four county councils, classified into <strong>Tax</strong>,
+      <strong>Transportation</strong>, <strong>Food Security</strong>, and
+      <strong>Affordable Housing</strong>.
+    </p>
+    <p id="meta" class="meta">Loading…</p>
+  </header>
+
+  <section class="filters">
+    <div class="filter-group">
+      <label>Council</label>
+      <div id="f-council" class="chips"></div>
+    </div>
+    <div class="filter-group">
+      <label>Subject</label>
+      <div id="f-subject" class="chips"></div>
+    </div>
+    <div class="filter-group">
+      <label>Type</label>
+      <select id="f-type"><option value="">All</option></select>
+    </div>
+    <div class="filter-group">
+      <label>Status</label>
+      <select id="f-status"><option value="">All</option></select>
+    </div>
+    <div class="filter-group filter-search">
+      <label>Search</label>
+      <input id="f-search" type="search" placeholder="title, number, introducer…">
+    </div>
+    <div class="filter-group">
+      <label>&nbsp;</label>
+      <label class="checkbox-inline"><input id="f-classified" type="checkbox" checked> Only classified bills</label>
+    </div>
+  </section>
+
+  <section class="results">
+    <p id="result-count" class="meta"></p>
+    <table id="results">
+      <thead>
+        <tr>
+          <th>Council</th>
+          <th>Number</th>
+          <th>Type</th>
+          <th>Title</th>
+          <th>Subjects</th>
+          <th>Introduced</th>
+          <th>Last action</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <footer>
+    <p>Source: <a href="https://github.com/dtomkatsu/Tracker">github.com/dtomkatsu/Tracker</a>. All data is public record.</p>
+    <p class="meta">Maui via Legistar API. Honolulu via hnldoc.ehawaii.gov. Hawaii County &amp; Kauai are hand-maintained pending a viable scrape path.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
