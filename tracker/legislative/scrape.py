@@ -3,10 +3,15 @@
 from __future__ import annotations
 
 import logging
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 
 from tracker.legislative import COUNCILS
+
+# When no explicit --since is given, scrape this far back. Keeps the daily cron
+# incremental instead of re-paging full council history (Maui's API otherwise
+# walks every Matter ever filed, plus a 2-step action fetch per bill).
+DEFAULT_LOOKBACK_DAYS = 120
 from tracker.legislative.adapters.base import CouncilAdapter
 from tracker.legislative.classify import classify
 from tracker.legislative.db import (
@@ -43,7 +48,13 @@ def scrape_council(
     since: date | None = None,
     fetch_actions: bool = True,
 ) -> dict:
-    """Scrape one council, upsert into DB, return run summary."""
+    """Scrape one council, upsert into DB, return run summary.
+
+    If `since` is None, defaults to a DEFAULT_LOOKBACK_DAYS window so the daily
+    cron stays incremental. Pass an explicit old date for a full backfill.
+    """
+    if since is None:
+        since = date.today() - timedelta(days=DEFAULT_LOOKBACK_DAYS)
     adapter = _build_adapter(council)
     seen = new = updated = 0
     errors: list[str] = []
