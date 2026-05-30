@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-05-30T20:43:09+00:00",
+  "generated_at": "2026-05-30T20:45:49+00:00",
   "last_scrape": {
-    "id": 24,
-    "started_at": "2026-05-30T20:41:50+00:00",
-    "completed_at": "2026-05-30T20:42:51+00:00",
+    "id": 28,
+    "started_at": "2026-05-30T20:45:01+00:00",
+    "completed_at": "2026-05-30T20:45:49+00:00",
     "council": "kauai",
     "bills_seen": 28,
-    "bills_new": 28,
+    "bills_new": 0,
     "bills_updated": 0,
     "errors": null
   },
