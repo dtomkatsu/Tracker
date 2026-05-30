@@ -35,12 +35,11 @@ def _build_adapter(council: str) -> CouncilAdapter:
         from tracker.legislative.adapters.honolulu import HonoluluAdapter
         return HonoluluAdapter()
     if council == "hawaii":
-        # No bill API; bills live in Granicus meeting agendas (served as PDFs).
-        from tracker.legislative.adapters.granicus import GranicusAdapter
-        return GranicusAdapter(
-            council_id="hawaii", host="hawaiicounty.granicus.com",
-            view_ids=[1, 2], mode="pdf", max_meetings=30,
-        )
+        # Authoritative source = Laserfiche "Council Records System" metadata
+        # (introducer, status, dated action history); titles borrowed from
+        # Granicus agendas. See adapters/laserfiche.py.
+        from tracker.legislative.adapters.laserfiche import HawaiiCountyAdapter
+        return HawaiiCountyAdapter()
     if council == "kauai":
         # No bill API; bills live in Granicus meeting agendas (HTML).
         from tracker.legislative.adapters.granicus import GranicusAdapter
