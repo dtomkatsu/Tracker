@@ -227,7 +227,10 @@
       <td class="col-council">${escapeHtml(council)}</td>
       <td class="col-num"><a class="bill-link" href="${escapeHtml(b.url)}" target="_blank" rel="noopener">${escapeHtml(b.bill_number)}</a></td>
       <td class="col-type">${escapeHtml(b.bill_type)}</td>
-      <td class="col-title"><span class="caret" aria-hidden="true">▸</span><span class="title-text">${annotate(b.title || "")}</span></td>
+      <td class="col-title">
+        <div class="title-line"><span class="caret" aria-hidden="true">▸</span><span class="title-text">${annotate(b.title || "")}</span></div>
+        ${b.raw_subject ? `<div class="title-preview">${annotate(b.raw_subject)}</div>` : ""}
+      </td>
       <td class="col-subj">${pills || '<span class="muted">—</span>'}</td>
       <td class="col-date">${escapeHtml(b.introduced_date)}</td>
       <td class="col-action">${escapeHtml(lastAction)}</td>
