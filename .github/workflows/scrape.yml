@@ -1,10 +1,10 @@
 name: Daily scrape
 
 on:
-  schedule:
-    # Every 6 hours (UTC). Council data moves slowly, but frequent runs keep the
-    # dashboard's "last update" fresh and catch same-day status changes.
-    - cron: "0 */6 * * *"
+  # No schedule: the authoritative scrape runs daily from a local launchd job
+  # on a residential IP, because Hawaii County's Laserfiche WAF blocks GitHub's
+  # datacenter IPs (only Granicus would work here, which would clobber the
+  # Laserfiche-enriched data). Kept for manual runs / debugging only.
   workflow_dispatch:
 
 permissions:

@@ -92,7 +92,7 @@
     const ts = payload.last_scrape?.completed_at || payload.generated_at;
     const when = ts ? new Date(ts).toLocaleString() : "—";
     document.getElementById("meta").textContent =
-      `Data current as of ${when} (${relTime(ts)}) · auto-refreshes every 15 min`;
+      `Data current as of ${when} (${relTime(ts)}) · updates daily`;
   }
 
   function buildGlossaryPanel() {
@@ -314,8 +314,9 @@
   buildGlossaryPanel();
   load();
 
-  // Self-update: poll periodically and on tab focus, preserving active filters.
-  setInterval(load, 15 * 60 * 1000);
+  // Data refreshes once a day (scrape runs daily), so poll daily and also
+  // re-fetch whenever the tab regains focus — preserving active filters.
+  setInterval(load, 24 * 60 * 60 * 1000);
   document.addEventListener("visibilitychange", () => {
     if (!document.hidden) load();
   });
