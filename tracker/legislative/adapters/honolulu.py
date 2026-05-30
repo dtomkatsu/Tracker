@@ -98,7 +98,10 @@ class HonoluluAdapter(CouncilAdapter):
             status=row.get("lastEventType"),
             last_action=row.get("lastEventDescription"),
             last_action_date=last_action_iso,
-            url=f"{BASE}/hnldoc/measure/browse/{row['id']}",
+            # Public measure page. The /measure/browse/{id} variant is the
+            # in-app authenticated route: it gateway-bounces fine for anonymous
+            # users but 403s for anyone with an existing eHawaii SSO session.
+            url=f"{BASE}/hnldoc/measure/{row['id']}",
             raw_subject=raw_subject,
         )
 
