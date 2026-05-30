@@ -12,8 +12,8 @@
     affordable_housing: "Affordable Housing",
   };
 
-  // Acronyms that show up in Hawaii county bill text. Full set powers the
-  // glossary panel; a conservative subset is auto-linked inline (see INLINE).
+  // Full set powers the glossary panel; the conservative INLINE subset is
+  // auto-linked inside titles/summaries.
   const GLOSSARY = {
     TAT: "Transient Accommodations Tax (hotel/short-term rental tax)",
     GET: "General Excise Tax (Hawaii's broad tax on business gross income)",
@@ -38,15 +38,12 @@
     "CD#": "Conference Draft — a version reconciled between House and Senate",
   };
 
-  // Distinctive acronyms safe to auto-link inline without matching plain
-  // English words (even inside ALL-CAPS titles). GET is intentionally omitted
-  // here — it collides with the English word — but is in the glossary panel.
   const INLINE = [
     "TAT", "ADU", "TOD", "LIHTC", "HUD", "RPT", "TMK",
     "CZO", "ROH", "HRS", "CIP", "DPP", "SNAP", "WIC", "EBT", "SMA",
   ];
   const INLINE_RE = new RegExp("\\b(" + INLINE.join("|") + ")\\b", "g");
-  const DRAFT_RE = /\b([HSC]D)(\d+)\b/g; // HD2, SD2, CD1 …
+  const DRAFT_RE = /\b([HSC]D)(\d+)\b/g;
   const DRAFT_TITLE = {
     HD: "House Draft — a revised version of a state bill in the House",
     SD: "Senate Draft — a revised version of a state bill in the Senate",
@@ -71,8 +68,8 @@
       .replace(/"/g, "&quot;");
   }
 
-  // Escape, then wrap recognized acronyms in <abbr> tooltips. Single pass per
-  // pattern over already-escaped text, so no nesting or double-substitution.
+  // Escape, then wrap recognized acronyms in <abbr> tooltips. One pass per
+  // pattern over already-escaped text — no nesting or double substitution.
   function annotate(raw) {
     let s = escapeHtml(raw);
     s = s.replace(INLINE_RE, (m) => `<abbr class="gloss" title="${GLOSSARY[m]}">${m}</abbr>`);
@@ -95,7 +92,7 @@
     const ts = payload.last_scrape?.completed_at || payload.generated_at;
     const when = ts ? new Date(ts).toLocaleString() : "—";
     document.getElementById("meta").textContent =
-      `${payload.bills.length} bills tracked · data current as of ${when} (${relTime(ts)}) · auto-refreshes every 15 min`;
+      `Data current as of ${when} (${relTime(ts)}) · auto-refreshes every 15 min`;
   }
 
   function buildGlossaryPanel() {
@@ -133,7 +130,6 @@
     return [...new Set(arr.filter(Boolean))].sort();
   }
 
-  // Populate a <select> with values, preserving the current selection.
   function populateSelect(id, values) {
     const sel = document.getElementById(id);
     const current = sel.value;
@@ -204,43 +200,58 @@
     });
   }
 
-  function renderRow(b) {
-    const tr = document.createElement("tr");
+  function renderCard(b) {
+    const card = document.createElement("article");
+    const primary = (b.subjects && b.subjects[0]) || "";
+    card.className = "bill-card" + (primary ? " s-" + primary : "");
+
     const council = COUNCIL_LABEL[b.council] || b.council;
-    const subjPills = (b.subjects || [])
+    const pills = (b.subjects || [])
       .map(
         (s) =>
-          `<span class="subject-pill ${s}" title="${SUBJECT_LABEL[s] || s}">${
-            SUBJECT_LABEL[s] || s
-          }</span>`
+          `<span class="subject-pill ${s}" title="${SUBJECT_LABEL[s] || s}">${SUBJECT_LABEL[s] || s}</span>`
       )
       .join("");
-    tr.innerHTML = `
-      <td class="col-council">${escapeHtml(council)}</td>
-      <td class="col-num"><a class="bill-link" href="${escapeHtml(b.url)}" target="_blank" rel="noopener">${escapeHtml(b.bill_number)}</a></td>
-      <td class="col-type">${escapeHtml(b.bill_type)}</td>
-      <td class="col-title">
-        <div class="bill-title">${annotate(b.title || "")}</div>
-        ${b.raw_subject ? `<div class="summary">${annotate(b.raw_subject)}</div>` : ""}
-      </td>
-      <td class="col-subj">${subjPills || '<span class="meta">—</span>'}</td>
-      <td class="col-date">${escapeHtml(b.introduced_date)}</td>
-      <td class="col-action">${escapeHtml(b.last_action || b.last_action_date)}</td>
-      <td class="col-status">${escapeHtml(b.status)}</td>
+
+    let lastAction = "";
+    if (b.last_action) {
+      lastAction = b.last_action + (b.last_action_date ? ` (${b.last_action_date})` : "");
+    } else if (b.last_action_date) {
+      lastAction = b.last_action_date;
+    }
+
+    const foot = [
+      b.introduced_date ? `<span><span class="lbl">Introduced</span> ${escapeHtml(b.introduced_date)}</span>` : "",
+      lastAction ? `<span><span class="lbl">Last action</span> ${escapeHtml(lastAction)}</span>` : "",
+      b.status ? `<span class="status-chip">${escapeHtml(b.status)}</span>` : "",
+      b.introducer ? `<span><span class="lbl">Introducer</span> ${escapeHtml(b.introducer)}</span>` : "",
+    ].join("");
+
+    card.innerHTML = `
+      <div class="bill-head">
+        <a class="bill-num" href="${escapeHtml(b.url)}" target="_blank" rel="noopener">${escapeHtml(b.bill_number)} <span class="ext">↗</span></a>
+        <span class="council-badge">${escapeHtml(council)}</span>
+        ${b.bill_type ? `<span class="type-badge">${escapeHtml(b.bill_type)}</span>` : ""}
+        <span class="head-spacer"></span>
+        <span class="head-subjects">${pills}</span>
+      </div>
+      ${b.title ? `<div class="bill-card-title">${annotate(b.title)}</div>` : ""}
+      ${b.raw_subject ? `<p class="bill-card-summary">${annotate(b.raw_subject)}</p>` : ""}
+      <div class="bill-foot">${foot}</div>
     `;
-    return tr;
+    return card;
   }
 
   function applyFilters() {
     const filtered = filterBills();
-    const tbody = document.querySelector("#results tbody");
-    tbody.innerHTML = "";
+    const list = document.getElementById("results");
+    list.innerHTML = "";
     const frag = document.createDocumentFragment();
-    for (const b of filtered.slice(0, 1000)) frag.appendChild(renderRow(b));
-    tbody.appendChild(frag);
+    for (const b of filtered.slice(0, 1000)) frag.appendChild(renderCard(b));
+    list.appendChild(frag);
     document.getElementById("result-count").textContent =
-      `Showing ${Math.min(filtered.length, 1000)} of ${filtered.length} matching bills` +
-      (filtered.length > 1000 ? " (first 1000)" : "");
+      `${filtered.length} bill${filtered.length === 1 ? "" : "s"}` +
+      (filtered.length > 1000 ? " (showing first 1000)" : "");
   }
 
   function ingest(payload) {
@@ -256,17 +267,17 @@
       if (!r.ok) throw new Error("HTTP " + r.status);
       ingest(await r.json());
     } catch (e) {
-      const meta = document.getElementById("meta");
-      // Keep stale data visible on a failed refresh; only surface error on first load.
-      if (!state.bills.length) meta.textContent = "Failed to load bills.json: " + e.message;
+      if (!state.bills.length) {
+        document.getElementById("result-count").textContent =
+          "Failed to load bills.json: " + e.message;
+      }
     }
   }
 
   buildGlossaryPanel();
   load();
 
-  // Self-update: poll periodically and whenever the tab regains focus, so a
-  // long-open tab reflects the latest scrape without a manual reload.
+  // Self-update: poll periodically and on tab focus, preserving active filters.
   setInterval(load, 15 * 60 * 1000);
   document.addEventListener("visibilitychange", () => {
     if (!document.hidden) load();
