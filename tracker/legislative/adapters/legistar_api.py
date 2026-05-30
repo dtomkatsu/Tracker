@@ -64,11 +64,11 @@ class LegistarApiAdapter(CouncilAdapter):
             "User-Agent", "Tracker/0.1 (+https://github.com/dtomkatsu/Tracker)"
         )
 
-    def _matter_url(self, matter_id: int, matter_guid: str) -> str:
-        return (
-            f"{WEB_BASE.format(tenant=self.tenant)}/LegislationDetail.aspx"
-            f"?ID={matter_id}&GUID={matter_guid}"
-        )
+    def _matter_url(self, matter_id: int) -> str:
+        # Gateway.aspx?M=L&ID={MatterId} is the public legislation permalink.
+        # The LegislationDetail.aspx?ID=&GUID= form returns "Invalid parameters!"
+        # on this tenant, so it must not be used.
+        return f"{WEB_BASE.format(tenant=self.tenant)}/Gateway.aspx?M=L&ID={matter_id}"
 
     def _to_bill(self, m: dict[str, Any]) -> BillRecord:
         return BillRecord(
@@ -81,7 +81,7 @@ class LegistarApiAdapter(CouncilAdapter):
             status=m.get("MatterStatusName"),
             last_action=None,
             last_action_date=None,
-            url=self._matter_url(m["MatterId"], m["MatterGuid"]),
+            url=self._matter_url(m["MatterId"]),
             raw_subject=m.get("MatterBodyName"),
         )
 

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-30T18:58:11+00:00",
+  "generated_at": "2026-05-30T19:16:21+00:00",
   "last_scrape": {
     "id": 20,
     "started_at": "2026-05-30T18:58:10+00:00",
@@ -184,7 +184,7 @@
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16317&GUID=AB173D31-CBAB-457F-AB15-030DD2A9886A",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16317",
       "raw_subject": "Disaster Recovery, International Affairs, and Planning Committee (2025-2027)",
       "subjects": [],
       "classification_confidence": 0.0,
@@ -222,7 +222,7 @@
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16315&GUID=1ABCC2B6-EC68-4D24-8873-A2F0A0264D9C",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16315",
       "raw_subject": "Government Relations, Ethics, and Transparency Committee (2025-2027)",
       "subjects": [],
       "classification_confidence": 0.0,
@@ -240,7 +240,7 @@
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16316&GUID=B047E86A-6276-48B4-8447-8D2AF1ED3E7A",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16316",
       "raw_subject": "Government Relations, Ethics, and Transparency Committee (2025-2027)",
       "subjects": [],
       "classification_confidence": 0.0,
@@ -332,7 +332,7 @@
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16310&GUID=263708DB-4401-47B6-B9E4-F20DF9E33E75",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16310",
       "raw_subject": "Government Relations, Ethics, and Transparency Committee (2025-2027)",
       "subjects": [],
       "classification_confidence": 0.0,
@@ -350,7 +350,7 @@
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16311&GUID=6F8C86A0-DB42-4723-AD05-AF38E92DACE6",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16311",
       "raw_subject": "Water Authority, Social Services, and Parks Committee (2025-2027)",
       "subjects": [],
       "classification_confidence": 0.0,
@@ -368,7 +368,7 @@
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16313&GUID=93EB9341-E7AC-46AE-8143-7720D326F553",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16313",
       "raw_subject": "Water Authority, Social Services, and Parks Committee (2025-2027)",
       "subjects": [
         "affordable_housing"
@@ -485,7 +485,7 @@
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16309&GUID=9BCAB9AE-6BD5-4187-A9E3-07C49251F775",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16309",
       "raw_subject": "Housing and Land Use Committee (2025-2027)",
       "subjects": [
         "affordable_housing"
@@ -795,7 +795,7 @@
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16307&GUID=4CB6366A-817C-460A-8C23-011F743AE78F",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16307",
       "raw_subject": "Government Relations, Ethics, and Transparency Committee (2025-2027)",
       "subjects": [],
       "classification_confidence": 0.0,
@@ -813,7 +813,7 @@
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16308&GUID=CB2E80B4-40CC-4CD2-8228-E978CA81F526",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16308",
       "raw_subject": "Government Relations, Ethics, and Transparency Committee (2025-2027)",
       "subjects": [],
       "classification_confidence": 0.0,
@@ -849,7 +849,7 @@
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16306&GUID=1CEA6A2C-2FE3-4FD4-80AA-A9E03C86C185",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16306",
       "raw_subject": "Government Relations, Ethics, and Transparency Committee (2025-2027)",
       "subjects": [],
       "classification_confidence": 0.0,
@@ -885,7 +885,7 @@
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16304&GUID=0DF8CF62-49AD-4C45-BA0A-C14F0B4F2DBA",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16304",
       "raw_subject": "Government Relations, Ethics, and Transparency Committee (2025-2027)",
       "subjects": [],
       "classification_confidence": 0.0,
@@ -903,7 +903,7 @@
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16305&GUID=E353587D-BA6E-4A79-84C8-8645D02E3448",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16305",
       "raw_subject": "Government Relations, Ethics, and Transparency Committee (2025-2027)",
       "subjects": [],
       "classification_confidence": 0.0,
@@ -975,7 +975,7 @@
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16300&GUID=EDDB1D50-315D-4839-ABC4-2950B5CD7286",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16300",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
       "subjects": [
         "affordable_housing"
@@ -995,7 +995,7 @@
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16302&GUID=F239284B-63E5-496A-BABE-817529620AD2",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16302",
       "raw_subject": "Housing and Land Use Committee (2025-2027)",
       "subjects": [
         "affordable_housing"
@@ -1033,7 +1033,7 @@
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16298&GUID=E4CD2DC4-33F8-4933-8411-222D7BD1292D",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16298",
       "raw_subject": "Housing and Land Use Committee (2025-2027)",
       "subjects": [
         "affordable_housing"
@@ -1071,7 +1071,7 @@
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16296&GUID=C2851406-8AC9-4E83-99BC-B57C199843B9",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16296",
       "raw_subject": "Water and Infrastructure Committee (2025-2027)",
       "subjects": [
         "tax",
@@ -1188,7 +1188,7 @@
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16293&GUID=7CA94DEA-A4C6-4581-A8A8-2FE1FCA72C3A",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16293",
       "raw_subject": "Government Relations, Ethics, and Transparency Committee (2025-2027)",
       "subjects": [],
       "classification_confidence": 0.0,
@@ -1280,7 +1280,7 @@
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16289&GUID=D3E29814-229F-4144-919A-62637C202E66",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16289",
       "raw_subject": "Government Relations, Ethics, and Transparency Committee (2025-2027)",
       "subjects": [],
       "classification_confidence": 0.0,
@@ -1298,7 +1298,7 @@
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16290&GUID=BC1CA1F0-784F-4BF0-AE04-A9133DAA3C93",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16290",
       "raw_subject": "Housing and Land Use Committee (2025-2027)",
       "subjects": [
         "affordable_housing"
@@ -1466,7 +1466,7 @@
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16286&GUID=79159CE6-194C-46DC-8027-984B6879BCEB",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16286",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
       "subjects": [
         "affordable_housing"
@@ -1486,7 +1486,7 @@
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16287&GUID=0DDC760F-2402-426B-8C3C-3284BAD4BA89",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16287",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
       "subjects": [
         "affordable_housing"
@@ -1580,7 +1580,7 @@
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16285&GUID=53C6CA01-98E5-4E2B-9022-A82D175167C7",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16285",
       "raw_subject": "Housing and Land Use Committee (2025-2027)",
       "subjects": [
         "food_security",
@@ -1781,7 +1781,7 @@
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16282&GUID=20AB165B-7060-48B7-BB5B-82A4B1CD5120",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16282",
       "raw_subject": "Government Relations, Ethics, and Transparency Committee (2025-2027)",
       "subjects": [],
       "classification_confidence": 0.0,
@@ -1835,7 +1835,7 @@
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16280&GUID=0BCA4D08-2D70-4FBA-A762-DC73862D9094",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16280",
       "raw_subject": "Water and Infrastructure Committee (2025-2027)",
       "subjects": [
         "transportation"
@@ -2210,7 +2210,7 @@
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16278&GUID=22DCF5FF-0D61-4639-A9AE-0FB06D26C067",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16278",
       "raw_subject": "Housing and Land Use Committee (2025-2027)",
       "subjects": [
         "affordable_housing"
@@ -2269,7 +2269,7 @@
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16277&GUID=EB306C6E-CBB5-42B1-B005-0046754E99DE",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16277",
       "raw_subject": "Kōmike Aloha ʻĀina (2025-2027)",
       "subjects": [
         "food_security"
@@ -2381,7 +2381,7 @@
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16275&GUID=47B31056-700A-40F6-90B4-138F51779FCC",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16275",
       "raw_subject": "Housing and Land Use Committee (2025-2027)",
       "subjects": [
         "affordable_housing"
@@ -2401,7 +2401,7 @@
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16276&GUID=DE9AE484-4CEE-48CE-AE54-ABE6D79274B7",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16276",
       "raw_subject": "Housing and Land Use Committee (2025-2027)",
       "subjects": [
         "affordable_housing"
@@ -2457,7 +2457,7 @@
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16273&GUID=ADD55CCB-4CAE-4066-9643-EC714D537FD5",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16273",
       "raw_subject": "Government Relations, Ethics, and Transparency Committee (2025-2027)",
       "subjects": [],
       "classification_confidence": 0.0,
@@ -2475,7 +2475,7 @@
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16274&GUID=799DE6D2-B4B0-4536-8C03-2608E1FC886C",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16274",
       "raw_subject": "Government Relations, Ethics, and Transparency Committee (2025-2027)",
       "subjects": [],
       "classification_confidence": 0.0,
@@ -2645,7 +2645,7 @@
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16271&GUID=79A05BC4-62CA-4EC7-B293-C5978FEAFFD3",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16271",
       "raw_subject": "Disaster Recovery, International Affairs, and Planning Committee (2025-2027)",
       "subjects": [
         "transportation",
@@ -2868,7 +2868,7 @@
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16269&GUID=747FB742-2431-4806-A1D4-FBAE26340499",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16269",
       "raw_subject": "Housing and Land Use Committee (2025-2027)",
       "subjects": [
         "tax",
@@ -2909,7 +2909,7 @@
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16268&GUID=8445A6F6-375F-4440-8DC9-FE8BB9296AF0",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16268",
       "raw_subject": "Disaster Recovery, International Affairs, and Planning Committee (2025-2027)",
       "subjects": [],
       "classification_confidence": 0.0,
@@ -2983,7 +2983,7 @@
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16264&GUID=F73E016A-5EB1-4D0D-9CB5-692A9266443B",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16264",
       "raw_subject": "Special Committee on Real Property Tax Reform",
       "subjects": [
         "tax"
@@ -3003,7 +3003,7 @@
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16265&GUID=BC07C633-A8A0-4A0D-839B-93F4C283F972",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16265",
       "raw_subject": "Special Committee on Real Property Tax Reform",
       "subjects": [
         "tax"
@@ -3023,7 +3023,7 @@
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16266&GUID=20403325-0873-4909-8A7A-6540AE52EFCD",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16266",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
       "subjects": [
         "affordable_housing"
@@ -3043,7 +3043,7 @@
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16258&GUID=EC971F90-1A12-4CAE-94FB-1CE18DC9DD2E",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16258",
       "raw_subject": "Special Committee on Real Property Tax Reform",
       "subjects": [
         "tax",
@@ -3064,7 +3064,7 @@
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16259&GUID=D30C8AD9-FA2D-4528-9D57-2D36BE03CCAD",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16259",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
       "subjects": [
         "affordable_housing"
@@ -3084,7 +3084,7 @@
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16260&GUID=3222EFAB-C478-4263-A107-DC0199DD64B5",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16260",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
       "subjects": [
         "affordable_housing"
@@ -3104,7 +3104,7 @@
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16261&GUID=07743A68-E963-4CF0-B278-306E5680F101",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16261",
       "raw_subject": "Water and Infrastructure Committee (2025-2027)",
       "subjects": [],
       "classification_confidence": 0.0,
@@ -3122,7 +3122,7 @@
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16262&GUID=0B3673D6-3AC6-4961-917A-1CF0066BBA8A",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16262",
       "raw_subject": "Water and Infrastructure Committee (2025-2027)",
       "subjects": [],
       "classification_confidence": 0.0,
@@ -3140,7 +3140,7 @@
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16255&GUID=36C3042B-E480-49C3-B507-20E8AF0C7977",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16255",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
       "subjects": [
         "affordable_housing"
@@ -3160,7 +3160,7 @@
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16256&GUID=E50E1721-5B92-490D-88EA-70108A22DFC8",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16256",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
       "subjects": [
         "tax",
@@ -3235,7 +3235,7 @@
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16254&GUID=B9448E15-7D19-454C-9FDB-8F072C3A3C04",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16254",
       "raw_subject": "Housing and Land Use Committee (2025-2027)",
       "subjects": [
         "tax",
@@ -3425,7 +3425,7 @@
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16253&GUID=2FB0E708-867A-4F0E-81E0-878935CD6D7E",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16253",
       "raw_subject": "Disaster Recovery, International Affairs, and Planning Committee (2025-2027)",
       "subjects": [],
       "classification_confidence": 0.0,
@@ -3443,7 +3443,7 @@
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16250&GUID=2FFE0B0F-D34D-4835-AF19-50A352BD47A6",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16250",
       "raw_subject": "Water Authority, Social Services, and Parks Committee (2025-2027)",
       "subjects": [],
       "classification_confidence": 0.0,
@@ -3461,7 +3461,7 @@
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16251&GUID=CFF0EC22-A9EA-43D8-A566-43BFD402BE92",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16251",
       "raw_subject": "Government Relations, Ethics, and Transparency Committee (2025-2027)",
       "subjects": [],
       "classification_confidence": 0.0,
@@ -3479,7 +3479,7 @@
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16252&GUID=4335C00D-CBB4-4CC5-AF47-9D6AD7F74649",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16252",
       "raw_subject": "Government Relations, Ethics, and Transparency Committee (2025-2027)",
       "subjects": [],
       "classification_confidence": 0.0,
@@ -3497,7 +3497,7 @@
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/LegislationDetail.aspx?ID=16247&GUID=2E93DD9A-3CF3-4864-9177-0876E4D8C844",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16247",
       "raw_subject": "Water and Infrastructure Committee (2025-2027)",
       "subjects": [],
       "classification_confidence": 0.0,
