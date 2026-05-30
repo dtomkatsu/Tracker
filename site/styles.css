@@ -36,16 +36,12 @@ body {
   color: var(--text);
   overflow-x: hidden;
 }
-
 a { color: var(--link); }
 
 /* Header */
-.site-header {
-  background: var(--paper);
-  border-bottom: 3px solid var(--primary);
-}
+.site-header { background: var(--paper); border-bottom: 3px solid var(--primary); }
 .header-inner, main, .glossary, footer {
-  max-width: 1080px;
+  max-width: 1180px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -59,7 +55,6 @@ h1 {
 }
 .tagline { margin: 0 0 14px; color: var(--text-muted); font-size: 15px; }
 
-/* Legend */
 .legend { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
 .legend-note { color: var(--text-muted); font-size: 12.5px; }
 
@@ -90,10 +85,7 @@ main { padding-top: 20px; }
   text-transform: uppercase;
   color: var(--text-muted);
 }
-.checkbox-inline {
-  display: flex; align-items: center; gap: 7px;
-  font-size: 14px; color: var(--text);
-}
+.checkbox-inline { display: flex; align-items: center; gap: 7px; font-size: 14px; color: var(--text); }
 .checkbox-inline input { accent-color: var(--primary); width: 16px; height: 16px; }
 
 .chips { display: flex; flex-wrap: wrap; gap: 6px; }
@@ -111,11 +103,7 @@ main { padding-top: 20px; }
   transition: background .12s, border-color .12s;
 }
 .chip:hover { border-color: var(--accent); background: var(--primary-bg-hover); }
-.chip.active {
-  background: var(--primary);
-  color: #fff;
-  border-color: var(--primary);
-}
+.chip.active { background: var(--primary); color: #fff; border-color: var(--primary); }
 
 select, input[type="search"] {
   width: 100%;
@@ -127,99 +115,113 @@ select, input[type="search"] {
   background: #fff;
   color: var(--text);
 }
-select:focus, input[type="search"]:focus {
-  outline: 2px solid var(--accent);
-  outline-offset: 0;
-  border-color: var(--accent);
-}
+select:focus, input[type="search"]:focus { outline: 2px solid var(--accent); border-color: var(--accent); }
 
-/* Result count + meta */
 .result-count { font-size: 15px; font-weight: 700; color: var(--primary-dark); margin: 22px 0 2px; }
-.meta { color: var(--text-muted); font-size: 13px; margin: 2px 0 16px; }
+.meta { color: var(--text-muted); font-size: 13px; margin: 2px 0; }
+.hint { color: var(--text-muted); font-size: 12.5px; font-style: italic; margin: 8px 0 12px; }
 
-/* Bill cards — description spans the FULL card width */
-.bill-list { display: flex; flex-direction: column; gap: 12px; }
-.bill-card {
-  background: var(--paper);
+/* Table */
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   border: 1px solid var(--border-strong);
-  border-left: 4px solid var(--accent);
   border-radius: var(--radius);
-  padding: 14px 18px;
+  background: var(--paper);
   box-shadow: var(--shadow);
 }
-.bill-card.s-tax { border-left-color: var(--tax); }
-.bill-card.s-transportation { border-left-color: var(--transportation); }
-.bill-card.s-food_security { border-left-color: var(--food_security); }
-.bill-card.s-affordable_housing { border-left-color: var(--affordable_housing); }
-
-.bill-head {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px 10px;
-  margin-bottom: 8px;
-}
-.bill-num {
-  font-weight: 800;
-  font-size: 15px;
-  text-decoration: none;
-  color: var(--primary-dark);
+table { width: 100%; min-width: 880px; border-collapse: collapse; font-size: 14px; }
+thead th {
+  text-align: left;
   white-space: nowrap;
-}
-.bill-num:hover { text-decoration: underline; }
-.bill-num .ext { font-weight: 600; opacity: .5; font-size: 12px; }
-
-.council-badge, .type-badge {
+  padding: 11px 12px;
   font-size: 11.5px;
-  font-weight: 600;
-  padding: 2px 9px;
-  border-radius: 12px;
-  white-space: nowrap;
-}
-.council-badge { background: var(--primary-bg); color: var(--primary-dark); border: 1px solid var(--border); }
-.type-badge { background: #eef1f3; color: var(--text-muted); }
-
-.head-spacer { flex: 1 1 auto; }
-.head-subjects { display: flex; flex-wrap: wrap; gap: 5px; }
-
-.bill-card-title {
-  margin: 2px 0 6px;
-  font-size: 15.5px;
   font-weight: 700;
-  line-height: 1.35;
-  color: var(--text);
-}
-/* Full-width description — no column constraint */
-.bill-card-summary {
-  margin: 0 0 10px;
-  color: #3c4a4e;
-  font-size: 14.5px;
-  line-height: 1.55;
-  max-width: 70ch; /* readable measure, but spans far wider than the old column */
-}
-
-.bill-foot {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px 18px;
-  font-size: 12.5px;
-  color: var(--text-muted);
-  border-top: 1px solid var(--border);
-  padding-top: 8px;
-}
-.bill-foot .lbl { font-weight: 600; color: #4a575b; }
-.bill-foot .status-chip {
-  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
   color: var(--primary-dark);
   background: var(--primary-bg);
-  border-radius: 10px;
-  padding: 1px 9px;
+  border-bottom: 2px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
+
+tbody .bill-row > td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+tbody .bill-row { cursor: pointer; }
+tbody .bill-row:hover > td { background: var(--primary-bg); }
+tbody .bill-row:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+tbody .bill-row.open > td { background: var(--primary-bg); border-bottom-color: transparent; }
+
+/* Column sizing */
+.col-council { width: 7rem; }
+.col-num { width: 8.5rem; white-space: nowrap; }
+.col-type { width: 6.5rem; }
+.col-title { width: 40%; min-width: 15rem; }
+.col-subj { width: 11rem; }
+.col-date, .col-action { width: 7rem; white-space: nowrap; }
+.col-status { width: 8rem; }
+
+.bill-link { color: var(--link); text-decoration: none; font-weight: 700; }
+.bill-link:hover { text-decoration: underline; }
+
+.col-title .caret {
+  display: inline-block;
+  color: var(--primary);
+  font-size: 11px;
+  margin-right: 6px;
+  transition: transform .15s;
+  transform: translateY(-1px);
+}
+.bill-row.open .col-title .caret { transform: translateY(-1px) rotate(90deg); }
+.title-text { font-weight: 600; color: var(--text); overflow-wrap: anywhere; }
+.muted { color: var(--text-muted); }
+
+/* Full-width expandable detail row — description spans the whole table */
+.detail-row > td {
+  padding: 0;
+  background: #f7fbf1;
+  border-bottom: 1px solid var(--border);
+}
+.detail-inner {
+  padding: 4px 18px 16px 30px;
+  border-left: 4px solid var(--accent);
+}
+.detail-summary {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #34424a;
+  margin: 8px 0 10px;
+  max-width: 90ch;
+}
+.detail-label {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--primary-dark);
+  margin-right: 8px;
+}
+.detail-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 22px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.detail-meta a { font-weight: 600; }
 
 /* Subject pills */
 .subject-pill {
   display: inline-block;
   padding: 2px 9px;
+  margin: 0 3px 3px 0;
   border-radius: 12px;
   font-size: 11px;
   font-weight: 700;
@@ -242,20 +244,8 @@ abbr.gloss {
 
 /* Glossary */
 .glossary { padding-top: 28px; }
-.glossary summary {
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--primary-dark);
-  padding: 6px 0;
-}
-.glossary dl {
-  display: grid;
-  grid-template-columns: max-content 1fr;
-  gap: 5px 16px;
-  margin: 10px 0 0;
-  font-size: 13.5px;
-}
+.glossary summary { cursor: pointer; font-size: 14px; font-weight: 700; color: var(--primary-dark); padding: 6px 0; }
+.glossary dl { display: grid; grid-template-columns: max-content 1fr; gap: 5px 16px; margin: 10px 0 0; font-size: 13.5px; }
 .glossary dt { font-weight: 700; color: var(--primary-dark); }
 .glossary dd { margin: 0; color: var(--text-muted); }
 
@@ -274,5 +264,5 @@ footer a { color: var(--link); font-weight: 600; }
   h1 { font-size: 1.4rem; }
   .glossary dl { grid-template-columns: 1fr; gap: 2px 0; }
   .glossary dd { margin-bottom: 8px; }
-  .bill-card-summary { max-width: none; }
+  .detail-summary { max-width: none; }
 }

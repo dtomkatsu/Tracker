@@ -59,8 +59,25 @@
 
     <p id="result-count" class="result-count">Loading…</p>
     <p id="meta" class="meta"></p>
+    <p class="hint">Click any row to expand the full description.</p>
 
-    <section id="results" class="bill-list" aria-live="polite"></section>
+    <div class="table-wrap">
+      <table id="results">
+        <thead>
+          <tr>
+            <th class="col-council">Council</th>
+            <th class="col-num">Number</th>
+            <th class="col-type">Type</th>
+            <th class="col-title">Title</th>
+            <th class="col-subj">Subjects</th>
+            <th class="col-date">Introduced</th>
+            <th class="col-action">Last action</th>
+            <th class="col-status">Status</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
   </main>
 
   <section class="glossary">

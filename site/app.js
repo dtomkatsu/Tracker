@@ -200,11 +200,9 @@
     });
   }
 
-  function renderCard(b) {
-    const card = document.createElement("article");
-    const primary = (b.subjects && b.subjects[0]) || "";
-    card.className = "bill-card" + (primary ? " s-" + primary : "");
-
+  // Returns [mainRow, detailRow]. The detail row spans all columns so the
+  // description gets the full table width instead of the narrow Title column.
+  function renderRows(b) {
     const council = COUNCIL_LABEL[b.council] || b.council;
     const pills = (b.subjects || [])
       .map(
@@ -220,35 +218,71 @@
       lastAction = b.last_action_date;
     }
 
-    const foot = [
-      b.introduced_date ? `<span><span class="lbl">Introduced</span> ${escapeHtml(b.introduced_date)}</span>` : "",
-      lastAction ? `<span><span class="lbl">Last action</span> ${escapeHtml(lastAction)}</span>` : "",
-      b.status ? `<span class="status-chip">${escapeHtml(b.status)}</span>` : "",
-      b.introducer ? `<span><span class="lbl">Introducer</span> ${escapeHtml(b.introducer)}</span>` : "",
-    ].join("");
-
-    card.innerHTML = `
-      <div class="bill-head">
-        <a class="bill-num" href="${escapeHtml(b.url)}" target="_blank" rel="noopener">${escapeHtml(b.bill_number)} <span class="ext">↗</span></a>
-        <span class="council-badge">${escapeHtml(council)}</span>
-        ${b.bill_type ? `<span class="type-badge">${escapeHtml(b.bill_type)}</span>` : ""}
-        <span class="head-spacer"></span>
-        <span class="head-subjects">${pills}</span>
-      </div>
-      ${b.title ? `<div class="bill-card-title">${annotate(b.title)}</div>` : ""}
-      ${b.raw_subject ? `<p class="bill-card-summary">${annotate(b.raw_subject)}</p>` : ""}
-      <div class="bill-foot">${foot}</div>
+    const tr = document.createElement("tr");
+    tr.className = "bill-row";
+    tr.tabIndex = 0;
+    tr.setAttribute("role", "button");
+    tr.setAttribute("aria-expanded", "false");
+    tr.innerHTML = `
+      <td class="col-council">${escapeHtml(council)}</td>
+      <td class="col-num"><a class="bill-link" href="${escapeHtml(b.url)}" target="_blank" rel="noopener">${escapeHtml(b.bill_number)}</a></td>
+      <td class="col-type">${escapeHtml(b.bill_type)}</td>
+      <td class="col-title"><span class="caret" aria-hidden="true">▸</span><span class="title-text">${annotate(b.title || "")}</span></td>
+      <td class="col-subj">${pills || '<span class="muted">—</span>'}</td>
+      <td class="col-date">${escapeHtml(b.introduced_date)}</td>
+      <td class="col-action">${escapeHtml(lastAction)}</td>
+      <td class="col-status">${escapeHtml(b.status)}</td>
     `;
-    return card;
+
+    const detail = document.createElement("tr");
+    detail.className = "detail-row";
+    detail.hidden = true;
+    const summaryLabel = b.council === "honolulu" ? "Summary" : "Committee / body";
+    const parts = [];
+    if (b.raw_subject) {
+      parts.push(
+        `<div class="detail-summary"><span class="detail-label">${summaryLabel}</span>${annotate(b.raw_subject)}</div>`
+      );
+    } else {
+      parts.push(`<div class="detail-summary muted">No description available from the council source.</div>`);
+    }
+    const metaBits = [];
+    if (b.introducer) metaBits.push(`<span><span class="detail-label">Introducer</span>${escapeHtml(b.introducer)}</span>`);
+    if (b.bill_type) metaBits.push(`<span><span class="detail-label">Type</span>${escapeHtml(b.bill_type)}</span>`);
+    metaBits.push(`<span><a href="${escapeHtml(b.url)}" target="_blank" rel="noopener">View on council site ↗</a></span>`);
+    parts.push(`<div class="detail-meta">${metaBits.join("")}</div>`);
+    detail.innerHTML = `<td colspan="8"><div class="detail-inner">${parts.join("")}</div></td>`;
+
+    function toggle() {
+      const open = tr.classList.toggle("open");
+      detail.hidden = !open;
+      tr.setAttribute("aria-expanded", open ? "true" : "false");
+    }
+    tr.addEventListener("click", (e) => {
+      if (e.target.closest("a")) return; // let the bill link open normally
+      toggle();
+    });
+    tr.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        toggle();
+      }
+    });
+
+    return [tr, detail];
   }
 
   function applyFilters() {
     const filtered = filterBills();
-    const list = document.getElementById("results");
-    list.innerHTML = "";
+    const tbody = document.querySelector("#results tbody");
+    tbody.innerHTML = "";
     const frag = document.createDocumentFragment();
-    for (const b of filtered.slice(0, 1000)) frag.appendChild(renderCard(b));
-    list.appendChild(frag);
+    for (const b of filtered.slice(0, 1000)) {
+      const [row, detail] = renderRows(b);
+      frag.appendChild(row);
+      frag.appendChild(detail);
+    }
+    tbody.appendChild(frag);
     document.getElementById("result-count").textContent =
       `${filtered.length} bill${filtered.length === 1 ? "" : "s"}` +
       (filtered.length > 1000 ? " (showing first 1000)" : "");
