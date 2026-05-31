@@ -200,47 +200,56 @@
     }
   }
 
-  function renderChips(containerId, items, selectedSet) {
+  // Multi-select checkbox group with a leading "All" box. "All" checks/unchecks
+  // every option; checking all options re-checks "All". `opts.pill` renders each
+  // option as its colored subject pill (used for the Subject group).
+  function renderCheckGroup(containerId, items, selectedSet, opts = {}) {
     const c = document.getElementById(containerId);
     c.innerHTML = "";
-    for (const it of items) {
-      const el = document.createElement("span");
-      el.className = "chip" + (selectedSet.has(it.value) ? " active" : "");
-      el.textContent = it.label;
-      el.dataset.value = it.value;
-      el.addEventListener("click", () => {
-        if (selectedSet.has(it.value)) selectedSet.delete(it.value);
-        else selectedSet.add(it.value);
-        el.classList.toggle("active");
-        applyFilters();
-      });
-      c.appendChild(el);
-    }
-  }
+    const itemBoxes = [];
 
-  // Subject filter as checkboxes (multi-select), styled with the same colored
-  // subject pills as the legend.
-  function renderSubjectChecks(items, selectedSet) {
-    const c = document.getElementById("f-subject");
-    c.innerHTML = "";
+    const allLabel = document.createElement("label");
+    allLabel.className = "chk-all";
+    const allCb = document.createElement("input");
+    allCb.type = "checkbox";
+    allCb.checked = selectedSet.size === items.length;
+    const allTxt = document.createElement("span");
+    allTxt.textContent = "All";
+    allLabel.append(allCb, allTxt);
+    c.appendChild(allLabel);
+
     for (const it of items) {
       const label = document.createElement("label");
-      label.className = "subj-check";
+      label.className = opts.pill ? "subj-check" : "county-check";
       const cb = document.createElement("input");
       cb.type = "checkbox";
       cb.checked = selectedSet.has(it.value);
       cb.addEventListener("change", () => {
         if (cb.checked) selectedSet.add(it.value);
         else selectedSet.delete(it.value);
+        allCb.checked = selectedSet.size === items.length;
         applyFilters();
       });
-      const pill = document.createElement("span");
-      pill.className = "subject-pill " + it.value;
-      pill.textContent = it.label;
-      label.appendChild(cb);
-      label.appendChild(pill);
+      let node;
+      if (opts.pill) {
+        node = document.createElement("span");
+        node.className = "subject-pill " + it.value;
+        node.textContent = it.label;
+      } else {
+        node = document.createElement("span");
+        node.textContent = it.label;
+      }
+      label.append(cb, node);
       c.appendChild(label);
+      itemBoxes.push({ cb, value: it.value });
     }
+
+    allCb.addEventListener("change", () => {
+      selectedSet.clear();
+      if (allCb.checked) for (const it of items) selectedSet.add(it.value);
+      for (const { cb, value } of itemBoxes) cb.checked = selectedSet.has(value);
+      applyFilters();
+    });
   }
 
   function uniqueSorted(arr) {
@@ -263,14 +272,24 @@
   let filtersWired = false;
 
   function buildFilters(payload) {
-    renderChips(
+    // Default to everything selected ("All" checked) on first load.
+    if (!filtersWired) {
+      payload.councils.forEach((c) => state.councils.add(c));
+      payload.subjects.forEach((s) => state.subjects.add(s));
+    }
+    state.councilUniverse = payload.councils.length;
+    state.subjectUniverse = payload.subjects.length;
+
+    renderCheckGroup(
       "f-council",
       payload.councils.map((c) => ({ value: c, label: COUNCIL_LABEL[c] || c })),
       state.councils
     );
-    renderSubjectChecks(
+    renderCheckGroup(
+      "f-subject",
       payload.subjects.map((s) => ({ value: s, label: SUBJECT_LABEL[s] || s })),
-      state.subjects
+      state.subjects,
+      { pill: true }
     );
     populateSelect("f-type", uniqueSorted(payload.bills.map((b) => b.bill_type)));
     populateSelect("f-status", uniqueSorted(payload.bills.map((b) => normalizeStatus(b).label)));
@@ -296,9 +315,13 @@
   }
 
   function filterBills() {
+    const countyAll = state.councils.size === state.councilUniverse;
+    const subjectAll = state.subjects.size === state.subjectUniverse;
     return state.bills.filter((b) => {
-      if (state.councils.size && !state.councils.has(b.council)) return false;
-      if (state.subjects.size) {
+      // "All" checked → no constraint on that dimension; otherwise the bill
+      // must match a checked box (empty selection → nothing).
+      if (!countyAll && !state.councils.has(b.council)) return false;
+      if (!subjectAll) {
         if (!b.subjects?.some((s) => state.subjects.has(s))) return false;
       } else if (state.onlyClassified && (!b.subjects || b.subjects.length === 0)) {
         return false;
@@ -354,11 +377,10 @@
         ${sub ? `<div class="title-preview">${annotate(sub)}</div>` : ""}
       </td>
       <td class="col-subj">${pills || '<span class="muted">—</span>'}</td>
-      <td class="col-date">${escapeHtml(b.introduced_date)}</td>
-      <td class="col-action">${escapeHtml(lastAction)}</td>
       <td class="col-status" title="${escapeHtml(b.last_action || b.status || "")}">
         ${renderStepper(prog, false)}
         <div class="stage-label">${prog.label}</div>
+        ${b.last_action_date ? `<div class="status-date">${escapeHtml(b.last_action_date)}</div>` : ""}
       </td>
     `;
 
@@ -376,10 +398,11 @@
     }
     const metaBits = [];
     if (b.introducer) metaBits.push(`<span><span class="detail-label">Introducer</span>${escapeHtml(b.introducer)}</span>`);
-    if (b.bill_type) metaBits.push(`<span><span class="detail-label">Type</span>${escapeHtml(b.bill_type)}</span>`);
+    if (b.introduced_date) metaBits.push(`<span><span class="detail-label">Introduced</span>${escapeHtml(b.introduced_date)}</span>`);
+    if (lastAction) metaBits.push(`<span><span class="detail-label">Last action</span>${escapeHtml(lastAction)}</span>`);
     metaBits.push(`<span><a href="${escapeHtml(b.url)}" target="_blank" rel="noopener">View on council site ↗</a></span>`);
     parts.push(`<div class="detail-meta">${metaBits.join("")}</div>`);
-    detail.innerHTML = `<td colspan="8"><div class="detail-inner">${parts.join("")}</div></td>`;
+    detail.innerHTML = `<td colspan="6"><div class="detail-inner">${parts.join("")}</div></td>`;
 
     function toggle() {
       const open = tr.classList.toggle("open");

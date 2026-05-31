@@ -250,20 +250,23 @@ tbody .bill-row.open > td { background: var(--primary-bg); border-bottom-color: 
 .subject-pill.food_security { background: var(--food_security); }
 .subject-pill.affordable_housing { background: var(--affordable_housing); }
 
-/* Subject filter checkboxes — checkbox + the same colored subject pill */
-.subj-check {
+/* Filter checkbox groups — "All" + colored subject pills / plain county names */
+.subj-check, .county-check, .chk-all {
   display: inline-flex;
   align-items: center;
   gap: 6px;
   cursor: pointer;
   margin: 0 10px 4px 0;
 }
-.subj-check input {
+.subj-check input, .county-check input, .chk-all input {
   accent-color: var(--primary);
   width: 15px;
   height: 15px;
   cursor: pointer;
 }
+.county-check, .chk-all { font-size: 14px; color: var(--text); }
+.chk-all { font-weight: 700; }
+.chk-all::after { content: "·"; margin-left: 10px; color: var(--border); }
 
 /* Progress stepper — bill's position on the 5-step legislative track.
    --done = completed steps, --pending = not-yet-reached. */
@@ -311,6 +314,7 @@ tbody .bill-row.open > td { background: var(--primary-bg); border-bottom-color: 
 .stepper .step.current-unknown .dot { border-color: #b3b3ad; border-style: dashed; }
 
 .stage-label { margin-top: 4px; font-size: 11.5px; font-weight: 600; color: var(--text-muted); white-space: nowrap; }
+.status-date { margin-top: 2px; font-size: 11px; color: var(--text-muted); white-space: nowrap; }
 
 /* Labeled stepper in the expanded detail row */
 .detail-progress { margin: 2px 0 12px; }
