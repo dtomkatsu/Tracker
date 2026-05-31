@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-05-30T22:52:06+00:00",
+  "generated_at": "2026-05-31T16:17:28+00:00",
   "last_scrape": {
-    "id": 41,
-    "started_at": "2026-05-30T22:50:38+00:00",
-    "completed_at": "2026-05-30T22:52:06+00:00",
-    "council": "hawaii",
-    "bills_seen": 28,
+    "id": 45,
+    "started_at": "2026-05-31T16:16:32+00:00",
+    "completed_at": "2026-05-31T16:17:28+00:00",
+    "council": "kauai",
+    "bills_seen": 27,
     "bills_new": 0,
-    "bills_updated": 27,
+    "bills_updated": 0,
     "errors": null
   },
   "subjects": [
