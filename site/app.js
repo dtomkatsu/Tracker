@@ -102,6 +102,17 @@
   // (stalled / failed).
   const STEP_NAMES = ["Introduced", "Committee", "1st reading", "Final reading", "Enacted"];
 
+  // Lifecycle order for sorting the status dropdown (chronological, not alpha).
+  const STATUS_ORDER = [
+    "Introduced", "Scheduled", "In committee", "In progress",
+    "Passed 1st reading", "Passed final reading", "Adopted / enacted",
+    "Stalled", "Failed", "Tracking",
+  ];
+  function statusRank(label) {
+    const i = STATUS_ORDER.indexOf(label);
+    return i === -1 ? STATUS_ORDER.length : i;
+  }
+
   // Step derived from the normalized label so the stepper always agrees with
   // the stage badge (council status fields can disagree with last-action text).
   const STEP_OF = {
@@ -230,15 +241,9 @@
         allCb.checked = selectedSet.size === items.length;
         applyFilters();
       });
-      let node;
-      if (opts.pill) {
-        node = document.createElement("span");
-        node.className = "subject-pill " + it.value;
-        node.textContent = it.label;
-      } else {
-        node = document.createElement("span");
-        node.textContent = it.label;
-      }
+      const node = document.createElement("span");
+      node.className = opts.pill ? "subject-pill " + it.value : "county-badge";
+      node.textContent = it.label;
       label.append(cb, node);
       c.appendChild(label);
       itemBoxes.push({ cb, value: it.value });
@@ -292,7 +297,9 @@
       { pill: true }
     );
     populateSelect("f-type", uniqueSorted(payload.bills.map((b) => b.bill_type)));
-    populateSelect("f-status", uniqueSorted(payload.bills.map((b) => normalizeStatus(b).label)));
+    const statuses = [...new Set(payload.bills.map((b) => normalizeStatus(b).label))]
+      .sort((a, b) => statusRank(a) - statusRank(b));
+    populateSelect("f-status", statuses);
 
     if (filtersWired) return;
     filtersWired = true;
