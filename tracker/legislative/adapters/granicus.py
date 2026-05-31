@@ -97,6 +97,29 @@ def _clean(text: str) -> str:
     return re.sub(r"\s+", " ", text).strip()
 
 
+# A bill's agenda title runs until the procedural note / next agenda section.
+# Without trimming, the title bleeds into following content (committee
+# sections, minutes, item numbers), e.g. "...REAL PROPERTY TAX (Long-Term
+# Affordable Rental Requirements) (Public Hearing held on May 20, 2026) 10.
+# B. COMMITTEE OF THE WHOLE ...".
+_HEARING_RE = re.compile(r"\s*\(Public Hearing[^)]*\).*$", re.I)
+_SECTION_RE = re.compile(
+    r"\s+(?:[A-Z]\.\s+(?:COMMITTEE|EXECUTIVE|PUBLIC|UNFINISHED|NEW|OLD|ADJOURN"
+    r"|APPROVAL|MINUTES|COMMUNICATIONS?|REPORTS?|CONSENT)"
+    r"|COMMITTEE OF THE WHOLE|EXECUTIVE SESSION|\d+\.\s+Minutes\b).*$",
+    re.I,
+)
+_TRAIL_NUM_RE = re.compile(r"\s*\b\d{1,3}\.\s*$")
+
+
+def _clean_agenda_title(t: str) -> str:
+    t = _HEARING_RE.sub("", t)            # drop "(Public Hearing …)" + trailing bleed
+    t = _SECTION_RE.sub("", t)            # drop bled-in agenda sections
+    t = _TRAIL_NUM_RE.sub("", t)          # drop trailing agenda item number
+    t = re.sub(r"(\w)- (\w)", r"\1-\2", t)  # rejoin hyphen-split words ("Long- Term")
+    return re.sub(r"\s{2,}", " ", t).strip(" -–—:.,")
+
+
 _TITLE_KEYWORDS = re.compile(
     r"\b(ORDINANCE|RESOLUTION|BILL|AMEND|RELATING|ESTABLISH|APPROV|AUTHORIZ"
     r"|PROVID|REPEAL|CHARTER|BUDGET|APPROPRIAT|ADOPT|DESIGNAT|GRANT|CREAT)\w*",
@@ -204,10 +227,10 @@ class GranicusAdapter(CouncilAdapter):
 
             # Title window: text up to the next bill reference, capped. Do NOT
             # split on periods — legal titles are full of "NO.", "SEC.", etc.
-            tail = _BILL_RE.split(flat[m.end(): m.end() + 300])[0]
+            tail = _BILL_RE.split(flat[m.end(): m.end() + 320])[0]
             title = _clean(tail).lstrip("-–—:.,) ")
             title = re.sub(r"^\(Draft\s+\d+\)\s*", "", title, flags=re.I).strip()
-            title = title[:220].rstrip()
+            title = _clean_agenda_title(title)[:240].rstrip()
             if not _looks_like_title(title):
                 continue
 

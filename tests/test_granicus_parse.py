@@ -33,3 +33,15 @@ def test_parse_agenda_skips_bare_number_mentions():
     agenda = "Minutes approved. Bill 2987, Bill 2988, and Bill 2990 were referred to committee."
     recs = adapter._parse_agenda(agenda, "2026-05-27", "http://x/agenda")
     assert recs == []  # no real titles → nothing extracted
+
+
+def test_clean_agenda_title_strips_bleed():
+    from tracker.legislative.adapters.granicus import _clean_agenda_title
+    raw = ("A BILL FOR AN ORDINANCE AMENDING CHAPTER 5A, RELATING TO REAL PROPERTY "
+           "TAX (Long- Term Affordable Rental Requirements) (Public Hearing held on "
+           "May 20, 2026) 10. B. COMMITTEE OF THE WHOLE C. EXECUTIVE SESSION")
+    out = _clean_agenda_title(raw)
+    assert out.endswith("(Long-Term Affordable Rental Requirements)")  # hyphen rejoined, bleed gone
+    assert "Public Hearing" not in out
+    assert "COMMITTEE OF THE WHOLE" not in out
+    assert "EXECUTIVE SESSION" not in out

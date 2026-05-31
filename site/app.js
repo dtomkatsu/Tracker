@@ -147,6 +147,19 @@
     return html + "</div>";
   }
 
+  // A readable headline for a bill: prefer the parenthetical short-title that
+  // councils tack on (e.g. "(Long-Term Affordable Rental Requirements)"),
+  // otherwise the title with the "A BILL FOR AN ORDINANCE…" boilerplate trimmed.
+  function billHeadline(b) {
+    const t = (b.title || "").trim();
+    if (!t) return "";
+    const parens = [...t.matchAll(/\(([^)]{5,90})\)/g)]
+      .map((x) => x[1].replace(/\s{2,}/g, " ").trim())
+      .filter((p) => !/^draft\s*\d+$/i.test(p) && !/^\d+$/.test(p) && !/public hearing/i.test(p));
+    if (parens.length) return parens[0];
+    return t.replace(/^A BILL FOR AN ORDINANCE\s+/i, "").replace(/^A RESOLUTION\s+/i, "").trim() || t;
+  }
+
   // Escape, then wrap recognized acronyms in <abbr> tooltips. One pass per
   // pattern over already-escaped text — no nesting or double substitution.
   function annotate(raw) {
@@ -321,6 +334,11 @@
       lastAction = b.last_action_date;
     }
     const prog = billProgress(b);
+    const fullTitle = (b.title || "").trim();
+    const head = billHeadline(b);
+    let sub = "";
+    if (head && fullTitle && head !== fullTitle) sub = fullTitle;
+    else if (b.raw_subject && b.raw_subject !== fullTitle) sub = b.raw_subject;
 
     const tr = document.createElement("tr");
     tr.className = "bill-row";
@@ -332,8 +350,8 @@
       <td class="col-num"><a class="bill-link" href="${escapeHtml(b.url)}" target="_blank" rel="noopener">${escapeHtml(b.bill_number)}</a></td>
       <td class="col-type">${escapeHtml(b.bill_type)}</td>
       <td class="col-title">
-        <div class="title-line"><span class="caret" aria-hidden="true">▸</span><span class="title-text">${annotate(b.title || "")}</span></div>
-        ${b.raw_subject ? `<div class="title-preview">${annotate(b.raw_subject)}</div>` : ""}
+        <div class="title-line"><span class="caret" aria-hidden="true">▸</span><span class="title-text">${annotate(head || fullTitle || "")}</span></div>
+        ${sub ? `<div class="title-preview">${annotate(sub)}</div>` : ""}
       </td>
       <td class="col-subj">${pills || '<span class="muted">—</span>'}</td>
       <td class="col-date">${escapeHtml(b.introduced_date)}</td>
