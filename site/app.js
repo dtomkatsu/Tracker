@@ -54,11 +54,18 @@
     bills: [],
     councils: new Set(),
     subjects: new Set(),
+    years: new Set(),
     type: "",
     status: "",
     search: "",
     onlyClassified: true,
   };
+
+  // Year a bill belongs to: prefer introduced date, fall back to last action.
+  function billYear(b) {
+    const d = b.introduced_date || b.last_action_date || "";
+    return /^\d{4}/.test(d) ? d.slice(0, 4) : null;
+  }
 
   function escapeHtml(s) {
     return String(s == null ? "" : s)
@@ -195,7 +202,7 @@
     const ts = payload.last_scrape?.completed_at || payload.generated_at;
     const when = ts ? new Date(ts).toLocaleString() : "—";
     document.getElementById("meta").textContent =
-      `Data current as of ${when} (${relTime(ts)}) · updates daily`;
+      `Data current as of ${when} (${relTime(ts)}) · updates Mon/Wed/Fri`;
   }
 
   function buildGlossaryPanel() {
@@ -278,17 +285,26 @@
 
   function buildFilters(payload) {
     // Default to everything selected ("All" checked) on first load.
+    // Years present in the data, newest first.
+    const years = [...new Set(payload.bills.map(billYear).filter(Boolean))].sort().reverse();
     if (!filtersWired) {
       payload.councils.forEach((c) => state.councils.add(c));
       payload.subjects.forEach((s) => state.subjects.add(s));
+      years.forEach((y) => state.years.add(y));
     }
     state.councilUniverse = payload.councils.length;
     state.subjectUniverse = payload.subjects.length;
+    state.yearUniverse = years.length;
 
     renderCheckGroup(
       "f-council",
       payload.councils.map((c) => ({ value: c, label: COUNCIL_LABEL[c] || c })),
       state.councils
+    );
+    renderCheckGroup(
+      "f-year",
+      years.map((y) => ({ value: y, label: y })),
+      state.years
     );
     renderCheckGroup(
       "f-subject",
@@ -324,10 +340,12 @@
   function filterBills() {
     const countyAll = state.councils.size === state.councilUniverse;
     const subjectAll = state.subjects.size === state.subjectUniverse;
+    const yearAll = state.years.size === state.yearUniverse;
     return state.bills.filter((b) => {
       // "All" checked → no constraint on that dimension; otherwise the bill
       // must match a checked box (empty selection → nothing).
       if (!countyAll && !state.councils.has(b.council)) return false;
+      if (!yearAll && !state.years.has(billYear(b))) return false;
       if (!subjectAll) {
         if (!b.subjects?.some((s) => state.subjects.has(s))) return false;
       } else if (state.onlyClassified && (!b.subjects || b.subjects.length === 0)) {
@@ -469,8 +487,8 @@
   buildGlossaryPanel();
   load();
 
-  // Data refreshes once a day (scrape runs daily), so poll daily and also
-  // re-fetch whenever the tab regains focus — preserving active filters.
+  // Scrape runs Mon/Wed/Fri, so a daily client poll is plenty; also re-fetch
+  // whenever the tab regains focus — preserving active filters.
   setInterval(load, 24 * 60 * 60 * 1000);
   document.addEventListener("visibilitychange", () => {
     if (!document.hidden) load();

@@ -8,10 +8,10 @@ from pathlib import Path
 
 from tracker.legislative import COUNCILS
 
-# When no explicit --since is given, scrape this far back. Keeps the daily cron
-# incremental instead of re-paging full council history (Maui's API otherwise
-# walks every Matter ever filed, plus a 2-step action fetch per bill).
-DEFAULT_LOOKBACK_DAYS = 120
+# When no explicit --since is given, scrape this far back. County councils run
+# on 2-year terms (year-round bodies, not session-bound), so a 730-day window
+# covers the full active inventory of the sitting council.
+DEFAULT_LOOKBACK_DAYS = 730
 from tracker.legislative.adapters.base import CouncilAdapter
 from tracker.legislative.classify import classify
 from tracker.legislative.db import (
