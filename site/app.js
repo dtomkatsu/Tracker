@@ -56,10 +56,34 @@
     subjects: new Set(),
     years: new Set(),
     type: "",
-    status: "",
+    status: "Active",
     search: "",
     onlyClassified: true,
   };
+
+  // Bill types collapse into 3 plain buckets. Councils emit ~9 raw types, most
+  // of them procedural noise a regular reader doesn't care about.
+  const TYPE_BUCKETS = ["Laws", "Resolutions", "Procedural & ceremonial"];
+  function typeBucket(t) {
+    const x = (t || "").toLowerCase().trim();
+    if (x === "bill" || x === "ordinance") return "Laws";
+    if (x === "resolution") return "Resolutions";
+    return "Procedural & ceremonial"; // committee reports, Rule 7(B), ceremonial, etc.
+  }
+
+  // The 10 normalized status labels collapse into 3 outcome buckets for the
+  // filter dropdown. The per-row stepper still shows the precise stage.
+  const STATUS_BUCKETS = ["Active", "Passed", "Dead"];
+  const STATUS_BUCKET_OF = {
+    "Introduced": "Active", "Scheduled": "Active", "In committee": "Active",
+    "In progress": "Active", "Passed 1st reading": "Active",
+    "Passed final reading": "Active", "Tracking": "Active",
+    "Adopted / enacted": "Passed",
+    "Stalled": "Dead", "Failed": "Dead",
+  };
+  function statusBucket(b) {
+    return STATUS_BUCKET_OF[normalizeStatus(b).label] || "Active";
+  }
 
   // Year a bill belongs to: prefer introduced date, fall back to last action.
   function billYear(b) {
@@ -108,17 +132,6 @@
   // mark whether it's still moving (active), done (enacted), or off-track
   // (stalled / failed).
   const STEP_NAMES = ["Introduced", "Committee", "1st reading", "Final reading", "Enacted"];
-
-  // Lifecycle order for sorting the status dropdown (chronological, not alpha).
-  const STATUS_ORDER = [
-    "Introduced", "Scheduled", "In committee", "In progress",
-    "Passed 1st reading", "Passed final reading", "Adopted / enacted",
-    "Stalled", "Failed", "Tracking",
-  ];
-  function statusRank(label) {
-    const i = STATUS_ORDER.indexOf(label);
-    return i === -1 ? STATUS_ORDER.length : i;
-  }
 
   // Step derived from the normalized label so the stepper always agrees with
   // the stage badge (council status fields can disagree with last-action text).
@@ -290,7 +303,9 @@
     if (!filtersWired) {
       payload.councils.forEach((c) => state.councils.add(c));
       payload.subjects.forEach((s) => state.subjects.add(s));
-      years.forEach((y) => state.years.add(y));
+      // Default the Year filter to the most recent session only (currently
+      // 2026) instead of every year — the older years are still one click away.
+      if (years.length) state.years.add(years[0]);
     }
     state.councilUniverse = payload.councils.length;
     state.subjectUniverse = payload.subjects.length;
@@ -312,12 +327,14 @@
       state.subjects,
       { pill: true }
     );
-    populateSelect("f-type", uniqueSorted(payload.bills.map((b) => b.bill_type)));
-    const statuses = [...new Set(payload.bills.map((b) => normalizeStatus(b).label))]
-      .sort((a, b) => statusRank(a) - statusRank(b));
-    populateSelect("f-status", statuses);
+    const typesPresent = new Set(payload.bills.map((b) => typeBucket(b.bill_type)));
+    populateSelect("f-type", TYPE_BUCKETS.filter((t) => typesPresent.has(t)));
+    const statusesPresent = new Set(payload.bills.map((b) => statusBucket(b)));
+    populateSelect("f-status", STATUS_BUCKETS.filter((s) => statusesPresent.has(s)));
 
     if (filtersWired) return;
+    // Reflect the default status bucket ("Active") in the dropdown on first load.
+    document.getElementById("f-status").value = state.status;
     filtersWired = true;
     document.getElementById("f-type").addEventListener("change", (e) => {
       state.type = e.target.value;
@@ -351,8 +368,8 @@
       } else if (state.onlyClassified && (!b.subjects || b.subjects.length === 0)) {
         return false;
       }
-      if (state.type && b.bill_type !== state.type) return false;
-      if (state.status && normalizeStatus(b).label !== state.status) return false;
+      if (state.type && typeBucket(b.bill_type) !== state.type) return false;
+      if (state.status && statusBucket(b) !== state.status) return false;
       if (state.search) {
         const hay = [b.bill_number, b.title, b.introducer, b.raw_subject]
           .filter(Boolean)
