@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-05-31T20:37:55+00:00",
+  "generated_at": "2026-06-01T16:17:43+00:00",
   "last_scrape": {
-    "id": 47,
-    "started_at": "2026-05-31T20:36:25+00:00",
-    "completed_at": "2026-05-31T20:37:55+00:00",
-    "council": "hawaii",
-    "bills_seen": 28,
+    "id": 51,
+    "started_at": "2026-06-01T16:16:55+00:00",
+    "completed_at": "2026-06-01T16:17:42+00:00",
+    "council": "kauai",
+    "bills_seen": 16,
     "bills_new": 0,
-    "bills_updated": 28,
+    "bills_updated": 3,
     "errors": null
   },
   "subjects": [
@@ -45,19 +45,19 @@
       "id": 257,
       "council": "kauai",
       "bill_number": "Bill 2989",
-      "title": "C 2026-128 Communication (05/20/2026) from the Hawai‘i State Association of Counties (HSAC) President, transmitting for Council consideration, HSAC’s Fiscal Year 2027 Proposed Operating Budget, pursuant to Section 18 of the Bylaws of the Ha",
+      "title": "\"A Bill For An Ordinance Relating To Capital Improvements And Financing Thereof For The Fiscal Year July 1, 2026 to June 30, 2027\"; and",
       "bill_type": "Bill",
       "introducer": null,
       "introduced_date": null,
       "status": null,
-      "last_action": "On agenda 2026-06-03",
-      "last_action_date": "2026-06-03",
-      "url": "https://kauai.granicus.com/AgendaViewer.php?view_id=2&event_id=1587",
-      "raw_subject": "C 2026-128 Communication (05/20/2026) from the Hawai‘i State Association of Counties (HSAC) President, transmitting for Council consideration, HSAC’s Fiscal Year 2027 Proposed Operating Budget, pursuant to Section 18 of the Bylaws of the Ha",
+      "last_action": "On agenda 2026-04-07",
+      "last_action_date": "2026-04-07",
+      "url": "https://kauai.granicus.com/AgendaViewer.php?view_id=2&clip_id=3057",
+      "raw_subject": "\"A Bill For An Ordinance Relating To Capital Improvements And Financing Thereof For The Fiscal Year July 1, 2026 to June 30, 2027\"; and",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T20:42:51+00:00",
-      "last_updated": "2026-05-31T20:36:25+00:00"
+      "last_updated": "2026-06-01T16:17:42+00:00"
     },
     {
       "id": 258,
@@ -81,19 +81,19 @@
       "id": 259,
       "council": "kauai",
       "bill_number": "Bill 2988",
-      "title": "the Mayor’s Proposed Operating Budget for Fiscal Year 2026-2027 regarding the appropriation to the YWCA in the Office of the Prosecuting Attorney, Grant-In-Aid, as he holds a part-time accounting position at the YWCA. C 2026-118 Communicati",
+      "title": "\"A Bill For An Ordinance Relating To The Operating Budget And Financing Thereof For The Fiscal Year July 1, 2026 to June 30, 2027\";",
       "bill_type": "Bill",
       "introducer": null,
       "introduced_date": null,
       "status": null,
-      "last_action": "On agenda 2026-06-03",
-      "last_action_date": "2026-06-03",
-      "url": "https://kauai.granicus.com/AgendaViewer.php?view_id=2&event_id=1587",
-      "raw_subject": "the Mayor’s Proposed Operating Budget for Fiscal Year 2026-2027 regarding the appropriation to the YWCA in the Office of the Prosecuting Attorney, Grant-In-Aid, as he holds a part-time accounting position at the YWCA. C 2026-118 Communicati",
+      "last_action": "On agenda 2026-04-07",
+      "last_action_date": "2026-04-07",
+      "url": "https://kauai.granicus.com/AgendaViewer.php?view_id=2&clip_id=3057",
+      "raw_subject": "\"A Bill For An Ordinance Relating To The Operating Budget And Financing Thereof For The Fiscal Year July 1, 2026 to June 30, 2027\";",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T20:42:51+00:00",
-      "last_updated": "2026-05-31T20:36:25+00:00"
+      "last_updated": "2026-06-01T16:17:42+00:00"
     },
     {
       "id": 260,
@@ -103,17 +103,17 @@
       "bill_type": "Resolution",
       "introducer": null,
       "introduced_date": null,
-      "status": "In Committee",
-      "last_action": "On agenda 2026-06-03",
-      "last_action_date": "2026-06-03",
-      "url": "https://kauai.granicus.com/AgendaViewer.php?view_id=2&event_id=1587",
+      "status": null,
+      "last_action": "On agenda 2026-04-07",
+      "last_action_date": "2026-04-07",
+      "url": "https://kauai.granicus.com/AgendaViewer.php?view_id=2&clip_id=3057",
       "raw_subject": "\"Resolution Establishing The Real Property Tax Rates For The Fiscal Year July 1, 2026 to June 30, 2027 For The County of Kaua'i.\" MEETING INFORMATION: • This is an in-person meeting at multiple meeting sites connected by interactive confere",
       "subjects": [
         "tax"
       ],
       "classification_confidence": 0.038,
       "first_seen": "2026-05-30T20:42:51+00:00",
-      "last_updated": "2026-05-31T20:36:25+00:00"
+      "last_updated": "2026-06-01T16:17:42+00:00"
     },
     {
       "id": 261,
