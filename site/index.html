@@ -46,19 +46,22 @@
           <input id="f-search" type="search" placeholder="title, number, introducer…">
         </div>
         <div class="filter-group filter-check">
+          <label class="checkbox-inline"><input id="f-favorites" type="checkbox"> ★ Favorites only<span id="fav-count"></span></label>
           <label class="checkbox-inline"><input id="f-classified" type="checkbox" checked> Only classified bills</label>
+          <button id="copy-list" type="button" class="link-btn" title="Copy a link to your starred list">🔗 Copy link to my list</button>
         </div>
       </div>
     </section>
 
     <p id="result-count" class="result-count">Loading…</p>
     <p id="meta" class="meta"></p>
-    <p class="hint">Click any row to expand the full description.</p>
+    <p class="hint">Click any row to expand the full description. Star (★) bills to build a list, then bookmark this page — or use “Copy link to my list” — to reopen the same picks on any device.</p>
 
     <div class="table-wrap">
       <table id="results">
         <thead>
           <tr>
+            <th class="col-fav" aria-label="Favorite"></th>
             <th class="col-council">County</th>
             <th class="col-num">Number</th>
             <th class="col-type">Type</th>

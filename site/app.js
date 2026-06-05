@@ -50,6 +50,16 @@
     CD: "Conference Draft — reconciled between House and Senate",
   };
 
+  // Favorites are persisted client-side (localStorage) — no backend, so they
+  // live per-browser/device. Keyed by council|bill_number, which is stable
+  // across re-scrapes and DB rebuilds (unlike the numeric id).
+  const FAV_STORE = "tracker:favorites";
+  function loadFavSet() {
+    try { return new Set(JSON.parse(localStorage.getItem(FAV_STORE) || "[]")); }
+    catch { return new Set(); }
+  }
+  function favKey(b) { return b.council + "|" + b.bill_number; }
+
   const state = {
     bills: [],
     councils: new Set(),
@@ -59,7 +69,59 @@
     status: "Active",
     search: "",
     onlyClassified: true,
+    favorites: loadFavSet(),
+    favoritesOnly: false,
   };
+
+  function saveFavs() {
+    try { localStorage.setItem(FAV_STORE, JSON.stringify([...state.favorites])); }
+    catch { /* storage disabled/full — favorites just won't persist this session */ }
+  }
+  function toggleFav(b) {
+    const k = favKey(b);
+    if (state.favorites.has(k)) state.favorites.delete(k);
+    else state.favorites.add(k);
+    saveFavs();
+    syncListHash();
+    updateFavCount();
+  }
+  function updateFavCount() {
+    const el = document.getElementById("fav-count");
+    if (el) el.textContent = state.favorites.size ? ` (${state.favorites.size})` : "";
+  }
+  function favButtonHtml(b) {
+    const on = state.favorites.has(favKey(b));
+    return `<button class="fav-btn${on ? " is-fav" : ""}" type="button" aria-pressed="${on}" ` +
+      `title="${on ? "Remove from favorites" : "Save to favorites"}" ` +
+      `aria-label="${on ? "Remove bill from favorites" : "Save bill to favorites"}">${on ? "★" : "☆"}</button>`;
+  }
+
+  // Mirror the starred set (and the favorites-only view) into the URL hash, so
+  // bookmarking or copying the page link reopens the exact list anywhere — no
+  // backend. localStorage remains the everyday store; the hash is the portable
+  // copy that travels in a bookmark.
+  function syncListHash() {
+    let hash = "";
+    if (state.favorites.size) {
+      const payload = { f: [...state.favorites], o: state.favoritesOnly ? 1 : 0 };
+      hash = "#list=" + encodeURIComponent(JSON.stringify(payload));
+    }
+    history.replaceState(null, "", hash || location.pathname + location.search);
+  }
+  // On load, fold any list from the URL into the local favorites (union — never
+  // drops stars already saved on this device) and restore the favorites-only view.
+  function restoreListFromHash() {
+    const m = /[#&]list=([^&]+)/.exec(location.hash);
+    if (!m) return;
+    let payload;
+    try { payload = JSON.parse(decodeURIComponent(m[1])); } catch { return; }
+    let changed = false;
+    for (const k of payload.f || []) {
+      if (!state.favorites.has(k)) { state.favorites.add(k); changed = true; }
+    }
+    if (changed) saveFavs();
+    if (payload.o) state.favoritesOnly = true;
+  }
 
   // Bill types collapse into 3 plain buckets. Councils emit ~9 raw types, most
   // of them procedural noise a regular reader doesn't care about.
@@ -352,6 +414,31 @@
       state.onlyClassified = e.target.checked;
       applyFilters();
     });
+    document.getElementById("f-favorites").addEventListener("change", (e) => {
+      state.favoritesOnly = e.target.checked;
+      syncListHash();
+      applyFilters();
+    });
+    const copyBtn = document.getElementById("copy-list");
+    if (copyBtn) {
+      copyBtn.addEventListener("click", async () => {
+        syncListHash();
+        const restore = () => { copyBtn.textContent = "🔗 Copy link to my list"; };
+        if (!state.favorites.size) {
+          copyBtn.textContent = "Star some bills first";
+          setTimeout(restore, 1800);
+          return;
+        }
+        try {
+          await navigator.clipboard.writeText(location.href);
+          copyBtn.textContent = "✓ Link copied — bookmark it";
+        } catch {
+          copyBtn.textContent = "Copy the page URL from the address bar";
+        }
+        setTimeout(restore, 2200);
+      });
+    }
+    updateFavCount();
   }
 
   function filterBills() {
@@ -359,6 +446,7 @@
     const subjectAll = state.subjects.size === state.subjectUniverse;
     const yearAll = state.years.size === state.yearUniverse;
     return state.bills.filter((b) => {
+      if (state.favoritesOnly && !state.favorites.has(favKey(b))) return false;
       // "All" checked → no constraint on that dimension; otherwise the bill
       // must match a checked box (empty selection → nothing).
       if (!countyAll && !state.councils.has(b.council)) return false;
@@ -411,6 +499,7 @@
     tr.setAttribute("role", "button");
     tr.setAttribute("aria-expanded", "false");
     tr.innerHTML = `
+      <td class="col-fav">${favButtonHtml(b)}</td>
       <td class="col-council">${escapeHtml(council)}</td>
       <td class="col-num"><a class="bill-link" href="${escapeHtml(b.url)}" target="_blank" rel="noopener">${escapeHtml(b.bill_number)}</a></td>
       <td class="col-type">${escapeHtml(b.bill_type)}</td>
@@ -444,7 +533,7 @@
     if (lastAction) metaBits.push(`<span><span class="detail-label">Last action</span>${escapeHtml(lastAction)}</span>`);
     metaBits.push(`<span><a href="${escapeHtml(b.url)}" target="_blank" rel="noopener">View on council site ↗</a></span>`);
     parts.push(`<div class="detail-meta">${metaBits.join("")}</div>`);
-    detail.innerHTML = `<td colspan="6"><div class="detail-inner">${parts.join("")}</div></td>`;
+    detail.innerHTML = `<td colspan="7"><div class="detail-inner">${parts.join("")}</div></td>`;
 
     function toggle() {
       const open = tr.classList.toggle("open");
@@ -452,14 +541,28 @@
       tr.setAttribute("aria-expanded", open ? "true" : "false");
     }
     tr.addEventListener("click", (e) => {
-      if (e.target.closest("a")) return; // let the bill link open normally
+      if (e.target.closest("a") || e.target.closest(".fav-btn")) return;
       toggle();
     });
     tr.addEventListener("keydown", (e) => {
+      if (e.target.closest(".fav-btn")) return; // star handles its own keys
       if (e.key === "Enter" || e.key === " ") {
         e.preventDefault();
         toggle();
       }
+    });
+
+    // Star toggles the favorite without expanding the row.
+    const favBtn = tr.querySelector(".fav-btn");
+    favBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      toggleFav(b);
+      const on = state.favorites.has(favKey(b));
+      favBtn.classList.toggle("is-fav", on);
+      favBtn.setAttribute("aria-pressed", String(on));
+      favBtn.textContent = on ? "★" : "☆";
+      favBtn.title = on ? "Remove from favorites" : "Save to favorites";
+      if (state.favoritesOnly) applyFilters(); // drop it from the filtered view
     });
 
     return [tr, detail];
@@ -485,6 +588,10 @@
     state.bills = payload.bills;
     setMeta(payload);
     buildFilters(payload);
+    restoreListFromHash();
+    const favCb = document.getElementById("f-favorites");
+    if (favCb) favCb.checked = state.favoritesOnly;
+    updateFavCount();
     applyFilters();
   }
 

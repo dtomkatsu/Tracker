@@ -166,6 +166,23 @@ tbody .bill-row.open > td { background: var(--primary-bg); border-bottom-color: 
 .col-subj { width: 11rem; }
 .col-date, .col-action { width: 7rem; white-space: nowrap; }
 .col-status { width: 10rem; }
+.col-fav { width: 2rem; text-align: center; padding-left: 6px !important; padding-right: 0 !important; }
+.fav-btn {
+  background: none; border: none; cursor: pointer; padding: 2px 4px;
+  font-size: 18px; line-height: 1; color: var(--text-muted);
+  border-radius: 4px; transition: color .12s, transform .08s;
+}
+.fav-btn:hover { color: var(--accent); transform: scale(1.18); }
+.fav-btn.is-fav { color: #e6a700; }
+.fav-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+#fav-count { color: var(--text-muted); font-weight: 400; }
+.link-btn {
+  background: none; border: none; cursor: pointer; padding: 0;
+  font: inherit; font-size: 14px; color: var(--link);
+  text-decoration: underline; text-underline-offset: 2px;
+}
+.link-btn:hover { color: var(--primary-dark); }
+.link-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
 
 .bill-link { color: var(--link); text-decoration: none; font-weight: 700; }
 .bill-link:hover { text-decoration: underline; }
