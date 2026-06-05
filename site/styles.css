@@ -501,6 +501,18 @@ abbr.gloss {
 .glossary dl { display: grid; grid-template-columns: max-content 1fr; gap: 5px 16px; margin: 10px 0 0; font-size: 13.5px; }
 .glossary dt { font-weight: 700; color: var(--primary-dark); }
 .glossary dd { margin: 0; color: var(--text-muted); }
+.glossary details { margin-bottom: 4px; }
+.legend-body { font-size: 13.5px; color: var(--text); margin: 8px 0 4px; }
+.legend-body p { margin: 6px 0; }
+.legend-body .legend-note { color: var(--text-muted); }
+.legend-dots { list-style: none; margin: 8px 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 4px 16px; }
+.legend-dots li { display: flex; align-items: center; gap: 9px; color: var(--text); }
+.lg-dot { flex: none; width: 13px; height: 13px; border-radius: 50%; box-sizing: border-box; border: 2px solid var(--primary); background: #fff; }
+.lg-dot.done { background: var(--primary); }
+.lg-dot.current { background: #fff; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(58,119,16,.18); }
+.lg-dot.stalled { background: #e8a317; border-color: #b9810f; }
+.lg-dot.failed { background: #c0392b; border-color: #962d22; }
+.lg-dot.unknown { border-style: dashed; border-color: #b3b3ad; }
 
 footer {
   color: var(--text-muted);

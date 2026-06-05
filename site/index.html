@@ -6,6 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Track bills before Honolulu, Maui, Hawaii County, and Kauai councils — Tax, Transportation, Food Security, Affordable Housing.">
   <meta name="theme-color" content="#3a7710">
+  <link rel="canonical" href="https://dtomkatsu.github.io/Tracker/">
+  <!-- Social share preview (shown when a bookmarked/shared link is unfurled) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Hawaii County Legislative Tracker">
+  <meta property="og:title" content="Hawaii County Legislative Tracker">
+  <meta property="og:description" content="Track bills before Honolulu, Maui, Hawaii County, and Kauai councils — Tax, Transportation, Food Security, and Affordable Housing.">
+  <meta property="og:url" content="https://dtomkatsu.github.io/Tracker/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Hawaii County Legislative Tracker">
+  <meta name="twitter:description" content="Track Tax, Transportation, Food Security, and Affordable Housing bills before Hawaii's four county councils.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%233a7710'/%3E%3Ctext x='8' y='12' font-size='11' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'%3EH%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -93,6 +104,20 @@
 
   <section class="glossary">
     <details>
+      <summary>Reading the Progress column</summary>
+      <div class="legend-body">
+        <p>Each bill is placed on a 5-step track: <strong>Introduced → Committee → 1st reading → Final reading → Enacted.</strong></p>
+        <ul class="legend-dots">
+          <li><span class="lg-dot done"></span> Step reached / completed</li>
+          <li><span class="lg-dot current"></span> Current step (still active)</li>
+          <li><span class="lg-dot stalled"></span> Stalled — postponed, deferred, or held</li>
+          <li><span class="lg-dot failed"></span> Failed — defeated or withdrawn</li>
+          <li><span class="lg-dot unknown"></span> Status not yet reported</li>
+        </ul>
+        <p class="legend-note">The date below each track is the most recent action on that bill.</p>
+      </div>
+    </details>
+    <details>
       <summary>Glossary — common acronyms in council bills</summary>
       <dl id="glossary-list"></dl>
     </details>
@@ -100,9 +125,9 @@
 
   <footer>
     <p>
-      Data sources: Maui via the Legistar API, Honolulu via hnldoc.ehawaii.gov.
-      Hawaii County &amp; Kauai are hand-maintained pending a viable data source.
-      All bill data is public record.
+      Data sources: Maui via the Legistar API; Honolulu via hnldoc.ehawaii.gov;
+      Hawaii County &amp; Kauai parsed from their Granicus meeting agendas (Hawaii
+      County enriched with Laserfiche council records). All bill data is public record.
     </p>
     <p class="meta">
       Styled after the Hawaii Appleseed Center palette. Independent project —
