@@ -65,8 +65,8 @@
     councils: new Set(),
     subjects: new Set(),
     years: new Set(),
-    type: "",
-    status: "Active",
+    types: new Set(),
+    statuses: new Set(["Active"]),
     search: "",
     onlyClassified: true,
     favorites: loadFavSet(),
@@ -403,6 +403,8 @@
     for (const [id, n, total] of [
       ["cf-council-btn", state.councils.size, state.councilUniverse],
       ["cf-subject-btn", state.subjects.size, state.subjectUniverse],
+      ["cf-type-btn", state.types.size, state.typeUniverse],
+      ["cf-status-btn", state.statuses.size, state.statusUniverse],
     ]) {
       const btn = document.getElementById(id);
       if (!btn) continue;
@@ -422,16 +424,20 @@
     // Default to everything selected ("All" checked) on first load.
     // Years present in the data, newest first.
     const years = [...new Set(payload.bills.map(billYear).filter(Boolean))].sort().reverse();
+    const typesPresent = TYPE_BUCKETS.filter((t) => payload.bills.some((b) => typeBucket(b.bill_type) === t));
+    const statusesPresent = STATUS_BUCKETS.filter((s) => payload.bills.some((b) => statusBucket(b) === s));
     if (!filtersWired) {
       payload.councils.forEach((c) => state.councils.add(c));
       payload.subjects.forEach((s) => state.subjects.add(s));
-      // Default the Year filter to the most recent session only (currently
-      // 2026) instead of every year — the older years are still one click away.
+      typesPresent.forEach((t) => state.types.add(t)); // default: all types (no filter)
+      // statuses default to {Active} (state init); Year defaults to newest only.
       if (years.length) state.years.add(years[0]);
     }
     state.councilUniverse = payload.councils.length;
     state.subjectUniverse = payload.subjects.length;
     state.yearUniverse = years.length;
+    state.typeUniverse = typesPresent.length;
+    state.statusUniverse = statusesPresent.length;
 
     renderCheckGroup(
       "f-council",
@@ -449,23 +455,19 @@
       state.subjects,
       { pill: true }
     );
-    const typesPresent = new Set(payload.bills.map((b) => typeBucket(b.bill_type)));
-    populateSelect("f-type", TYPE_BUCKETS.filter((t) => typesPresent.has(t)));
-    const statusesPresent = new Set(payload.bills.map((b) => statusBucket(b)));
-    populateSelect("f-status", STATUS_BUCKETS.filter((s) => statusesPresent.has(s)));
+    renderCheckGroup(
+      "f-type",
+      typesPresent.map((t) => ({ value: t, label: t })),
+      state.types
+    );
+    renderCheckGroup(
+      "f-status",
+      statusesPresent.map((s) => ({ value: s, label: s })),
+      state.statuses
+    );
 
     if (filtersWired) return;
-    // Reflect the default status bucket ("Active") in the dropdown on first load.
-    document.getElementById("f-status").value = state.status;
     filtersWired = true;
-    document.getElementById("f-type").addEventListener("change", (e) => {
-      state.type = e.target.value;
-      applyFilters();
-    });
-    document.getElementById("f-status").addEventListener("change", (e) => {
-      state.status = e.target.value;
-      applyFilters();
-    });
     document.getElementById("f-search").addEventListener("input", (e) => {
       state.search = e.target.value.toLowerCase().trim();
       applyFilters();
@@ -500,6 +502,8 @@
     }
     wireColumnFilter("cf-council-btn", "cf-council-pop");
     wireColumnFilter("cf-subject-btn", "cf-subject-pop");
+    wireColumnFilter("cf-type-btn", "cf-type-pop");
+    wireColumnFilter("cf-status-btn", "cf-status-pop");
     document.addEventListener("click", closeColPop);
     document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeColPop(); });
     window.addEventListener("scroll", closeColPop, true);
@@ -511,6 +515,8 @@
     const countyAll = state.councils.size === state.councilUniverse;
     const subjectAll = state.subjects.size === state.subjectUniverse;
     const yearAll = state.years.size === state.yearUniverse;
+    const typeAll = state.types.size === state.typeUniverse;
+    const statusAll = state.statuses.size === state.statusUniverse;
     return state.bills.filter((b) => {
       if (state.favoritesOnly && !state.favorites.has(favKey(b))) return false;
       // "All" checked → no constraint on that dimension; otherwise the bill
@@ -522,8 +528,8 @@
       } else if (state.onlyClassified && (!b.subjects || b.subjects.length === 0)) {
         return false;
       }
-      if (state.type && typeBucket(b.bill_type) !== state.type) return false;
-      if (state.status && statusBucket(b) !== state.status) return false;
+      if (!typeAll && !state.types.has(typeBucket(b.bill_type))) return false;
+      if (!statusAll && !state.statuses.has(statusBucket(b))) return false;
       if (state.search) {
         const hay = [b.bill_number, b.title, b.introducer, b.raw_subject]
           .filter(Boolean)

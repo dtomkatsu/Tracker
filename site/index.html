@@ -25,14 +25,6 @@
         <div id="f-year" class="chips"></div>
       </div>
       <div class="filter-row">
-        <div class="filter-group">
-          <label class="group-label" for="f-type">Type</label>
-          <select id="f-type"><option value="">All</option></select>
-        </div>
-        <div class="filter-group">
-          <label class="group-label" for="f-status">Status</label>
-          <select id="f-status"><option value="">All</option></select>
-        </div>
         <div class="filter-group filter-search">
           <label class="group-label" for="f-search">Search</label>
           <input id="f-search" type="search" placeholder="title, number, introducer…">
@@ -67,7 +59,14 @@
               </div>
             </th>
             <th class="col-num">Number</th>
-            <th class="col-type">Type</th>
+            <th class="col-type col-filter">
+              <button type="button" class="col-filter-btn" id="cf-type-btn" aria-haspopup="true" aria-expanded="false">
+                Type <span class="cf-caret" aria-hidden="true">▾</span><span class="cf-badge" hidden></span>
+              </button>
+              <div class="col-filter-pop" id="cf-type-pop" hidden role="group" aria-label="Filter by type">
+                <div id="f-type" class="chips"></div>
+              </div>
+            </th>
             <th class="col-title">Title</th>
             <th class="col-subj col-filter">
               <button type="button" class="col-filter-btn" id="cf-subject-btn" aria-haspopup="true" aria-expanded="false">
@@ -77,7 +76,14 @@
                 <div id="f-subject" class="chips"></div>
               </div>
             </th>
-            <th class="col-status">Progress</th>
+            <th class="col-status col-filter">
+              <button type="button" class="col-filter-btn" id="cf-status-btn" aria-haspopup="true" aria-expanded="false">
+                Progress <span class="cf-caret" aria-hidden="true">▾</span><span class="cf-badge" hidden></span>
+              </button>
+              <div class="col-filter-pop" id="cf-status-pop" hidden role="group" aria-label="Filter by status">
+                <div id="f-status" class="chips"></div>
+              </div>
+            </th>
           </tr>
         </thead>
         <tbody></tbody>
