@@ -78,6 +78,7 @@ main { padding-top: 20px; }
 }
 .filter-group { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
 .filter-check { justify-content: flex-end; }
+.filters-mobile { display: none; }   /* shown only when the table collapses to cards */
 .group-label {
   font-size: 12px;
   font-weight: 700;
@@ -567,4 +568,64 @@ footer a { color: var(--link); font-weight: 600; }
   .glossary dl { grid-template-columns: 1fr; gap: 2px 0; }
   .glossary dd { margin-bottom: 8px; }
   .detail-summary { max-width: none; }
+}
+
+/* Below this width the table can't fit, so collapse each bill into a card and
+   surface the County/Type/Subject/Status filters in the card (the column-header
+   popovers aren't reachable once the header is hidden). */
+@media (max-width: 680px) {
+  .filters-mobile { display: flex; flex-direction: column; gap: 14px; }
+
+  table { min-width: 0; }
+  thead { display: none; }
+  table, tbody, tr, td { display: block; }
+  .detail-row[hidden] { display: none; }   /* author 'tr{display:block}' would otherwise override [hidden] */
+  .table-wrap { overflow-x: visible; border: none; box-shadow: none; background: none; }
+
+  tbody .bill-row {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 12px;
+    padding: 12px 14px 12px;
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius);
+    background: var(--paper);
+    box-shadow: var(--shadow);
+  }
+  tbody .bill-row > td { padding: 0; border: none; }
+  tbody .bill-row:hover > td, tbody .bill-row.open > td { background: none; }
+
+  .bill-row td[data-label]::before {
+    content: attr(data-label);
+    display: inline-block;
+    min-width: 80px;
+    margin-right: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    vertical-align: top;
+  }
+
+  /* Star to the top-right corner of the card */
+  .bill-row .col-fav { position: absolute; top: 8px; right: 8px; padding: 0; }
+
+  /* Number + Title lead the card, unlabeled */
+  .bill-row .col-num { order: -2; padding-right: 32px; }
+  .bill-row .col-num::before { content: none; }
+  .bill-row .col-num .bill-link { font-size: 15px; }
+  .bill-row .col-title { order: -1; padding-right: 32px; }
+  .bill-row .col-title::before { content: none; }
+  .bill-row .col-title .caret { display: none; }
+  .bill-row .col-title .title-preview { padding-left: 0; }
+
+  .bill-row .col-status .stepper { max-width: 280px; margin-top: 4px; }
+  .bill-row .col-status .stage-label,
+  .bill-row .col-status .status-date { display: inline-block; }
+
+  .detail-row { margin: -6px 0 12px; }
+  .detail-inner { padding: 6px 14px 14px; }
 }

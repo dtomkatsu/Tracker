@@ -35,6 +35,14 @@
         <span class="group-label">Year</span>
         <div id="f-year" class="chips"></div>
       </div>
+      <!-- County/Type/Subject/Status live in the table column headers on desktop;
+           on mobile (cards) those headers are hidden, so mirror them here. -->
+      <div class="filters-mobile">
+        <div class="filter-group filter-wide"><span class="group-label">County</span><div id="mf-council" class="chips"></div></div>
+        <div class="filter-group filter-wide"><span class="group-label">Type</span><div id="mf-type" class="chips"></div></div>
+        <div class="filter-group filter-wide"><span class="group-label">Subject</span><div id="mf-subject" class="chips"></div></div>
+        <div class="filter-group filter-wide"><span class="group-label">Status</span><div id="mf-status" class="chips"></div></div>
+      </div>
       <div class="filter-row">
         <div class="filter-group filter-search">
           <label class="group-label" for="f-search">Search</label>

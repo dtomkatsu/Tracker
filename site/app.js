@@ -439,11 +439,20 @@
   function renderFilterGroups() {
     const it = state._items;
     if (!it) return;
-    renderCheckGroup("f-council", it.council, state.councils);
-    renderCheckGroup("f-year", it.year, state.years);
-    renderCheckGroup("f-subject", it.subject, state.subjects, { pill: true });
-    renderCheckGroup("f-type", it.type, state.types);
-    renderCheckGroup("f-status", it.status, state.statuses);
+    // Desktop renders into the column-header popovers (f-*); mobile mirrors the
+    // same groups into the always-visible filter card (mf-*), since the header
+    // popovers aren't reachable once the table collapses to cards.
+    const groups = [
+      ["council", it.council, state.councils, undefined],
+      ["year", it.year, state.years, undefined],
+      ["subject", it.subject, state.subjects, { pill: true }],
+      ["type", it.type, state.types, undefined],
+      ["status", it.status, state.statuses, undefined],
+    ];
+    for (const [name, items, set, opts] of groups) {
+      if (document.getElementById("f-" + name)) renderCheckGroup("f-" + name, items, set, opts);
+      if (document.getElementById("mf-" + name)) renderCheckGroup("mf-" + name, items, set, opts);
+    }
   }
   function setAll(set, items) {
     set.clear();
@@ -676,15 +685,15 @@
     tr.setAttribute("aria-expanded", "false");
     tr.innerHTML = `
       <td class="col-fav">${favButtonHtml(b)}</td>
-      <td class="col-council">${escapeHtml(council)}</td>
-      <td class="col-num"><a class="bill-link" href="${escapeHtml(b.url)}" target="_blank" rel="noopener">${escapeHtml(b.bill_number)}</a></td>
-      <td class="col-type">${escapeHtml(b.bill_type)}</td>
-      <td class="col-title">
+      <td class="col-council" data-label="County">${escapeHtml(council)}</td>
+      <td class="col-num" data-label="Number"><a class="bill-link" href="${escapeHtml(b.url)}" target="_blank" rel="noopener">${escapeHtml(b.bill_number)}</a></td>
+      <td class="col-type" data-label="Type">${escapeHtml(b.bill_type)}</td>
+      <td class="col-title" data-label="Title">
         <div class="title-line"><span class="caret" aria-hidden="true">▸</span><span class="title-text">${annotate(head || fullTitle || "")}</span></div>
         ${sub ? `<div class="title-preview">${annotate(sub)}</div>` : ""}
       </td>
-      <td class="col-subj">${pills || '<span class="muted">—</span>'}</td>
-      <td class="col-status" title="${escapeHtml(b.last_action || b.status || "")}">
+      <td class="col-subj" data-label="Subjects">${pills || '<span class="muted">—</span>'}</td>
+      <td class="col-status" data-label="Progress" title="${escapeHtml(b.last_action || b.status || "")}">
         ${renderStepper(prog, false)}
         <div class="stage-label">${prog.label}</div>
         ${b.last_action_date ? `<div class="status-date">${escapeHtml(b.last_action_date)}</div>` : ""}
