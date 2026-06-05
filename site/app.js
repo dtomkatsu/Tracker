@@ -275,9 +275,15 @@
 
   function setMeta(payload) {
     const ts = payload.last_scrape?.completed_at || payload.generated_at;
-    const when = ts ? new Date(ts).toLocaleString() : "—";
-    document.getElementById("meta").textContent =
-      `Data current as of ${when} (${relTime(ts)}) · updates Mon/Wed/Fri`;
+    const exact = ts ? new Date(ts).toLocaleString() : "—";
+    const rel = ts ? relTime(ts) : exact;
+    const el = document.getElementById("meta");
+    el.innerHTML =
+      `<span class="live-dot" aria-hidden="true"></span>` +
+      `<span>Updated ${escapeHtml(rel)}</span>` +
+      `<span class="meta-sep" aria-hidden="true">·</span>` +
+      `<span>refreshes Mon, Wed &amp; Fri</span>`;
+    el.title = `Data current as of ${exact}`;
   }
 
   function buildGlossaryPanel() {
