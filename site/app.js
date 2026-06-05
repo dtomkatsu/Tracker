@@ -71,7 +71,23 @@
     onlyClassified: true,
     favorites: loadFavSet(),
     favoritesOnly: false,
+    sort: "recent",
   };
+
+  // Sort the filtered list. "recent"/"oldest" key off the latest action date
+  // (falling back to introduced / first-seen); "number" is a natural sort.
+  function sortBills(arr) {
+    if (state.sort === "number") {
+      return arr.slice().sort((a, b) =>
+        (a.bill_number || "").localeCompare(b.bill_number || "", undefined, { numeric: true }));
+    }
+    const dir = state.sort === "oldest" ? 1 : -1;
+    const key = (b) => b.last_action_date || b.introduced_date || b.first_seen || "";
+    return arr.slice().sort((a, b) => {
+      const ka = key(a), kb = key(b);
+      return ka === kb ? 0 : (ka < kb ? -dir : dir);
+    });
+  }
 
   function saveFavs() {
     try { localStorage.setItem(FAV_STORE, JSON.stringify([...state.favorites])); }
@@ -549,6 +565,11 @@
       state.search = e.target.value.toLowerCase().trim();
       applyFilters();
     });
+    const sortSel = document.getElementById("f-sort");
+    if (sortSel) sortSel.addEventListener("change", (e) => {
+      state.sort = e.target.value;
+      applyFilters();
+    });
     document.getElementById("f-classified").addEventListener("change", (e) => {
       state.onlyClassified = e.target.checked;
       applyFilters();
@@ -724,7 +745,7 @@
   }
 
   function applyFilters() {
-    const filtered = filterBills();
+    const filtered = sortBills(filterBills());
     updateColumnFilterIndicators();
     renderActiveFilters();
     const tbody = document.querySelector("#results tbody");
