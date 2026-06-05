@@ -418,6 +418,101 @@
     }
   }
 
+  // Render all five checkbox groups from the stashed item lists + current Sets.
+  // Used on load and after a chip removal / reset re-syncs the Sets.
+  function renderFilterGroups() {
+    const it = state._items;
+    if (!it) return;
+    renderCheckGroup("f-council", it.council, state.councils);
+    renderCheckGroup("f-year", it.year, state.years);
+    renderCheckGroup("f-subject", it.subject, state.subjects, { pill: true });
+    renderCheckGroup("f-type", it.type, state.types);
+    renderCheckGroup("f-status", it.status, state.statuses);
+  }
+  function setAll(set, items) {
+    set.clear();
+    (items || []).forEach((x) => set.add(x.value));
+  }
+
+  // Removable chips summarizing the applied (non-default) filters, with Reset all.
+  function renderActiveFilters() {
+    const host = document.getElementById("active-filters");
+    if (!host) return;
+    const it = state._items || {};
+    const labelOf = (arr, v) => (arr?.find((x) => x.value === v)?.label) ?? v;
+    const chips = [];
+    const dimChip = (dim, set, items, name) => {
+      if (!items || set.size === items.length) return; // "all" → no chip
+      const text = set.size === 1 ? `${name}: ${labelOf(items, [...set][0])}`
+        : set.size === 0 ? `${name}: none` : `${name}: ${set.size}`;
+      chips.push({ dim, text });
+    };
+    dimChip("council", state.councils, it.council, "County");
+    dimChip("type", state.types, it.type, "Type");
+    dimChip("subject", state.subjects, it.subject, "Subject");
+    dimChip("status", state.statuses, it.status, "Status");
+    dimChip("year", state.years, it.year, "Year");
+    if (state.favoritesOnly) chips.push({ dim: "fav", text: "★ Favorites" });
+    if (state.search) chips.push({ dim: "search", text: `Search: “${state.search}”` });
+
+    host.innerHTML = "";
+    if (!chips.length) { host.hidden = true; return; }
+    host.hidden = false;
+    const lbl = document.createElement("span");
+    lbl.className = "af-label";
+    lbl.textContent = "Filters:";
+    host.appendChild(lbl);
+    for (const c of chips) {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "af-chip";
+      b.dataset.dim = c.dim;
+      b.setAttribute("aria-label", `Remove filter ${c.text}`);
+      b.innerHTML = `${escapeHtml(c.text)} <span class="af-x" aria-hidden="true">✕</span>`;
+      host.appendChild(b);
+    }
+    const reset = document.createElement("button");
+    reset.type = "button";
+    reset.className = "af-reset";
+    reset.textContent = "Reset all";
+    host.appendChild(reset);
+  }
+  function clearFilterDim(dim) {
+    const it = state._items || {};
+    if (dim === "council") setAll(state.councils, it.council);
+    else if (dim === "type") setAll(state.types, it.type);
+    else if (dim === "subject") setAll(state.subjects, it.subject);
+    else if (dim === "status") setAll(state.statuses, it.status);
+    else if (dim === "year") setAll(state.years, it.year);
+    else if (dim === "fav") {
+      state.favoritesOnly = false;
+      const cb = document.getElementById("f-favorites"); if (cb) cb.checked = false;
+      syncListHash();
+    } else if (dim === "search") {
+      state.search = "";
+      const s = document.getElementById("f-search"); if (s) s.value = "";
+    }
+    renderFilterGroups();
+    applyFilters();
+  }
+  function resetAllFilters() {
+    const it = state._items || {};
+    setAll(state.councils, it.council);
+    setAll(state.subjects, it.subject);
+    setAll(state.types, it.type);
+    state.statuses.clear(); state.statuses.add("Active");
+    state.years.clear(); if (it.year && it.year[0]) state.years.add(it.year[0].value);
+    state.search = "";
+    const s = document.getElementById("f-search"); if (s) s.value = "";
+    state.favoritesOnly = false;
+    const cb = document.getElementById("f-favorites"); if (cb) cb.checked = false;
+    state.onlyClassified = true;
+    const cc = document.getElementById("f-classified"); if (cc) cc.checked = true;
+    syncListHash();
+    renderFilterGroups();
+    applyFilters();
+  }
+
   let filtersWired = false;
 
   function buildFilters(payload) {
@@ -439,32 +534,14 @@
     state.typeUniverse = typesPresent.length;
     state.statusUniverse = statusesPresent.length;
 
-    renderCheckGroup(
-      "f-council",
-      payload.councils.map((c) => ({ value: c, label: COUNCIL_LABEL[c] || c })),
-      state.councils
-    );
-    renderCheckGroup(
-      "f-year",
-      years.map((y) => ({ value: y, label: y })),
-      state.years
-    );
-    renderCheckGroup(
-      "f-subject",
-      payload.subjects.map((s) => ({ value: s, label: SUBJECT_LABEL[s] || s })),
-      state.subjects,
-      { pill: true }
-    );
-    renderCheckGroup(
-      "f-type",
-      typesPresent.map((t) => ({ value: t, label: t })),
-      state.types
-    );
-    renderCheckGroup(
-      "f-status",
-      statusesPresent.map((s) => ({ value: s, label: s })),
-      state.statuses
-    );
+    state._items = {
+      council: payload.councils.map((c) => ({ value: c, label: COUNCIL_LABEL[c] || c })),
+      year: years.map((y) => ({ value: y, label: y })),
+      subject: payload.subjects.map((s) => ({ value: s, label: SUBJECT_LABEL[s] || s })),
+      type: typesPresent.map((t) => ({ value: t, label: t })),
+      status: statusesPresent.map((s) => ({ value: s, label: s })),
+    };
+    renderFilterGroups();
 
     if (filtersWired) return;
     filtersWired = true;
@@ -504,6 +581,12 @@
     wireColumnFilter("cf-subject-btn", "cf-subject-pop");
     wireColumnFilter("cf-type-btn", "cf-type-pop");
     wireColumnFilter("cf-status-btn", "cf-status-pop");
+    const af = document.getElementById("active-filters");
+    if (af) af.addEventListener("click", (e) => {
+      if (e.target.closest(".af-reset")) return resetAllFilters();
+      const chip = e.target.closest(".af-chip");
+      if (chip) clearFilterDim(chip.dataset.dim);
+    });
     document.addEventListener("click", closeColPop);
     document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeColPop(); });
     window.addEventListener("scroll", closeColPop, true);
@@ -643,15 +726,24 @@
   function applyFilters() {
     const filtered = filterBills();
     updateColumnFilterIndicators();
+    renderActiveFilters();
     const tbody = document.querySelector("#results tbody");
     tbody.innerHTML = "";
-    const frag = document.createDocumentFragment();
-    for (const b of filtered.slice(0, 1000)) {
-      const [row, detail] = renderRows(b);
-      frag.appendChild(row);
-      frag.appendChild(detail);
+    if (!filtered.length) {
+      const tr = document.createElement("tr");
+      tr.innerHTML = `<td colspan="7" class="empty-state">No bills match your filters. ` +
+        `<button type="button" id="empty-reset" class="link-btn">Reset all filters</button></td>`;
+      tbody.appendChild(tr);
+      tbody.querySelector("#empty-reset").addEventListener("click", resetAllFilters);
+    } else {
+      const frag = document.createDocumentFragment();
+      for (const b of filtered.slice(0, 1000)) {
+        const [row, detail] = renderRows(b);
+        frag.appendChild(row);
+        frag.appendChild(detail);
+      }
+      tbody.appendChild(frag);
     }
-    tbody.appendChild(frag);
     document.getElementById("result-count").textContent =
       `${filtered.length} bill${filtered.length === 1 ? "" : "s"}` +
       (filtered.length > 1000 ? " (showing first 1000)" : "");
