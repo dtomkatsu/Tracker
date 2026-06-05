@@ -46,7 +46,10 @@
       <div class="filter-row">
         <div class="filter-group filter-search">
           <label class="group-label" for="f-search">Search</label>
-          <input id="f-search" type="search" placeholder="title, number, introducer…">
+          <div class="search-wrap">
+            <input id="f-search" type="search" placeholder="title, number, introducer…">
+            <button type="button" id="f-search-clear" class="search-clear" aria-label="Clear search" hidden>✕</button>
+          </div>
         </div>
         <div class="filter-group filter-check">
           <label class="checkbox-inline"><input id="f-favorites" type="checkbox"> ★ Favorites only<span id="fav-count"></span></label>

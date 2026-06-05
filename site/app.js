@@ -382,11 +382,13 @@
   // the same renderCheckGroup() checkbox group that used to sit in the filter
   // card — just rendered into a popover anchored under the column header.
   let openColPop = null;
-  function closeColPop() {
+  function closeColPop(restoreFocus) {
     if (!openColPop) return;
+    const btn = openColPop.btn;
     openColPop.pop.hidden = true;
-    openColPop.btn.setAttribute("aria-expanded", "false");
+    btn.setAttribute("aria-expanded", "false");
     openColPop = null;
+    if (restoreFocus) btn.focus();
   }
   function positionColPop(btn, pop) {
     const r = btn.getBoundingClientRect();
@@ -410,9 +412,16 @@
         btn.setAttribute("aria-expanded", "true");
         openColPop = { btn, pop };
         positionColPop(btn, pop);
+        pop.querySelector("input")?.focus(); // a11y: move focus into the menu
       }
     });
     pop.addEventListener("click", (e) => e.stopPropagation());
+    // a11y: tabbing (or clicking) out of the menu closes it
+    pop.addEventListener("focusout", (e) => {
+      if (e.relatedTarget && e.relatedTarget !== btn && !pop.contains(e.relatedTarget)) {
+        closeColPop(false);
+      }
+    });
   }
   // Reflect an applied (non-"All") filter on the header: highlight + a count badge.
   function updateColumnFilterIndicators() {
@@ -516,6 +525,7 @@
     } else if (dim === "search") {
       state.search = "";
       const s = document.getElementById("f-search"); if (s) s.value = "";
+    const sc = document.getElementById("f-search-clear"); if (sc) sc.hidden = true;
     }
     renderFilterGroups();
     applyFilters();
@@ -529,6 +539,7 @@
     state.years.clear(); if (it.year && it.year[0]) state.years.add(it.year[0].value);
     state.search = "";
     const s = document.getElementById("f-search"); if (s) s.value = "";
+    const sc = document.getElementById("f-search-clear"); if (sc) sc.hidden = true;
     state.favoritesOnly = false;
     const cb = document.getElementById("f-favorites"); if (cb) cb.checked = false;
     state.onlyClassified = true;
@@ -570,9 +581,19 @@
 
     if (filtersWired) return;
     filtersWired = true;
-    document.getElementById("f-search").addEventListener("input", (e) => {
+    const searchInput = document.getElementById("f-search");
+    const searchClear = document.getElementById("f-search-clear");
+    searchInput.addEventListener("input", (e) => {
       state.search = e.target.value.toLowerCase().trim();
+      if (searchClear) searchClear.hidden = !e.target.value;
       applyFilters();
+    });
+    if (searchClear) searchClear.addEventListener("click", () => {
+      searchInput.value = "";
+      state.search = "";
+      searchClear.hidden = true;
+      applyFilters();
+      searchInput.focus();
     });
     const sortSel = document.getElementById("f-sort");
     if (sortSel) sortSel.addEventListener("change", (e) => {
@@ -617,10 +638,10 @@
       const chip = e.target.closest(".af-chip");
       if (chip) clearFilterDim(chip.dataset.dim);
     });
-    document.addEventListener("click", closeColPop);
-    document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeColPop(); });
-    window.addEventListener("scroll", closeColPop, true);
-    window.addEventListener("resize", closeColPop);
+    document.addEventListener("click", () => closeColPop(false));
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeColPop(true); });
+    window.addEventListener("scroll", () => closeColPop(false), true);
+    window.addEventListener("resize", () => closeColPop(false));
     updateFavCount();
   }
 
@@ -790,6 +811,16 @@
     applyFilters();
   }
 
+  // Placeholder shimmer rows shown while bills.json downloads (1.7MB — visible
+  // on a slow phone connection). Replaced by the real rows on first ingest.
+  function renderSkeleton(n) {
+    const tbody = document.querySelector("#results tbody");
+    if (!tbody) return;
+    tbody.innerHTML = Array.from({ length: n || 8 }).map(() =>
+      `<tr class="skeleton-row"><td colspan="7"><div class="sk sk-title"></div><div class="sk sk-line"></div></td></tr>`
+    ).join("");
+  }
+
   async function load() {
     try {
       const r = await fetch("bills.json?t=" + Date.now(), { cache: "no-store" });
@@ -797,6 +828,7 @@
       ingest(await r.json());
     } catch (e) {
       if (!state.bills.length) {
+        document.querySelector("#results tbody").innerHTML = "";
         document.getElementById("result-count").textContent =
           "Failed to load bills.json: " + e.message;
       }
@@ -804,6 +836,7 @@
   }
 
   buildGlossaryPanel();
+  renderSkeleton();
   load();
 
   // Scrape runs Mon/Wed/Fri, so a daily client poll is plenty; also re-fetch
