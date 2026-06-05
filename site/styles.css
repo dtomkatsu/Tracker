@@ -289,14 +289,15 @@ tbody .bill-row.open > td { background: var(--primary-bg); border-bottom-color: 
 /* Subject pills */
 .subject-pill {
   display: inline-block;
-  padding: 2px 9px;
+  padding: 3px 10px;
   margin: 0 3px 3px 0;
-  border-radius: 12px;
-  font-size: 11.5px;
+  border-radius: 999px;
+  font-size: 12px;
   font-weight: 700;
-  letter-spacing: .02em;
+  letter-spacing: .01em;
   color: #fff;
   white-space: nowrap;
+  box-shadow: 0 1px 1.5px rgba(19, 52, 59, .12);
 }
 .subject-pill.tax { background: var(--tax); }
 .subject-pill.transportation { background: var(--transportation); }
@@ -331,6 +332,87 @@ tbody .bill-row.open > td { background: var(--primary-bg); border-bottom-color: 
   font-weight: 600;
   white-space: nowrap;
 }
+
+/* Column-header filters (County, Subjects) — click the header to open a
+   popover with the same checkbox group that used to live in the filter card. */
+th.col-filter { padding: 0; }
+.col-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  padding: 11px 12px;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--primary-dark);
+  background: none;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.col-filter-btn:hover { background: var(--primary-bg-hover); }
+.col-filter-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+.col-filter-btn .cf-caret { font-size: 9px; opacity: .65; transition: transform .12s; }
+.col-filter-btn[aria-expanded="true"] .cf-caret { transform: rotate(180deg); }
+.col-filter-btn.is-active { color: var(--primary); }
+.cf-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 17px;
+  height: 17px;
+  padding: 0 4px;
+  border-radius: 999px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.cf-badge[hidden] { display: none; }
+
+.col-filter-pop {
+  position: fixed;
+  z-index: 50;
+  min-width: 190px;
+  max-width: 280px;
+  padding: 7px;
+  background: var(--paper);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow);
+  /* neutralize the inherited uppercase/letter-spacing from the table header */
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: normal;
+  text-transform: none;
+  color: var(--text);
+}
+.col-filter-pop .chips { display: flex; flex-direction: column; gap: 1px; }
+.col-filter-pop .chk-all,
+.col-filter-pop .county-check,
+.col-filter-pop .subj-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 6px 8px;
+  border-radius: 6px;
+}
+.col-filter-pop .chk-all:hover,
+.col-filter-pop .county-check:hover,
+.col-filter-pop .subj-check:hover { background: var(--primary-bg); }
+.col-filter-pop .chk-all {
+  font-weight: 700;
+  border-radius: 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 4px;
+  padding-bottom: 8px;
+}
+.col-filter-pop .chk-all::after { display: none; }
 
 /* Progress stepper — bill's position on the 5-step legislative track.
    --done = completed steps, --pending = not-yet-reached. */
@@ -378,7 +460,17 @@ tbody .bill-row.open > td { background: var(--primary-bg); border-bottom-color: 
 .stepper .step.current-unknown .dot { border-color: #b3b3ad; border-style: dashed; }
 
 .stage-label { margin-top: 6px; font-size: 13px; font-weight: 600; color: var(--text); white-space: nowrap; }
-.status-date { margin-top: 2px; font-size: 12px; color: var(--text-muted); white-space: nowrap; }
+.status-date {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 2px 8px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--primary-dark);
+  background: var(--primary-bg);
+  border-radius: 10px;
+  white-space: nowrap;
+}
 
 /* Labeled stepper in the expanded detail row */
 .detail-progress { margin: 2px 0 12px; }

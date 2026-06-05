@@ -362,6 +362,60 @@
     if (values.includes(current)) sel.value = current;
   }
 
+  // Column-header filter popovers (County, Subjects). The menu inside each is
+  // the same renderCheckGroup() checkbox group that used to sit in the filter
+  // card — just rendered into a popover anchored under the column header.
+  let openColPop = null;
+  function closeColPop() {
+    if (!openColPop) return;
+    openColPop.pop.hidden = true;
+    openColPop.btn.setAttribute("aria-expanded", "false");
+    openColPop = null;
+  }
+  function positionColPop(btn, pop) {
+    const r = btn.getBoundingClientRect();
+    pop.style.top = Math.round(r.bottom + 4) + "px";
+    let left = r.left;
+    if (left + pop.offsetWidth > window.innerWidth - 8) {
+      left = window.innerWidth - pop.offsetWidth - 8;
+    }
+    pop.style.left = Math.max(8, Math.round(left)) + "px";
+  }
+  function wireColumnFilter(btnId, popId) {
+    const btn = document.getElementById(btnId);
+    const pop = document.getElementById(popId);
+    if (!btn || !pop) return;
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const wasOpen = openColPop && openColPop.pop === pop;
+      closeColPop();
+      if (!wasOpen) {
+        pop.hidden = false;
+        btn.setAttribute("aria-expanded", "true");
+        openColPop = { btn, pop };
+        positionColPop(btn, pop);
+      }
+    });
+    pop.addEventListener("click", (e) => e.stopPropagation());
+  }
+  // Reflect an applied (non-"All") filter on the header: highlight + a count badge.
+  function updateColumnFilterIndicators() {
+    for (const [id, n, total] of [
+      ["cf-council-btn", state.councils.size, state.councilUniverse],
+      ["cf-subject-btn", state.subjects.size, state.subjectUniverse],
+    ]) {
+      const btn = document.getElementById(id);
+      if (!btn) continue;
+      const active = !!(total && n < total);
+      btn.classList.toggle("is-active", active);
+      const badge = btn.querySelector(".cf-badge");
+      if (badge) {
+        badge.hidden = !active;
+        badge.textContent = active ? String(n) : "";
+      }
+    }
+  }
+
   let filtersWired = false;
 
   function buildFilters(payload) {
@@ -444,6 +498,12 @@
         setTimeout(restore, 2200);
       });
     }
+    wireColumnFilter("cf-council-btn", "cf-council-pop");
+    wireColumnFilter("cf-subject-btn", "cf-subject-pop");
+    document.addEventListener("click", closeColPop);
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeColPop(); });
+    window.addEventListener("scroll", closeColPop, true);
+    window.addEventListener("resize", closeColPop);
     updateFavCount();
   }
 
@@ -576,6 +636,7 @@
 
   function applyFilters() {
     const filtered = filterBills();
+    updateColumnFilterIndicators();
     const tbody = document.querySelector("#results tbody");
     tbody.innerHTML = "";
     const frag = document.createDocumentFragment();

@@ -21,16 +21,8 @@
   <main>
     <section class="filters" aria-label="Filters">
       <div class="filter-group filter-wide">
-        <span class="group-label">County</span>
-        <div id="f-council" class="chips"></div>
-      </div>
-      <div class="filter-group filter-wide">
         <span class="group-label">Year</span>
         <div id="f-year" class="chips"></div>
-      </div>
-      <div class="filter-group filter-wide">
-        <span class="group-label">Subject</span>
-        <div id="f-subject" class="chips"></div>
       </div>
       <div class="filter-row">
         <div class="filter-group">
@@ -66,11 +58,25 @@
         <thead>
           <tr>
             <th class="col-fav" aria-label="Favorite"></th>
-            <th class="col-council">County</th>
+            <th class="col-council col-filter">
+              <button type="button" class="col-filter-btn" id="cf-council-btn" aria-haspopup="true" aria-expanded="false">
+                County <span class="cf-caret" aria-hidden="true">▾</span><span class="cf-badge" hidden></span>
+              </button>
+              <div class="col-filter-pop" id="cf-council-pop" hidden role="group" aria-label="Filter by county">
+                <div id="f-council" class="chips"></div>
+              </div>
+            </th>
             <th class="col-num">Number</th>
             <th class="col-type">Type</th>
             <th class="col-title">Title</th>
-            <th class="col-subj">Subjects</th>
+            <th class="col-subj col-filter">
+              <button type="button" class="col-filter-btn" id="cf-subject-btn" aria-haspopup="true" aria-expanded="false">
+                Subjects <span class="cf-caret" aria-hidden="true">▾</span><span class="cf-badge" hidden></span>
+              </button>
+              <div class="col-filter-pop" id="cf-subject-pop" hidden role="group" aria-label="Filter by subject">
+                <div id="f-subject" class="chips"></div>
+              </div>
+            </th>
             <th class="col-status">Progress</th>
           </tr>
         </thead>
