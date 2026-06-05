@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-05T08:53:25+00:00",
+  "generated_at": "2026-06-05T16:17:08+00:00",
   "last_scrape": {
-    "id": 61,
-    "started_at": "2026-06-05T08:51:47+00:00",
-    "completed_at": "2026-06-05T08:53:10+00:00",
-    "council": "hawaii",
-    "bills_seen": 26,
+    "id": 65,
+    "started_at": "2026-06-05T16:16:21+00:00",
+    "completed_at": "2026-06-05T16:17:07+00:00",
+    "council": "kauai",
+    "bills_seen": 15,
     "bills_new": 0,
-    "bills_updated": 26,
+    "bills_updated": 3,
     "errors": null
   },
   "subjects": [
@@ -369,7 +369,7 @@
       "id": 277,
       "council": "kauai",
       "bill_number": "Bill 2982",
-      "title": "A BILL FOR AN ORDINANCE AMENDING ORDINANCE NO. B-2025-905, AS AMENDED, RELATING TO THE OPERATING BUDGET OF THE COUNTY OF KAUA‘I, STATE OF HAWAI‘I, FOR THE FISCAL YEAR JULY 1, 2025 THROUGH JUNE 30, 2026, BY REVISING THE AMOUNTS ESTIMATED IN",
+      "title": "A BILL FOR AN ORDINANCE AMENDING ORDINANCE NO. B-2025-905, AS AMENDED, RELATING TO THE OPERATING BUDGET OF THE COUNTY OF KAUA‘I, STATE OF HAWAI‘I, FOR THE FISCAL YEAR JULY 1, 2025 THROUGH JUNE 30, 2026, BY REVISING THE AMOUNTS ESTIMATED IN THE GENERAL FUND (Kawaihau Road Parks Parcel – $800,000.00)",
       "bill_type": "Bill",
       "introducer": null,
       "introduced_date": null,
@@ -377,17 +377,19 @@
       "last_action": "On agenda 2026-03-04",
       "last_action_date": "2026-03-04",
       "url": "https://kauai.granicus.com/AgendaViewer.php?view_id=2&clip_id=3023",
-      "raw_subject": "A BILL FOR AN ORDINANCE AMENDING ORDINANCE NO. B-2025-905, AS AMENDED, RELATING TO THE OPERATING BUDGET OF THE COUNTY OF KAUA‘I, STATE OF HAWAI‘I, FOR THE FISCAL YEAR JULY 1, 2025 THROUGH JUNE 30, 2026, BY REVISING THE AMOUNTS ESTIMATED IN",
-      "subjects": [],
-      "classification_confidence": 0.0,
+      "raw_subject": "A BILL FOR AN ORDINANCE AMENDING ORDINANCE NO. B-2025-905, AS AMENDED, RELATING TO THE OPERATING BUDGET OF THE COUNTY OF KAUA‘I, STATE OF HAWAI‘I, FOR THE FISCAL YEAR JULY 1, 2025 THROUGH JUNE 30, 2026, BY REVISING THE AMOUNTS ESTIMATED IN THE GENERAL FUND (Kawaihau Road Parks Parcel – $800,000.00)",
+      "subjects": [
+        "transportation"
+      ],
+      "classification_confidence": 0.01,
       "first_seen": "2026-05-30T20:42:51+00:00",
-      "last_updated": "2026-05-31T20:36:25+00:00"
+      "last_updated": "2026-06-05T16:17:07+00:00"
     },
     {
       "id": 278,
       "council": "kauai",
       "bill_number": "Bill 2983",
-      "title": "A BILL FOR AN ORDINANCE AMENDING ORDINANCE NO. B-2025-906, AS AMENDED, RELATING TO THE CAPITAL BUDGET OF THE COUNTY OF KAUA‘I, STATE OF HAWAI‘I, FOR THE FISCAL YEAR JULY 1, 2025 THROUGH JUNE 30, 2026, BY REVISING THE AMOUNTS ESTIMATED IN TH",
+      "title": "A BILL FOR AN ORDINANCE AMENDING ORDINANCE NO. B-2025-906, AS AMENDED, RELATING TO THE CAPITAL BUDGET OF THE COUNTY OF KAUA‘I, STATE OF HAWAI‘I, FOR THE FISCAL YEAR JULY 1, 2025 THROUGH JUNE 30, 2026, BY REVISING THE AMOUNTS ESTIMATED IN THE GENERAL FUND - CIP (Kawaihau Road Parks Parcel – $1,300,000.00)",
       "bill_type": "Bill",
       "introducer": null,
       "introduced_date": null,
@@ -395,17 +397,19 @@
       "last_action": "On agenda 2026-03-04",
       "last_action_date": "2026-03-04",
       "url": "https://kauai.granicus.com/AgendaViewer.php?view_id=2&clip_id=3023",
-      "raw_subject": "A BILL FOR AN ORDINANCE AMENDING ORDINANCE NO. B-2025-906, AS AMENDED, RELATING TO THE CAPITAL BUDGET OF THE COUNTY OF KAUA‘I, STATE OF HAWAI‘I, FOR THE FISCAL YEAR JULY 1, 2025 THROUGH JUNE 30, 2026, BY REVISING THE AMOUNTS ESTIMATED IN TH",
-      "subjects": [],
-      "classification_confidence": 0.0,
+      "raw_subject": "A BILL FOR AN ORDINANCE AMENDING ORDINANCE NO. B-2025-906, AS AMENDED, RELATING TO THE CAPITAL BUDGET OF THE COUNTY OF KAUA‘I, STATE OF HAWAI‘I, FOR THE FISCAL YEAR JULY 1, 2025 THROUGH JUNE 30, 2026, BY REVISING THE AMOUNTS ESTIMATED IN THE GENERAL FUND - CIP (Kawaihau Road Parks Parcel – $1,300,000.00)",
+      "subjects": [
+        "transportation"
+      ],
+      "classification_confidence": 0.01,
       "first_seen": "2026-05-30T20:42:51+00:00",
-      "last_updated": "2026-05-31T20:36:25+00:00"
+      "last_updated": "2026-06-05T16:17:07+00:00"
     },
     {
       "id": 279,
       "council": "kauai",
       "bill_number": "Bill 2980",
-      "title": "A BILL FOR AN ORDINANCE AMENDING ORDINANCE NO. B-2025-905, AS AMENDED, RELATING TO THE OPERATING BUDGET OF THE COUNTY OF KAUA‘I, STATE OF HAWAI‘I, FOR THE FISCAL YEAR JULY 1, 2025 THROUGH JUNE 30, 2026, BY REVISING THE AMOUNTS ESTIMATED IN",
+      "title": "A BILL FOR AN ORDINANCE AMENDING ORDINANCE NO. B-2025-905, AS AMENDED, RELATING TO THE OPERATING BUDGET OF THE COUNTY OF KAUA‘I, STATE OF HAWAI‘I, FOR THE FISCAL YEAR JULY 1, 2025 THROUGH JUNE 30, 2026, BY REVISING THE AMOUNTS ESTIMATED IN THE GENERAL FUND (ACFR Year 1 Fiscal Year 2024 Change Order – $130,000.00)",
       "bill_type": "Bill",
       "introducer": null,
       "introduced_date": null,
@@ -413,11 +417,11 @@
       "last_action": "On agenda 2026-03-04",
       "last_action_date": "2026-03-04",
       "url": "https://kauai.granicus.com/AgendaViewer.php?view_id=2&clip_id=3023",
-      "raw_subject": "A BILL FOR AN ORDINANCE AMENDING ORDINANCE NO. B-2025-905, AS AMENDED, RELATING TO THE OPERATING BUDGET OF THE COUNTY OF KAUA‘I, STATE OF HAWAI‘I, FOR THE FISCAL YEAR JULY 1, 2025 THROUGH JUNE 30, 2026, BY REVISING THE AMOUNTS ESTIMATED IN",
+      "raw_subject": "A BILL FOR AN ORDINANCE AMENDING ORDINANCE NO. B-2025-905, AS AMENDED, RELATING TO THE OPERATING BUDGET OF THE COUNTY OF KAUA‘I, STATE OF HAWAI‘I, FOR THE FISCAL YEAR JULY 1, 2025 THROUGH JUNE 30, 2026, BY REVISING THE AMOUNTS ESTIMATED IN THE GENERAL FUND (ACFR Year 1 Fiscal Year 2024 Change Order – $130,000.00)",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T20:42:51+00:00",
-      "last_updated": "2026-05-31T20:36:25+00:00"
+      "last_updated": "2026-06-05T16:17:07+00:00"
     },
     {
       "id": 281,
@@ -485,17 +489,17 @@
       "bill_number": "Bill 135",
       "title": "ESTABLISHES AN OPERATING BUDGET FOR THE COUNTY OF HAWAI‘I FOR THE FISCAL YEAR JULY 1, 2026, TO JUNE 30, 2027",
       "bill_type": "Bill",
-      "introducer": "Matt Kaneali'i-Kleinfelder, Council Member",
+      "introducer": null,
       "introduced_date": null,
-      "status": "Passed First Reading",
-      "last_action": "Council:  Bill 135, Draft 3 passes first reading; adopts FC-143 - 05/21/26",
-      "last_action_date": "2026-05-21",
-      "url": "https://records.hawaiicounty.gov/WebLink/DocView.aspx?id=1130657&dbid=0",
+      "status": null,
+      "last_action": "On agenda 2026-06-04",
+      "last_action_date": "2026-06-04",
+      "url": "https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&clip_id=3785",
       "raw_subject": "ESTABLISHES AN OPERATING BUDGET FOR THE COUNTY OF HAWAI‘I FOR THE FISCAL YEAR JULY 1, 2026, TO JUNE 30, 2027",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T20:41:50+00:00",
-      "last_updated": "2026-06-05T08:53:03+00:00"
+      "last_updated": "2026-06-05T16:16:21+00:00"
     },
     {
       "id": 230,
@@ -503,17 +507,17 @@
       "bill_number": "Bill 136",
       "title": "RELATES TO PUBLIC IMPROVEMENTS AND FINANCING THEREOF FOR THE FISCAL YEAR JULY 1, 2026, TO JUNE 30, 2027",
       "bill_type": "Bill",
-      "introducer": "Matt Kaneali'i-Kleinfelder, Council Member",
+      "introducer": null,
       "introduced_date": null,
-      "status": "Passed First Reading",
-      "last_action": "Council:  Bill 136, Draft 3 passes first reading; adopts  FC-144 - 05/21/26",
-      "last_action_date": "2026-05-21",
-      "url": "https://records.hawaiicounty.gov/WebLink/DocView.aspx?id=1130656&dbid=0",
+      "status": null,
+      "last_action": "On agenda 2026-06-04",
+      "last_action_date": "2026-06-04",
+      "url": "https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&clip_id=3785",
       "raw_subject": "RELATES TO PUBLIC IMPROVEMENTS AND FINANCING THEREOF FOR THE FISCAL YEAR JULY 1, 2026, TO JUNE 30, 2027",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T20:41:50+00:00",
-      "last_updated": "2026-06-05T08:53:04+00:00"
+      "last_updated": "2026-06-05T16:16:21+00:00"
     },
     {
       "id": 231,
@@ -521,17 +525,17 @@
       "bill_number": "Bill 156",
       "title": "AMENDS CHAPTER 2, ARTICLE 25, SECTION 2-137, OF THE HAWAI‘I COUNTY CODE 1983 (2016 EDITION, AS AMENDED), RELATING TO APPROPRIATION OF FUNDS TO NONPROFIT ORGANIZATIONS",
       "bill_type": "Bill",
-      "introducer": "Holeka Goro Inaba, Council Member",
+      "introducer": null,
       "introduced_date": null,
-      "status": "Passed First Reading",
-      "last_action": "GOEAC-133:  Recommended passage on first reading  - 05/19/26",
-      "last_action_date": "2026-05-19",
-      "url": "https://records.hawaiicounty.gov/WebLink/DocView.aspx?id=1129293&dbid=0",
+      "status": null,
+      "last_action": "On agenda 2026-06-03",
+      "last_action_date": "2026-06-03",
+      "url": "https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&clip_id=3783",
       "raw_subject": "AMENDS CHAPTER 2, ARTICLE 25, SECTION 2-137, OF THE HAWAI‘I COUNTY CODE 1983 (2016 EDITION, AS AMENDED), RELATING TO APPROPRIATION OF FUNDS TO NONPROFIT ORGANIZATIONS",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T20:41:50+00:00",
-      "last_updated": "2026-06-05T08:53:04+00:00"
+      "last_updated": "2026-06-05T16:16:21+00:00"
     },
     {
       "id": 232,
@@ -539,17 +543,17 @@
       "bill_number": "Bill 158",
       "title": "INITIATES AN AMENDMENT TO ARTICLES III, IV, V, VI, VII, VIII, X, XIII, AND XVI, OF THE CHARTER OF THE COUNTY OF HAWAI‘I (2024 EDITION), RELATING TO THE STRUCTURE AND ORGANIZATION OF THE COUNTY",
       "bill_type": "Bill",
-      "introducer": "Heather Kimball, Council Member, D1",
+      "introducer": null,
       "introduced_date": null,
-      "status": "Passed First Reading",
-      "last_action": "GOEAC-134:  Recommended passage on first reading  - 05/19/26",
-      "last_action_date": "2026-05-19",
-      "url": "https://records.hawaiicounty.gov/WebLink/DocView.aspx?id=1129673&dbid=0",
+      "status": null,
+      "last_action": "On agenda 2026-06-03",
+      "last_action_date": "2026-06-03",
+      "url": "https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&clip_id=3783",
       "raw_subject": "INITIATES AN AMENDMENT TO ARTICLES III, IV, V, VI, VII, VIII, X, XIII, AND XVI, OF THE CHARTER OF THE COUNTY OF HAWAI‘I (2024 EDITION), RELATING TO THE STRUCTURE AND ORGANIZATION OF THE COUNTY",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T20:41:50+00:00",
-      "last_updated": "2026-06-05T08:53:04+00:00"
+      "last_updated": "2026-06-05T16:16:21+00:00"
     },
     {
       "id": 233,
@@ -557,17 +561,17 @@
       "bill_number": "Bill 159",
       "title": "INITIATES AN AMENDMENT TO ARTICLES III, V, VI, VII, VIII, AND X OF THE CHARTER OF THE COUNTY OF HAWAIʻI (2024 EDITION), RELATING TO THE ESTABLISHMENT OF A BIENNIAL OPERATING BUDGET AND CAPITAL BUDGET",
       "bill_type": "Bill",
-      "introducer": "Heather Kimball, Council Member, D1",
+      "introducer": null,
       "introduced_date": null,
       "status": null,
-      "last_action": "FC-153:  Forwarded to Council with a negative recommendation - 5/19/2026",
-      "last_action_date": "2026-05-19",
-      "url": "https://records.hawaiicounty.gov/WebLink/DocView.aspx?id=1129675&dbid=0",
+      "last_action": "On agenda 2026-06-03",
+      "last_action_date": "2026-06-03",
+      "url": "https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&clip_id=3783",
       "raw_subject": "INITIATES AN AMENDMENT TO ARTICLES III, V, VI, VII, VIII, AND X OF THE CHARTER OF THE COUNTY OF HAWAIʻI (2024 EDITION), RELATING TO THE ESTABLISHMENT OF A BIENNIAL OPERATING BUDGET AND CAPITAL BUDGET",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T20:41:50+00:00",
-      "last_updated": "2026-06-05T08:53:04+00:00"
+      "last_updated": "2026-06-05T16:16:21+00:00"
     },
     {
       "id": 234,
@@ -575,17 +579,17 @@
       "bill_number": "Bill 160",
       "title": "AMENDS ORDINANCE NO. 25-45, AS AMENDED, THE OPERATING BUDGET OF THE COUNTY OF HAWAIʻI FOR THE FISCAL YEAR ENDING JUNE 30, 2026",
       "bill_type": "Bill",
-      "introducer": "Matt Kaneali'i-Kleinfelder, Council member",
+      "introducer": null,
       "introduced_date": null,
-      "status": "Passed First Reading",
-      "last_action": "FC-154:  Recommended passage on first reading - 5/19/2026",
-      "last_action_date": "2026-05-19",
-      "url": "https://records.hawaiicounty.gov/WebLink/DocView.aspx?id=1129749&dbid=0",
+      "status": null,
+      "last_action": "On agenda 2026-06-03",
+      "last_action_date": "2026-06-03",
+      "url": "https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&clip_id=3783",
       "raw_subject": "AMENDS ORDINANCE NO. 25-45, AS AMENDED, THE OPERATING BUDGET OF THE COUNTY OF HAWAIʻI FOR THE FISCAL YEAR ENDING JUNE 30, 2026",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T20:41:50+00:00",
-      "last_updated": "2026-06-05T08:53:05+00:00"
+      "last_updated": "2026-06-05T16:16:21+00:00"
     },
     {
       "id": 235,
@@ -593,17 +597,17 @@
       "bill_number": "Bill 161",
       "title": "AMENDS ORDINANCE NO. 25-45, AS AMENDED, THE OPERATING BUDGET OF THE COUNTY OF HAWAIʻI FOR THE FISCAL YEAR ENDING JUNE 30, 2026",
       "bill_type": "Bill",
-      "introducer": "Matt Kaneali'i-Kleinfelder, Council member",
+      "introducer": null,
       "introduced_date": null,
-      "status": "Passed First Reading",
-      "last_action": "FC-155:  Recommended passage on first reading - 5/19/2026",
-      "last_action_date": "2026-05-19",
-      "url": "https://records.hawaiicounty.gov/WebLink/DocView.aspx?id=1129751&dbid=0",
+      "status": null,
+      "last_action": "On agenda 2026-06-03",
+      "last_action_date": "2026-06-03",
+      "url": "https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&clip_id=3783",
       "raw_subject": "AMENDS ORDINANCE NO. 25-45, AS AMENDED, THE OPERATING BUDGET OF THE COUNTY OF HAWAIʻI FOR THE FISCAL YEAR ENDING JUNE 30, 2026",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T20:41:50+00:00",
-      "last_updated": "2026-06-05T08:53:05+00:00"
+      "last_updated": "2026-06-05T16:16:21+00:00"
     },
     {
       "id": 236,
@@ -611,19 +615,19 @@
       "bill_number": "Bill 166",
       "title": "AMENDS ORDINANCE NO. 25-50, AS AMENDED, AN ORDINANCE AMENDING CHAPTER 6 OF THE HAWAI‘I COUNTY CODE 1983 (2016 EDITION, AS AMENDED), RELATING TO TRANSIENT ACCOMMODATIONS",
       "bill_type": "Bill",
-      "introducer": "Heather Kimball, Council Member",
+      "introducer": null,
       "introduced_date": null,
       "status": null,
-      "last_action": null,
-      "last_action_date": null,
-      "url": "https://records.hawaiicounty.gov/WebLink/DocView.aspx?id=1130672&dbid=0",
+      "last_action": "On agenda 2026-06-03",
+      "last_action_date": "2026-06-03",
+      "url": "https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&clip_id=3783",
       "raw_subject": "AMENDS ORDINANCE NO. 25-50, AS AMENDED, AN ORDINANCE AMENDING CHAPTER 6 OF THE HAWAI‘I COUNTY CODE 1983 (2016 EDITION, AS AMENDED), RELATING TO TRANSIENT ACCOMMODATIONS",
       "subjects": [
         "tax"
       ],
       "classification_confidence": 0.02,
       "first_seen": "2026-05-30T20:41:50+00:00",
-      "last_updated": "2026-06-05T08:53:05+00:00"
+      "last_updated": "2026-06-05T16:16:21+00:00"
     },
     {
       "id": 237,
@@ -631,17 +635,17 @@
       "bill_number": "Bill 167",
       "title": "AMENDS ORDINANCE NO. 25-45, AS AMENDED, THE OPERATING BUDGET OF THE COUNTY OF HAWAIʻI FOR THE FISCAL YEAR ENDING JUNE 30, 2026",
       "bill_type": "Bill",
-      "introducer": "Matt Kaneali'i-Kleinfelder, Council Member",
+      "introducer": null,
       "introduced_date": null,
       "status": null,
-      "last_action": null,
-      "last_action_date": null,
-      "url": "https://records.hawaiicounty.gov/WebLink/DocView.aspx?id=1130794&dbid=0",
+      "last_action": "On agenda 2026-06-03",
+      "last_action_date": "2026-06-03",
+      "url": "https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&clip_id=3783",
       "raw_subject": "AMENDS ORDINANCE NO. 25-45, AS AMENDED, THE OPERATING BUDGET OF THE COUNTY OF HAWAIʻI FOR THE FISCAL YEAR ENDING JUNE 30, 2026",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T20:41:50+00:00",
-      "last_updated": "2026-06-05T08:53:05+00:00"
+      "last_updated": "2026-06-05T16:16:21+00:00"
     },
     {
       "id": 238,
@@ -649,17 +653,17 @@
       "bill_number": "Bill 66",
       "title": "ADOPTS THE COUNTY OF HAWAI‘I GENERAL PLAN 2045 AND REPEALS ORDINANCE NO. 05-025, AS AMENDED",
       "bill_type": "Bill",
-      "introducer": "Ashley L. Kierkiewicz, Council Member",
+      "introducer": null,
       "introduced_date": null,
-      "status": "Passed First Reading",
-      "last_action": "PCPLUED: Bill 66, Draft 2 postponed to May 4, 2026 - 04/07/26\nPCPLUED-10:  Recommended passage on first reading - 05/04/26\nCouncil:  Bill 66, Draft 2 passes first reading; adopts PCPLUED-10 - 05/20/26",
-      "last_action_date": "2026-04-07",
-      "url": "https://records.hawaiicounty.gov/WebLink/DocView.aspx?id=1113328&dbid=0",
+      "status": null,
+      "last_action": "On agenda 2026-06-03",
+      "last_action_date": "2026-06-03",
+      "url": "https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&clip_id=3783",
       "raw_subject": "ADOPTS THE COUNTY OF HAWAI‘I GENERAL PLAN 2045 AND REPEALS ORDINANCE NO. 05-025, AS AMENDED",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T20:41:50+00:00",
-      "last_updated": "2026-06-05T08:53:06+00:00"
+      "last_updated": "2026-06-05T16:16:21+00:00"
     },
     {
       "id": 239,
@@ -667,17 +671,17 @@
       "bill_number": "Bill 152",
       "title": "INITIATES AN AMENDMENT TO ARTICLE III, SECTION 3-18, OF THE CHARTER OF THE COUNTY OF HAWAI‘I (2024 EDITION), RELATING TO THE OFFICE OF THE COUNTY AUDITOR",
       "bill_type": "Bill",
-      "introducer": "Dr. Holeka G. Inaba, Council Member\nAshley L. Kierkiewicz, Council Member",
+      "introducer": null,
       "introduced_date": null,
       "status": null,
-      "last_action": "Council:  Bill 152 passes first of three required readings; adopts GOEAC-126 - 05/20/26",
-      "last_action_date": "2026-05-20",
-      "url": "https://records.hawaiicounty.gov/WebLink/DocView.aspx?id=1128945&dbid=0",
+      "last_action": "On agenda 2026-06-03",
+      "last_action_date": "2026-06-03",
+      "url": "https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&clip_id=3783",
       "raw_subject": "INITIATES AN AMENDMENT TO ARTICLE III, SECTION 3-18, OF THE CHARTER OF THE COUNTY OF HAWAI‘I (2024 EDITION), RELATING TO THE OFFICE OF THE COUNTY AUDITOR",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T20:41:50+00:00",
-      "last_updated": "2026-06-05T08:53:06+00:00"
+      "last_updated": "2026-06-05T16:16:21+00:00"
     },
     {
       "id": 240,
@@ -685,17 +689,17 @@
       "bill_number": "Bill 153",
       "title": "AMENDS ORDINANCE NO. 25-45, AS AMENDED, THE OPERATING BUDGET OF THE COUNTY OF HAWAIʻI FOR THE FISCAL YEAR ENDING JUNE 30, 2026",
       "bill_type": "Bill",
-      "introducer": "Matt Kaneali'i-Kleinfelder, Council Member",
+      "introducer": null,
       "introduced_date": null,
-      "status": "Passed First Reading",
-      "last_action": "Council:  Bill 153 passes first reading; adopts FC-151 - 05/20/26",
-      "last_action_date": "2026-05-20",
-      "url": "https://records.hawaiicounty.gov/WebLink/DocView.aspx?id=1128957&dbid=0",
+      "status": null,
+      "last_action": "On agenda 2026-06-03",
+      "last_action_date": "2026-06-03",
+      "url": "https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&clip_id=3783",
       "raw_subject": "AMENDS ORDINANCE NO. 25-45, AS AMENDED, THE OPERATING BUDGET OF THE COUNTY OF HAWAIʻI FOR THE FISCAL YEAR ENDING JUNE 30, 2026",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T20:41:50+00:00",
-      "last_updated": "2026-06-05T08:53:06+00:00"
+      "last_updated": "2026-06-05T16:16:21+00:00"
     },
     {
       "id": 241,
@@ -703,19 +707,19 @@
       "bill_number": "Bill 164",
       "title": "AMENDS CHAPTER 2, ARTICLE 13, DIVISION 2, SECTION 2-69, OF THE HAWAI‘I COUNTY CODE 1983 (2016 EDITION, AS AMENDED), RELATING TO THE HOUSING ADMINISTRATOR",
       "bill_type": "Bill",
-      "introducer": "Dennis \"Fresh\" Onishi, Council Member",
+      "introducer": null,
       "introduced_date": null,
-      "status": "Postponed",
-      "last_action": "GOEAC: Postponed to June 16, 2026 - 06/02/26",
+      "status": null,
+      "last_action": "On agenda 2026-06-02",
       "last_action_date": "2026-06-02",
-      "url": "https://records.hawaiicounty.gov/WebLink/DocView.aspx?id=1130363&dbid=0",
+      "url": "https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=1&clip_id=3776",
       "raw_subject": "AMENDS CHAPTER 2, ARTICLE 13, DIVISION 2, SECTION 2-69, OF THE HAWAI‘I COUNTY CODE 1983 (2016 EDITION, AS AMENDED), RELATING TO THE HOUSING ADMINISTRATOR",
       "subjects": [
         "affordable_housing"
       ],
       "classification_confidence": 0.021,
       "first_seen": "2026-05-30T20:41:50+00:00",
-      "last_updated": "2026-06-05T08:53:07+00:00"
+      "last_updated": "2026-06-05T16:16:21+00:00"
     },
     {
       "id": 242,
@@ -723,17 +727,17 @@
       "bill_number": "Bill 165",
       "title": "INITIATES AN AMENDMENT TO ARTICLE X OF THE CHARTER OF THE COUNTY OF HAWAI‘I (2024 EDITION), RELATING TO PUBLIC ACCESS, OPEN SPACE, AND NATURAL RESOURCES PRESERVATION",
       "bill_type": "Bill",
-      "introducer": "Ashley Kierkiewicz, Council Member",
+      "introducer": null,
       "introduced_date": null,
-      "status": "Passed First Reading",
-      "last_action": "GOEAC-139:  Recommended passage on first reading - 06/02/26",
+      "status": null,
+      "last_action": "On agenda 2026-06-02",
       "last_action_date": "2026-06-02",
-      "url": "https://records.hawaiicounty.gov/WebLink/DocView.aspx?id=1130366&dbid=0",
+      "url": "https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=1&clip_id=3776",
       "raw_subject": "INITIATES AN AMENDMENT TO ARTICLE X OF THE CHARTER OF THE COUNTY OF HAWAI‘I (2024 EDITION), RELATING TO PUBLIC ACCESS, OPEN SPACE, AND NATURAL RESOURCES PRESERVATION",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T20:41:50+00:00",
-      "last_updated": "2026-06-05T08:53:07+00:00"
+      "last_updated": "2026-06-05T16:16:21+00:00"
     },
     {
       "id": 244,
@@ -741,19 +745,19 @@
       "bill_number": "Bill 163",
       "title": "AMENDS CHAPTER 19, ARTICLE 8, OF THE HAWAIʻI COUNTY CODE 1983 (2016 EDITION, AS AMENDED), RELATING TO REAL PROPERTY TAXES",
       "bill_type": "Bill",
-      "introducer": "James Hustace, Council Member",
+      "introducer": null,
       "introduced_date": null,
-      "status": "Postponed",
-      "last_action": "FC:  Postponed to 6/16/2026 - 6/2/2026",
-      "last_action_date": "2026-06-16",
-      "url": "https://records.hawaiicounty.gov/WebLink/DocView.aspx?id=1130355&dbid=0",
+      "status": null,
+      "last_action": "On agenda 2026-06-02",
+      "last_action_date": "2026-06-02",
+      "url": "https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&clip_id=3777",
       "raw_subject": "AMENDS CHAPTER 19, ARTICLE 8, OF THE HAWAIʻI COUNTY CODE 1983 (2016 EDITION, AS AMENDED), RELATING TO REAL PROPERTY TAXES",
       "subjects": [
         "tax"
       ],
       "classification_confidence": 0.025,
       "first_seen": "2026-05-30T20:41:50+00:00",
-      "last_updated": "2026-06-05T08:53:07+00:00"
+      "last_updated": "2026-06-05T16:16:21+00:00"
     },
     {
       "id": 245,
@@ -761,19 +765,19 @@
       "bill_number": "Bill 162",
       "title": "AMENDS CHAPTER 3 OF THE HAWAI‘I COUNTY CODE 1983 (2016 EDITION, AS AMENDED), RELATING TO PAID PARKING FACILITIES",
       "bill_type": "Bill",
-      "introducer": "Rebecca Villegas, Council Member",
+      "introducer": null,
       "introduced_date": null,
-      "status": "Passed First Reading",
-      "last_action": "PCPWMT-13:  Recommended passage on first reading - 06/02/26",
+      "status": null,
+      "last_action": "On agenda 2026-06-02",
       "last_action_date": "2026-06-02",
-      "url": "https://records.hawaiicounty.gov/WebLink/DocView.aspx?id=1130351&dbid=0",
+      "url": "https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=1&clip_id=3779",
       "raw_subject": "AMENDS CHAPTER 3 OF THE HAWAI‘I COUNTY CODE 1983 (2016 EDITION, AS AMENDED), RELATING TO PAID PARKING FACILITIES",
       "subjects": [
         "transportation"
       ],
       "classification_confidence": 0.028,
       "first_seen": "2026-05-30T20:41:50+00:00",
-      "last_updated": "2026-06-05T08:53:07+00:00"
+      "last_updated": "2026-06-05T16:16:21+00:00"
     },
     {
       "id": 246,
@@ -781,17 +785,17 @@
       "bill_number": "Bill 157",
       "title": "AMENDS CHAPTER 7 OF THE HAWAI‘I COUNTY CODE 1983 (2016 EDITION, AS AMENDED), RELATING TO DISASTER RECOVERY",
       "bill_type": "Bill",
-      "introducer": "Ashley L. Kierkiewicz, Council Member. D4",
+      "introducer": null,
       "introduced_date": null,
       "status": null,
-      "last_action": "PCHSW:  Bill 157 amended to Draft 2 - 06/02/26",
+      "last_action": "On agenda 2026-06-02",
       "last_action_date": "2026-06-02",
-      "url": "https://records.hawaiicounty.gov/WebLink/DocView.aspx?id=1129668&dbid=0",
+      "url": "https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=1&clip_id=3780",
       "raw_subject": "AMENDS CHAPTER 7 OF THE HAWAI‘I COUNTY CODE 1983 (2016 EDITION, AS AMENDED), RELATING TO DISASTER RECOVERY",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T20:41:50+00:00",
-      "last_updated": "2026-06-05T08:53:08+00:00"
+      "last_updated": "2026-06-05T16:16:21+00:00"
     },
     {
       "id": 247,
@@ -799,19 +803,19 @@
       "bill_number": "Bill 148",
       "title": "DESIGNATES TAX MAP KEY: 6-6-001:010 AS “LAʻELAʻE PARK”, AMENDS CHAPTER 15, ARTICLE 8, SECTION 15-68.1, AND AMENDS CHAPTER 14, ARTICLE 1, SECTION 14-1 OF THE HAWAI‘I COUNTY CODE 1983 (2016 EDITION, AS AMENDED), RELATING TO PARKS AND RECREATIONAL FACILITIES",
       "bill_type": "Bill",
-      "introducer": "James E. Hustace, Council Member",
+      "introducer": null,
       "introduced_date": null,
-      "status": "Passed Second Reading",
-      "last_action": "Council:  Bill 148 passes second & final reading - 05/20/26",
+      "status": null,
+      "last_action": "On agenda 2026-05-20",
       "last_action_date": "2026-05-20",
-      "url": "https://records.hawaiicounty.gov/WebLink/DocView.aspx?id=1128335&dbid=0",
+      "url": "https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&clip_id=3768",
       "raw_subject": "DESIGNATES TAX MAP KEY: 6-6-001:010 AS “LAʻELAʻE PARK”, AMENDS CHAPTER 15, ARTICLE 8, SECTION 15-68.1, AND AMENDS CHAPTER 14, ARTICLE 1, SECTION 14-1 OF THE HAWAI‘I COUNTY CODE 1983 (2016 EDITION, AS AMENDED), RELATING TO PARKS AND RECREATIONAL FACILITIES",
       "subjects": [
         "tax"
       ],
       "classification_confidence": 0.013,
       "first_seen": "2026-05-30T20:41:50+00:00",
-      "last_updated": "2026-06-05T08:53:08+00:00"
+      "last_updated": "2026-06-05T16:16:21+00:00"
     },
     {
       "id": 248,
@@ -819,17 +823,17 @@
       "bill_number": "Bill 150",
       "title": "AMENDS ORDINANCE NO. 25-45, AS AMENDED, THE OPERATING BUDGET OF THE COUNTY OF HAWAIʻI FOR THE FISCAL YEAR ENDING JUNE 30, 2026",
       "bill_type": "Bill",
-      "introducer": "Matt Kaneali'i-Kleinfelder, Council Member",
+      "introducer": null,
       "introduced_date": null,
-      "status": "Passed Second Reading",
-      "last_action": "Council:  Bill 150 passes second & final reading - 05/20/26",
+      "status": null,
+      "last_action": "On agenda 2026-05-20",
       "last_action_date": "2026-05-20",
-      "url": "https://records.hawaiicounty.gov/WebLink/DocView.aspx?id=1128331&dbid=0",
+      "url": "https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&clip_id=3768",
       "raw_subject": "AMENDS ORDINANCE NO. 25-45, AS AMENDED, THE OPERATING BUDGET OF THE COUNTY OF HAWAIʻI FOR THE FISCAL YEAR ENDING JUNE 30, 2026",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T20:41:50+00:00",
-      "last_updated": "2026-06-05T08:53:08+00:00"
+      "last_updated": "2026-06-05T16:16:21+00:00"
     },
     {
       "id": 249,
@@ -837,17 +841,17 @@
       "bill_number": "Bill 151",
       "title": "AMENDS ORDINANCE NO. 25-46, AS AMENDED, RELATING TO PUBLIC IMPROVEMENTS AND FINANCING THEREOF FOR THE FISCAL YEAR JULY 1, 2025, TO JUNE 30, 2026",
       "bill_type": "Bill",
-      "introducer": "Matt Kaneali'i-Kleinfelder, Council Member",
+      "introducer": null,
       "introduced_date": null,
-      "status": "Passed Second Reading",
-      "last_action": "Council: Bill 151 passes second & final reading - 05/20/26",
+      "status": null,
+      "last_action": "On agenda 2026-05-20",
       "last_action_date": "2026-05-20",
-      "url": "https://records.hawaiicounty.gov/WebLink/DocView.aspx?id=1128333&dbid=0",
+      "url": "https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&clip_id=3768",
       "raw_subject": "AMENDS ORDINANCE NO. 25-46, AS AMENDED, RELATING TO PUBLIC IMPROVEMENTS AND FINANCING THEREOF FOR THE FISCAL YEAR JULY 1, 2025, TO JUNE 30, 2026",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T20:41:50+00:00",
-      "last_updated": "2026-06-05T08:53:08+00:00"
+      "last_updated": "2026-06-05T16:16:21+00:00"
     },
     {
       "id": 250,
@@ -855,17 +859,17 @@
       "bill_number": "Bill 155",
       "title": "AMENDS ORDINANCE NO. 25-45, AS AMENDED, THE OPERATING BUDGET OF THE COUNTY OF HAWAIʻI FOR THE FISCAL YEAR ENDING JUNE 30, 2026",
       "bill_type": "Bill",
-      "introducer": "Matt Kaneali'i-Kleinfelder, Council Member",
+      "introducer": null,
       "introduced_date": null,
-      "status": "Passed Second Reading",
-      "last_action": "Council:  Bill 155 passes second & final reading - 05/20/26",
+      "status": null,
+      "last_action": "On agenda 2026-05-20",
       "last_action_date": "2026-05-20",
-      "url": "https://records.hawaiicounty.gov/WebLink/DocView.aspx?id=1128999&dbid=0",
+      "url": "https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&clip_id=3768",
       "raw_subject": "AMENDS ORDINANCE NO. 25-45, AS AMENDED, THE OPERATING BUDGET OF THE COUNTY OF HAWAIʻI FOR THE FISCAL YEAR ENDING JUNE 30, 2026",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T20:41:50+00:00",
-      "last_updated": "2026-06-05T08:53:09+00:00"
+      "last_updated": "2026-06-05T16:16:21+00:00"
     },
     {
       "id": 251,
@@ -873,19 +877,19 @@
       "bill_number": "Bill 132",
       "title": "AMENDS CHAPTER 6 OF THE HAWAI‘I COUNTY CODE 1983 (2016 EDITION, AS AMENDED) BY ADDING AN ARTICLE RELATING TO PAID PARKING FACILITIES IN KAILUA VILLAGE",
       "bill_type": "Bill",
-      "introducer": "Rebecca Villegas, Council Member",
+      "introducer": null,
       "introduced_date": null,
       "status": null,
-      "last_action": "PCPWMT:  Withdrawn - 05/19/26",
+      "last_action": "On agenda 2026-05-19",
       "last_action_date": "2026-05-19",
-      "url": "https://records.hawaiicounty.gov/WebLink/DocView.aspx?id=1125213&dbid=0",
+      "url": "https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=1&clip_id=3762",
       "raw_subject": "AMENDS CHAPTER 6 OF THE HAWAI‘I COUNTY CODE 1983 (2016 EDITION, AS AMENDED) BY ADDING AN ARTICLE RELATING TO PAID PARKING FACILITIES IN KAILUA VILLAGE",
       "subjects": [
         "transportation"
       ],
       "classification_confidence": 0.02,
       "first_seen": "2026-05-30T20:41:50+00:00",
-      "last_updated": "2026-06-05T08:53:09+00:00"
+      "last_updated": "2026-06-05T16:16:21+00:00"
     },
     {
       "id": 252,
@@ -893,17 +897,17 @@
       "bill_number": "Bill 144",
       "title": "ADOPTS A PAY PLAN FOR PERSONS EMPLOYED BY THE COUNTY OTHER THAN THOSE WHOSE PAY IS OTHERWISE PROVIDED FOR, DESIGNATING PAYROLL PERIODS, PAY DAYS, PRESCRIBING REQUIREMENTS WITH RESPECT TO OFFICIAL FIDELITY BONDS, AND REPEALING ORDINANCE NO. 25-39 AND ALL AMENDMENTS THERETO, SAID ORDINANCE TO BE KNOWN AS THE SALARY ORDINANCE OF 2026",
       "bill_type": "Bill",
-      "introducer": "Matt Kaneali'i-Kleinfelder, Council Member",
+      "introducer": null,
       "introduced_date": null,
-      "status": "Passed Second Reading",
-      "last_action": "Council:  Bill 144 passes second & final reading - 05/05/26",
+      "status": null,
+      "last_action": "On agenda 2026-05-05",
       "last_action_date": "2026-05-05",
-      "url": "https://records.hawaiicounty.gov/WebLink/DocView.aspx?id=1127023&dbid=0",
+      "url": "https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&clip_id=3751",
       "raw_subject": "ADOPTS A PAY PLAN FOR PERSONS EMPLOYED BY THE COUNTY OTHER THAN THOSE WHOSE PAY IS OTHERWISE PROVIDED FOR, DESIGNATING PAYROLL PERIODS, PAY DAYS, PRESCRIBING REQUIREMENTS WITH RESPECT TO OFFICIAL FIDELITY BONDS, AND REPEALING ORDINANCE NO. 25-39 AND ALL AMENDMENTS THERETO, SAID ORDINANCE TO BE KNOWN AS THE SALARY ORDINANCE OF 2026",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T20:41:50+00:00",
-      "last_updated": "2026-06-05T08:53:09+00:00"
+      "last_updated": "2026-06-05T16:16:21+00:00"
     },
     {
       "id": 253,
@@ -911,17 +915,17 @@
       "bill_number": "Bill 145",
       "title": "AMENDS ORDINANCE NO. 25-45, AS AMENDED, THE OPERATING BUDGET OF THE COUNTY OF HAWAIʻI FOR THE FISCAL YEAR ENDING JUNE 30, 2026",
       "bill_type": "Bill",
-      "introducer": "Kehaulani M. Costa, Office of Housing and Community Development Administrator",
+      "introducer": null,
       "introduced_date": null,
-      "status": "Passed Second Reading",
-      "last_action": "Council:  Bill 145 passes second & final reading - 05/05/26",
+      "status": null,
+      "last_action": "On agenda 2026-05-05",
       "last_action_date": "2026-05-05",
-      "url": "https://records.hawaiicounty.gov/WebLink/DocView.aspx?id=1127024&dbid=0",
+      "url": "https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&clip_id=3751",
       "raw_subject": "AMENDS ORDINANCE NO. 25-45, AS AMENDED, THE OPERATING BUDGET OF THE COUNTY OF HAWAIʻI FOR THE FISCAL YEAR ENDING JUNE 30, 2026",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T20:41:50+00:00",
-      "last_updated": "2026-06-05T08:53:10+00:00"
+      "last_updated": "2026-06-05T16:16:21+00:00"
     },
     {
       "id": 254,
@@ -929,17 +933,17 @@
       "bill_number": "Bill 146",
       "title": "AMENDS ORDINANCE NO. 25-45, AS AMENDED, THE OPERATING BUDGET OF THE COUNTY OF HAWAIʻI FOR THE FISCAL YEAR ENDING JUNE 30, 2026",
       "bill_type": "Bill",
-      "introducer": "Kehaulani M. Costa, Office of Housing and Community Development Administrator",
+      "introducer": null,
       "introduced_date": null,
-      "status": "Passed Second Reading",
-      "last_action": "Council:  Bill 146 passes second & final reading - 05/05/26",
+      "status": null,
+      "last_action": "On agenda 2026-05-05",
       "last_action_date": "2026-05-05",
-      "url": "https://records.hawaiicounty.gov/WebLink/DocView.aspx?id=1127029&dbid=0",
+      "url": "https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&clip_id=3751",
       "raw_subject": "AMENDS ORDINANCE NO. 25-45, AS AMENDED, THE OPERATING BUDGET OF THE COUNTY OF HAWAIʻI FOR THE FISCAL YEAR ENDING JUNE 30, 2026",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T20:41:50+00:00",
-      "last_updated": "2026-06-05T08:53:10+00:00"
+      "last_updated": "2026-06-05T16:16:21+00:00"
     },
     {
       "id": 255,
@@ -947,17 +951,17 @@
       "bill_number": "Bill 149",
       "title": "AMENDS ORDINANCE NO. 25-45, AS AMENDED, THE OPERATING BUDGET OF THE COUNTY OF HAWAIʻI FOR THE FISCAL YEAR ENDING JUNE 30, 2026",
       "bill_type": "Bill",
-      "introducer": "Matt Kaneali'i-Kleinfelder, Council Member",
+      "introducer": null,
       "introduced_date": null,
-      "status": "Passed Second Reading",
-      "last_action": "Council:  Bill 149 passes second & final reading - 05/05/26",
+      "status": null,
+      "last_action": "On agenda 2026-05-05",
       "last_action_date": "2026-05-05",
-      "url": "https://records.hawaiicounty.gov/WebLink/DocView.aspx?id=1128345&dbid=0",
+      "url": "https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&clip_id=3751",
       "raw_subject": "AMENDS ORDINANCE NO. 25-45, AS AMENDED, THE OPERATING BUDGET OF THE COUNTY OF HAWAIʻI FOR THE FISCAL YEAR ENDING JUNE 30, 2026",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T20:41:50+00:00",
-      "last_updated": "2026-06-05T08:53:10+00:00"
+      "last_updated": "2026-06-05T16:16:21+00:00"
     },
     {
       "id": 256,
@@ -987,9 +991,9 @@
       "bill_type": "Bill",
       "introducer": "TYLER  DOS SANTOS-TAM",
       "introduced_date": "2026-05-28",
-      "status": "INTRO",
-      "last_action": "Introduced.",
-      "last_action_date": "2026-05-28",
+      "status": "CCL",
+      "last_action": "Passed first reading.",
+      "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3752",
       "raw_subject": "Temporarily entitles the owner of certain owner-occupied condominium units to a real property tax home exemption. Applies retroactively to the tax year beginning July 1, 2025, and thereafter.",
       "subjects": [
@@ -997,7 +1001,7 @@
       ],
       "classification_confidence": 0.121,
       "first_seen": "2026-05-30T07:33:26+00:00",
-      "last_updated": "2026-05-30T07:33:26+00:00"
+      "last_updated": "2026-06-05T16:15:05+00:00"
     },
     {
       "id": 16,
@@ -1007,9 +1011,9 @@
       "bill_type": "Bill",
       "introducer": "TYLER  DOS SANTOS-TAM, AUGIE  TULBA",
       "introduced_date": "2026-05-28",
-      "status": "INTRO",
-      "last_action": "Introduced.",
-      "last_action_date": "2026-05-28",
+      "status": "CCL",
+      "last_action": "Passed first reading.",
+      "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3753",
       "raw_subject": "Conforms ROH provisions to House Bill 2021, HD2, SD2, CD1, Relating to Transportation. Adds definitions for “Electric Bicycle,” “Class 1 Electric Bicycle,” Class 2 Electric Bicycle,” Class 3 Electric Bicycle, “Electric Micro-mobility Device, “High-speed Electric Device,” and “Electric Motorcycle.” Substitutes the term “electric bicycle” for the terms “bicycle with motor,” “motorized bicycles,” and similar terms. Substitutes the term “motor-driven cycle” for the term “motor scooter.” Regulates riding electric bicycles on sidewalks under certain circumstances. Prohibits on bikeways: (1) driving a vehicle, other than a bicycle, electric foot scooter, or electric micro-mobility device, with specified\nexceptions; and (2) operating mopeds or electric motorcycles. Prohibits a person under the age of sixteen from operating a class 2 or class 3 electric bicycle without direct supervision. Repeals as preempted: (1) certain safe driving requirements for the operation of electric bicycles on public streets, paths, or tra",
       "subjects": [
@@ -1017,7 +1021,7 @@
       ],
       "classification_confidence": 0.014,
       "first_seen": "2026-05-30T07:33:26+00:00",
-      "last_updated": "2026-05-30T07:33:26+00:00"
+      "last_updated": "2026-06-05T16:15:05+00:00"
     },
     {
       "id": 56,
@@ -1027,33 +1031,33 @@
       "bill_type": "Resolution",
       "introducer": "TOMMY  WATERS - By Request",
       "introduced_date": "2026-05-28",
-      "status": "INTRO",
-      "last_action": "Introduced.",
-      "last_action_date": "2026-05-28",
+      "status": "CCL",
+      "last_action": "Adopted.",
+      "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3754",
       "raw_subject": null,
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
-      "last_updated": "2026-05-30T07:33:27+00:00"
+      "last_updated": "2026-06-05T16:15:05+00:00"
     },
     {
       "id": 57,
       "council": "honolulu",
       "bill_number": "RES26-138",
-      "title": "AUTHORIZING THE MAYOR TO EXECUTE AN AMENDMENT TO THE LAND EXCHANGE AGREEMENT BETWEEN THE CITY AND COUNTY OF HONOLULU AND THE STATE OF HAWAI'l, DEPARTMENT OF HAWAIIAN HOME LANDS, FOR THE VARONA VILLAGE / EWA DRUM PROPERTY EXCHANGE, AND APPROVING A REVISED EQUALIZATION PAYMENT.",
+      "title": "AUTHORIZING THE MAYOR TO EXECUTE THE AMENDMENT OF RESTATED MEMORANDUM OF AGREEMENT BETWEEN THE CITY AND COUNTY OF HONOLULU AND THE STATE OF HAWAIʻI, DEPARTMENT OF\nHAWAIIAN HOME LANDS, FOR THE VARONA VILLAGE AND ‘EWA DRUM PROPERTY EXCHANGE, AND APPROVING THE REVISED EQUALIZATION PAYMENT.",
       "bill_type": "Resolution",
       "introducer": "TOMMY  WATERS - By Request",
       "introduced_date": "2026-05-28",
-      "status": "INTRO",
-      "last_action": "Introduced.",
-      "last_action_date": "2026-05-28",
+      "status": "CCL",
+      "last_action": "Adopted.",
+      "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3755",
       "raw_subject": null,
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
-      "last_updated": "2026-05-30T07:33:27+00:00"
+      "last_updated": "2026-06-05T16:15:05+00:00"
     },
     {
       "id": 58,
@@ -1083,15 +1087,15 @@
       "bill_type": "Resolution",
       "introducer": "TOMMY  WATERS",
       "introduced_date": "2026-05-27",
-      "status": "INTRO",
-      "last_action": "Introduced.",
-      "last_action_date": "2026-05-27",
+      "status": "CCL",
+      "last_action": "Adopted.",
+      "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3750",
       "raw_subject": null,
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
-      "last_updated": "2026-05-30T07:33:27+00:00"
+      "last_updated": "2026-06-05T16:15:05+00:00"
     },
     {
       "id": 60,
@@ -1101,15 +1105,15 @@
       "bill_type": "Resolution",
       "introducer": "TOMMY  WATERS",
       "introduced_date": "2026-05-27",
-      "status": "INTRO",
-      "last_action": "Introduced.",
-      "last_action_date": "2026-05-27",
+      "status": "CCL",
+      "last_action": "Adopted.",
+      "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3751",
       "raw_subject": null,
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
-      "last_updated": "2026-05-30T07:33:27+00:00"
+      "last_updated": "2026-06-05T16:15:05+00:00"
     },
     {
       "id": 61,
@@ -1341,9 +1345,9 @@
       "bill_type": "Bill",
       "introducer": "TOMMY  WATERS - By Request",
       "introduced_date": "2026-05-14",
-      "status": "INTRO",
-      "last_action": "Introduced.",
-      "last_action_date": "2026-05-14",
+      "status": "CCL",
+      "last_action": "Passed first reading.",
+      "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3740",
       "raw_subject": "Amends the LUO by expanding the TOO Special District boundaries to the East Kapolei Neighborhood TOD Plan area, adding primary design objectives and use regulations, and modifying the TOD Special District Project Classification table.",
       "subjects": [
@@ -1352,7 +1356,7 @@
       ],
       "classification_confidence": 0.1,
       "first_seen": "2026-05-30T07:33:26+00:00",
-      "last_updated": "2026-05-30T07:33:26+00:00"
+      "last_updated": "2026-06-05T16:15:05+00:00"
     },
     {
       "id": 18,
@@ -1362,9 +1366,9 @@
       "bill_type": "Bill",
       "introducer": "TOMMY  WATERS - By Request",
       "introduced_date": "2026-05-14",
-      "status": "INTRO",
-      "last_action": "Introduced.",
-      "last_action_date": "2026-05-14",
+      "status": "CCL",
+      "last_action": "Passed first reading.",
+      "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3741",
       "raw_subject": "Rezones certain land in the East Kapolei Neighborhood TOD Plan area and ‘Ewa.",
       "subjects": [
@@ -1372,7 +1376,7 @@
       ],
       "classification_confidence": 0.034,
       "first_seen": "2026-05-30T07:33:26+00:00",
-      "last_updated": "2026-05-30T07:33:26+00:00"
+      "last_updated": "2026-06-05T16:15:05+00:00"
     },
     {
       "id": 67,
@@ -1382,15 +1386,15 @@
       "bill_type": "Resolution",
       "introducer": "TOMMY  WATERS - By Request",
       "introduced_date": "2026-05-14",
-      "status": "HHP",
-      "last_action": "CR-159(26)\nReported out for adoption.",
-      "last_action_date": "2026-05-21",
+      "status": "CCL",
+      "last_action": "Committee report and Resolution were adopted.",
+      "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3738",
       "raw_subject": null,
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
-      "last_updated": "2026-05-30T07:33:27+00:00"
+      "last_updated": "2026-06-05T16:15:05+00:00"
     },
     {
       "id": 68,
@@ -1400,15 +1404,15 @@
       "bill_type": "Resolution",
       "introducer": "TOMMY  WATERS - By Request",
       "introduced_date": "2026-05-14",
-      "status": "HHP",
-      "last_action": "CR-160(26)\nReported out for adoption.",
-      "last_action_date": "2026-05-21",
+      "status": "CCL",
+      "last_action": "Committee report and Resolution were adopted.",
+      "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3739",
       "raw_subject": null,
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
-      "last_updated": "2026-05-30T07:33:27+00:00"
+      "last_updated": "2026-06-05T16:15:05+00:00"
     },
     {
       "id": 69,
@@ -1418,9 +1422,9 @@
       "bill_type": "Resolution",
       "introducer": "TOMMY  WATERS",
       "introduced_date": "2026-05-14",
-      "status": "ZON",
-      "last_action": "CR-152(26)\nReported out for adoption.",
-      "last_action_date": "2026-05-21",
+      "status": "CCL",
+      "last_action": "Committee report and Resolution were adopted.",
+      "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3742",
       "raw_subject": null,
       "subjects": [
@@ -1428,7 +1432,27 @@
       ],
       "classification_confidence": 0.062,
       "first_seen": "2026-05-30T07:33:27+00:00",
-      "last_updated": "2026-05-30T07:33:27+00:00"
+      "last_updated": "2026-06-05T16:15:05+00:00"
+    },
+    {
+      "id": 2110,
+      "council": "maui",
+      "bill_number": "BFED-60 Bill 61 (2026)",
+      "title": "BILL 61 (2026), ESTABLISHING A NEW CHAPTER 3.101, MAUI COUNTY CODE, FOR A FISCAL RESERVE FUND (BFED-60)",
+      "bill_type": "Bill",
+      "introducer": null,
+      "introduced_date": "2026-05-14",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16314",
+      "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
+      "subjects": [
+        "affordable_housing"
+      ],
+      "classification_confidence": 0.042,
+      "first_seen": "2026-06-05T16:15:07+00:00",
+      "last_updated": "2026-06-05T16:15:07+00:00"
     },
     {
       "id": 7,
@@ -1458,15 +1482,15 @@
       "bill_type": "Resolution",
       "introducer": "TOMMY  WATERS - By Request",
       "introduced_date": "2026-05-13",
-      "status": "BUD",
-      "last_action": "CR-131(26)\nReported out for adoption.",
-      "last_action_date": "2026-05-19",
+      "status": "CCL",
+      "last_action": "Committee report and Resolution were adopted.",
+      "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3727",
       "raw_subject": null,
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
-      "last_updated": "2026-05-30T07:33:27+00:00"
+      "last_updated": "2026-06-05T16:15:05+00:00"
     },
     {
       "id": 71,
@@ -1476,15 +1500,15 @@
       "bill_type": "Resolution",
       "introducer": "TOMMY  WATERS - By Request",
       "introduced_date": "2026-05-13",
-      "status": "HHP",
-      "last_action": "CR-156(26)\nReported out for adoption.",
-      "last_action_date": "2026-05-21",
+      "status": "CCL",
+      "last_action": "Committee report and Resolution were adopted.",
+      "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3728",
       "raw_subject": null,
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
-      "last_updated": "2026-05-30T07:33:27+00:00"
+      "last_updated": "2026-06-05T16:15:05+00:00"
     },
     {
       "id": 72,
@@ -1494,15 +1518,15 @@
       "bill_type": "Resolution",
       "introducer": "TOMMY  WATERS - By Request",
       "introduced_date": "2026-05-13",
-      "status": "PSE",
-      "last_action": "CR-140(26)\nReported out for adoption.",
-      "last_action_date": "2026-05-19",
+      "status": "CCL",
+      "last_action": "Committee report and Resolution were adopted.",
+      "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3729",
       "raw_subject": null,
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
-      "last_updated": "2026-05-30T07:33:27+00:00"
+      "last_updated": "2026-06-05T16:15:05+00:00"
     },
     {
       "id": 73,
@@ -1512,33 +1536,33 @@
       "bill_type": "Resolution",
       "introducer": "TOMMY  WATERS - By Request",
       "introduced_date": "2026-05-13",
-      "status": "HHP",
-      "last_action": "CR-157(26)\nReported out for adoption.",
-      "last_action_date": "2026-05-21",
+      "status": "CCL",
+      "last_action": "Committee report and Resolution were adopted.",
+      "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3730",
       "raw_subject": null,
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
-      "last_updated": "2026-05-30T07:33:27+00:00"
+      "last_updated": "2026-06-05T16:15:05+00:00"
     },
     {
       "id": 74,
       "council": "honolulu",
       "bill_number": "RES26-118",
-      "title": "ACCEPTING A GIFT OF ONE HUNDRED (100) SMALL CORRUGATED BOXES, THREE HUNDRED (300) MEDIUM CORRUGATED BOXES, AND FIFTY-FOUR (54) LARGE CORRUGATED BOXES VALUED AT $1,360.80 TO THE CITY FROM RENGO PACKAGING TO BE USED FOR THE MAYOR’S MEMORIAL DAY EVENT HELD AT NATIONAL MEMORIAL CEMETERY OF THE PACIFIC AT PŪOWAINA.",
+      "title": "ACCEPTING A GIFT TO THE CITY OF ONE HUNDRED (100) SMALL CORRUGATED BOXES, THREE HUNDRED (300) MEDIUM CORRUGATED BOXES, AND FIFTY-FOUR (54) LARGE CORRUGATED BOXES VALUED AT $1,360.80 FROM RENGO PACKAGING TO BE USED FOR THE MAYOR'S MEMORIAL DAY EVENT HELD AT THE NATIONAL MEMORIAL CEMETERY OF THE PACIFIC AT PŪOWAINA.",
       "bill_type": "Resolution",
       "introducer": "TOMMY  WATERS - By Request",
       "introduced_date": "2026-05-13",
-      "status": "HHP",
-      "last_action": "CR-158(26)\nReported out for adoption as amended in CD1 form.",
-      "last_action_date": "2026-05-21",
+      "status": "CCL",
+      "last_action": "Committee report and Resolution as amended were adopted.",
+      "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3731",
       "raw_subject": null,
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
-      "last_updated": "2026-05-30T07:33:27+00:00"
+      "last_updated": "2026-06-05T16:15:05+00:00"
     },
     {
       "id": 75,
@@ -1548,15 +1572,15 @@
       "bill_type": "Resolution",
       "introducer": "TOMMY  WATERS - By Request",
       "introduced_date": "2026-05-13",
-      "status": "BUD",
-      "last_action": "CR-132(26)\nReported out for adoption as amended in CD1 form.",
-      "last_action_date": "2026-05-19",
+      "status": "CCL",
+      "last_action": "Committee report and Resolution as amended were adopted.",
+      "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3732",
       "raw_subject": null,
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
-      "last_updated": "2026-05-30T07:33:27+00:00"
+      "last_updated": "2026-06-05T16:15:05+00:00"
     },
     {
       "id": 76,
@@ -1584,15 +1608,15 @@
       "bill_type": "Resolution",
       "introducer": "TOMMY  WATERS - By Request",
       "introduced_date": "2026-05-13",
-      "status": "BUD",
-      "last_action": "CR-133(26)\nReported out for adoption as amended in CD1 form.",
-      "last_action_date": "2026-05-19",
+      "status": "CCL",
+      "last_action": "Committee report and Resolution as amended were adopted.",
+      "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3734",
       "raw_subject": null,
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
-      "last_updated": "2026-05-30T07:33:27+00:00"
+      "last_updated": "2026-06-05T16:15:05+00:00"
     },
     {
       "id": 78,
@@ -1602,15 +1626,15 @@
       "bill_type": "Resolution",
       "introducer": "TOMMY  WATERS - By Request",
       "introduced_date": "2026-05-13",
-      "status": "BUD",
-      "last_action": "CR-134(26)\nReported out for adoption.",
-      "last_action_date": "2026-05-19",
+      "status": "CCL",
+      "last_action": "Committee report and Resolution were adopted.",
+      "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3735",
       "raw_subject": "Relating to the Transfer of Funds; Executive Operating Budget Ordinance; Provision for\nSalary Adjustments and Accrued Vacation Pay.",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
-      "last_updated": "2026-05-30T07:33:27+00:00"
+      "last_updated": "2026-06-05T16:15:05+00:00"
     },
     {
       "id": 79,
@@ -1620,15 +1644,15 @@
       "bill_type": "Resolution",
       "introducer": "TOMMY  WATERS - By Request",
       "introduced_date": "2026-05-13",
-      "status": "BUD",
-      "last_action": "CR-135(26)\nReported out for adoption.",
-      "last_action_date": "2026-05-19",
+      "status": "CCL",
+      "last_action": "Committee report and Resolution were adopted.",
+      "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3736",
       "raw_subject": "Relating to the Transfer of Funds; Executive Operating Budget Ordinance; Provision for\nEnergy Costs.",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
-      "last_updated": "2026-05-30T07:33:27+00:00"
+      "last_updated": "2026-06-05T16:15:05+00:00"
     },
     {
       "id": 80,
@@ -1638,15 +1662,15 @@
       "bill_type": "Resolution",
       "introducer": "TOMMY  WATERS - By Request",
       "introduced_date": "2026-05-13",
-      "status": "BUD",
-      "last_action": "CR-136(26)\nReported out for adoption.",
-      "last_action_date": "2026-05-19",
+      "status": "CCL",
+      "last_action": "Committee report and Resolution were adopted.",
+      "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3737",
       "raw_subject": null,
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
-      "last_updated": "2026-05-30T07:33:27+00:00"
+      "last_updated": "2026-06-05T16:15:05+00:00"
     },
     {
       "id": 19,
@@ -1656,9 +1680,9 @@
       "bill_type": "Bill",
       "introducer": "TOMMY  WATERS - By Request",
       "introduced_date": "2026-05-12",
-      "status": "INTRO",
-      "last_action": "Introduced.",
-      "last_action_date": "2026-05-12",
+      "status": "CCL",
+      "last_action": "Passed first reading.",
+      "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3723",
       "raw_subject": null,
       "subjects": [
@@ -1666,7 +1690,7 @@
       ],
       "classification_confidence": 0.026,
       "first_seen": "2026-05-30T07:33:26+00:00",
-      "last_updated": "2026-05-30T07:33:26+00:00"
+      "last_updated": "2026-06-05T16:15:05+00:00"
     },
     {
       "id": 81,
@@ -1676,69 +1700,69 @@
       "bill_type": "Resolution",
       "introducer": "TOMMY  WATERS - By Request",
       "introduced_date": "2026-05-12",
-      "status": "ITT",
-      "last_action": "CR-143(26)\nReported out for adoption.",
-      "last_action_date": "2026-05-20",
+      "status": "CCL",
+      "last_action": "Committee report and Resolution were adopted.",
+      "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3722",
       "raw_subject": null,
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
-      "last_updated": "2026-05-30T07:33:27+00:00"
+      "last_updated": "2026-06-05T16:15:05+00:00"
     },
     {
       "id": 82,
       "council": "honolulu",
       "bill_number": "RES26-111",
-      "title": "ACCEPTING A GIFT OF SHIPPING SERVICES VALUED AT $2,500 TO THE CITY FROM AEKO KULA LLC DBA ALOHA AIR CARGO FOR SHIPPING FLOWERS AND LEI FROM THE NEIGHBOR ISLANDS TO SUPPORT THE MAKING AND COLLECTION OF 38,000 LEI TO BE USED FOR THE ANNUAL MAYOR’S MEMORIAL DAY CEREMONY HELD AT THE NATIONAL CEMETERY OF THE PACIFIC AT PŪOWAINA.",
+      "title": "ACCEPTING A GIFT TO THE CITY OF SHIPPING SERVICES VALUED AT $2,500 FROM AEKO KULA LLC DBA ALOHA AIR CARGO FOR SHIPPING FLOWERS AND LEI FROM THE NEIGHBOR ISLANDS TO SUPPORT THE MAKING AND COLLECTION OF 38,000 LEI TO ADORN THE GRAVES OF OUR SERVICE MEMBERS BURIED AT THE NATIONAL MEMORIAL CEMETERY OF THE PACIFIC AT PŪOWAINA AS PART OF THE MAYOR'S MEMORIAL DAY CEREMONY.",
       "bill_type": "Resolution",
       "introducer": "TOMMY  WATERS - By Request",
       "introduced_date": "2026-05-12",
-      "status": "HHP",
-      "last_action": "CR-153(26)\nReported out for adoption as amended in CD1 form.",
-      "last_action_date": "2026-05-21",
+      "status": "CCL",
+      "last_action": "Committee report and Resolution as amended were adopted.",
+      "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3724",
       "raw_subject": null,
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
-      "last_updated": "2026-05-30T07:33:27+00:00"
+      "last_updated": "2026-06-05T16:15:05+00:00"
     },
     {
       "id": 83,
       "council": "honolulu",
       "bill_number": "RES26-112",
-      "title": "ACCEPTING A GIFT OF COOKIES FOR THE BOY SCOUTS VOLUNTEERS VALUED AT $606.00 FROM DIAMOND BAKERY WILL BE USED FOR THE MAYOR’S MEMORIAL DAY EVENT HELD AT NATIONAL MEMORIAL CEMETERY OF THE PACIFIC AT PŪOWAINA.",
+      "title": "ACCEPTING A GIFT TO THE CITY OF COOKIES VALUED AT $606.00 FROM DIAMOND BAKERY FOR THE BOY SCOUTS VOLUNTEERING AT THE MAYOR'S MEMORIAL DAY EVENT HELD AT THE NATIONAL MEMORIAL CEMETERY OF THE PACIFIC AT PŪOWAINA.",
       "bill_type": "Resolution",
       "introducer": "TOMMY  WATERS - By Request",
       "introduced_date": "2026-05-12",
-      "status": "HHP",
-      "last_action": "CR-154(26)\nReported out for adoption as amended in CD1 form.",
-      "last_action_date": "2026-05-21",
+      "status": "CCL",
+      "last_action": "Committee report and Resolution as amended were adopted.",
+      "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3725",
       "raw_subject": null,
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
-      "last_updated": "2026-05-30T07:33:27+00:00"
+      "last_updated": "2026-06-05T16:15:05+00:00"
     },
     {
       "id": 84,
       "council": "honolulu",
       "bill_number": "RES26-113",
-      "title": "ACCEPTING A GIFT OF ONGOING WEEKLY DONATIONS OF COMMERCIAL TI LEAVES WHICH WILL BE SEWN INTO LEI BY PUBLIC VOLUNTEERS VALUED AT $18,000.00 FROM MURAKAMI FARMS WILL BE USED FOR THE ANNUAL MAYOR'S MEMORIAL DAY CEREMONY HELD AT THE NATIONAL CEMETERY OF THE PACIFIC AT PŪOWAINA.",
+      "title": "ACCEPTING A GIFT TO THE CITY OF ONGOING WEEKLY DONATIONS OF COMMERCIAL TI LEAVES VALUED AT $18,000.00 FROM MURAKAMI FARMS TO BE SEWN INTO LEI BY PUBLIC VOLUNTEERS FOR THE MAYOR'S ANNUAL MEMORIAL DAY CEREMONY HELD AT THE NATIONAL MEMORIAL CEMETERY OF THE PACIFIC AT PŪOWAINA.",
       "bill_type": "Resolution",
       "introducer": "TOMMY  WATERS - By Request",
       "introduced_date": "2026-05-12",
-      "status": "HHP",
-      "last_action": "CR-155(26)\nReported out for adoption as amended in CD1 form.",
-      "last_action_date": "2026-05-21",
+      "status": "CCL",
+      "last_action": "Committee report and Resolution as amended were adopted.",
+      "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3726",
       "raw_subject": null,
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
-      "last_updated": "2026-05-30T07:33:27+00:00"
+      "last_updated": "2026-06-05T16:15:05+00:00"
     },
     {
       "id": 8,
@@ -1784,15 +1808,15 @@
       "bill_type": "Resolution",
       "introducer": "TOMMY  WATERS - By Request",
       "introduced_date": "2026-05-08",
-      "status": "BUD",
-      "last_action": "CR-130(26)\nReported out for adoption as amended in CD1 form.",
-      "last_action_date": "2026-05-19",
+      "status": "CCL",
+      "last_action": "Committee report and Resolution as amended were adopted.",
+      "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3721",
       "raw_subject": "Related to the transfer of funds due to the purchase price of a pickup truck to be used by District 8’s Community Policing Team being higher than anticipated",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
-      "last_updated": "2026-05-30T07:33:27+00:00"
+      "last_updated": "2026-06-05T16:15:05+00:00"
     },
     {
       "id": 10,
@@ -1892,15 +1916,15 @@
       "bill_type": "Resolution",
       "introducer": "TOMMY  WATERS - By Request",
       "introduced_date": "2026-05-05",
-      "status": "BUD",
-      "last_action": "CR-128(26)\nReported out for adoption as amended in CD1 form.",
-      "last_action_date": "2026-05-19",
+      "status": null,
+      "last_action": "Committee report and Resolution as amended were adopted.",
+      "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3718",
       "raw_subject": null,
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
-      "last_updated": "2026-05-30T07:33:27+00:00"
+      "last_updated": "2026-06-05T16:15:05+00:00"
     },
     {
       "id": 88,
@@ -1910,15 +1934,15 @@
       "bill_type": "Resolution",
       "introducer": "TOMMY  WATERS - By Request",
       "introduced_date": "2026-05-05",
-      "status": "BUD",
-      "last_action": "CR-129(26)\nReported out for adoption as amended in CD1 form.",
-      "last_action_date": "2026-05-19",
+      "status": "CCL",
+      "last_action": "Committee report and Resolution as amended were adopted.",
+      "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3719",
       "raw_subject": null,
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
-      "last_updated": "2026-05-30T07:33:27+00:00"
+      "last_updated": "2026-06-05T16:15:05+00:00"
     },
     {
       "id": 13,
@@ -1968,15 +1992,35 @@
       "bill_type": "Resolution",
       "introducer": "ESTHER  KIAʻĀINA",
       "introduced_date": "2026-05-04",
-      "status": "ZON",
-      "last_action": "CR-151(26)\nReported out for adoption.",
-      "last_action_date": "2026-05-21",
+      "status": "CCL",
+      "last_action": "Committee report and Resolution were adopted.",
+      "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3716",
       "raw_subject": null,
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
-      "last_updated": "2026-05-30T07:33:27+00:00"
+      "last_updated": "2026-06-05T16:15:05+00:00"
+    },
+    {
+      "id": 2111,
+      "council": "maui",
+      "bill_number": "WASSP-11 Bill 77 (2026)",
+      "title": "BILL 77 (2026), USE OF THE AFFORDABLE HOUSING FUND FOR THE COUNTY’S HOUSELESS POPULATION  (WASSP-11)",
+      "bill_type": "Bill",
+      "introducer": null,
+      "introduced_date": "2026-05-04",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16299",
+      "raw_subject": "Water Authority, Social Services, and Parks Committee (2025-2027)",
+      "subjects": [
+        "affordable_housing"
+      ],
+      "classification_confidence": 0.087,
+      "first_seen": "2026-06-05T16:15:07+00:00",
+      "last_updated": "2026-06-05T16:15:07+00:00"
     },
     {
       "id": 194,
@@ -2041,19 +2085,19 @@
       "id": 90,
       "council": "honolulu",
       "bill_number": "RES26-100",
-      "title": "CONFIRMING THE APPOINTMENT OF LANI LAPILIO TO SERVE ON THE OʻAHU HISTORIC PRESERVATION COMMISSION OF THE CITY AND COUNTY OF HONOLULU.",
+      "title": "CONFIRMING THE APPOINTMENT OF LANI MAʻA LAPILIO TO SERVE ON THE OʻAHU HISTORIC PRESERVATION COMMISSION OF THE CITY AND COUNTY OF HONOLULU.",
       "bill_type": "Resolution",
       "introducer": "TOMMY  WATERS - By Request",
       "introduced_date": "2026-04-29",
-      "status": "ZON",
-      "last_action": "CR-149(26)\nReported out for adoption as amended in CD1 form.",
-      "last_action_date": "2026-05-21",
+      "status": "CCL",
+      "last_action": "Committee report and Resolution as amended were adopted.",
+      "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3710",
       "raw_subject": null,
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
-      "last_updated": "2026-05-30T07:33:27+00:00"
+      "last_updated": "2026-06-05T16:15:05+00:00"
     },
     {
       "id": 91,
@@ -2063,15 +2107,15 @@
       "bill_type": "Resolution",
       "introducer": "TOMMY  WATERS - By Request",
       "introduced_date": "2026-04-29",
-      "status": "PSE",
-      "last_action": "CR-139(26)\nReported out for adoption.",
-      "last_action_date": "2026-05-19",
+      "status": "CCL",
+      "last_action": "Committee report and Resolution were adopted.",
+      "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3711",
       "raw_subject": null,
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
-      "last_updated": "2026-05-30T07:33:27+00:00"
+      "last_updated": "2026-06-05T16:15:05+00:00"
     },
     {
       "id": 92,
@@ -2081,9 +2125,9 @@
       "bill_type": "Resolution",
       "introducer": "TOMMY  WATERS - By Request",
       "introduced_date": "2026-04-29",
-      "status": "ZON",
-      "last_action": "CR-150(26)\nReported out for adoption as amended in CD1 form.",
-      "last_action_date": "2026-05-21",
+      "status": "CCL",
+      "last_action": "Committee report and Resolution as amended were adopted.",
+      "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3712",
       "raw_subject": null,
       "subjects": [
@@ -2091,7 +2135,7 @@
       ],
       "classification_confidence": 0.048,
       "first_seen": "2026-05-30T07:33:27+00:00",
-      "last_updated": "2026-05-30T07:33:27+00:00"
+      "last_updated": "2026-06-05T16:15:05+00:00"
     },
     {
       "id": 93,
@@ -2177,15 +2221,15 @@
       "bill_type": "Resolution",
       "introducer": "TOMMY  WATERS - By Request",
       "introduced_date": "2026-04-27",
-      "status": "ZON",
-      "last_action": "CR-147(26)\nReported out for adoption as amended in CD1 form.",
-      "last_action_date": "2026-05-21",
+      "status": "CCL",
+      "last_action": "Committee report and Resolution as amended were adopted.",
+      "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3706",
       "raw_subject": null,
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
-      "last_updated": "2026-05-30T07:33:27+00:00"
+      "last_updated": "2026-06-05T16:15:05+00:00"
     },
     {
       "id": 97,
@@ -2195,35 +2239,35 @@
       "bill_type": "Resolution",
       "introducer": "TOMMY  WATERS - By Request",
       "introduced_date": "2026-04-27",
-      "status": "ZON",
-      "last_action": "CR-148(26)\nReported out for adoption as amended in CD1 form.",
-      "last_action_date": "2026-05-21",
+      "status": "CCL",
+      "last_action": "Committee report and Resolution as amended were adopted.",
+      "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3707",
       "raw_subject": null,
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
-      "last_updated": "2026-05-30T07:33:27+00:00"
+      "last_updated": "2026-06-05T16:15:05+00:00"
     },
     {
       "id": 98,
       "council": "honolulu",
       "bill_number": "RES26-098",
-      "title": "CONFIRMING THE REAPPOINTMENT OF DR. PETER YOUNG TO SERVE ON THE BOARD OF REVIEW III FOR REAL PROPERTY TAX APPEAL OF THE CITY AND COUNTY OF HONOLULU.",
+      "title": "CONFIRMING THE REAPPOINTMENT OF PETER YOUNG TO SERVE ON THE BOARD OF REVIEW III FOR REAL PROPERTY TAX APPEALS OF THE CITY AND COUNTY OF HONOLULU.",
       "bill_type": "Resolution",
       "introducer": "TOMMY  WATERS - By Request",
       "introduced_date": "2026-04-27",
-      "status": "BUD",
-      "last_action": "CR-127(26)\nReported out for adoption as amended in CD1 form.",
-      "last_action_date": "2026-05-19",
+      "status": "CCL",
+      "last_action": "Committee report and Resolution as amended were adopted.",
+      "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3708",
       "raw_subject": null,
       "subjects": [
         "tax"
       ],
-      "classification_confidence": 0.111,
+      "classification_confidence": 0.115,
       "first_seen": "2026-05-30T07:33:27+00:00",
-      "last_updated": "2026-05-30T07:33:27+00:00"
+      "last_updated": "2026-06-05T16:15:05+00:00"
     },
     {
       "id": 197,
@@ -2309,15 +2353,15 @@
       "bill_type": "Resolution",
       "introducer": "TOMMY  WATERS - By Request",
       "introduced_date": "2026-04-22",
-      "status": "PSE",
-      "last_action": "CR-137(26)\nReported out for adoption.",
-      "last_action_date": "2026-05-19",
+      "status": "CCL",
+      "last_action": "Committee report and Resolution were adopted.",
+      "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3699",
       "raw_subject": null,
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
-      "last_updated": "2026-05-30T07:33:27+00:00"
+      "last_updated": "2026-06-05T16:15:05+00:00"
     },
     {
       "id": 102,
@@ -2327,9 +2371,9 @@
       "bill_type": "Resolution",
       "introducer": "TOMMY  WATERS - By Request",
       "introduced_date": "2026-04-22",
-      "status": "ZON",
-      "last_action": "CR-146(26)\nReported out for adoption as amended in CD1 form.",
-      "last_action_date": "2026-05-21",
+      "status": "CCL",
+      "last_action": "Committee report and Resolution as amended were adopted.",
+      "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3700",
       "raw_subject": null,
       "subjects": [
@@ -2337,7 +2381,7 @@
       ],
       "classification_confidence": 0.048,
       "first_seen": "2026-05-30T07:33:27+00:00",
-      "last_updated": "2026-05-30T07:33:27+00:00"
+      "last_updated": "2026-06-05T16:15:05+00:00"
     },
     {
       "id": 103,
@@ -2347,15 +2391,15 @@
       "bill_type": "Resolution",
       "introducer": "TOMMY  WATERS - By Request",
       "introduced_date": "2026-04-22",
-      "status": "PSE",
-      "last_action": "CR-138(26)\nReported out for adoption.",
-      "last_action_date": "2026-05-19",
+      "status": "CCL",
+      "last_action": "Committee report and Resolution were adopted.",
+      "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3701",
       "raw_subject": null,
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
-      "last_updated": "2026-05-30T07:33:27+00:00"
+      "last_updated": "2026-06-05T16:15:05+00:00"
     },
     {
       "id": 104,
@@ -2450,6 +2494,26 @@
       "classification_confidence": 0.048,
       "first_seen": "2026-05-30T07:50:27+00:00",
       "last_updated": "2026-05-30T07:50:27+00:00"
+    },
+    {
+      "id": 2112,
+      "council": "maui",
+      "bill_number": "BFED-58 Bill 73 (2026)",
+      "title": "BILL 73 (2026), AMENDING SECTION 3.36.020, MAUI COUNTY CODE, ON REVIEWING THE MAUI COUNTY GRANTS PROGRAM (BFED-58)",
+      "bill_type": "Bill",
+      "introducer": null,
+      "introduced_date": "2026-04-21",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16288",
+      "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
+      "subjects": [
+        "affordable_housing"
+      ],
+      "classification_confidence": 0.042,
+      "first_seen": "2026-06-05T16:15:08+00:00",
+      "last_updated": "2026-06-05T16:15:08+00:00"
     },
     {
       "id": 107,
@@ -2554,15 +2618,15 @@
       "bill_type": "Bill",
       "introducer": "ESTHER  KIAʻĀINA - By Request",
       "introduced_date": "2026-04-09",
-      "status": "ZON",
-      "last_action": "CR-145(26)\nReported out for passage on third reading as amended in CD2 form.",
-      "last_action_date": "2026-05-21",
+      "status": "CCL",
+      "last_action": "Committee report adopted and Bill passed third reading as amended.",
+      "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3690",
       "raw_subject": "Amends ROH Chapter 21A to update requirements and construction standards for consistency with the requirements of the FEMA, to remain eligible for participation in the National Flood Insurance Program and the Community Rating System, and make other housekeeping amendments. Takes effect on June 10, 2026.",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:26+00:00",
-      "last_updated": "2026-05-30T07:33:26+00:00"
+      "last_updated": "2026-06-05T16:15:05+00:00"
     },
     {
       "id": 111,
@@ -3222,9 +3286,9 @@
       "bill_type": "Resolution",
       "introducer": "TOMMY  WATERS, VAL  OKIMOTO",
       "introduced_date": "2026-03-10",
-      "status": "BUD",
-      "last_action": "CR-126(26)\nReported out for adoption.",
-      "last_action_date": "2026-05-01",
+      "status": "CCL",
+      "last_action": "Committee report and Resolution were adopted.",
+      "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3666",
       "raw_subject": null,
       "subjects": [
@@ -3232,7 +3296,7 @@
       ],
       "classification_confidence": 0.125,
       "first_seen": "2026-05-30T07:33:27+00:00",
-      "last_updated": "2026-05-30T07:33:27+00:00"
+      "last_updated": "2026-06-05T16:15:05+00:00"
     },
     {
       "id": 134,
@@ -3602,15 +3666,15 @@
       "bill_type": "Bill",
       "introducer": "TOMMY  WATERS - By Request",
       "introduced_date": "2026-03-02",
-      "status": "BUD",
-      "last_action": "CR-120(26)\nReported out for passage on third reading as amended in CD2 form.",
-      "last_action_date": "2026-05-01",
+      "status": "CCL",
+      "last_action": "Committee report adopted and Bill passed third reading.",
+      "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3647",
       "raw_subject": "Appropriates funds for the Executive Operating Budget for Fiscal Year 2027.",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:26+00:00",
-      "last_updated": "2026-05-30T07:33:26+00:00"
+      "last_updated": "2026-06-05T16:15:05+00:00"
     },
     {
       "id": 30,
@@ -3620,15 +3684,15 @@
       "bill_type": "Bill",
       "introducer": "TOMMY  WATERS - By Request",
       "introduced_date": "2026-03-02",
-      "status": "BUD",
-      "last_action": "CR-121(26)\nReported out for passage on third reading as amended in CD2 form.",
-      "last_action_date": "2026-05-01",
+      "status": "CCL",
+      "last_action": "Committee report adopted and Bill passed third reading.",
+      "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3648",
       "raw_subject": "Appropriates funds for the Executive Capital Budget and Program for Fiscal Year 2027.",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:26+00:00",
-      "last_updated": "2026-05-30T07:33:26+00:00"
+      "last_updated": "2026-06-05T16:15:05+00:00"
     },
     {
       "id": 31,
@@ -3638,9 +3702,9 @@
       "bill_type": "Bill",
       "introducer": "TOMMY  WATERS - By Request",
       "introduced_date": "2026-03-02",
-      "status": "BUD",
-      "last_action": "CR-122(26)\nReported out for passage on third reading.",
-      "last_action_date": "2026-05-01",
+      "status": "CCL",
+      "last_action": "Committee report adopted and Bill passed third reading.",
+      "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3649",
       "raw_subject": "The bill authorizes the issuance and sale of general obligation bonds and bond anticipation notes of the City and County of Honolulu in a maximum principal amount equal to the aggregate of the amounts of general obligation bonds appropriated in the capital budget ordinance for Fiscal Year 2027.",
       "subjects": [
@@ -3649,7 +3713,7 @@
       ],
       "classification_confidence": 0.02,
       "first_seen": "2026-05-30T07:33:27+00:00",
-      "last_updated": "2026-05-30T07:33:27+00:00"
+      "last_updated": "2026-06-05T16:15:05+00:00"
     },
     {
       "id": 32,
@@ -3679,15 +3743,15 @@
       "bill_type": "Bill",
       "introducer": "TOMMY  WATERS - By Request",
       "introduced_date": "2026-03-02",
-      "status": "BUD",
-      "last_action": "CR-123(26)\nReported out for passage on third reading.",
-      "last_action_date": "2026-05-01",
+      "status": "CCL",
+      "last_action": "Committee report adopted and Bill passed third reading.",
+      "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3651",
       "raw_subject": null,
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
-      "last_updated": "2026-05-30T07:33:27+00:00"
+      "last_updated": "2026-06-05T16:15:05+00:00"
     },
     {
       "id": 34,
@@ -3697,15 +3761,15 @@
       "bill_type": "Bill",
       "introducer": "TOMMY  WATERS - By Request",
       "introduced_date": "2026-03-02",
-      "status": "BUD",
-      "last_action": "CR-124(26)\nReported out for passage on third reading.",
-      "last_action_date": "2026-05-01",
+      "status": "CCL",
+      "last_action": "Committee report adopted and Bill passed third reading.",
+      "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3652",
       "raw_subject": null,
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
-      "last_updated": "2026-05-30T07:33:27+00:00"
+      "last_updated": "2026-06-05T16:15:05+00:00"
     },
     {
       "id": 35,
@@ -3715,15 +3779,15 @@
       "bill_type": "Bill",
       "introducer": "TOMMY  WATERS",
       "introduced_date": "2026-03-02",
-      "status": "BUD",
-      "last_action": "CR-125(26)\nReported out for passage on third reading.",
-      "last_action_date": "2026-05-01",
+      "status": "CCL",
+      "last_action": "Committee report adopted and Bill passed third reading.",
+      "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3653",
       "raw_subject": "Appropriates funds for the Legislative Budget for Fiscal Year 2027.",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
-      "last_updated": "2026-05-30T07:33:27+00:00"
+      "last_updated": "2026-06-05T16:15:05+00:00"
     },
     {
       "id": 210,
@@ -5016,15 +5080,15 @@
       "bill_type": "Bill",
       "introducer": "TOMMY  WATERS, ANDRIA  TUPOLA",
       "introduced_date": "2026-01-22",
-      "status": "ITT",
-      "last_action": "CR-141(26)\nReported out for passage on third reading as amended in CD1 form.",
-      "last_action_date": "2026-05-20",
+      "status": "CCL",
+      "last_action": "Committee report adopted and Bill passed third reading as amended.",
+      "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3605",
       "raw_subject": "Requires a department to be designated by the Mayor to make certain information relating to the City's wastewater system and separate storm sewer system publicly accessible. Establishes reporting requirements.",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
-      "last_updated": "2026-05-30T07:33:27+00:00"
+      "last_updated": "2026-06-05T16:15:05+00:00"
     },
     {
       "id": 44,
@@ -9159,15 +9223,15 @@
       "bill_type": "Bill",
       "introducer": "TOMMY  WATERS, ANDRIA  TUPOLA",
       "introduced_date": "2025-10-29",
-      "status": "ZON",
-      "last_action": "CR-144(26)\nReported out for passage on third reading as amended in CD2 form.",
-      "last_action_date": "2026-05-21",
+      "status": "CCL",
+      "last_action": "Committee report adopted and Bill passed third reading as amended.",
+      "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3537",
       "raw_subject": "Allows certain lands that are provided in perpetuity or dedicated for use as dog parks to be credited toward satisfying the requirements for the provision or dedication of lands for park and playground purposes under ROH Section 22-7.5. Limits the amount of dog park lands to be credited to up to 10 percent of the total park and playground lands required.",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:04+00:00",
-      "last_updated": "2026-06-01T20:41:04+00:00"
+      "last_updated": "2026-06-05T16:15:04+00:00"
     },
     {
       "id": 572,
@@ -16637,6 +16701,26 @@
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:43:50+00:00",
       "last_updated": "2026-06-01T20:43:50+00:00"
+    },
+    {
+      "id": 2113,
+      "council": "maui",
+      "bill_number": "BFED-42 Bill 81 (2025)",
+      "title": "BILL 81 (2025), AMENDING CHAPTER 3.04, MAUI COUNTY CODE, ON INFORMATION ON COUNTY OPERATIONS (BFED-42)",
+      "bill_type": "Bill",
+      "introducer": null,
+      "introduced_date": "2025-06-30",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15732",
+      "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
+      "subjects": [
+        "affordable_housing"
+      ],
+      "classification_confidence": 0.045,
+      "first_seen": "2026-06-05T16:15:10+00:00",
+      "last_updated": "2026-06-05T16:15:10+00:00"
     },
     {
       "id": 492,
