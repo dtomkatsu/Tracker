@@ -739,7 +739,10 @@
     if (lastAction) metaBits.push(`<span><span class="detail-label">Last action</span>${escapeHtml(lastAction)}</span>`);
     metaBits.push(`<span><a href="${escapeHtml(b.url)}" target="_blank" rel="noopener">View on council site ↗</a></span>`);
     parts.push(`<div class="detail-meta">${metaBits.join("")}</div>`);
-    detail.innerHTML = `<td colspan="7"><div class="detail-inner">${parts.join("")}</div></td>`;
+    // Gutter cells occupy the star+county columns so the expanded content lines
+    // up under the bill's Number/Title block instead of floating at the far left.
+    detail.innerHTML = `<td class="detail-gutter" colspan="2"></td>` +
+      `<td colspan="5"><div class="detail-inner">${parts.join("")}</div></td>`;
 
     function toggle() {
       const open = tr.classList.toggle("open");
