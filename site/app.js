@@ -725,7 +725,9 @@
     detail.className = "detail-row";
     detail.hidden = true;
     const summaryLabel = b.council === "honolulu" ? "Summary" : "Committee / body";
-    const parts = [`<div class="detail-progress">${renderStepper(prog, true)}</div>`];
+    // Progress is already shown in the row's Progress column, so the expanded
+    // view skips the (redundant) labeled stepper and leads with the summary.
+    const parts = [];
     if (b.raw_subject) {
       parts.push(
         `<div class="detail-summary"><span class="detail-label">${summaryLabel}</span>${annotate(b.raw_subject)}</div>`
