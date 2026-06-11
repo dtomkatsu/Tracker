@@ -2,77 +2,97 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Hawaii County Legislative Tracker</title>
+  <title>Hawaiʻi County Bill Tracker</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Track bills before Honolulu, Maui, Hawaii County, and Kauai councils — Tax, Transportation, Food Security, Affordable Housing.">
-  <meta name="theme-color" content="#3a7710">
+  <meta name="description" content="Track bills before Honolulu, Maui, Hawaiʻi County, and Kauaʻi councils — Tax, Transportation, Food Security, Affordable Housing.">
+  <meta name="theme-color" content="#3a7710" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#14181a" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://dtomkatsu.github.io/Tracker/">
   <!-- Social share preview (shown when a bookmarked/shared link is unfurled) -->
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Hawaii County Legislative Tracker">
-  <meta property="og:title" content="Hawaii County Legislative Tracker">
-  <meta property="og:description" content="Track bills before Honolulu, Maui, Hawaii County, and Kauai councils — Tax, Transportation, Food Security, and Affordable Housing.">
+  <meta property="og:site_name" content="Hawaiʻi County Bill Tracker">
+  <meta property="og:title" content="Hawaiʻi County Bill Tracker">
+  <meta property="og:description" content="Track bills before Honolulu, Maui, Hawaiʻi County, and Kauaʻi councils — Tax, Transportation, Food Security, and Affordable Housing.">
   <meta property="og:url" content="https://dtomkatsu.github.io/Tracker/">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Hawaii County Legislative Tracker">
-  <meta name="twitter:description" content="Track Tax, Transportation, Food Security, and Affordable Housing bills before Hawaii's four county councils.">
+  <meta name="twitter:title" content="Hawaiʻi County Bill Tracker">
+  <meta name="twitter:description" content="Track Tax, Transportation, Food Security, and Affordable Housing bills before Hawaiʻi's four county councils.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%233a7710'/%3E%3Ctext x='8' y='12' font-size='11' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'%3EH%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20260611">
 </head>
 <body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 17.3l-5.4 3.3 1.5-6.2L3.3 10l6.3-.5L12 3.7l2.4 5.8 6.3.5-4.8 4.4 1.5 6.2z" fill="currentColor"/></symbol>
+    <symbol id="i-star-o" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 17.3l-5.4 3.3 1.5-6.2L3.3 10l6.3-.5L12 3.7l2.4 5.8 6.3.5-4.8 4.4 1.5 6.2z"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></symbol>
+    <symbol id="i-more" viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="1.9"/><circle cx="12" cy="12" r="1.9"/><circle cx="19" cy="12" r="1.9"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><line x1="12" y1="11" x2="12" y2="16"/><circle cx="12" cy="7.6" r="0.6" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1.5-1.5"/></symbol>
+  </svg>
+
   <header class="site-header">
     <div class="header-inner">
-      <h1>Hawaii County Legislative Tracker</h1>
+      <div class="brand">
+        <h1>Hawaiʻi County Bill Tracker</h1>
+        <p class="tagline">Honolulu · Maui · Hawaiʻi County · Kauaʻi</p>
+      </div>
+      <p id="meta" class="meta"></p>
     </div>
   </header>
 
   <main>
-    <section class="filters" aria-label="Filters">
-      <div class="filter-group filter-wide">
-        <span class="group-label">Year</span>
-        <div id="f-year" class="chips"></div>
+    <div class="toolbar" role="search">
+      <div class="search-wrap">
+        <svg class="search-icon" aria-hidden="true"><use href="#i-search"/></svg>
+        <input id="f-search" type="search" placeholder="Search bills, number, introducer…" aria-label="Search bills">
+        <button type="button" id="f-search-clear" class="search-clear" aria-label="Clear search" hidden><svg aria-hidden="true"><use href="#i-x"/></svg></button>
       </div>
-      <!-- County/Type/Subject/Status live in the table column headers on desktop;
-           on mobile (cards) those headers are hidden, so mirror them here. -->
-      <div class="filters-mobile">
-        <div class="filter-group filter-wide"><span class="group-label">County</span><div id="mf-council" class="chips"></div></div>
-        <div class="filter-group filter-wide"><span class="group-label">Type</span><div id="mf-type" class="chips"></div></div>
-        <div class="filter-group filter-wide"><span class="group-label">Subject</span><div id="mf-subject" class="chips"></div></div>
-        <div class="filter-group filter-wide"><span class="group-label">Status</span><div id="mf-status" class="chips"></div></div>
-      </div>
-      <div class="filter-row">
-        <div class="filter-group filter-search">
-          <label class="group-label" for="f-search">Search</label>
-          <div class="search-wrap">
-            <input id="f-search" type="search" placeholder="title, number, introducer…">
-            <button type="button" id="f-search-clear" class="search-clear" aria-label="Clear search" hidden>✕</button>
-          </div>
-        </div>
-        <div class="filter-group filter-check">
-          <label class="checkbox-inline"><input id="f-favorites" type="checkbox"> ★ Favorites only<span id="fav-count"></span></label>
-          <label class="checkbox-inline"><input id="f-classified" type="checkbox" checked> Only classified bills</label>
-          <button id="copy-list" type="button" class="link-btn" title="Copy a link to your starred list">🔗 Copy link to my list</button>
-        </div>
-      </div>
-    </section>
-
-    <div class="results-bar">
-      <p id="result-count" class="result-count">Loading…</p>
-      <p id="meta" class="meta"></p>
-      <label class="sort-control">Sort
-        <select id="f-sort">
+      <div id="f-year" class="segmented" role="group" aria-label="Filter by year"></div>
+      <button type="button" id="f-favorites" class="tool-btn" aria-pressed="false" title="Show only your starred bills">
+        <svg class="tb-star" aria-hidden="true"><use href="#i-star-o"/></svg><span>Saved</span><span id="fav-count" class="count-badge" hidden></span>
+      </button>
+      <label class="sort-control" title="Sort order">
+        <span class="sr-only">Sort</span>
+        <select id="f-sort" aria-label="Sort order">
           <option value="recent">Recent activity</option>
           <option value="oldest">Oldest activity</option>
           <option value="number">Bill number</option>
         </select>
+        <svg class="sel-caret" aria-hidden="true"><use href="#i-chevron"/></svg>
       </label>
+      <div class="overflow">
+        <button type="button" id="more-btn" class="tool-btn icon-only" aria-haspopup="true" aria-expanded="false" aria-label="More options"><svg aria-hidden="true"><use href="#i-more"/></svg></button>
+        <div id="more-pop" class="tool-pop" hidden role="menu" aria-label="More options">
+          <label class="menu-check"><input id="f-classified" type="checkbox" checked> Only classified bills</label>
+          <button type="button" id="copy-list" class="menu-item" role="menuitem"><svg aria-hidden="true"><use href="#i-link"/></svg><span class="mi-label">Copy link to my list</span></button>
+          <button type="button" id="help-btn" class="menu-item" role="menuitem"><svg aria-hidden="true"><use href="#i-info"/></svg><span class="mi-label">Legend &amp; glossary</span></button>
+        </div>
+      </div>
     </div>
-    <div id="active-filters" class="active-filters" hidden></div>
-    <p class="hint">
-      Click any row for the full description. <strong>Star <span class="hint-star">★</span></strong> bills to build your list, then <strong>bookmark this page</strong> — or use <em>“Copy link to my list”</em> — to reopen the same picks on any device.
+
+    <!-- County/Type/Subject/Status live in the table column headers on desktop;
+         on mobile (cards) those headers are hidden, so mirror them here. -->
+    <div class="filters-mobile">
+      <div class="filter-group"><span class="group-label">County</span><div id="mf-council" class="chips"></div></div>
+      <div class="filter-group"><span class="group-label">Type</span><div id="mf-type" class="chips"></div></div>
+      <div class="filter-group"><span class="group-label">Subject</span><div id="mf-subject" class="chips"></div></div>
+      <div class="filter-group"><span class="group-label">Status</span><div id="mf-status" class="chips"></div></div>
+    </div>
+
+    <div class="results-strip">
+      <span id="result-count" class="result-count">Loading…</span>
+      <div id="active-filters" class="active-filters" hidden></div>
+    </div>
+
+    <p class="hint" id="hint" hidden>
+      <svg class="hint-icon" aria-hidden="true"><use href="#i-info"/></svg>
+      <span>Click any row for the full description. <strong>Star</strong> bills to build your list, then <strong>bookmark this page</strong> — or use <em>Copy link to my list</em> — to reopen the same picks on any device.</span>
+      <button type="button" id="hint-dismiss" class="hint-dismiss" aria-label="Dismiss"><svg aria-hidden="true"><use href="#i-x"/></svg></button>
     </p>
 
     <div class="table-wrap">
@@ -82,7 +102,7 @@
             <th class="col-fav" aria-label="Favorite"></th>
             <th class="col-council col-filter">
               <button type="button" class="col-filter-btn" id="cf-council-btn" aria-haspopup="true" aria-expanded="false">
-                County <span class="cf-caret" aria-hidden="true">▾</span><span class="cf-badge" hidden></span>
+                County <svg class="cf-caret" aria-hidden="true"><use href="#i-chevron"/></svg><span class="cf-badge" hidden></span>
               </button>
               <div class="col-filter-pop" id="cf-council-pop" hidden role="group" aria-label="Filter by county">
                 <div id="f-council" class="chips"></div>
@@ -91,7 +111,7 @@
             <th class="col-num">Number</th>
             <th class="col-type col-filter">
               <button type="button" class="col-filter-btn" id="cf-type-btn" aria-haspopup="true" aria-expanded="false">
-                Type <span class="cf-caret" aria-hidden="true">▾</span><span class="cf-badge" hidden></span>
+                Type <svg class="cf-caret" aria-hidden="true"><use href="#i-chevron"/></svg><span class="cf-badge" hidden></span>
               </button>
               <div class="col-filter-pop" id="cf-type-pop" hidden role="group" aria-label="Filter by type">
                 <div id="f-type" class="chips"></div>
@@ -100,7 +120,7 @@
             <th class="col-title">Title</th>
             <th class="col-subj col-filter">
               <button type="button" class="col-filter-btn" id="cf-subject-btn" aria-haspopup="true" aria-expanded="false">
-                Subjects <span class="cf-caret" aria-hidden="true">▾</span><span class="cf-badge" hidden></span>
+                Subjects <svg class="cf-caret" aria-hidden="true"><use href="#i-chevron"/></svg><span class="cf-badge" hidden></span>
               </button>
               <div class="col-filter-pop" id="cf-subject-pop" hidden role="group" aria-label="Filter by subject">
                 <div id="f-subject" class="chips"></div>
@@ -108,7 +128,7 @@
             </th>
             <th class="col-status col-filter">
               <button type="button" class="col-filter-btn" id="cf-status-btn" aria-haspopup="true" aria-expanded="false">
-                Progress <span class="cf-caret" aria-hidden="true">▾</span><span class="cf-badge" hidden></span>
+                Progress <svg class="cf-caret" aria-hidden="true"><use href="#i-chevron"/></svg><span class="cf-badge" hidden></span>
               </button>
               <div class="col-filter-pop" id="cf-status-pop" hidden role="group" aria-label="Filter by status">
                 <div id="f-status" class="chips"></div>
@@ -121,10 +141,14 @@
     </div>
   </main>
 
-  <section class="glossary">
-    <details>
-      <summary>Reading the Progress column</summary>
-      <div class="legend-body">
+  <dialog id="help-dialog" class="help-dialog" aria-label="Legend and glossary">
+    <div class="help-head">
+      <h2>Legend &amp; glossary</h2>
+      <button type="button" id="help-close" class="help-close" aria-label="Close"><svg aria-hidden="true"><use href="#i-x"/></svg></button>
+    </div>
+    <div class="help-body">
+      <section>
+        <h3>Reading the Progress column</h3>
         <p>Each bill is placed on a 5-step track: <strong>Introduced → Committee → 1st reading → Final reading → Enacted.</strong></p>
         <ul class="legend-dots">
           <li><span class="lg-dot done"></span> Step reached / completed</li>
@@ -134,27 +158,27 @@
           <li><span class="lg-dot unknown"></span> Status not yet reported</li>
         </ul>
         <p class="legend-note">The date below each track is the most recent action on that bill.</p>
-      </div>
-    </details>
-    <details>
-      <summary>Glossary — common acronyms in council bills</summary>
-      <dl id="glossary-list"></dl>
-    </details>
-  </section>
+      </section>
+      <section>
+        <h3>Common acronyms in council bills</h3>
+        <dl id="glossary-list"></dl>
+      </section>
+    </div>
+  </dialog>
 
   <footer>
     <p>
       Data sources: Maui via the Legistar API; Honolulu via hnldoc.ehawaii.gov;
-      Hawaii County &amp; Kauai parsed from their Granicus meeting agendas (Hawaii
+      Hawaiʻi County &amp; Kauaʻi parsed from their Granicus meeting agendas (Hawaiʻi
       County enriched with Laserfiche council records). All bill data is public record.
     </p>
     <p class="meta">
-      Styled after the Hawaii Appleseed Center palette. Independent project —
-      not affiliated with or endorsed by Hawaii Appleseed.
+      Styled after the Hawaiʻi Appleseed Center palette. Independent project —
+      not affiliated with or endorsed by Hawaiʻi Appleseed.
       <a href="https://github.com/dtomkatsu/Tracker">Source on GitHub</a>.
     </p>
   </footer>
 
-  <script src="app.js"></script>
+  <script src="app.js?v=20260611"></script>
 </body>
 </html>

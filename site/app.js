@@ -103,13 +103,27 @@
   }
   function updateFavCount() {
     const el = document.getElementById("fav-count");
-    if (el) el.textContent = state.favorites.size ? ` (${state.favorites.size})` : "";
+    if (!el) return;
+    const n = state.favorites.size;
+    el.textContent = n ? String(n) : "";
+    el.hidden = !n;
+  }
+  // Reflect the favorites-only toggle button state (replaces the old checkbox).
+  function setFavoritesOnly(on) {
+    state.favoritesOnly = on;
+    const btn = document.getElementById("f-favorites");
+    if (!btn) return;
+    btn.classList.toggle("is-on", on);
+    btn.setAttribute("aria-pressed", String(on));
+    const use = btn.querySelector(".tb-star use");
+    if (use) use.setAttribute("href", on ? "#i-star" : "#i-star-o");
   }
   function favButtonHtml(b) {
     const on = state.favorites.has(favKey(b));
     return `<button class="fav-btn${on ? " is-fav" : ""}" type="button" aria-pressed="${on}" ` +
       `title="${on ? "Remove from favorites" : "Save to favorites"}" ` +
-      `aria-label="${on ? "Remove bill from favorites" : "Save bill to favorites"}">${on ? "★" : "☆"}</button>`;
+      `aria-label="${on ? "Remove bill from favorites" : "Save bill to favorites"}">` +
+      `<svg aria-hidden="true"><use href="#i-star${on ? "" : "-o"}"/></svg></button>`;
   }
 
   // Mirror the starred set (and the favorites-only view) into the URL hash, so
@@ -544,7 +558,6 @@
     // popovers aren't reachable once the table collapses to cards.
     const groups = [
       ["council", it.council, state.councils, undefined],
-      ["year", it.year, state.years, undefined],
       ["subject", it.subject, state.subjects, { pill: true }],
       ["type", it.type, state.types, undefined],
       ["status", it.status, state.statuses, undefined],
@@ -553,7 +566,87 @@
       if (document.getElementById("f-" + name)) renderCheckGroup("f-" + name, items, set, opts);
       if (document.getElementById("mf-" + name)) renderCheckGroup("mf-" + name, items, set, opts);
     }
+    renderYearControl();
   }
+
+  // Year is a single-select segmented control (newest year selected by default,
+  // plus an "All" segment) — clearer than a checkbox list for a 3-value filter.
+  function renderYearControl() {
+    const c = document.getElementById("f-year");
+    const years = state._items?.year;
+    if (!c || !years) return;
+    c.innerHTML = "";
+    const allActive = state.years.size === years.length;
+    const seg = (label, active, onClick) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "seg" + (active ? " active" : "");
+      b.setAttribute("aria-pressed", String(active));
+      b.textContent = label;
+      b.addEventListener("click", onClick);
+      return b;
+    };
+    for (const y of years) {
+      const active = !allActive && state.years.size === 1 && state.years.has(y.value);
+      c.appendChild(seg(y.label, active, () => {
+        state.years.clear();
+        state.years.add(y.value);
+        renderYearControl();
+        applyFilters();
+      }));
+    }
+    c.appendChild(seg("All", allActive, () => {
+      setAll(state.years, years);
+      renderYearControl();
+      applyFilters();
+    }));
+  }
+
+  // Overflow "⋯" menu in the toolbar (classified toggle, copy link, help).
+  function wireToolbarMenu() {
+    const btn = document.getElementById("more-btn");
+    const pop = document.getElementById("more-pop");
+    if (!btn || !pop) return;
+    const close = () => { pop.hidden = true; btn.setAttribute("aria-expanded", "false"); };
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const open = pop.hidden;
+      pop.hidden = !open;
+      btn.setAttribute("aria-expanded", String(open));
+    });
+    pop.addEventListener("click", (e) => e.stopPropagation());
+    document.addEventListener("click", () => { if (!pop.hidden) close(); });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
+  }
+
+  // Legend & glossary modal, opened from the overflow menu.
+  function wireHelpDialog() {
+    const dlg = document.getElementById("help-dialog");
+    if (!dlg) return;
+    const open = () => { if (typeof dlg.showModal === "function") dlg.showModal(); else dlg.setAttribute("open", ""); };
+    document.getElementById("help-btn")?.addEventListener("click", () => {
+      document.getElementById("more-pop")?.setAttribute("hidden", "");
+      document.getElementById("more-btn")?.setAttribute("aria-expanded", "false");
+      open();
+    });
+    document.getElementById("help-close")?.addEventListener("click", () => dlg.close());
+    // Click on the backdrop (outside the dialog box) closes it.
+    dlg.addEventListener("click", (e) => { if (e.target === dlg) dlg.close(); });
+  }
+
+  // One-time onboarding hint; dismissed state persists per browser.
+  function wireHint() {
+    const hint = document.getElementById("hint");
+    if (!hint) return;
+    let dismissed = false;
+    try { dismissed = !!localStorage.getItem("tracker:hint-dismissed"); } catch { /* storage off */ }
+    if (!dismissed) hint.hidden = false;
+    document.getElementById("hint-dismiss")?.addEventListener("click", () => {
+      hint.hidden = true;
+      try { localStorage.setItem("tracker:hint-dismissed", "1"); } catch { /* storage off */ }
+    });
+  }
+
   function setAll(set, items) {
     set.clear();
     (items || []).forEach((x) => set.add(x.value));
@@ -572,28 +665,25 @@
         : set.size === 0 ? `${name}: none` : `${name}: ${set.size}`;
       chips.push({ dim, text });
     };
+    // Year, Favorites, and Search each have a dedicated always-visible control
+    // (segmented control, toggle button, search box), so they're not echoed as
+    // removable chips. County/Type/Subject/Status live in column-header popovers
+    // that aren't always on screen, so those get chips.
     dimChip("council", state.councils, it.council, "County");
     dimChip("type", state.types, it.type, "Type");
     dimChip("subject", state.subjects, it.subject, "Subject");
     dimChip("status", state.statuses, it.status, "Status");
-    dimChip("year", state.years, it.year, "Year");
-    if (state.favoritesOnly) chips.push({ dim: "fav", text: "★ Favorites" });
-    if (state.search) chips.push({ dim: "search", text: `Search: “${state.search}”` });
 
     host.innerHTML = "";
     if (!chips.length) { host.hidden = true; return; }
     host.hidden = false;
-    const lbl = document.createElement("span");
-    lbl.className = "af-label";
-    lbl.textContent = "Filters:";
-    host.appendChild(lbl);
     for (const c of chips) {
       const b = document.createElement("button");
       b.type = "button";
       b.className = "af-chip";
       b.dataset.dim = c.dim;
       b.setAttribute("aria-label", `Remove filter ${c.text}`);
-      b.innerHTML = `${escapeHtml(c.text)} <span class="af-x" aria-hidden="true">✕</span>`;
+      b.innerHTML = `${escapeHtml(c.text)}<svg class="af-x" aria-hidden="true"><use href="#i-x"/></svg>`;
       host.appendChild(b);
     }
     const reset = document.createElement("button");
@@ -610,8 +700,7 @@
     else if (dim === "status") setAll(state.statuses, it.status);
     else if (dim === "year") setAll(state.years, it.year);
     else if (dim === "fav") {
-      state.favoritesOnly = false;
-      const cb = document.getElementById("f-favorites"); if (cb) cb.checked = false;
+      setFavoritesOnly(false);
       syncListHash();
     } else if (dim === "search") {
       state.search = "";
@@ -631,8 +720,7 @@
     state.search = "";
     const s = document.getElementById("f-search"); if (s) s.value = "";
     const sc = document.getElementById("f-search-clear"); if (sc) sc.hidden = true;
-    state.favoritesOnly = false;
-    const cb = document.getElementById("f-favorites"); if (cb) cb.checked = false;
+    setFavoritesOnly(false);
     state.onlyClassified = true;
     const cc = document.getElementById("f-classified"); if (cc) cc.checked = true;
     syncListHash();
@@ -695,30 +783,36 @@
       state.onlyClassified = e.target.checked;
       applyFilters();
     });
-    document.getElementById("f-favorites").addEventListener("change", (e) => {
-      state.favoritesOnly = e.target.checked;
+    const favBtn = document.getElementById("f-favorites");
+    if (favBtn) favBtn.addEventListener("click", () => {
+      setFavoritesOnly(!state.favoritesOnly);
       syncListHash();
       applyFilters();
     });
     const copyBtn = document.getElementById("copy-list");
     if (copyBtn) {
+      const copyLabel = copyBtn.querySelector(".mi-label");
+      const setCopy = (t) => { if (copyLabel) copyLabel.textContent = t; };
       copyBtn.addEventListener("click", async () => {
         syncListHash();
-        const restore = () => { copyBtn.textContent = "🔗 Copy link to my list"; };
+        const restore = () => setCopy("Copy link to my list");
         if (!state.favorites.size) {
-          copyBtn.textContent = "Star some bills first";
+          setCopy("Star some bills first");
           setTimeout(restore, 1800);
           return;
         }
         try {
           await navigator.clipboard.writeText(location.href);
-          copyBtn.textContent = "✓ Link copied — bookmark it";
+          setCopy("✓ Link copied — bookmark it");
         } catch {
-          copyBtn.textContent = "Copy the page URL from the address bar";
+          setCopy("Copy the page URL from the address bar");
         }
         setTimeout(restore, 2200);
       });
     }
+    wireToolbarMenu();
+    wireHelpDialog();
+    wireHint();
     wireColumnFilter("cf-council-btn", "cf-council-pop");
     wireColumnFilter("cf-subject-btn", "cf-subject-pop");
     wireColumnFilter("cf-type-btn", "cf-type-pop");
@@ -797,7 +891,7 @@
     tr.setAttribute("aria-expanded", "false");
     tr.innerHTML = `
       <td class="col-fav">${favButtonHtml(b)}</td>
-      <td class="col-council" data-label="County">${escapeHtml(council)}</td>
+      <td class="col-council" data-label="County"><span class="county-tag county-${escapeHtml(b.council)}">${escapeHtml(council)}</span></td>
       <td class="col-num" data-label="Number"><a class="bill-link" href="${escapeHtml(b.url)}" target="_blank" rel="noopener">${escapeHtml(b.bill_number)}</a></td>
       <td class="col-type" data-label="Type">${escapeHtml(b.bill_type)}</td>
       <td class="col-title" data-label="Title">
@@ -868,7 +962,7 @@
       const on = state.favorites.has(favKey(b));
       favBtn.classList.toggle("is-fav", on);
       favBtn.setAttribute("aria-pressed", String(on));
-      favBtn.textContent = on ? "★" : "☆";
+      favBtn.querySelector("use")?.setAttribute("href", on ? "#i-star" : "#i-star-o");
       favBtn.title = on ? "Remove from favorites" : "Save to favorites";
       if (state.favoritesOnly) applyFilters(); // drop it from the filtered view
     });
@@ -907,8 +1001,7 @@
     setMeta(payload);
     buildFilters(payload);
     restoreListFromHash();
-    const favCb = document.getElementById("f-favorites");
-    if (favCb) favCb.checked = state.favoritesOnly;
+    setFavoritesOnly(state.favoritesOnly);
     updateFavCount();
     applyFilters();
   }
