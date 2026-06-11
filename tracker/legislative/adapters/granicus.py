@@ -231,6 +231,35 @@ _HI_TRAILER_RE = re.compile(
 # the staff summary ("Requires a …", "Adds the …"), a communication attribution
 # ("From Mayor …, dated …, transmitting …"), or a stray "Draft 2)".
 _HI_DESC_RE = re.compile(r"\s+[A-Z][a-z].*$", re.S)
+# Where the staff summary ends: reference/introducer/vote metadata, an attached
+# communication ("; and Comm. 754.11: (Memo No. 1) From …"), an agenda note, or
+# the page footer.
+_HI_SUMMARY_END_RE = re.compile(
+    r"\s*(?:;\s*and\b|\(?Comm\.\s*(?:No\.?\s*)?\d|\(NOTE\b|\(Memo\b"
+    r"|Reference:|Intr\.\s*by:|Approve:|Negative:|Positive:|Postpone"
+    r"|2/3\s*Vote:|Public Hearing:|First Reading:|Second Reading:"
+    r"|Hawai.i\s+County\s+Council|Page\s+\d+).*$",
+    re.I | re.S,
+)
+
+
+def _hawaii_summary(raw: str) -> str | None:
+    """The Title-case staff summary that follows a Hawaii County ALL-CAPS
+    title ("Draft 3 includes estimated revenues of …", "Adds a new article
+    to regulate …"), or None when what follows is metadata or an attached
+    communication rather than a summary of the bill itself."""
+    t = _HI_LEAD_RE.sub("", raw)
+    m = _HI_DESC_RE.search(t)
+    if not m:
+        return None
+    s = _HI_SUMMARY_END_RE.sub("", m.group(0).strip()).strip()
+    # "From Council Member …, dated …, transmitting …" is a communication
+    # attribution, not a description of the bill.
+    if re.match(r"From\b", s):
+        return None
+    if len(s) < 25 or len(s.split()) < 5:
+        return None
+    return s[:600].rstrip()
 
 
 def _clean_hawaii_title(raw: str) -> str | None:
@@ -363,11 +392,14 @@ class GranicusAdapter(CouncilAdapter):
             # Title-case staff summary and metadata trailing an ALL-CAPS title;
             # Kauai (html) must tell a real agenda item from a cross-reference
             # and may recover a title that precedes the number.
+            summary = None
             if self.mode == "pdf":
-                window = _BILL_RE.split(flat[m.end(): m.end() + 400])[0]
+                window = _BILL_RE.split(flat[m.end(): m.end() + 900])[0]
                 raw = _clean(window).lstrip("-–—:.,) ")
                 raw = re.sub(r"^\(Draft\s+\d+\)\s*", "", raw, flags=re.I).strip()
                 title = _clean_hawaii_title(raw)
+                if title:
+                    summary = _hawaii_summary(raw)
             else:
                 title = _clean_kauai_title(flat, m)
             if not title:
@@ -388,6 +420,7 @@ class GranicusAdapter(CouncilAdapter):
                 "bill_number": bill_number,
                 "bill_type": bill_type,
                 "title": title,
+                "summary": summary,
                 "stage": stage,
                 "date": meeting_date,
                 "url": agenda_url,
@@ -432,8 +465,8 @@ class GranicusAdapter(CouncilAdapter):
                 browser.close()
 
     def fetch_bills(self, since: date | None = None) -> Iterator[BillRecord]:
-        # Per bill: keep the longest (best) title ever seen, plus the latest
-        # meeting date and the stage from that latest meeting.
+        # Per bill: keep the longest (best) title and summary ever seen, plus
+        # the latest meeting date and the stage from that latest meeting.
         merged: dict[str, dict] = {}
         for mdate, agenda_url, text in self.iter_raw_agendas(since=since):
             for men in self._parse_agenda(text, mdate, agenda_url):
@@ -442,9 +475,11 @@ class GranicusAdapter(CouncilAdapter):
                 if cur is None:
                     merged[key] = men
                     continue
-                # Best (longest) title wins.
+                # Best (longest) title / summary wins.
                 if len(men["title"] or "") > len(cur["title"] or ""):
                     cur["title"] = men["title"]
+                if len(men.get("summary") or "") > len(cur.get("summary") or ""):
+                    cur["summary"] = men["summary"]
                 # Latest meeting drives date / stage / link.
                 if (men["date"] or "") >= (cur["date"] or ""):
                     cur["date"] = men["date"]
@@ -463,7 +498,10 @@ class GranicusAdapter(CouncilAdapter):
                 last_action=f"On agenda {men['date']}" if men["date"] else "On agenda",
                 last_action_date=men["date"] or None,
                 url=men["url"],
-                raw_subject=men["title"],
+                # The staff summary (Hawaii County agendas carry one after the
+                # legal title) is the bill's best plain-English description;
+                # fall back to the title where the agenda has no summary.
+                raw_subject=men.get("summary") or men["title"],
             )
 
     def fetch_actions(self, bill_number: str) -> Iterator[ActionRecord]:

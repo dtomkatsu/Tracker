@@ -256,17 +256,108 @@
     return html + "</div>";
   }
 
-  // A readable headline for a bill: prefer the parenthetical short-title that
-  // councils tack on (e.g. "(Long-Term Affordable Rental Requirements)"),
-  // otherwise the title with the "A BILL FOR AN ORDINANCE…" boilerplate trimmed.
+  // A readable headline for a bill — what it's actually ABOUT, not the legal
+  // framing. Built from, in order of preference:
+  //   1. the subject of the "RELATING TO …" clause (the legal statement of
+  //      what the measure covers), combined with
+  //   2. a trailing parenthetical short-title when the council tacked one on
+  //      (e.g. "(Long-Term Affordable Rental Requirements)") — trailing only:
+  //      mid-title parentheticals are legal asides like "(2016 EDITION, AS
+  //      AMENDED)" or "(Public Laws 93-383 And 100-242)", not short titles;
+  //   3. otherwise the full title with lead-in boilerplate trimmed.
+  // ALL-CAPS results are converted to readable title case (known acronyms kept).
+  const PAREN_NOISE_RE = new RegExp(
+    "^draft\\s*\\d|^\\d+$|^\\d{4}\\b|public hearing|edition|as amended" +
+    "|public law|^see\\b|^memo|^comm\\b|\\bno\\.\\s*\\d|^for condemnation$",
+    "i"
+  );
+  const SMALL_WORDS = new Set([
+    "a", "an", "and", "as", "at", "by", "for", "in", "of", "on", "or", "the", "to", "with",
+  ]);
+  const KNOWN_ACRONYMS = new Set([
+    ...Object.keys(GLOSSARY),
+    "USA", "US", "HSAC", "CDBG", "PEG", "YWCA", "YMCA", "FY", "II", "III", "IV",
+  ]);
+
+  // A string counts as ALL-CAPS when it has no real lowercase or Title-case
+  // word — isolated lowercase letters inside codes ("A-20a", "RS-10a") don't
+  // disqualify it.
+  function isAllCaps(s) {
+    return !/\b[a-z]{2,}|[A-Z][a-z]{2,}/.test(s);
+  }
+
+  // Convert an ALL-CAPS legal title to title case; mixed-case input is
+  // returned untouched. Words the glossary knows (HUD, RPT, …) stay caps so
+  // the acronym tooltips still match, and mixed-case codes ("A-20a") are kept.
+  function readableCase(s) {
+    if (!s || !isAllCaps(s)) return s;
+    let first = true;
+    return s.replace(/[\p{L}\p{N}'’‘ʻ-]+/gu, (w) => {
+      if (KNOWN_ACRONYMS.has(w)) return w;
+      if (/[a-z]/.test(w)) return w; // zoning/code token like "A-20a"
+      const lw = w.toLowerCase();
+      if (!first && SMALL_WORDS.has(lw)) return lw;
+      first = false;
+      return lw
+        .split("-")
+        .map((seg) => (SMALL_WORDS.has(seg) ? seg : seg.charAt(0).toUpperCase() + seg.slice(1)))
+        .join("-");
+    });
+  }
+
+  // Records scraped before summary/title separation carry the Title-case staff
+  // summary glued onto the ALL-CAPS legal title ("…AND GARAGES Removes
+  // commercial parking lots…"); keep only the caps title.
+  function capsCore(t) {
+    const m = t.match(/[A-Z][a-z]{2,}/);
+    if (!m || m.index < 30) return t;
+    const prefix = t.slice(0, m.index);
+    return isAllCaps(prefix) ? prefix.trim() : t;
+  }
+
+  // A short-title tag the council appended at the END of the title; mid-title
+  // parentheticals are statutory asides and never used as headlines.
+  function shortTitleTag(t) {
+    const m = t.match(/\(([^()]{5,90})\)\s*\.?\s*$/);
+    if (!m) return "";
+    const p = m[1].replace(/\s{2,}/g, " ").trim();
+    if (PAREN_NOISE_RE.test(p)) return "";
+    if (p.split(/\s+/).length < 2 || !/[A-Za-z]{3}/.test(p)) return "";
+    return p;
+  }
+
   function billHeadline(b) {
-    const t = (b.title || "").trim();
-    if (!t) return "";
-    const parens = [...t.matchAll(/\(([^)]{5,90})\)/g)]
-      .map((x) => x[1].replace(/\s{2,}/g, " ").trim())
-      .filter((p) => !/^draft\s*\d+$/i.test(p) && !/^\d+$/.test(p) && !/public hearing/i.test(p));
-    if (parens.length) return parens[0];
-    return t.replace(/^A BILL FOR AN ORDINANCE\s+/i, "").replace(/^A RESOLUTION\s+/i, "").trim() || t;
+    const raw = (b.title || "").trim();
+    if (!raw) return "";
+    const tag = shortTitleTag(raw);
+    // A trailing short-title tag means the title is already clean; otherwise
+    // shear off any staff summary glued onto an ALL-CAPS title.
+    const t = tag ? raw : capsCore(raw);
+    // "RELATING TO X" / "RELATES TO X": X is the substance. Stop at a
+    // parenthetical, sentence end, or a trailing fiscal-year span.
+    const rel = t.match(
+      /\bRELAT(?:ING|ES|ED)\s+TO\s+(?:THE\s+)?(.+?)(?=\s*\(|\s*[.;]|\s+FOR\s+THE\s+FISCAL\s+YEAR\b|\s*$)/i
+    );
+    const subject = rel && rel[1].trim().replace(/,\s*$/, "");
+    if (subject && tag) return `${readableCase(subject)} — ${readableCase(tag)}`;
+    if (tag) return readableCase(tag);
+    if (subject && (subject.split(/\s+/).length >= 2 || subject.length >= 6)) {
+      return readableCase(subject);
+    }
+    const trimmed = t
+      .replace(/^A BILL FOR AN ORDINANCE\s+/i, "")
+      .replace(/^AN?\s+ORDINANCE\s+/i, "")
+      .replace(/^A BILL\s+(?:TO|FOR)\s+/i, "")
+      .replace(/^A RESOLUTION\s+/i, "")
+      // "RESOLUTION 26-84, …" / "BILL 61 (2026), …" — the number repeats the
+      // Number column; keep only what follows.
+      .replace(/^(?:BILL|RESOLUTION)\s+(?:NO\.?\s*)?\d[\d-]*\s*(?:\(\d{4}\))?\s*,\s*/i, "")
+      .replace(/^RESOLUTION\s+/i, "")
+      // trailing committee file code, e.g. "(BFED-60)" or "(WASSP-1(20))"
+      .replace(/\s*\(\s*[A-Za-z]{2,8}-\d+(?:\([^)]*\))?[^)]*\)\s*$/, "")
+      .replace(/\s{2,}/g, " ")
+      .trim();
+    return readableCase(trimmed) || t;
   }
 
   // Escape, then wrap recognized acronyms in <abbr> tooltips. One pass per
@@ -724,7 +815,13 @@
     const detail = document.createElement("tr");
     detail.className = "detail-row";
     detail.hidden = true;
-    const summaryLabel = b.council === "honolulu" ? "Summary" : "Committee / body";
+    // Maui's raw_subject is the referring committee; everywhere else it is a
+    // staff summary — or, when the council source has no separate summary
+    // (Kauai), the full legal title, which is itself the best description.
+    const summaryLabel =
+      b.council === "maui" ? "Committee / body"
+      : b.raw_subject && b.raw_subject !== fullTitle ? "Summary"
+      : "Full title";
     // Progress is already shown in the row's Progress column, so the expanded
     // view skips the (redundant) labeled stepper and leads with the summary.
     const parts = [];

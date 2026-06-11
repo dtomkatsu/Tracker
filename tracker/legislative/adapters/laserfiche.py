@@ -268,7 +268,9 @@ class HawaiiCountyAdapter(CouncilAdapter):
                 yield gbill
                 continue
             rec.title = gbill.title  # Laserfiche authoritative for metadata,
-            rec.raw_subject = gbill.title  # Granicus for the descriptive title
+            # Granicus for the descriptive title and the agenda staff summary
+            # (raw_subject falls back to the title when no summary was found).
+            rec.raw_subject = gbill.raw_subject or gbill.title
             yield rec
 
     def fetch_actions(self, bill_number: str) -> Iterator[ActionRecord]:

@@ -93,6 +93,65 @@ def test_clean_hawaii_title(raw, expected):
     assert _clean_hawaii_title(raw) == expected
 
 
+def test_hawaii_summary_extracted_from_staff_description():
+    from tracker.legislative.adapters.granicus import _hawaii_summary
+    raw = (
+        "ESTABLISHES AN OPERATING BUDGET FOR THE COUNTY OF HAWAI‘I FOR THE "
+        "FISCAL YEAR JULY 1, 2026, TO JUNE 30, 2027 Draft 3 includes estimated "
+        "revenues of $976,408,620 and appropriations of $975,980,388. "
+        "Reference: Comm. 754.10 Intr. by: Council Member Kānealiʻi-Kleinfelder (B/R) "
+        "Public Hearing: May 19, 2026 First Reading: May 21, 2026"
+    )
+    assert _hawaii_summary(raw) == (
+        "Draft 3 includes estimated revenues of $976,408,620 and "
+        "appropriations of $975,980,388."
+    )
+
+
+def test_hawaii_summary_stops_before_attached_communication():
+    from tracker.legislative.adapters.granicus import _hawaii_summary
+    raw = (
+        "AMENDS CHAPTER 6 OF THE HAWAI‘I COUNTY CODE 1983 (2016 EDITION, AS "
+        "AMENDED) BY ADDING AN ARTICLE RELATING TO PAID PARKING FACILITIES "
+        "Adds a new article to regulate parking rates at private parking "
+        "facilities. ; and Comm. 754.11: (Memo No. 1) From Council Member "
+        "Jenn Kagiwada, dated May 27, 2026, transmitting a proposed amendment"
+    )
+    assert _hawaii_summary(raw) == (
+        "Adds a new article to regulate parking rates at private parking facilities."
+    )
+
+
+def test_hawaii_summary_rejects_communication_attribution():
+    from tracker.legislative.adapters.granicus import _hawaii_summary
+    # When the Title-case text after the title is a communication attribution
+    # rather than a staff summary, there is no summary.
+    assert _hawaii_summary(
+        "ADOPTS THE COUNTY OF HAWAI‘I GENERAL PLAN 2045 "
+        "From Mayor Mitch Roth, dated May 27, 2026, transmitting the plan"
+    ) is None
+    # Bare metadata after the title -> no summary either.
+    assert _hawaii_summary(
+        "ADOPTS THE COUNTY OF HAWAI‘I GENERAL PLAN 2045 "
+        "Reference: Comm. 372.30 Intr. by: Council Member"
+    ) is None
+
+
+def test_hawaii_parse_agenda_carries_summary():
+    ad = GranicusAdapter.for_council("hawaii")
+    agenda = (
+        "ORDER OF THE DAY (SECOND OR FINAL READING) "
+        "Bill 135: (Draft 3) ESTABLISHES AN OPERATING BUDGET FOR THE COUNTY OF "
+        "HAWAI‘I FOR THE FISCAL YEAR JULY 1, 2026, TO JUNE 30, 2027 "
+        "Draft 3 includes estimated revenues of $976,408,620 and appropriations "
+        "of $975,980,388. Reference: Comm. 754.10 Intr. by: Council Member"
+    )
+    recs = ad._parse_agenda(agenda, "2026-06-04", "http://x")
+    by_num = {r["bill_number"]: r for r in recs}
+    assert by_num["Bill 135"]["summary"].startswith("Draft 3 includes estimated revenues")
+    assert by_num["Bill 135"]["title"].startswith("ESTABLISHES AN OPERATING BUDGET")
+
+
 def test_hawaii_title_keeps_parenthetical_edition():
     # The mixed-looking "(2016 EDITION, AS AMENDED)" is part of the title, not
     # the staff summary, and must not be trimmed.
