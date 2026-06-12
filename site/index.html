@@ -21,7 +21,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260611">
+  <link rel="alternate" type="application/atom+xml" title="All bill updates" href="feeds/all.xml">
+  <link rel="stylesheet" href="styles.css?v=20260611b">
 </head>
 <body>
   <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -53,9 +54,32 @@
         <button type="button" id="f-search-clear" class="search-clear" aria-label="Clear search" hidden><svg aria-hidden="true"><use href="#i-x"/></svg></button>
       </div>
       <div id="f-year" class="segmented" role="group" aria-label="Filter by year"></div>
-      <button type="button" id="f-favorites" class="tool-btn" aria-pressed="false" title="Show only your starred bills">
-        <svg class="tb-star" aria-hidden="true"><use href="#i-star-o"/></svg><span>Saved</span><span id="fav-count" class="count-badge" hidden></span>
-      </button>
+      <div class="tool-group saved-wrap">
+        <button type="button" id="f-favorites" class="tool-btn tg-main" aria-pressed="false" title="Show only your starred bills">
+          <svg class="tb-star" aria-hidden="true"><use href="#i-star-o"/></svg><span>Saved</span><span id="fav-count" class="count-badge" hidden></span>
+        </button>
+        <button type="button" id="saved-menu-btn" class="tool-btn tg-caret" aria-haspopup="true" aria-expanded="false" aria-label="My list — share and subscribe options">
+          <svg aria-hidden="true"><use href="#i-chevron"/></svg>
+        </button>
+        <div id="saved-pop" class="tool-pop saved-pop" hidden aria-label="My list">
+          <p class="sp-title">My list <span id="sp-count" class="count-badge" hidden></span></p>
+          <ul id="sp-bills" class="sp-bills"></ul>
+          <p id="sp-empty" class="sp-empty">Star <svg class="sp-star" aria-hidden="true"><use href="#i-star-o"/></svg> bills in the table to build your list.</p>
+          <div class="sp-actions">
+            <button type="button" id="sp-copy" class="menu-item"><svg aria-hidden="true"><use href="#i-link"/></svg><span class="mi-label">Copy link to this list</span></button>
+            <button type="button" id="sp-share" class="menu-item" hidden><svg aria-hidden="true"><use href="#i-more"/></svg><span class="mi-label">Share…</span></button>
+            <button type="button" id="sp-opml" class="menu-item"><svg aria-hidden="true"><use href="#i-info"/></svg><span class="mi-label">Follow in an RSS reader (OPML)</span></button>
+          </div>
+          <div id="sp-qr" class="sp-qr" aria-label="QR code linking to this list"></div>
+          <p class="sp-note">
+            The link (and QR code) carries your whole list — bookmark it or send it to another
+            device; no account needed. The OPML file subscribes any RSS reader (Feedly,
+            NetNewsWire, Inoreader) to each bill's update feed — or follow
+            <a href="feeds/all.xml">every update</a>. For email alerts, paste a feed into a free
+            RSS-to-email service like Blogtrottr.
+          </p>
+        </div>
+      </div>
       <label class="sort-control" title="Sort order">
         <span class="sr-only">Sort</span>
         <select id="f-sort" aria-label="Sort order">
@@ -179,6 +203,7 @@
     </p>
   </footer>
 
-  <script src="app.js?v=20260611"></script>
+  <script src="qr.js?v=20260611"></script>
+  <script src="app.js?v=20260611b"></script>
 </body>
 </html>

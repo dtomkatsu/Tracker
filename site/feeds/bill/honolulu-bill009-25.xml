@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>tag:dtomkatsu.github.io,2026:feeds/bill/honolulu-bill009-25.xml</id>
+  <title>BILL009(25) — Honolulu</title>
+  <updated>2026-06-01T20:41:04+00:00</updated>
+  <link rel="self" href="https://dtomkatsu.github.io/Tracker/feeds/bill/honolulu-bill009-25.xml"/>
+  <link rel="alternate" href="https://dtomkatsu.github.io/Tracker/"/>
+  <entry>
+    <id>tag:dtomkatsu.github.io,2026:honolulu-bill009-25/2026-06-01T20:41:04+00:00</id>
+    <title>New: BILL009(25) (Honolulu) — BUD</title>
+    <updated>2026-06-01T20:41:04+00:00</updated>
+    <link rel="alternate" href="https://hnldoc.ehawaii.gov/hnldoc/measure/3205"/>
+    <content type="html">&lt;p&gt;&lt;strong&gt;RELATING TO FEES AND CHARGES.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Requires OCS to prepare a consolidated table of fees and charges found in the ROH and insert the table in the ROH.&lt;/p&gt;
+&lt;p&gt;Latest action: CR-67
+Reported out for passage on third reading as amended in CD1 form.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://hnldoc.ehawaii.gov/hnldoc/measure/3205"&gt;View on the council site&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+</feed>

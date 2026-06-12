@@ -128,23 +128,54 @@
 
   // Mirror the starred set (and the favorites-only view) into the URL hash, so
   // bookmarking or copying the page link reopens the exact list anywhere — no
-  // backend. localStorage remains the everyday store; the hash is the portable
-  // copy that travels in a bookmark.
-  function syncListHash() {
+  // backend. localStorage remains the everyday convenience cache; the URL is
+  // the durable, device-independent copy. The payload is deflate-compressed
+  // (#l=…, base64url) where CompressionStream exists, with the legacy
+  // plain-JSON #list=… form as both fallback and backward-compat reader.
+  const B64URL = { to: (s) => btoa(s).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, ""),
+                   from: (s) => atob(s.replace(/-/g, "+").replace(/_/g, "/")) };
+  async function packList(payload) {
+    const json = JSON.stringify(payload);
+    if (typeof CompressionStream === "undefined") {
+      return "list=" + encodeURIComponent(json);
+    }
+    const stream = new Blob([json]).stream().pipeThrough(new CompressionStream("deflate-raw"));
+    const buf = new Uint8Array(await new Response(stream).arrayBuffer());
+    let bin = "";
+    for (const b of buf) bin += String.fromCharCode(b);
+    return "l=" + B64URL.to(bin);
+  }
+  async function unpackList(hash) {
+    let m = /[#&]l=([^&]+)/.exec(hash);
+    if (m && typeof DecompressionStream !== "undefined") {
+      try {
+        const bin = B64URL.from(m[1]);
+        const bytes = Uint8Array.from(bin, (c) => c.charCodeAt(0));
+        const stream = new Blob([bytes]).stream().pipeThrough(new DecompressionStream("deflate-raw"));
+        return JSON.parse(await new Response(stream).text());
+      } catch { /* corrupted/truncated link — fall through */ }
+    }
+    m = /[#&]list=([^&]+)/.exec(hash);
+    if (m) {
+      try { return JSON.parse(decodeURIComponent(m[1])); } catch { /* ignore */ }
+    }
+    return null;
+  }
+  let hashSyncSeq = 0;
+  async function syncListHash() {
+    const seq = ++hashSyncSeq;
     let hash = "";
     if (state.favorites.size) {
-      const payload = { f: [...state.favorites], o: state.favoritesOnly ? 1 : 0 };
-      hash = "#list=" + encodeURIComponent(JSON.stringify(payload));
+      hash = "#" + await packList({ f: [...state.favorites], o: state.favoritesOnly ? 1 : 0 });
     }
+    if (seq !== hashSyncSeq) return; // a newer sync superseded this one
     history.replaceState(null, "", hash || location.pathname + location.search);
   }
   // On load, fold any list from the URL into the local favorites (union — never
   // drops stars already saved on this device) and restore the favorites-only view.
-  function restoreListFromHash() {
-    const m = /[#&]list=([^&]+)/.exec(location.hash);
-    if (!m) return;
-    let payload;
-    try { payload = JSON.parse(decodeURIComponent(m[1])); } catch { return; }
+  async function restoreListFromHash() {
+    const payload = await unpackList(location.hash);
+    if (!payload) return;
     let changed = false;
     for (const k of payload.f || []) {
       if (!state.favorites.has(k)) { state.favorites.add(k); changed = true; }
@@ -619,6 +650,121 @@
     document.addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
   }
 
+  // ---- Saved panel: share / subscribe to the starred list -------------------
+  // Per-bill Atom feeds are generated at scrape time under feeds/bill/<slug>.xml
+  // (tracker/legislative/feeds.py). billSlug() must mirror feeds.bill_slug().
+  const SITE_BASE = "https://dtomkatsu.github.io/Tracker/";
+  function billSlug(b) {
+    return (b.council + "-" + b.bill_number).toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+  }
+  function favBills() {
+    return state.bills.filter((b) => state.favorites.has(favKey(b)));
+  }
+  function escapeXml(s) {
+    return String(s == null ? "" : s)
+      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;").replace(/'/g, "&apos;");
+  }
+  // OPML: one feed outline per starred bill. Any RSS reader imports this in
+  // one step, subscribing the user to exactly their bills — updates then
+  // arrive wherever their reader delivers (app, push, or email).
+  function opmlForFavorites() {
+    const outlines = favBills().map((b) =>
+      `    <outline type="rss" text="${escapeXml(`${b.bill_number} — ${COUNCIL_LABEL[b.council] || b.council}`)}" ` +
+      `title="${escapeXml(billHeadline(b) || b.bill_number)}" ` +
+      `xmlUrl="${SITE_BASE}feeds/bill/${billSlug(b)}.xml" htmlUrl="${escapeXml(b.url)}"/>`
+    ).join("\n");
+    return `<?xml version="1.0" encoding="UTF-8"?>\n<opml version="2.0">\n  <head>\n    <title>My Hawaiʻi county bill list</title>\n  </head>\n  <body>\n${outlines}\n  </body>\n</opml>\n`;
+  }
+  function renderSavedPanel() {
+    const list = document.getElementById("sp-bills");
+    const empty = document.getElementById("sp-empty");
+    const count = document.getElementById("sp-count");
+    const qrHost = document.getElementById("sp-qr");
+    const bills = favBills();
+    count.textContent = String(bills.length);
+    count.hidden = !bills.length;
+    empty.hidden = !!bills.length;
+    list.innerHTML = "";
+    for (const b of bills.slice(0, 30)) {
+      const li = document.createElement("li");
+      li.innerHTML = `<span class="sp-num">${escapeHtml(b.bill_number)}</span>` +
+        `<span class="sp-head">${escapeHtml(billHeadline(b) || b.title || "")}</span>`;
+      list.appendChild(li);
+    }
+    if (bills.length > 30) {
+      const li = document.createElement("li");
+      li.className = "sp-more";
+      li.textContent = `…and ${bills.length - 30} more`;
+      list.appendChild(li);
+    }
+    // QR of the list URL — scan with a phone to move the whole list across.
+    qrHost.innerHTML = "";
+    qrHost.hidden = !bills.length;
+    if (bills.length && typeof qrcode === "function") {
+      syncListHash().then(() => {
+        try {
+          const qr = qrcode(0, "M");
+          qr.addData(location.href);
+          qr.make();
+          qrHost.innerHTML = qr.createSvgTag({ cellSize: 3, margin: 2, scalable: true });
+        } catch { qrHost.hidden = true; } // list too large for one QR — link still works
+      });
+    }
+  }
+  function wireSavedPanel() {
+    const btn = document.getElementById("saved-menu-btn");
+    const pop = document.getElementById("saved-pop");
+    if (!btn || !pop) return;
+    const close = () => { pop.hidden = true; btn.setAttribute("aria-expanded", "false"); };
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const open = pop.hidden;
+      if (open) renderSavedPanel();
+      pop.hidden = !open;
+      btn.setAttribute("aria-expanded", String(open));
+    });
+    pop.addEventListener("click", (e) => e.stopPropagation());
+    document.addEventListener("click", () => { if (!pop.hidden) close(); });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
+
+    const flash = (id, text, revert) => {
+      const el = document.querySelector(`#${id} .mi-label`);
+      if (!el) return;
+      el.textContent = text;
+      setTimeout(() => { el.textContent = revert; }, 2000);
+    };
+    document.getElementById("sp-copy")?.addEventListener("click", async () => {
+      if (!state.favorites.size) return flash("sp-copy", "Star some bills first", "Copy link to this list");
+      await syncListHash();
+      try {
+        await navigator.clipboard.writeText(location.href);
+        flash("sp-copy", "✓ Copied — bookmark it anywhere", "Copy link to this list");
+      } catch {
+        flash("sp-copy", "Copy the URL from the address bar", "Copy link to this list");
+      }
+    });
+    const shareBtn = document.getElementById("sp-share");
+    if (shareBtn && navigator.share) {
+      shareBtn.hidden = false;
+      shareBtn.addEventListener("click", async () => {
+        await syncListHash();
+        try { await navigator.share({ title: "My Hawaiʻi county bill list", url: location.href }); }
+        catch { /* user cancelled */ }
+      });
+    }
+    document.getElementById("sp-opml")?.addEventListener("click", () => {
+      if (!state.favorites.size) return flash("sp-opml", "Star some bills first", "Follow in an RSS reader (OPML)");
+      const blob = new Blob([opmlForFavorites()], { type: "text/x-opml" });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = "hawaii-bill-tracker-list.opml";
+      a.click();
+      setTimeout(() => URL.revokeObjectURL(a.href), 5000);
+    });
+  }
+
   // Legend & glossary modal, opened from the overflow menu.
   function wireHelpDialog() {
     const dlg = document.getElementById("help-dialog");
@@ -794,7 +940,7 @@
       const copyLabel = copyBtn.querySelector(".mi-label");
       const setCopy = (t) => { if (copyLabel) copyLabel.textContent = t; };
       copyBtn.addEventListener("click", async () => {
-        syncListHash();
+        await syncListHash();
         const restore = () => setCopy("Copy link to my list");
         if (!state.favorites.size) {
           setCopy("Star some bills first");
@@ -811,6 +957,7 @@
       });
     }
     wireToolbarMenu();
+    wireSavedPanel();
     wireHelpDialog();
     wireHint();
     wireColumnFilter("cf-council-btn", "cf-council-pop");
@@ -996,11 +1143,11 @@
       (filtered.length > 1000 ? " (showing first 1000)" : "");
   }
 
-  function ingest(payload) {
+  async function ingest(payload) {
     state.bills = payload.bills;
     setMeta(payload);
     buildFilters(payload);
-    restoreListFromHash();
+    await restoreListFromHash();
     setFavoritesOnly(state.favoritesOnly);
     updateFavCount();
     applyFilters();
@@ -1020,7 +1167,7 @@
     try {
       const r = await fetch("bills.json?t=" + Date.now(), { cache: "no-store" });
       if (!r.ok) throw new Error("HTTP " + r.status);
-      ingest(await r.json());
+      await ingest(await r.json());
     } catch (e) {
       if (!state.bills.length) {
         document.querySelector("#results tbody").innerHTML = "";

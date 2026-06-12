@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>tag:dtomkatsu.github.io,2026:feeds/bill/maui-adept-1-22.xml</id>
+  <title>ADEPT-1(22) — Maui</title>
+  <updated>2026-06-01T20:48:45+00:00</updated>
+  <link rel="self" href="https://dtomkatsu.github.io/Tracker/feeds/bill/maui-adept-1-22.xml"/>
+  <link rel="alternate" href="https://dtomkatsu.github.io/Tracker/"/>
+  <entry>
+    <id>tag:dtomkatsu.github.io,2026:maui-adept-1-22/2026-06-01T20:48:45+00:00</id>
+    <title>New: ADEPT-1(22) (Maui) — Agenda Ready</title>
+    <updated>2026-06-01T20:48:45+00:00</updated>
+    <link rel="alternate" href="https://mauicounty.legistar.com/Gateway.aspx?M=L&amp;ID=14807"/>
+    <content type="html">&lt;p&gt;&lt;strong&gt;LOCAL FOOD INNOVATION AND AGRIBUSINESS  (ADEPT-1(22))&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Agriculture, Diversification, Environment, and Public Transportation Committee&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://mauicounty.legistar.com/Gateway.aspx?M=L&amp;amp;ID=14807"&gt;View on the council site&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+</feed>

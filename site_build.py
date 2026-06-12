@@ -7,6 +7,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from tracker.legislative.db import DEFAULT_DB, connect, last_completed_run
+from tracker.legislative.feeds import build_feeds
 
 SITE_DIR = Path(__file__).resolve().parent / "site"
 
@@ -46,6 +47,7 @@ def build(db_path: Path = DEFAULT_DB, site_dir: Path = SITE_DIR) -> Path:
     }
     out.write_text(json.dumps(payload, ensure_ascii=False, indent=2))
     print(f"Wrote {out} ({len(bills)} bills)")
+    build_feeds(db_path=db_path, site_dir=site_dir)
     return out
 
 

@@ -52,6 +52,24 @@ CREATE TABLE IF NOT EXISTS runs (
   bills_updated INTEGER DEFAULT 0,
   errors TEXT
 );
+
+-- Per-bill change history, written whenever upsert_bill inserts a bill or
+-- applies an update. diff_since() only knows a bill changed within the
+-- two-run window; this log keeps WHAT changed (old -> new status/action)
+-- durably, which is what the Atom feeds are built from.
+CREATE TABLE IF NOT EXISTS bill_changes (
+  id INTEGER PRIMARY KEY,
+  bill_id INTEGER NOT NULL REFERENCES bills(id) ON DELETE CASCADE,
+  changed_at TEXT NOT NULL,
+  kind TEXT NOT NULL,             -- 'new' | 'update'
+  old_status TEXT,
+  new_status TEXT,
+  old_last_action TEXT,
+  new_last_action TEXT
+);
+
+CREATE INDEX IF NOT EXISTS idx_changes_bill ON bill_changes(bill_id);
+CREATE INDEX IF NOT EXISTS idx_changes_at ON bill_changes(changed_at);
 """
 
 
@@ -109,6 +127,11 @@ def upsert_bill(
                 bill.raw_subject, subjects_json, confidence, now, now,
             ),
         )
+        conn.execute(
+            "INSERT INTO bill_changes (bill_id, changed_at, kind, new_status, new_last_action) "
+            "VALUES (?, ?, 'new', ?, ?)",
+            (cur.lastrowid, now, bill.status, bill.last_action),
+        )
         return cur.lastrowid, True, False
 
     changed = (
@@ -136,6 +159,20 @@ def upsert_bill(
                 now, existing["id"],
             ),
         )
+        # Log only movement a reader would care about (status / latest action);
+        # title- or summary-only edits update the bill but make no feed entry.
+        if (existing["status"] != bill.status
+                or existing["last_action"] != bill.last_action):
+            conn.execute(
+                "INSERT INTO bill_changes (bill_id, changed_at, kind, "
+                "  old_status, new_status, old_last_action, new_last_action) "
+                "VALUES (?, ?, 'update', ?, ?, ?, ?)",
+                (
+                    existing["id"], now,
+                    existing["status"], bill.status,
+                    existing["last_action"], bill.last_action,
+                ),
+            )
     return existing["id"], False, changed
 
 

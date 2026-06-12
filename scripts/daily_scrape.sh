@@ -26,7 +26,7 @@ fi
 
 "$PY" site_build.py >> "$LOG" 2>&1
 
-git add data/bills.db site/bills.json
+git add data/bills.db site/bills.json site/feeds
 if git diff --cached --quiet; then
   echo "no changes" >> "$LOG"
 else

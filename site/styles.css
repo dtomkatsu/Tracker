@@ -291,6 +291,62 @@ input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; a
 .menu-check { border-bottom: 1px solid var(--border); border-radius: 0; margin-bottom: 4px; padding-bottom: 11px; }
 .menu-check input { accent-color: var(--primary); width: 16px; height: 16px; }
 
+/* Split "Saved" button: main half toggles the favorites-only view, the caret
+   half opens the list panel (share link / QR / OPML subscribe). */
+.tool-group { position: relative; display: inline-flex; }
+.tool-group .tg-main { border-top-right-radius: 0; border-bottom-right-radius: 0; }
+.tool-group .tg-caret {
+  border-top-left-radius: 0; border-bottom-left-radius: 0;
+  border-left: none; padding: 8px 7px;
+}
+.tool-group .tg-caret svg { width: 13px; height: 13px; transition: transform .12s; }
+.tool-group .tg-caret[aria-expanded="true"] svg { transform: rotate(180deg); }
+
+.saved-pop { width: min(340px, calc(100vw - 32px)); }
+/* On narrow screens the toolbar wraps and the button can sit near the left
+   edge; a right-anchored 340px panel would hang off-screen. Pin it to the
+   viewport instead. */
+@media (max-width: 680px) {
+  .saved-pop { position: fixed; left: 16px; right: 16px; top: 76px; width: auto; max-height: calc(100vh - 100px); overflow: auto; }
+}
+.sp-title {
+  display: flex; align-items: center; gap: 7px;
+  margin: 4px 6px 6px; font-size: 13px; font-weight: 700; color: var(--primary-dark);
+}
+.sp-bills {
+  list-style: none; margin: 0 2px 6px; padding: 0;
+  max-height: 200px; overflow: auto;
+}
+.sp-bills li {
+  display: flex; gap: 8px; align-items: baseline;
+  padding: 4px 8px; border-radius: 6px; font-size: 13.5px;
+}
+.sp-bills li:nth-child(odd) { background: var(--paper-2); }
+.sp-num { flex: none; font-weight: 700; color: var(--link); font-variant-numeric: tabular-nums; }
+.sp-head {
+  color: var(--text-muted); min-width: 0;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.sp-more { color: var(--text-faint); font-size: 12.5px; }
+.sp-empty {
+  margin: 2px 8px 8px; font-size: 13.5px; color: var(--text-muted);
+}
+.sp-empty[hidden] { display: none; }
+.sp-star { width: 13px; height: 13px; vertical-align: -2px; color: var(--text-faint); }
+.sp-actions { border-top: 1px solid var(--border); padding-top: 5px; display: flex; flex-direction: column; gap: 1px; }
+.sp-qr {
+  display: flex; justify-content: center;
+  margin: 10px auto 2px; padding: 8px;
+  width: fit-content; background: #fff; border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+.sp-qr[hidden] { display: none; }
+.sp-qr svg { width: 132px; height: 132px; display: block; }
+.sp-note {
+  margin: 8px 6px 4px; font-size: 12px; line-height: 1.5; color: var(--text-muted);
+}
+.sp-note a { color: var(--link); }
+
 /* Mobile mirror of column filters (hidden until the table collapses to cards) */
 .filters-mobile { display: none; }
 .filter-group { display: flex; flex-direction: column; gap: 7px; }
