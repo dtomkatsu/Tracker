@@ -60,6 +60,60 @@
   }
   function favKey(b) { return b.council + "|" + b.bill_number; }
 
+  // Optional live-list backend (Cloudflare Worker + KV; see worker/DEPLOY.md).
+  // Empty string = feature OFF: the app uses only the compressed URL-hash
+  // snapshot links below. Set this to the deployed Worker URL — or define
+  // window.TRACKER_LIST_API — to make shared links/bookmarks update live as
+  // their owner edits. Every server call falls back to a snapshot link on error.
+  const LIST_API = (typeof window !== "undefined" && window.TRACKER_LIST_API) || "";
+  const LIVE_STORE = "tracker:livelist";   // {id, token} for THIS browser's list
+  let live = (() => {
+    try { return JSON.parse(localStorage.getItem(LIVE_STORE) || "null"); }
+    catch { return null; }
+  })();
+  function saveLive(v) {
+    live = v;
+    try { v ? localStorage.setItem(LIVE_STORE, JSON.stringify(v)) : localStorage.removeItem(LIVE_STORE); }
+    catch { /* storage off */ }
+  }
+  function listPayload() { return { f: [...state.favorites], o: state.favoritesOnly ? 1 : 0 }; }
+
+  async function liveCreate() {
+    const r = await fetch(LIST_API + "/lists", {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(listPayload()),
+    });
+    if (!r.ok) throw new Error("create " + r.status);
+    return r.json();   // {id, token}
+  }
+  async function liveFetch(id) {
+    const r = await fetch(LIST_API + "/lists/" + encodeURIComponent(id));
+    if (!r.ok) throw new Error("fetch " + r.status);
+    return (await r.json()).data;
+  }
+  // Ensure this browser has a live list (create on first share), then return it
+  // — or null if the backend is off/unreachable (callers fall back to a hash link).
+  async function ensureLive() {
+    if (!LIST_API) return null;
+    if (live) return live;
+    try { saveLive(await liveCreate()); return live; }
+    catch { return null; }
+  }
+  // Debounced PUT so a bound list stays current as the owner stars/unstars,
+  // without a write per click.
+  let livePushTimer = 0;
+  function scheduleLivePush() {
+    if (!LIST_API || !live) return;
+    clearTimeout(livePushTimer);
+    livePushTimer = setTimeout(() => {
+      fetch(LIST_API + "/lists/" + encodeURIComponent(live.id), {
+        method: "PUT",
+        headers: { "Content-Type": "application/json", "Authorization": "Bearer " + live.token },
+        body: JSON.stringify(listPayload()),
+      }).catch(() => { /* offline; the next edit retries */ });
+    }, 1200);
+  }
+
   const state = {
     bills: [],
     councils: new Set(),
@@ -165,23 +219,38 @@
   async function syncListHash() {
     const seq = ++hashSyncSeq;
     let hash = "";
-    if (state.favorites.size) {
+    if (LIST_API && live) {
+      // Bound to a server-backed list: keep the short, stable #id= link and
+      // push the edit (debounced) so the live link stays current.
+      hash = "#id=" + live.id;
+      scheduleLivePush();
+    } else if (state.favorites.size) {
       hash = "#" + await packList({ f: [...state.favorites], o: state.favoritesOnly ? 1 : 0 });
     }
     if (seq !== hashSyncSeq) return; // a newer sync superseded this one
     history.replaceState(null, "", hash || location.pathname + location.search);
   }
-  // On load, fold any list from the URL into the local favorites (union — never
-  // drops stars already saved on this device) and restore the favorites-only view.
-  async function restoreListFromHash() {
-    const payload = await unpackList(location.hash);
-    if (!payload) return;
+  function mergeFavorites(payload) {
     let changed = false;
     for (const k of payload.f || []) {
       if (!state.favorites.has(k)) { state.favorites.add(k); changed = true; }
     }
     if (changed) saveFavs();
     if (payload.o) state.favoritesOnly = true;
+  }
+  // On load, fold any list from the URL into the local favorites (union — never
+  // drops stars already saved on this device) and restore the favorites-only view.
+  async function restoreListFromHash() {
+    // Server-backed live link (#id=…): fetch the current contents. The owner's
+    // own browser stays bound (it has the token); a recipient just merges and
+    // remains a viewer (no token → their later edits fork to a snapshot link).
+    const idm = /[#&]id=([A-Za-z0-9]+)/.exec(location.hash);
+    if (idm && LIST_API) {
+      try { mergeFavorites({ f: [], ...(await liveFetch(idm[1])) }); return; }
+      catch { /* server down / 404 — fall through to hash forms */ }
+    }
+    const payload = await unpackList(location.hash);
+    if (payload) mergeFavorites(payload);
   }
 
   // Bill types collapse into 3 plain buckets. Councils emit ~9 raw types, most
@@ -703,20 +772,44 @@
     qrHost.innerHTML = "";
     qrHost.hidden = !bills.length;
     if (bills.length && typeof qrcode === "function") {
-      syncListHash().then(() => {
+      (async () => {
+        // Prefer the short, stable live link when the backend is on; otherwise
+        // the compressed snapshot hash. Either way encode the actual address bar.
+        if (LIST_API && await ensureLive()) {
+          history.replaceState(null, "", "#id=" + live.id);
+        } else {
+          await syncListHash();
+        }
         try {
           const qr = qrcode(0, "M");
           qr.addData(location.href);
           qr.make();
           qrHost.innerHTML = qr.createSvgTag({ cellSize: 3, margin: 2, scalable: true });
         } catch { qrHost.hidden = true; } // list too large for one QR — link still works
-      });
+      })();
     }
   }
   function wireSavedPanel() {
     const btn = document.getElementById("saved-menu-btn");
     const pop = document.getElementById("saved-pop");
     if (!btn || !pop) return;
+
+    // When the live backend is configured, reframe the share copy from
+    // "snapshot" to "live, auto-updating".
+    if (LIST_API) {
+      const lbl = document.querySelector("#sp-copy .mi-label");
+      if (lbl) lbl.textContent = "Copy live link";
+      const note = pop.querySelector(".sp-note");
+      if (note) {
+        note.innerHTML =
+          "Your link (and QR code) stays <strong>live</strong> — edit your list and " +
+          "anyone holding the link or bookmark sees the update, no account needed. " +
+          "The OPML file subscribes any RSS reader (Feedly, NetNewsWire, Inoreader) " +
+          'to each bill’s update feed — or follow <a href="feeds/all.xml">every ' +
+          "update</a>. For email alerts, paste a feed into a free RSS-to-email service " +
+          "like Blogtrottr.";
+      }
+    }
     const close = () => { pop.hidden = true; btn.setAttribute("aria-expanded", "false"); };
     btn.addEventListener("click", (e) => {
       e.stopPropagation();
@@ -735,14 +828,27 @@
       el.textContent = text;
       setTimeout(() => { el.textContent = revert; }, 2000);
     };
+    // With the backend on, leading copy uses a live link (updates as you edit);
+    // off, it's a snapshot. The button label/note are adjusted in renderSavedPanel.
+    const copyDefault = () => (LIST_API ? "Copy live link" : "Copy link to this list");
     document.getElementById("sp-copy")?.addEventListener("click", async () => {
-      if (!state.favorites.size) return flash("sp-copy", "Star some bills first", "Copy link to this list");
+      if (!state.favorites.size) return flash("sp-copy", "Star some bills first", copyDefault());
+      if (LIST_API && await ensureLive()) {
+        history.replaceState(null, "", "#id=" + live.id);
+        scheduleLivePush(); // make sure the server has the current contents
+        try {
+          await navigator.clipboard.writeText(location.href);
+          return flash("sp-copy", "✓ Live link copied — it updates as you edit", copyDefault());
+        } catch {
+          return flash("sp-copy", "Copy the URL from the address bar", copyDefault());
+        }
+      }
       await syncListHash();
       try {
         await navigator.clipboard.writeText(location.href);
-        flash("sp-copy", "✓ Copied — bookmark it anywhere", "Copy link to this list");
+        flash("sp-copy", "✓ Copied — bookmark it anywhere", copyDefault());
       } catch {
-        flash("sp-copy", "Copy the URL from the address bar", "Copy link to this list");
+        flash("sp-copy", "Copy the URL from the address bar", copyDefault());
       }
     });
     const shareBtn = document.getElementById("sp-share");
