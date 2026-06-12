@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <id>tag:dtomkatsu.github.io,2026:feeds/subject-tax.xml</id>
-  <title>Bill Tracker — Tax bills</title>
+  <id>tag:dtomkatsu.github.io,2026:feeds/bill/maui-bfed-61-reso-26-100.xml</id>
+  <title>BFED-61 Reso 26-100 — Maui</title>
   <updated>2026-06-12T16:15:06+00:00</updated>
-  <link rel="self" href="https://dtomkatsu.github.io/Tracker/feeds/subject-tax.xml"/>
+  <link rel="self" href="https://dtomkatsu.github.io/Tracker/feeds/bill/maui-bfed-61-reso-26-100.xml"/>
   <link rel="alternate" href="https://dtomkatsu.github.io/Tracker/"/>
   <entry>
     <id>tag:dtomkatsu.github.io,2026:maui-bfed-61-reso-26-100/2026-06-12T16:15:06+00:00</id>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <id>tag:dtomkatsu.github.io,2026:feeds/subject-transportation.xml</id>
-  <title>Bill Tracker — Transportation bills</title>
+  <id>tag:dtomkatsu.github.io,2026:feeds/bill/maui-wai-24-bill-68-2026.xml</id>
+  <title>WAI-24 Bill 68 (2026) — Maui</title>
   <updated>2026-06-12T16:15:06+00:00</updated>
-  <link rel="self" href="https://dtomkatsu.github.io/Tracker/feeds/subject-transportation.xml"/>
+  <link rel="self" href="https://dtomkatsu.github.io/Tracker/feeds/bill/maui-wai-24-bill-68-2026.xml"/>
   <link rel="alternate" href="https://dtomkatsu.github.io/Tracker/"/>
   <entry>
     <id>tag:dtomkatsu.github.io,2026:maui-wai-24-bill-68-2026/2026-06-12T16:15:06+00:00</id>
