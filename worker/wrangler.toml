@@ -6,4 +6,4 @@ compatibility_date = "2025-01-01"
 # See DEPLOY.md.
 [[kv_namespaces]]
 binding = "LISTS"
-id = "REPLACE_WITH_KV_NAMESPACE_ID"
+id = "358f0e0138db4a6a91aa05316ac3c5c7"
