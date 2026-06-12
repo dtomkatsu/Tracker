@@ -20,9 +20,9 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%233a7710'/%3E%3Ctext x='8' y='12' font-size='11' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'%3EH%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
   <link rel="alternate" type="application/atom+xml" title="All bill updates" href="feeds/all.xml">
-  <link rel="stylesheet" href="styles.css?v=20260611b">
+  <link rel="stylesheet" href="styles.css?v=20260612">
 </head>
 <body>
   <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -38,11 +38,13 @@
 
   <header class="site-header">
     <div class="header-inner">
-      <div class="brand">
-        <h1>Hawaiʻi County Bill Tracker</h1>
-        <p class="tagline">Honolulu · Maui · Hawaiʻi County · Kauaʻi</p>
+      <p class="overline">Tracking Honolulu · Maui · Hawaiʻi County · Kauaʻi</p>
+      <h1>Every county bill,<br>in plain language.</h1>
+      <div class="stat-strip">
+        <span class="stat"><strong id="stat-total" data-count>—</strong> bills tracked</span>
+        <span class="stat"><strong id="stat-active" data-count>—</strong> active this year</span>
+        <p id="meta" class="meta stat"></p>
       </div>
-      <p id="meta" class="meta"></p>
     </div>
   </header>
 
@@ -51,6 +53,7 @@
       <div class="search-wrap">
         <svg class="search-icon" aria-hidden="true"><use href="#i-search"/></svg>
         <input id="f-search" type="search" placeholder="Search bills, number, introducer…" aria-label="Search bills">
+        <span class="kbd-hint" aria-hidden="true">/</span>
         <button type="button" id="f-search-clear" class="search-clear" aria-label="Clear search" hidden><svg aria-hidden="true"><use href="#i-x"/></svg></button>
       </div>
       <div id="f-year" class="segmented" role="group" aria-label="Filter by year"></div>
@@ -204,6 +207,6 @@
   </footer>
 
   <script src="qr.js?v=20260611"></script>
-  <script src="app.js?v=20260611b"></script>
+  <script src="app.js?v=20260612"></script>
 </body>
 </html>

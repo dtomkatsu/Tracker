@@ -494,6 +494,52 @@
     return `${Math.round(secs / 86400)} days ago`;
   }
 
+  // ---- Motion ---------------------------------------------------------------
+  // One global switch: every JS-driven animation checks this, and styles.css
+  // has a matching @media (prefers-reduced-motion) kill block for CSS ones.
+  const REDUCED_MOTION = !!(window.matchMedia &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+
+  function countUp(el, target) {
+    const fmt = (n) => n.toLocaleString();
+    if (REDUCED_MOTION || target < 10) { el.textContent = fmt(target); return; }
+    const t0 = performance.now();
+    const dur = 650;
+    const tick = (t) => {
+      const p = Math.min(1, (t - t0) / dur);
+      el.textContent = fmt(Math.round(target * (1 - Math.pow(1 - p, 3))));
+      if (p < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  }
+
+  // Discrete filter changes (chips, segments, checkboxes, sort) crossfade the
+  // list via the View Transitions API where available; continuous input
+  // (typing in search) never animates. Handlers opt in by calling animateNext()
+  // right before their applyFilters().
+  let animateNextApply = false;
+  function animateNext() { animateNextApply = true; }
+
+  // Progress steppers fill in the first time they scroll into view.
+  let stepObserver = null;
+  function observeSteppers(tbody) {
+    if (REDUCED_MOTION || !("IntersectionObserver" in window)) return;
+    if (!stepObserver) {
+      stepObserver = new IntersectionObserver((entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            e.target.classList.remove("pre");
+            stepObserver.unobserve(e.target);
+          }
+        }
+      }, { threshold: 0.4 });
+    }
+    for (const s of tbody.querySelectorAll(".stepper")) {
+      s.classList.add("pre");
+      stepObserver.observe(s);
+    }
+  }
+
   function setMeta(payload) {
     const ts = payload.last_scrape?.completed_at || payload.generated_at;
     const exact = ts ? new Date(ts).toLocaleString() : "—";
@@ -501,10 +547,45 @@
     const el = document.getElementById("meta");
     el.innerHTML =
       `<span class="live-dot" aria-hidden="true"></span>` +
-      `<span>Updated ${escapeHtml(rel)}</span>` +
-      `<span class="meta-sep" aria-hidden="true">·</span>` +
-      `<span>refreshes Mon, Wed &amp; Fri</span>`;
-    el.title = `Data current as of ${exact}`;
+      `<span>updated ${escapeHtml(rel)}</span>`;
+    el.title = `Data current as of ${exact} — refreshes Mon, Wed & Fri`;
+    state.dataTs = ts ? Date.parse(ts) : 0;
+  }
+
+  // Masthead stat strip. Counts animate up on the first load only — the daily
+  // background refetch and tab-refocus reloads just swap the numbers.
+  let statsAnimated = false;
+  function setStats(payload) {
+    const totalEl = document.getElementById("stat-total");
+    const activeEl = document.getElementById("stat-active");
+    if (!totalEl || !activeEl) return;
+    const newest = [...new Set(payload.bills.map(billYear).filter(Boolean))].sort().at(-1);
+    const active = payload.bills.filter(
+      (b) => statusBucket(b) === "Active" && billYear(b) === newest
+    ).length;
+    if (statsAnimated) {
+      totalEl.textContent = payload.bills.length.toLocaleString();
+      activeEl.textContent = active.toLocaleString();
+      return;
+    }
+    statsAnimated = true;
+    countUp(totalEl, payload.bills.length);
+    countUp(activeEl, active);
+  }
+
+  // "What changed?" at a glance: flag bills first seen in the latest scrapes
+  // as New, and bills whose status/action moved recently as Updated. Anchored
+  // to the data's own timestamp, not the wall clock, so a stale open tab
+  // doesn't silently drop its badges.
+  const NEW_WINDOW_MS = 5 * 86400e3;       // ~2 scrape cycles (Mon/Wed/Fri)
+  const UPDATED_WINDOW_MS = 3 * 86400e3;   // ~1 scrape cycle
+  function rowBadgeHtml(b) {
+    if (!state.dataTs) return "";
+    const fs = Date.parse(b.first_seen || "") || 0;
+    const lu = Date.parse(b.last_updated || "") || 0;
+    if (fs && state.dataTs - fs < NEW_WINDOW_MS) return '<span class="row-badge new">New</span>';
+    if (lu && state.dataTs - lu < UPDATED_WINDOW_MS) return '<span class="row-badge upd">Updated</span>';
+    return "";
   }
 
   function buildGlossaryPanel() {
@@ -548,6 +629,7 @@
         if (cb.checked) selectedSet.add(it.value);
         else selectedSet.delete(it.value);
         allCb.checked = selectedSet.size === items.length;
+        animateNext();
         applyFilters();
       });
       const node = document.createElement("span");
@@ -562,6 +644,7 @@
       selectedSet.clear();
       if (allCb.checked) for (const it of items) selectedSet.add(it.value);
       for (const { cb, value } of itemBoxes) cb.checked = selectedSet.has(value);
+      animateNext();
       applyFilters();
     });
   }
@@ -671,35 +754,58 @@
 
   // Year is a single-select segmented control (newest year selected by default,
   // plus an "All" segment) — clearer than a checkbox list for a 3-value filter.
+  // A .seg-pill element slides behind the active label (transform/width
+  // transition in CSS); buttons stay plain so keyboard/AT semantics are simple.
+  function positionSegPill(c) {
+    const pill = c.querySelector(".seg-pill");
+    const active = c.querySelector(".seg.active");
+    if (!pill) return;
+    if (!active) { pill.style.opacity = "0"; return; }
+    pill.style.opacity = "1";
+    pill.style.width = active.offsetWidth + "px";
+    pill.style.transform = `translateX(${active.offsetLeft}px)`;
+  }
+  function selectYear(value) {
+    const years = state._items?.year || [];
+    state.years.clear();
+    if (value === null) years.forEach((y) => state.years.add(y.value));
+    else state.years.add(value);
+    renderYearControl();
+    animateNext();
+    applyFilters();
+  }
   function renderYearControl() {
     const c = document.getElementById("f-year");
     const years = state._items?.year;
     if (!c || !years) return;
-    c.innerHTML = "";
-    const allActive = state.years.size === years.length;
-    const seg = (label, active, onClick) => {
-      const b = document.createElement("button");
-      b.type = "button";
-      b.className = "seg" + (active ? " active" : "");
-      b.setAttribute("aria-pressed", String(active));
-      b.textContent = label;
-      b.addEventListener("click", onClick);
-      return b;
-    };
-    for (const y of years) {
-      const active = !allActive && state.years.size === 1 && state.years.has(y.value);
-      c.appendChild(seg(y.label, active, () => {
-        state.years.clear();
-        state.years.add(y.value);
-        renderYearControl();
-        applyFilters();
-      }));
+    // Build the buttons once per year-set; clicks only re-sync classes, so the
+    // pill actually slides instead of being torn down and rebuilt in place.
+    const key = years.map((y) => y.value).join(",");
+    if (c.dataset.key !== key) {
+      c.dataset.key = key;
+      c.innerHTML = '<span class="seg-pill" aria-hidden="true"></span>';
+      const mk = (label, value) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.className = "seg";
+        if (value !== null) b.dataset.year = value;
+        b.textContent = label;
+        b.addEventListener("click", () => selectYear(value));
+        c.appendChild(b);
+      };
+      for (const y of years) mk(y.label, y.value);
+      mk("All", null);
     }
-    c.appendChild(seg("All", allActive, () => {
-      setAll(state.years, years);
-      renderYearControl();
-      applyFilters();
-    }));
+    const allActive = state.years.size === years.length;
+    for (const b of c.querySelectorAll(".seg")) {
+      const v = b.dataset.year;
+      const active = v != null
+        ? (!allActive && state.years.size === 1 && state.years.has(v))
+        : allActive;
+      b.classList.toggle("active", active);
+      b.setAttribute("aria-pressed", String(active));
+    }
+    requestAnimationFrame(() => positionSegPill(c));
   }
 
   // Overflow "⋯" menu in the toolbar (classified toggle, copy link, help).
@@ -1029,17 +1135,40 @@
     const sortSel = document.getElementById("f-sort");
     if (sortSel) sortSel.addEventListener("change", (e) => {
       state.sort = e.target.value;
+      animateNext();
       applyFilters();
     });
     document.getElementById("f-classified").addEventListener("change", (e) => {
       state.onlyClassified = e.target.checked;
+      animateNext();
       applyFilters();
     });
     const favBtn = document.getElementById("f-favorites");
     if (favBtn) favBtn.addEventListener("click", () => {
       setFavoritesOnly(!state.favoritesOnly);
       syncListHash();
+      animateNext();
       applyFilters();
+    });
+    // "/" focuses search from anywhere; Esc inside it clears and blurs.
+    document.addEventListener("keydown", (e) => {
+      if (e.key !== "/" || e.metaKey || e.ctrlKey || e.altKey) return;
+      const tag = document.activeElement?.tagName || "";
+      if (/^(INPUT|TEXTAREA|SELECT)$/.test(tag)) return;
+      e.preventDefault();
+      searchInput.focus();
+    });
+    searchInput.addEventListener("keydown", (e) => {
+      if (e.key !== "Escape") return;
+      searchInput.value = "";
+      state.search = "";
+      if (searchClear) searchClear.hidden = true;
+      applyFilters();
+      searchInput.blur();
+    });
+    window.addEventListener("resize", () => {
+      const c = document.getElementById("f-year");
+      if (c) positionSegPill(c);
     });
     const copyBtn = document.getElementById("copy-list");
     if (copyBtn) {
@@ -1072,6 +1201,7 @@
     wireColumnFilter("cf-status-btn", "cf-status-pop");
     const af = document.getElementById("active-filters");
     if (af) af.addEventListener("click", (e) => {
+      animateNext();
       if (e.target.closest(".af-reset")) return resetAllFilters();
       const chip = e.target.closest(".af-chip");
       if (chip) clearFilterDim(chip.dataset.dim);
@@ -1148,7 +1278,7 @@
       <td class="col-num" data-label="Number"><a class="bill-link" href="${escapeHtml(b.url)}" target="_blank" rel="noopener">${escapeHtml(b.bill_number)}</a></td>
       <td class="col-type" data-label="Type">${escapeHtml(b.bill_type)}</td>
       <td class="col-title" data-label="Title">
-        <div class="title-line"><span class="caret" aria-hidden="true">▸</span><span class="title-text">${annotate(head || fullTitle || "")}</span></div>
+        <div class="title-line"><span class="caret" aria-hidden="true">▸</span><span class="title-text">${annotate(head || fullTitle || "")}</span>${rowBadgeHtml(b)}</div>
         ${sub ? `<div class="title-preview">${annotate(sub)}</div>` : ""}
       </td>
       <td class="col-subj" data-label="Subjects">${pills || '<span class="muted">—</span>'}</td>
@@ -1187,13 +1317,30 @@
     parts.push(`<div class="detail-meta">${metaBits.join("")}</div>`);
     // Gutter cells occupy the star+county columns so the expanded content lines
     // up under the bill's Number/Title block instead of floating at the far left.
+    // .detail-anim is the grid 0fr→1fr wrapper that animates the open/close.
     detail.innerHTML = `<td class="detail-gutter" colspan="2"></td>` +
-      `<td colspan="5"><div class="detail-inner">${parts.join("")}</div></td>`;
+      `<td colspan="5"><div class="detail-anim"><div class="detail-inner">${parts.join("")}</div></div></td>`;
 
     function toggle() {
-      const open = tr.classList.toggle("open");
-      detail.hidden = !open;
-      tr.setAttribute("aria-expanded", open ? "true" : "false");
+      const open = !tr.classList.contains("open");
+      tr.classList.toggle("open", open);
+      tr.setAttribute("aria-expanded", String(open));
+      if (REDUCED_MOTION) {
+        detail.classList.toggle("expanded", open);
+        detail.hidden = !open;
+        return;
+      }
+      if (open) {
+        detail.hidden = false;
+        // two frames so the 0fr state paints before the transition to 1fr
+        requestAnimationFrame(() => requestAnimationFrame(() => detail.classList.add("expanded")));
+      } else {
+        detail.classList.remove("expanded");
+        const anim = detail.querySelector(".detail-anim");
+        anim.addEventListener("transitionend", () => {
+          if (!tr.classList.contains("open")) detail.hidden = true;
+        }, { once: true });
+      }
     }
     tr.addEventListener("click", (e) => {
       if (e.target.closest("a") || e.target.closest(".fav-btn")) return;
@@ -1217,41 +1364,72 @@
       favBtn.setAttribute("aria-pressed", String(on));
       favBtn.querySelector("use")?.setAttribute("href", on ? "#i-star" : "#i-star-o");
       favBtn.title = on ? "Remove from favorites" : "Save to favorites";
+      if (on && !REDUCED_MOTION) {
+        favBtn.classList.add("pop");
+        favBtn.addEventListener("animationend", () => favBtn.classList.remove("pop"), { once: true });
+        const badge = document.getElementById("fav-count");
+        if (badge) {
+          badge.classList.remove("bump");
+          void badge.offsetWidth; // restart the animation
+          badge.classList.add("bump");
+        }
+      }
       if (state.favoritesOnly) applyFilters(); // drop it from the filtered view
     });
 
     return [tr, detail];
   }
 
+  let firstRender = true;
   function applyFilters() {
     const filtered = sortBills(filterBills());
     updateColumnFilterIndicators();
     renderActiveFilters();
-    const tbody = document.querySelector("#results tbody");
-    tbody.innerHTML = "";
-    if (!filtered.length) {
-      const tr = document.createElement("tr");
-      tr.innerHTML = `<td colspan="7" class="empty-state">No bills match your filters. ` +
-        `<button type="button" id="empty-reset" class="link-btn">Reset all filters</button></td>`;
-      tbody.appendChild(tr);
-      tbody.querySelector("#empty-reset").addEventListener("click", resetAllFilters);
-    } else {
-      const frag = document.createDocumentFragment();
-      for (const b of filtered.slice(0, 1000)) {
-        const [row, detail] = renderRows(b);
-        frag.appendChild(row);
-        frag.appendChild(detail);
+    const render = () => {
+      const tbody = document.querySelector("#results tbody");
+      tbody.innerHTML = "";
+      if (!filtered.length) {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `<td colspan="7" class="empty-state">` +
+          `<svg class="es-icon" aria-hidden="true"><use href="#i-search"/></svg>` +
+          `<span class="es-title">No bills match your filters</span>` +
+          `<span class="es-sub">Try widening the year, county, or status — or ` +
+          `<button type="button" id="empty-reset" class="link-btn">reset all filters</button>.</span></td>`;
+        tbody.appendChild(tr);
+        tbody.querySelector("#empty-reset").addEventListener("click", () => { animateNext(); resetAllFilters(); });
+      } else {
+        const frag = document.createDocumentFragment();
+        let i = 0;
+        for (const b of filtered.slice(0, 1000)) {
+          const [row, detail] = renderRows(b);
+          // Entrance stagger on the initial load only, capped to the first
+          // screenful — later re-renders crossfade via the view transition.
+          if (firstRender && !REDUCED_MOTION && i < 12) {
+            row.classList.add("enter");
+            row.style.animationDelay = `${i * 25}ms`;
+          }
+          frag.appendChild(row);
+          frag.appendChild(detail);
+          i++;
+        }
+        tbody.appendChild(frag);
+        observeSteppers(tbody);
       }
-      tbody.appendChild(frag);
-    }
-    document.getElementById("result-count").textContent =
-      `${filtered.length} bill${filtered.length === 1 ? "" : "s"}` +
-      (filtered.length > 1000 ? " (showing first 1000)" : "");
+      document.getElementById("result-count").textContent =
+        `${filtered.length} bill${filtered.length === 1 ? "" : "s"}` +
+        (filtered.length > 1000 ? " (showing first 1000)" : "");
+      firstRender = false;
+    };
+    const useVT = animateNextApply && !REDUCED_MOTION && typeof document.startViewTransition === "function";
+    animateNextApply = false;
+    if (useVT) document.startViewTransition(render);
+    else render();
   }
 
   async function ingest(payload) {
     state.bills = payload.bills;
     setMeta(payload);
+    setStats(payload);
     buildFilters(payload);
     await restoreListFromHash();
     setFavoritesOnly(state.favoritesOnly);
