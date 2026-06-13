@@ -389,14 +389,6 @@ input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; a
 }
 .sp-note a { color: var(--link); }
 
-/* Mobile mirror of column filters (hidden until the table collapses to cards) */
-.filters-mobile { display: none; }
-.filter-group { display: flex; flex-direction: column; gap: 7px; }
-.group-label {
-  font-size: 11.5px; font-weight: 700; letter-spacing: .05em;
-  text-transform: uppercase; color: var(--text-muted);
-}
-
 /* ---- Results strip + active filters -------------------------------------- */
 .results-strip {
   display: flex; align-items: center; flex-wrap: wrap;
@@ -945,23 +937,33 @@ footer .meta { display: block; font-size: 13px; margin-top: 8px; }
   .detail-summary { max-width: none; }
 }
 
-/* Below this width the table can't fit, so collapse each bill into a card and
-   surface the County/Type/Subject/Status filters in the card. */
+/* Below this width the table can't fit, so collapse each bill into a card. The
+   County/Type/Subject/Status filters stay in the column headers — the header
+   row becomes a compact 2×2 bar of those same buttons (their popovers are
+   position:fixed and JS-clamped to the viewport, so they open fine here). */
 @media (max-width: 680px) {
   /* the pill silhouette only works on a single-line toolbar */
   .toolbar { border-radius: 18px; }
 
-  .filters-mobile {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
-    background: var(--paper); border: 1px solid var(--border);
-    border-radius: var(--radius); padding: 14px; margin-top: 12px;
-    box-shadow: var(--shadow);
-  }
-  .filters-mobile .filter-group:nth-child(n+3) { grid-column: span 2; }
-
   table { min-width: 0; }
-  thead { display: none; }
   table, tbody, tr, td { display: block; }
+
+  /* Header → filter bar: show only the four filter columns as pill buttons.
+     A flex-wrap row of natural-width pills wraps cleanly and never forces
+     horizontal overflow (each pill is far narrower than the viewport). */
+  thead { display: block; }
+  thead tr {
+    display: flex; flex-wrap: wrap; gap: 8px;
+    margin: 12px 0; padding: 0; border: none;
+  }
+  thead th:not(.col-filter) { display: none; }
+  thead th.col-filter {
+    display: block; flex: 0 1 auto;
+    border: 1px solid var(--border-strong); border-radius: 999px;
+    background: var(--paper-2);
+  }
+  thead .col-filter-btn { width: auto; border-radius: 999px; padding: 10px 14px; gap: 7px; }
+  thead .col-filter-btn.is-active { background: var(--primary-bg); }
   .detail-row[hidden] { display: none; }
   .table-wrap { max-height: none; overflow: visible; border: none; box-shadow: none; background: none; }
 

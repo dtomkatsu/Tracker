@@ -736,9 +736,9 @@
   function renderFilterGroups() {
     const it = state._items;
     if (!it) return;
-    // Desktop renders into the column-header popovers (f-*); mobile mirrors the
-    // same groups into the always-visible filter card (mf-*), since the header
-    // popovers aren't reachable once the table collapses to cards.
+    // County/Type/Subject/Status are filtered only through the column-header
+    // popovers (f-*). On mobile the header collapses to a compact filter bar
+    // (see styles.css) but the same buttons/popovers stay the single source.
     const groups = [
       ["council", it.council, state.councils, undefined],
       ["subject", it.subject, state.subjects, { pill: true }],
@@ -747,7 +747,6 @@
     ];
     for (const [name, items, set, opts] of groups) {
       if (document.getElementById("f-" + name)) renderCheckGroup("f-" + name, items, set, opts);
-      if (document.getElementById("mf-" + name)) renderCheckGroup("mf-" + name, items, set, opts);
     }
     renderYearControl();
   }
