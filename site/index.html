@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
   <link rel="alternate" type="application/atom+xml" title="All bill updates" href="feeds/all.xml">
-  <link rel="stylesheet" href="styles.css?v=20260612">
+  <link rel="stylesheet" href="styles.css?v=20260613b">
 </head>
 <body>
   <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -83,15 +83,17 @@
           </p>
         </div>
       </div>
-      <label class="sort-control" title="Sort order">
-        <span class="sr-only">Sort</span>
-        <select id="f-sort" aria-label="Sort order">
-          <option value="recent">Recent activity</option>
-          <option value="oldest">Oldest activity</option>
-          <option value="number">Bill number</option>
-        </select>
-        <svg class="sel-caret" aria-hidden="true"><use href="#i-chevron"/></svg>
-      </label>
+      <div class="sort-control">
+        <button type="button" id="sort-btn" class="tool-btn sort-btn" aria-haspopup="true" aria-expanded="false" aria-label="Sort order">
+          <span id="sort-label">Recent activity</span>
+          <svg class="sel-caret" aria-hidden="true"><use href="#i-chevron"/></svg>
+        </button>
+        <div id="sort-pop" class="tool-pop sort-pop" hidden role="menu" aria-label="Sort order">
+          <button type="button" class="menu-item sort-opt is-sel" role="menuitemradio" aria-checked="true" data-sort="recent"><span class="mi-label">Recent activity</span></button>
+          <button type="button" class="menu-item sort-opt" role="menuitemradio" aria-checked="false" data-sort="oldest"><span class="mi-label">Oldest activity</span></button>
+          <button type="button" class="menu-item sort-opt" role="menuitemradio" aria-checked="false" data-sort="number"><span class="mi-label">Bill number</span></button>
+        </div>
+      </div>
       <div class="overflow">
         <button type="button" id="more-btn" class="tool-btn icon-only" aria-haspopup="true" aria-expanded="false" aria-label="More options"><svg aria-hidden="true"><use href="#i-more"/></svg></button>
         <div id="more-pop" class="tool-pop" hidden role="menu" aria-label="More options">
@@ -208,6 +210,6 @@
 
   <script>window.TRACKER_LIST_API = "https://tracker-lists.dtomkatsu.workers.dev";</script>
   <script src="qr.js?v=20260611"></script>
-  <script src="app.js?v=20260613"></script>
+  <script src="app.js?v=20260613b"></script>
 </body>
 </html>

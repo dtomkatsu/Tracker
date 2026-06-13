@@ -295,24 +295,15 @@ input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; a
 .tool-btn.is-on .count-badge { background: rgba(0,0,0,.16); color: var(--on-primary); }
 .count-badge[hidden] { display: none; }
 
-/* Sort select with custom caret */
+/* Sort: custom popover dropdown matching the other toolbar menus */
 .sort-control { position: relative; display: inline-flex; align-items: center; }
-.sort-control select {
-  appearance: none; -webkit-appearance: none;
-  font: inherit; font-size: 13.5px; font-weight: 600;
-  color: var(--text-muted);
-  background: var(--paper-2);
-  border: 1px solid var(--border-strong);
-  border-radius: 999px;
-  padding: 8px 30px 8px 13px;
-  cursor: pointer;
-}
-.sort-control select:hover { border-color: var(--accent); color: var(--primary-dark); }
-.sort-control select:focus-visible { outline: none; box-shadow: 0 0 0 3px var(--ring); }
-.sel-caret {
-  position: absolute; right: 9px; width: 14px; height: 14px;
-  color: var(--text-faint); pointer-events: none;
-}
+.sort-btn { gap: 8px; }
+.sort-btn .sel-caret { width: 14px; height: 14px; color: var(--text-faint); flex: none; transition: transform var(--dur-1) var(--ease-out); }
+.sort-btn[aria-expanded="true"] .sel-caret { transform: rotate(180deg); }
+.sort-pop { left: 0; right: auto; min-width: 188px; transform-origin: top left; }
+.sort-opt .mi-label { flex: 1; }
+.sort-opt.is-sel { color: var(--primary-dark); font-weight: 700; }
+.sort-opt.is-sel::after { content: ""; width: 7px; height: 12px; margin-left: 8px; border: solid var(--primary); border-width: 0 2px 2px 0; transform: rotate(45deg); flex: none; }
 
 /* Overflow menu */
 .overflow { position: relative; }
@@ -687,16 +678,26 @@ tbody .bill-row.open > td { background: var(--primary-bg); border-bottom-color: 
 .detail-anim {
   display: grid;
   grid-template-rows: 0fr;
+  /* Collapse is quick (--dur-1) so the row doesn't linger half-open. */
+  transition: grid-template-rows var(--dur-1) var(--ease-in);
+}
+.detail-row.expanded .detail-anim {
+  grid-template-rows: 1fr;
   transition: grid-template-rows var(--dur-2) var(--ease-out);
 }
-.detail-row.expanded .detail-anim { grid-template-rows: 1fr; }
+/* .detail-inner sizes the 1fr grid track, so it must stay opacity:1 — fade the
+   content children instead. On close they fade out fast (--dur-1) so the
+   summary doesn't linger fully visible while the row collapses. */
 .detail-anim > .detail-inner { overflow: hidden; min-height: 0; }
-.detail-row.expanded .detail-inner > * {
-  animation: detail-fade var(--dur-2) var(--ease-out) 60ms both;
+.detail-inner > * {
+  opacity: 0;
+  transform: translateY(-3px);
+  transition: opacity var(--dur-1) var(--ease-in), transform var(--dur-1) var(--ease-in);
 }
-@keyframes detail-fade {
-  from { opacity: 0; transform: translateY(-3px); }
-  to { opacity: 1; transform: none; }
+.detail-row.expanded .detail-inner > * {
+  opacity: 1;
+  transform: none;
+  transition: opacity var(--dur-2) var(--ease-out) 60ms, transform var(--dur-2) var(--ease-out) 60ms;
 }
 .detail-inner {
   padding: 12px 18px 18px 30px;

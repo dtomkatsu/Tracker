@@ -793,8 +793,8 @@
         b.addEventListener("click", () => selectYear(value));
         c.appendChild(b);
       };
-      for (const y of years) mk(y.label, y.value);
       mk("All", null);
+      for (const y of years) mk(y.label, y.value);
     }
     const allActive = state.years.size === years.length;
     for (const b of c.querySelectorAll(".seg")) {
@@ -823,6 +823,39 @@
     pop.addEventListener("click", (e) => e.stopPropagation());
     document.addEventListener("click", () => { if (!pop.hidden) close(); });
     document.addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
+  }
+
+  // Sort dropdown — a custom popover (matching the other toolbar menus) in
+  // place of a native <select>, so its options inherit the toolbar styling.
+  function wireSortMenu() {
+    const btn = document.getElementById("sort-btn");
+    const pop = document.getElementById("sort-pop");
+    const label = document.getElementById("sort-label");
+    if (!btn || !pop) return;
+    const close = () => { pop.hidden = true; btn.setAttribute("aria-expanded", "false"); };
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const open = pop.hidden;
+      pop.hidden = !open;
+      btn.setAttribute("aria-expanded", String(open));
+    });
+    pop.addEventListener("click", (e) => e.stopPropagation());
+    document.addEventListener("click", () => { if (!pop.hidden) close(); });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
+    for (const opt of pop.querySelectorAll(".sort-opt")) {
+      opt.addEventListener("click", () => {
+        state.sort = opt.dataset.sort;
+        for (const o of pop.querySelectorAll(".sort-opt")) {
+          const sel = o === opt;
+          o.classList.toggle("is-sel", sel);
+          o.setAttribute("aria-checked", String(sel));
+        }
+        if (label) label.textContent = opt.querySelector(".mi-label").textContent;
+        close();
+        animateNext();
+        applyFilters();
+      });
+    }
   }
 
   // ---- Saved panel: share / subscribe to the starred list -------------------
@@ -1132,12 +1165,7 @@
       applyFilters();
       searchInput.focus();
     });
-    const sortSel = document.getElementById("f-sort");
-    if (sortSel) sortSel.addEventListener("change", (e) => {
-      state.sort = e.target.value;
-      animateNext();
-      applyFilters();
-    });
+    wireSortMenu();
     document.getElementById("f-classified").addEventListener("change", (e) => {
       state.onlyClassified = e.target.checked;
       animateNext();
