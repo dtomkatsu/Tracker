@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-12T16:17:31+00:00",
+  "generated_at": "2026-06-15T16:26:03+00:00",
   "last_scrape": {
-    "id": 77,
-    "started_at": "2026-06-12T16:16:41+00:00",
-    "completed_at": "2026-06-12T16:17:31+00:00",
+    "id": 81,
+    "started_at": "2026-06-15T16:24:38+00:00",
+    "completed_at": "2026-06-15T16:26:03+00:00",
     "council": "kauai",
-    "bills_seen": 20,
-    "bills_new": 1,
-    "bills_updated": 0,
+    "bills_seen": 13,
+    "bills_new": 0,
+    "bills_updated": 3,
     "errors": null
   },
   "subjects": [
@@ -327,57 +327,57 @@
       "id": 257,
       "council": "kauai",
       "bill_number": "Bill 2989",
-      "title": "A BILL FOR AN ORDINANCE RELATING TO CAPITAL IMPROVEMENTS AND FINANCING THEREOF FOR THE FISCAL YEAR JULY 1, 2026 TO JUNE 30, 2027 (Fiscal Year 2026-2027 CIP Budget)",
+      "title": "A Bill For An Ordinance Relating To Capital Improvements And Financing Thereof For The Fiscal Year July 1, 2026 to June 30, 2027",
       "bill_type": "Bill",
       "introducer": null,
       "introduced_date": null,
       "status": null,
-      "last_action": "On agenda 2026-05-27",
-      "last_action_date": "2026-05-27",
-      "url": "https://kauai.granicus.com/AgendaViewer.php?view_id=2&clip_id=3089",
-      "raw_subject": "A BILL FOR AN ORDINANCE RELATING TO CAPITAL IMPROVEMENTS AND FINANCING THEREOF FOR THE FISCAL YEAR JULY 1, 2026 TO JUNE 30, 2027 (Fiscal Year 2026-2027 CIP Budget)",
+      "last_action": "On agenda 2026-04-09",
+      "last_action_date": "2026-04-09",
+      "url": "https://kauai.granicus.com/AgendaViewer.php?view_id=2&clip_id=3059",
+      "raw_subject": "A Bill For An Ordinance Relating To Capital Improvements And Financing Thereof For The Fiscal Year July 1, 2026 to June 30, 2027",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T20:42:51+00:00",
-      "last_updated": "2026-06-05T08:51:43+00:00"
+      "last_updated": "2026-06-15T16:26:03+00:00"
     },
     {
       "id": 259,
       "council": "kauai",
       "bill_number": "Bill 2988",
-      "title": "A BILL FOR AN ORDINANCE RELATING TO THE OPERATING BUDGET AND FINANCING THEREOF FOR THE FISCAL YEAR JULY 1, 2026 TO JUNE 30, 2027 (Fiscal Year 2026-2027 Operating Budget)",
+      "title": "A Bill For An Ordinance Relating To The Operating Budget And Financing Thereof For The Fiscal Year July 1, 2026 to June 30, 2027",
       "bill_type": "Bill",
       "introducer": null,
       "introduced_date": null,
       "status": null,
-      "last_action": "On agenda 2026-05-27",
-      "last_action_date": "2026-05-27",
-      "url": "https://kauai.granicus.com/AgendaViewer.php?view_id=2&clip_id=3089",
-      "raw_subject": "A BILL FOR AN ORDINANCE RELATING TO THE OPERATING BUDGET AND FINANCING THEREOF FOR THE FISCAL YEAR JULY 1, 2026 TO JUNE 30, 2027 (Fiscal Year 2026-2027 Operating Budget)",
+      "last_action": "On agenda 2026-04-09",
+      "last_action_date": "2026-04-09",
+      "url": "https://kauai.granicus.com/AgendaViewer.php?view_id=2&clip_id=3059",
+      "raw_subject": "A Bill For An Ordinance Relating To The Operating Budget And Financing Thereof For The Fiscal Year July 1, 2026 to June 30, 2027",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T20:42:51+00:00",
-      "last_updated": "2026-06-05T08:51:43+00:00"
+      "last_updated": "2026-06-15T16:26:03+00:00"
     },
     {
       "id": 260,
       "council": "kauai",
       "bill_number": "Resolution 2026-11",
-      "title": "RESOLUTION ESTABLISHING THE REAL PROPERTY TAX RATES FOR THE FISCAL YEAR JULY 1, 2026 TO JUNE 30, 2027 FOR THE COUNTY OF KAUA‘I",
+      "title": "Resolution Establishing The Real Property Tax Rates For The Fiscal Year July 1, 2026 to June 30, 2027 For The County of Kaua'i",
       "bill_type": "Resolution",
       "introducer": null,
       "introduced_date": null,
-      "status": "In Committee",
-      "last_action": "On agenda 2026-06-03",
-      "last_action_date": "2026-06-03",
-      "url": "https://kauai.granicus.com/AgendaViewer.php?view_id=2&clip_id=3091",
-      "raw_subject": "RESOLUTION ESTABLISHING THE REAL PROPERTY TAX RATES FOR THE FISCAL YEAR JULY 1, 2026 TO JUNE 30, 2027 FOR THE COUNTY OF KAUA‘I",
+      "status": null,
+      "last_action": "On agenda 2026-04-09",
+      "last_action_date": "2026-04-09",
+      "url": "https://kauai.granicus.com/AgendaViewer.php?view_id=2&clip_id=3059",
+      "raw_subject": "Resolution Establishing The Real Property Tax Rates For The Fiscal Year July 1, 2026 to June 30, 2027 For The County of Kaua'i",
       "subjects": [
         "tax"
       ],
       "classification_confidence": 0.065,
       "first_seen": "2026-05-30T20:42:51+00:00",
-      "last_updated": "2026-06-05T08:51:43+00:00"
+      "last_updated": "2026-06-15T16:26:03+00:00"
     },
     {
       "id": 261,
@@ -3944,14 +3944,14 @@
       "introducer": "TOMMY  WATERS - By Request",
       "introduced_date": "2026-03-02",
       "status": "MAYOR",
-      "last_action": "Deadline for Mayor to return Bill is 06/22/26.\nTransmitted to Mayor for his approval or otherwise.",
+      "last_action": "Deadline for Mayor to return Bill is 06/23/26.\nTransmitted to Mayor for his approval or otherwise.",
       "last_action_date": "2026-06-05",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3647",
       "raw_subject": "Appropriates funds for the Executive Operating Budget for Fiscal Year 2027.",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:26+00:00",
-      "last_updated": "2026-06-08T16:15:06+00:00"
+      "last_updated": "2026-06-15T16:15:10+00:00"
     },
     {
       "id": 30,
@@ -3962,14 +3962,14 @@
       "introducer": "TOMMY  WATERS - By Request",
       "introduced_date": "2026-03-02",
       "status": "MAYOR",
-      "last_action": "Deadline for Mayor to return Bill is 06/22/26.\nTransmitted to Mayor for his approval or otherwise.",
+      "last_action": "Deadline for Mayor to return Bill is 06/23/26.\nTransmitted to Mayor for his approval or otherwise.",
       "last_action_date": "2026-06-05",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3648",
       "raw_subject": "Appropriates funds for the Executive Capital Budget and Program for Fiscal Year 2027.",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:26+00:00",
-      "last_updated": "2026-06-08T16:15:06+00:00"
+      "last_updated": "2026-06-15T16:15:10+00:00"
     },
     {
       "id": 31,
@@ -3980,7 +3980,7 @@
       "introducer": "TOMMY  WATERS - By Request",
       "introduced_date": "2026-03-02",
       "status": "MAYOR",
-      "last_action": "Deadline for Mayor to return Bill is 06/22/26.\nTransmitted to Mayor for his approval or otherwise.",
+      "last_action": "Deadline for Mayor to return Bill is 06/23/26.\nTransmitted to Mayor for his approval or otherwise.",
       "last_action_date": "2026-06-05",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3649",
       "raw_subject": "The bill authorizes the issuance and sale of general obligation bonds and bond anticipation notes of the City and County of Honolulu in a maximum principal amount equal to the aggregate of the amounts of general obligation bonds appropriated in the capital budget ordinance for Fiscal Year 2027.",
@@ -3990,7 +3990,7 @@
       ],
       "classification_confidence": 0.02,
       "first_seen": "2026-05-30T07:33:27+00:00",
-      "last_updated": "2026-06-08T16:15:06+00:00"
+      "last_updated": "2026-06-15T16:15:10+00:00"
     },
     {
       "id": 32,
@@ -4021,14 +4021,14 @@
       "introducer": "TOMMY  WATERS - By Request",
       "introduced_date": "2026-03-02",
       "status": "MAYOR",
-      "last_action": "Deadline for Mayor to return Bill is 06/22/26.\nTransmitted to Mayor for his approval or otherwise.",
+      "last_action": "Deadline for Mayor to return Bill is 06/23/26.\nTransmitted to Mayor for his approval or otherwise.",
       "last_action_date": "2026-06-05",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3651",
       "raw_subject": null,
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
-      "last_updated": "2026-06-08T16:15:06+00:00"
+      "last_updated": "2026-06-15T16:15:10+00:00"
     },
     {
       "id": 34,
@@ -4039,14 +4039,14 @@
       "introducer": "TOMMY  WATERS - By Request",
       "introduced_date": "2026-03-02",
       "status": "MAYOR",
-      "last_action": "Deadline for Mayor to return Bill is 06/22/26.\nTransmitted to Mayor for his approval or otherwise.",
+      "last_action": "Deadline for Mayor to return Bill is 06/23/26.\nTransmitted to Mayor for his approval or otherwise.",
       "last_action_date": "2026-06-05",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3652",
       "raw_subject": null,
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
-      "last_updated": "2026-06-08T16:15:06+00:00"
+      "last_updated": "2026-06-15T16:15:10+00:00"
     },
     {
       "id": 35,
@@ -4057,14 +4057,14 @@
       "introducer": "TOMMY  WATERS",
       "introduced_date": "2026-03-02",
       "status": "MAYOR",
-      "last_action": "Deadline for Mayor to return Bill is 06/22/26.\nTransmitted to Mayor for his approval or otherwise.",
+      "last_action": "Deadline for Mayor to return Bill is 06/23/26.\nTransmitted to Mayor for his approval or otherwise.",
       "last_action_date": "2026-06-05",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3653",
       "raw_subject": "Appropriates funds for the Legislative Budget for Fiscal Year 2027.",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
-      "last_updated": "2026-06-08T16:15:06+00:00"
+      "last_updated": "2026-06-15T16:15:10+00:00"
     },
     {
       "id": 210,
@@ -5416,14 +5416,14 @@
       "introducer": "TOMMY  WATERS, ANDRIA  TUPOLA",
       "introduced_date": "2026-01-22",
       "status": "MAYOR",
-      "last_action": "Deadline for Mayor to return Bill is 06/22/26.\nTransmitted to Mayor for his approval or otherwise.",
+      "last_action": "Deadline for Mayor to return Bill is 06/23/26.\nTransmitted to Mayor for his approval or otherwise.",
       "last_action_date": "2026-06-08",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3605",
       "raw_subject": "Requires a department to be designated by the Mayor to make certain information relating to the City's wastewater system and separate storm sewer system publicly accessible. Establishes reporting requirements.",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
-      "last_updated": "2026-06-08T16:15:06+00:00"
+      "last_updated": "2026-06-15T16:15:10+00:00"
     },
     {
       "id": 44,
@@ -9559,14 +9559,14 @@
       "introducer": "TOMMY  WATERS, ANDRIA  TUPOLA",
       "introduced_date": "2025-10-29",
       "status": "MAYOR",
-      "last_action": "Deadline for Mayor to return Bill is 06/22/26.\nTransmitted to Mayor for his approval or otherwise.",
+      "last_action": "Deadline for Mayor to return Bill is 06/23/26.\nTransmitted to Mayor for his approval or otherwise.",
       "last_action_date": "2026-06-05",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3537",
       "raw_subject": "Allows certain lands that are provided in perpetuity or dedicated for use as dog parks to be credited toward satisfying the requirements for the provision or dedication of lands for park and playground purposes under ROH Section 22-7.5. Limits the amount of dog park lands to be credited to up to 10 percent of the total park and playground lands required.",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:04+00:00",
-      "last_updated": "2026-06-08T16:15:06+00:00"
+      "last_updated": "2026-06-15T16:15:10+00:00"
     },
     {
       "id": 572,
