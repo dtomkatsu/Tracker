@@ -2,18 +2,29 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>tag:dtomkatsu.github.io,2026:feeds/bill/hawaii-bill-164.xml</id>
   <title>Bill 164 — Hawaiʻi County</title>
-  <updated>2026-06-17T16:16:24+00:00</updated>
+  <updated>2026-06-17T23:09:30+00:00</updated>
   <link rel="self" href="https://dtomkatsu.github.io/Tracker/feeds/bill/hawaii-bill-164.xml"/>
   <link rel="alternate" href="https://dtomkatsu.github.io/Tracker/"/>
+  <entry>
+    <id>tag:dtomkatsu.github.io,2026:hawaii-bill-164/2026-06-17T23:09:30+00:00</id>
+    <title>Bill 164 (Hawaiʻi County): — → Postponed</title>
+    <updated>2026-06-17T23:09:30+00:00</updated>
+    <link rel="alternate" href="https://records.hawaiicounty.gov/WebLink/DocView.aspx?id=1130363&amp;dbid=0"/>
+    <content type="html">&lt;p&gt;&lt;strong&gt;AMENDS CHAPTER 2, ARTICLE 13, DIVISION 2, SECTION 2-69, OF THE HAWAI‘I COUNTY CODE 1983 (2016 EDITION, AS AMENDED), RELATING TO THE HOUSING ADMINISTRATOR&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Requires Council confirmation for the Housing Administrator.&lt;/p&gt;
+&lt;p&gt;Status: — → Postponed&lt;/p&gt;
+&lt;p&gt;Latest action: GOEAC: Postponed to June 16, 2026 - 06/02/26&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://records.hawaiicounty.gov/WebLink/DocView.aspx?id=1130363&amp;amp;dbid=0"&gt;View on the council site&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
   <entry>
     <id>tag:dtomkatsu.github.io,2026:hawaii-bill-164/2026-06-17T16:16:24+00:00</id>
     <title>Bill 164 (Hawaiʻi County): Postponed → —</title>
     <updated>2026-06-17T16:16:24+00:00</updated>
-    <link rel="alternate" href="https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=1&amp;clip_id=3789"/>
+    <link rel="alternate" href="https://records.hawaiicounty.gov/WebLink/DocView.aspx?id=1130363&amp;dbid=0"/>
     <content type="html">&lt;p&gt;&lt;strong&gt;AMENDS CHAPTER 2, ARTICLE 13, DIVISION 2, SECTION 2-69, OF THE HAWAI‘I COUNTY CODE 1983 (2016 EDITION, AS AMENDED), RELATING TO THE HOUSING ADMINISTRATOR&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Requires Council confirmation for the Housing Administrator.&lt;/p&gt;
 &lt;p&gt;Status: Postponed → —&lt;/p&gt;
 &lt;p&gt;Latest action: On agenda 2026-06-16&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=1&amp;amp;clip_id=3789"&gt;View on the council site&lt;/a&gt;&lt;/p&gt;</content>
+&lt;p&gt;&lt;a href="https://records.hawaiicounty.gov/WebLink/DocView.aspx?id=1130363&amp;amp;dbid=0"&gt;View on the council site&lt;/a&gt;&lt;/p&gt;</content>
   </entry>
 </feed>

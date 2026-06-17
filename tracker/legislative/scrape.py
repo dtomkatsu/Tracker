@@ -78,11 +78,16 @@ def scrape_council(
                     new += 1
                 if was_updated:
                     updated += 1
-                if fetch_actions and (is_new or was_updated):
+                if fetch_actions:
                     try:
-                        upsert_actions(
-                            conn, bill_id, adapter.fetch_actions(bill.bill_number)
-                        )
+                        if bill.actions:
+                            # Adapter already has the history (no extra request) —
+                            # upsert unconditionally so existing bills backfill too.
+                            upsert_actions(conn, bill_id, bill.actions)
+                        elif is_new or was_updated:
+                            upsert_actions(
+                                conn, bill_id, adapter.fetch_actions(bill.bill_number)
+                            )
                     except Exception as e:
                         errors.append(f"{bill.bill_number} actions: {e}")
                         log.warning("actions fetch failed for %s: %s", bill.bill_number, e)

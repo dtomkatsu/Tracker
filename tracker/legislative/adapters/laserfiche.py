@@ -176,6 +176,18 @@ class HawaiiCountyAdapter(CouncilAdapter):
         )
         last_action = actions[-1][1] if actions else None
         last_action_date = _iso_from_mdy(last_action) if last_action else None
+        # The template's numbered Action fields ARE the dated action history;
+        # surface them so the dashboard timeline shows the full progression
+        # (ordered oldest-first by the field number).
+        action_records = [
+            ActionRecord(
+                council=self.council_id,
+                bill_number=_norm_key(type_label, number),
+                action_date=_iso_from_mdy(text) or "",
+                action=text.strip(),
+            )
+            for _, text in actions
+        ]
 
         status = (meta.get("Status") or "").strip() or None
         if not status and last_action:
@@ -202,6 +214,7 @@ class HawaiiCountyAdapter(CouncilAdapter):
             last_action_date=last_action_date,
             url=urljoin(_BASE, f"DocView.aspx?id={doc_id}&dbid=0"),
             raw_subject=(meta.get("Referred To") or "").strip() or None,
+            actions=action_records,
         )
 
     def _doc_index(self) -> dict[str, str]:
