@@ -28,7 +28,10 @@ def cmd_scrape(args: argparse.Namespace) -> int:
     else:
         results = [
             scrape_council(
-                args.council, db_path=args.db, since=_parse_date(args.since)
+                args.council,
+                db_path=args.db,
+                since=_parse_date(args.since),
+                force_actions=args.refetch_actions,
             )
         ]
     print(json.dumps(results, indent=2))
@@ -87,6 +90,12 @@ def main(argv: list[str] | None = None) -> int:
     sp = sub.add_parser("scrape", help="scrape one or all councils")
     sp.add_argument("--council", choices=["all", *COUNCILS], default="all")
     sp.add_argument("--since", help="YYYY-MM-DD; only fetch bills since this date")
+    sp.add_argument(
+        "--refetch-actions",
+        action="store_true",
+        help="fetch action history for every bill, not just new/updated "
+        "(heavier one-time backfill; single-council only)",
+    )
     sp.set_defaults(fn=cmd_scrape)
 
     dp = sub.add_parser("diff", help="diff against a prior point in time")

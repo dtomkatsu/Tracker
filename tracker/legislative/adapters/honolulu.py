@@ -15,6 +15,7 @@ from datetime import date, datetime
 from typing import Any, Iterator
 
 import requests
+from bs4 import BeautifulSoup
 
 from tracker.legislative.adapters.base import (
     ActionRecord,
@@ -25,6 +26,16 @@ from tracker.legislative.adapters.base import (
 log = logging.getLogger(__name__)
 
 BASE = "https://hnldoc.ehawaii.gov"
+# A browser-like UA + HTML Accept for the server-rendered measure page (the
+# browse JSON endpoints are happy with the Tracker UA, but the measure page
+# gateway is fussier).
+_HTML_HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+        "(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+    ),
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+}
 
 _TYPE_LABEL = {
     "BILL": "Bill",
@@ -50,12 +61,35 @@ def _date_obj_to_iso(d: dict | None) -> str | None:
         return None
 
 
+def _to_int(s: str | None) -> int | None:
+    try:
+        return int(str(s).strip())
+    except (TypeError, ValueError):
+        return None
+
+
+def _mdy_to_iso(s: str | None) -> str | None:
+    if not s:
+        return None
+    try:
+        return datetime.strptime(s.strip(), "%m/%d/%Y").date().isoformat()
+    except ValueError:
+        return None
+
+
 class HonoluluAdapter(CouncilAdapter):
     council_id = "honolulu"
     PAGE_SIZE = 50  # server-enforced, but pagination.page=-1 returns all
 
     def __init__(self, session: requests.Session | None = None, timeout: int = 30):
         self.timeout = timeout
+        # bill_number -> measure id, populated as fetch_bills yields each row so
+        # fetch_actions can reach the per-measure page without re-querying.
+        self._measure_ids: dict[str, int] = {}
+        # The measure-page gateway redirect-loops when sent the JSON browse
+        # headers (Content-Type/X-Requested-With), so the HTML page uses its own
+        # bare session. Built lazily.
+        self._html_session: requests.Session | None = None
         self.session = session or requests.Session()
         self.session.headers.update(
             {
@@ -120,10 +154,65 @@ class HonoluluAdapter(CouncilAdapter):
                     if since and bill.introduced_date:
                         if bill.introduced_date < since.isoformat():
                             continue
+                    if row.get("id") is not None:
+                        self._measure_ids[bill.bill_number] = row["id"]
                     yield bill
 
     def fetch_actions(self, bill_number: str) -> Iterator[ActionRecord]:
-        # The browse JSON only exposes lastEvent*; detailed event history would
-        # require scraping the per-measure page. Defer; status updates are
-        # captured via upsert of the bill row itself.
-        return iter(())
+        """Scrape the per-measure page's status table for the full event history.
+
+        The browse JSON only exposes the latest event; the measure page at
+        /hnldoc/measure/{id} server-renders a Date / Type / Description table of
+        every event (the 4th column is a hidden epoch-ms timestamp). Relies on
+        fetch_bills having cached the measure id for this bill_number.
+        """
+        measure_id = self._measure_ids.get(bill_number)
+        if measure_id is None:
+            return
+        if self._html_session is None:
+            self._html_session = requests.Session()
+            self._html_session.headers.update(_HTML_HEADERS)
+        url = f"{BASE}/hnldoc/measure/{measure_id}"
+        try:
+            r = self._html_session.get(url, timeout=self.timeout)
+            r.raise_for_status()
+        except requests.RequestException as e:
+            log.warning("Honolulu measure page fetch failed for %s: %s", bill_number, e)
+            return
+        yield from self._parse_events(r.text, bill_number)
+
+    def _parse_events(self, html: str, bill_number: str) -> Iterator[ActionRecord]:
+        soup = BeautifulSoup(html, "lxml")
+        table = self._event_table(soup)
+        if table is None:
+            return
+        for tr in table.find_all("tr"):
+            cells = tr.find_all("td")
+            if len(cells) < 3:
+                continue
+            date_txt = cells[0].get_text(" ", strip=True)
+            ev_type = cells[1].get_text(" ", strip=True) or None
+            desc = cells[2].get_text(" ", strip=True)
+            if not desc:
+                continue
+            # 4th cell is an epoch-ms timestamp — more reliable than the m/d/Y text.
+            iso = None
+            if len(cells) >= 4:
+                iso = _epoch_ms_to_iso(_to_int(cells[3].get_text(strip=True)))
+            iso = iso or _mdy_to_iso(date_txt)
+            yield ActionRecord(
+                council=self.council_id,
+                bill_number=bill_number,
+                action_date=iso or "",
+                action=desc,
+                committee=ev_type,
+            )
+
+    @staticmethod
+    def _event_table(soup: BeautifulSoup) -> Any:
+        """The status/events table, found by its Date/Type/Description header."""
+        for table in soup.find_all("table"):
+            headers = [th.get_text(strip=True).lower() for th in table.find_all("th")]
+            if {"date", "type", "description"} <= set(headers):
+                return table
+        return None

@@ -52,11 +52,17 @@ def scrape_council(
     db_path: Path = DEFAULT_DB,
     since: date | None = None,
     fetch_actions: bool = True,
+    force_actions: bool = False,
 ) -> dict:
     """Scrape one council, upsert into DB, return run summary.
 
     If `since` is None, defaults to a DEFAULT_LOOKBACK_DAYS window so the daily
     cron stays incremental. Pass an explicit old date for a full backfill.
+
+    `force_actions` fetches action history for every bill seen, not just new or
+    updated ones — a heavier one-time backfill (each measure is an extra
+    request for adapters that fetch history per-bill). Inline-action adapters
+    backfill regardless.
     """
     if since is None:
         since = date.today() - timedelta(days=DEFAULT_LOOKBACK_DAYS)
@@ -84,7 +90,7 @@ def scrape_council(
                             # Adapter already has the history (no extra request) —
                             # upsert unconditionally so existing bills backfill too.
                             upsert_actions(conn, bill_id, bill.actions)
-                        elif is_new or was_updated:
+                        elif is_new or was_updated or force_actions:
                             upsert_actions(
                                 conn, bill_id, adapter.fetch_actions(bill.bill_number)
                             )
