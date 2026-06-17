@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T16:17:12+00:00",
+  "generated_at": "2026-06-17T21:46:23+00:00",
   "last_scrape": {
     "id": 85,
     "started_at": "2026-06-17T16:16:24+00:00",
@@ -6702,7 +6702,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:26+00:00",
-      "last_updated": "2026-06-01T20:41:26+00:00"
+      "last_updated": "2026-06-01T20:41:26+00:00",
+      "actions": [
+        {
+          "date": "2025-12-17",
+          "action": "recommended for approval",
+          "committee": "Disaster Recovery, International Affairs, and Planning Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 919,
@@ -7047,7 +7054,14 @@
       ],
       "classification_confidence": 0.125,
       "first_seen": "2026-06-01T20:41:33+00:00",
-      "last_updated": "2026-06-01T20:41:33+00:00"
+      "last_updated": "2026-06-01T20:41:33+00:00",
+      "actions": [
+        {
+          "date": "2025-12-09",
+          "action": "recommended for approval",
+          "committee": "Special Committee on Real Property Tax Reform"
+        }
+      ]
     },
     {
       "id": 937,
@@ -7068,7 +7082,14 @@
       ],
       "classification_confidence": 0.056,
       "first_seen": "2026-06-01T20:41:33+00:00",
-      "last_updated": "2026-06-01T20:41:33+00:00"
+      "last_updated": "2026-06-01T20:41:33+00:00",
+      "actions": [
+        {
+          "date": "2025-12-16",
+          "action": "recommended for approval",
+          "committee": "Budget, Finance, and Economic Development Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 938,
@@ -7088,7 +7109,14 @@
       ],
       "classification_confidence": 0.006,
       "first_seen": "2026-06-01T20:41:34+00:00",
-      "last_updated": "2026-06-01T20:41:34+00:00"
+      "last_updated": "2026-06-01T20:41:34+00:00",
+      "actions": [
+        {
+          "date": "2025-12-16",
+          "action": "recommended for approval",
+          "committee": "Budget, Finance, and Economic Development Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 939,
@@ -7124,7 +7152,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:35+00:00",
-      "last_updated": "2026-06-01T20:41:35+00:00"
+      "last_updated": "2026-06-01T20:41:35+00:00",
+      "actions": [
+        {
+          "date": "2025-12-17",
+          "action": "recommended for approval",
+          "committee": "Water and Infrastructure Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 542,
@@ -7628,7 +7663,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:42+00:00",
-      "last_updated": "2026-06-01T20:41:42+00:00"
+      "last_updated": "2026-06-01T20:41:42+00:00",
+      "actions": [
+        {
+          "date": "2025-12-03",
+          "action": "recommended for approval",
+          "committee": "Government Relations, Ethics, and Transparency Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 960,
@@ -7646,7 +7688,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:42+00:00",
-      "last_updated": "2026-06-01T20:41:42+00:00"
+      "last_updated": "2026-06-01T20:41:42+00:00",
+      "actions": [
+        {
+          "date": "2025-12-03",
+          "action": "recommended for approval",
+          "committee": "Government Relations, Ethics, and Transparency Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 961,
@@ -7664,7 +7713,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:42+00:00",
-      "last_updated": "2026-06-01T20:41:42+00:00"
+      "last_updated": "2026-06-01T20:41:42+00:00",
+      "actions": [
+        {
+          "date": "2025-12-03",
+          "action": "recommended for approval",
+          "committee": "Government Relations, Ethics, and Transparency Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 962,
@@ -7682,7 +7738,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:43+00:00",
-      "last_updated": "2026-06-01T20:41:43+00:00"
+      "last_updated": "2026-06-01T20:41:43+00:00",
+      "actions": [
+        {
+          "date": "2025-12-03",
+          "action": "recommended for approval",
+          "committee": "Government Relations, Ethics, and Transparency Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 963,
@@ -7700,7 +7763,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:43+00:00",
-      "last_updated": "2026-06-01T20:41:43+00:00"
+      "last_updated": "2026-06-01T20:41:43+00:00",
+      "actions": [
+        {
+          "date": "2025-12-19",
+          "action": "recommended for approval",
+          "committee": "Government Relations, Ethics, and Transparency Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 964,
@@ -8372,7 +8442,14 @@
       ],
       "classification_confidence": 0.053,
       "first_seen": "2026-06-01T20:41:55+00:00",
-      "last_updated": "2026-06-01T20:41:55+00:00"
+      "last_updated": "2026-06-01T20:41:55+00:00",
+      "actions": [
+        {
+          "date": "2025-11-13",
+          "action": "recommended for approval",
+          "committee": "Special Committee on Real Property Tax Reform"
+        }
+      ]
     },
     {
       "id": 994,
@@ -8392,7 +8469,14 @@
       ],
       "classification_confidence": 0.047,
       "first_seen": "2026-06-01T20:41:55+00:00",
-      "last_updated": "2026-06-01T20:41:55+00:00"
+      "last_updated": "2026-06-01T20:41:55+00:00",
+      "actions": [
+        {
+          "date": "2025-11-13",
+          "action": "recommended for approval",
+          "committee": "Special Committee on Real Property Tax Reform"
+        }
+      ]
     },
     {
       "id": 995,
@@ -8413,7 +8497,14 @@
       ],
       "classification_confidence": 0.085,
       "first_seen": "2026-06-01T20:41:55+00:00",
-      "last_updated": "2026-06-01T20:41:55+00:00"
+      "last_updated": "2026-06-01T20:41:55+00:00",
+      "actions": [
+        {
+          "date": "2025-11-13",
+          "action": "recommended for approval",
+          "committee": "Special Committee on Real Property Tax Reform"
+        }
+      ]
     },
     {
       "id": 467,
@@ -8472,7 +8563,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:56+00:00",
-      "last_updated": "2026-06-01T20:41:56+00:00"
+      "last_updated": "2026-06-01T20:41:56+00:00",
+      "actions": [
+        {
+          "date": "2025-11-17",
+          "action": "recommended for approval",
+          "committee": "Water and Infrastructure Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 997,
@@ -8679,7 +8777,14 @@
       ],
       "classification_confidence": 0.021,
       "first_seen": "2026-06-01T20:41:59+00:00",
-      "last_updated": "2026-06-01T20:41:59+00:00"
+      "last_updated": "2026-06-01T20:41:59+00:00",
+      "actions": [
+        {
+          "date": "2025-07-24",
+          "action": "recommended for approval",
+          "committee": "Housing and Land Use Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 557,
@@ -8837,7 +8942,14 @@
       ],
       "classification_confidence": 0.017,
       "first_seen": "2026-06-01T20:42:01+00:00",
-      "last_updated": "2026-06-01T20:42:01+00:00"
+      "last_updated": "2026-06-01T20:42:01+00:00",
+      "actions": [
+        {
+          "date": "2025-10-21",
+          "action": "recommended for approval",
+          "committee": "Budget, Finance, and Economic Development Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1010,
@@ -8857,7 +8969,14 @@
       ],
       "classification_confidence": 0.056,
       "first_seen": "2026-06-01T20:42:01+00:00",
-      "last_updated": "2026-06-01T20:42:01+00:00"
+      "last_updated": "2026-06-01T20:42:01+00:00",
+      "actions": [
+        {
+          "date": "2025-10-21",
+          "action": "recommended for approval",
+          "committee": "Budget, Finance, and Economic Development Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1011,
@@ -8877,7 +8996,14 @@
       ],
       "classification_confidence": 0.009,
       "first_seen": "2026-06-01T20:42:02+00:00",
-      "last_updated": "2026-06-01T20:42:02+00:00"
+      "last_updated": "2026-06-01T20:42:02+00:00",
+      "actions": [
+        {
+          "date": "2025-11-04",
+          "action": "recommended for approval",
+          "committee": "Budget, Finance, and Economic Development Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 559,
@@ -9244,7 +9370,14 @@
       ],
       "classification_confidence": 0.018,
       "first_seen": "2026-06-01T20:42:06+00:00",
-      "last_updated": "2026-06-01T20:42:06+00:00"
+      "last_updated": "2026-06-01T20:42:06+00:00",
+      "actions": [
+        {
+          "date": "2025-10-20",
+          "action": "recommended for approval",
+          "committee": "Water Authority, Social Services, and Parks Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1023,
@@ -9284,7 +9417,14 @@
       ],
       "classification_confidence": 0.013,
       "first_seen": "2026-06-01T20:42:07+00:00",
-      "last_updated": "2026-06-01T20:42:07+00:00"
+      "last_updated": "2026-06-01T20:42:07+00:00",
+      "actions": [
+        {
+          "date": "2025-10-21",
+          "action": "recommended for approval",
+          "committee": "Budget, Finance, and Economic Development Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1025,
@@ -9304,7 +9444,14 @@
       ],
       "classification_confidence": 0.041,
       "first_seen": "2026-06-01T20:42:07+00:00",
-      "last_updated": "2026-06-01T20:42:07+00:00"
+      "last_updated": "2026-06-01T20:42:07+00:00",
+      "actions": [
+        {
+          "date": "2025-10-14",
+          "action": "recommended for approval",
+          "committee": "Special Committee on Real Property Tax Reform"
+        }
+      ]
     },
     {
       "id": 1026,
@@ -9326,7 +9473,14 @@
       ],
       "classification_confidence": 0.091,
       "first_seen": "2026-06-01T20:42:08+00:00",
-      "last_updated": "2026-06-01T20:42:08+00:00"
+      "last_updated": "2026-06-01T20:42:08+00:00",
+      "actions": [
+        {
+          "date": "2025-09-24",
+          "action": "recommended for approval",
+          "committee": "Disaster Recovery, International Affairs, and Planning Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1027,
@@ -9344,7 +9498,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:42:08+00:00",
-      "last_updated": "2026-06-01T20:42:08+00:00"
+      "last_updated": "2026-06-01T20:42:08+00:00",
+      "actions": [
+        {
+          "date": "2025-10-22",
+          "action": "recommended for approval",
+          "committee": "Disaster Recovery, International Affairs, and Planning Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1028,
@@ -9606,7 +9767,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:42:11+00:00",
-      "last_updated": "2026-06-01T20:42:11+00:00"
+      "last_updated": "2026-06-01T20:42:11+00:00",
+      "actions": [
+        {
+          "date": "2025-10-21",
+          "action": "recommended for approval",
+          "committee": "Water and Infrastructure Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1034,
@@ -9624,7 +9792,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:42:11+00:00",
-      "last_updated": "2026-06-01T20:42:11+00:00"
+      "last_updated": "2026-06-01T20:42:11+00:00",
+      "actions": [
+        {
+          "date": "2025-10-21",
+          "action": "recommended for approval",
+          "committee": "Water and Infrastructure Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 472,
@@ -10231,7 +10406,14 @@
       ],
       "classification_confidence": 0.017,
       "first_seen": "2026-06-01T20:42:18+00:00",
-      "last_updated": "2026-06-01T20:42:18+00:00"
+      "last_updated": "2026-06-01T20:42:18+00:00",
+      "actions": [
+        {
+          "date": "2025-09-25",
+          "action": "recommended for approval",
+          "committee": "Kōmike Aloha ʻĀina (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1052,
@@ -10271,7 +10453,14 @@
       ],
       "classification_confidence": 0.025,
       "first_seen": "2026-06-01T20:42:18+00:00",
-      "last_updated": "2026-06-01T20:42:18+00:00"
+      "last_updated": "2026-06-01T20:42:18+00:00",
+      "actions": [
+        {
+          "date": "2025-09-30",
+          "action": "recommended for approval",
+          "committee": "Budget, Finance, and Economic Development Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1054,
@@ -10292,7 +10481,14 @@
       ],
       "classification_confidence": 0.016,
       "first_seen": "2026-06-01T20:42:19+00:00",
-      "last_updated": "2026-06-01T20:42:19+00:00"
+      "last_updated": "2026-06-01T20:42:19+00:00",
+      "actions": [
+        {
+          "date": "2025-09-30",
+          "action": "recommended for approval",
+          "committee": "Budget, Finance, and Economic Development Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1055,
@@ -10313,7 +10509,14 @@
       ],
       "classification_confidence": 0.013,
       "first_seen": "2026-06-01T20:42:19+00:00",
-      "last_updated": "2026-06-01T20:42:19+00:00"
+      "last_updated": "2026-06-01T20:42:19+00:00",
+      "actions": [
+        {
+          "date": "2025-10-08",
+          "action": "recommended for approval",
+          "committee": "Budget, Finance, and Economic Development Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1056,
@@ -10522,7 +10725,14 @@
       ],
       "classification_confidence": 0.043,
       "first_seen": "2026-06-01T20:42:22+00:00",
-      "last_updated": "2026-06-01T20:42:22+00:00"
+      "last_updated": "2026-06-01T20:42:22+00:00",
+      "actions": [
+        {
+          "date": "2025-10-06",
+          "action": "recommended for approval",
+          "committee": "Water and Infrastructure Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1064,
@@ -10540,7 +10750,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:42:23+00:00",
-      "last_updated": "2026-06-01T20:42:23+00:00"
+      "last_updated": "2026-06-01T20:42:23+00:00",
+      "actions": [
+        {
+          "date": "2025-10-07",
+          "action": "recommended for approval",
+          "committee": "Government Relations, Ethics, and Transparency Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1065,
@@ -10971,7 +11188,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:42:29+00:00",
-      "last_updated": "2026-06-01T20:42:29+00:00"
+      "last_updated": "2026-06-01T20:42:29+00:00",
+      "actions": [
+        {
+          "date": "2025-09-24",
+          "action": "recommended for approval",
+          "committee": "Disaster Recovery, International Affairs, and Planning Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1081,
@@ -10991,7 +11215,14 @@
       ],
       "classification_confidence": 0.022,
       "first_seen": "2026-06-01T20:42:29+00:00",
-      "last_updated": "2026-06-01T20:42:29+00:00"
+      "last_updated": "2026-06-01T20:42:29+00:00",
+      "actions": [
+        {
+          "date": "2025-09-24",
+          "action": "recommended for approval",
+          "committee": "Housing and Land Use Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1082,
@@ -11648,7 +11879,14 @@
       ],
       "classification_confidence": 0.125,
       "first_seen": "2026-06-01T20:42:41+00:00",
-      "last_updated": "2026-06-01T20:42:41+00:00"
+      "last_updated": "2026-06-01T20:42:41+00:00",
+      "actions": [
+        {
+          "date": "2025-09-03",
+          "action": "recommended for approval",
+          "committee": "Housing and Land Use Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1115,
@@ -12082,7 +12320,14 @@
       ],
       "classification_confidence": 0.024,
       "first_seen": "2026-06-01T20:42:44+00:00",
-      "last_updated": "2026-06-01T20:42:44+00:00"
+      "last_updated": "2026-06-01T20:42:44+00:00",
+      "actions": [
+        {
+          "date": "2025-09-05",
+          "action": "recommended for approval",
+          "committee": "Budget, Finance, and Economic Development Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1122,
@@ -12103,7 +12348,14 @@
       ],
       "classification_confidence": 0.077,
       "first_seen": "2026-06-01T20:42:44+00:00",
-      "last_updated": "2026-06-01T20:42:44+00:00"
+      "last_updated": "2026-06-01T20:42:44+00:00",
+      "actions": [
+        {
+          "date": "2025-09-03",
+          "action": "recommended for approval",
+          "committee": "Housing and Land Use Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1123,
@@ -12123,7 +12375,14 @@
       ],
       "classification_confidence": 0.049,
       "first_seen": "2026-06-01T20:42:45+00:00",
-      "last_updated": "2026-06-01T20:42:45+00:00"
+      "last_updated": "2026-06-01T20:42:45+00:00",
+      "actions": [
+        {
+          "date": "2025-09-03",
+          "action": "recommended for approval",
+          "committee": "Disaster Recovery, International Affairs, and Planning Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1124,
@@ -12144,7 +12403,14 @@
       ],
       "classification_confidence": 0.035,
       "first_seen": "2026-06-01T20:42:45+00:00",
-      "last_updated": "2026-06-01T20:42:45+00:00"
+      "last_updated": "2026-06-01T20:42:45+00:00",
+      "actions": [
+        {
+          "date": "2025-09-05",
+          "action": "recommended for approval",
+          "committee": "Budget, Finance, and Economic Development Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1125,
@@ -12164,7 +12430,14 @@
       ],
       "classification_confidence": 0.008,
       "first_seen": "2026-06-01T20:42:46+00:00",
-      "last_updated": "2026-06-01T20:42:46+00:00"
+      "last_updated": "2026-06-01T20:42:46+00:00",
+      "actions": [
+        {
+          "date": "2025-09-05",
+          "action": "recommended for approval",
+          "committee": "Budget, Finance, and Economic Development Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1126,
@@ -12182,7 +12455,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:42:46+00:00",
-      "last_updated": "2026-06-01T20:42:46+00:00"
+      "last_updated": "2026-06-01T20:42:46+00:00",
+      "actions": [
+        {
+          "date": "2025-09-02",
+          "action": "recommended for approval",
+          "committee": "Water and Infrastructure Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1127,
@@ -12220,7 +12500,14 @@
       ],
       "classification_confidence": 0.062,
       "first_seen": "2026-06-01T20:42:47+00:00",
-      "last_updated": "2026-06-01T20:42:47+00:00"
+      "last_updated": "2026-06-01T20:42:47+00:00",
+      "actions": [
+        {
+          "date": "2025-09-17",
+          "action": "recommended for approval",
+          "committee": "Special Committee on Real Property Tax Reform"
+        }
+      ]
     },
     {
       "id": 1129,
@@ -12259,7 +12546,14 @@
       ],
       "classification_confidence": 0.082,
       "first_seen": "2026-06-01T20:42:48+00:00",
-      "last_updated": "2026-06-01T20:42:48+00:00"
+      "last_updated": "2026-06-01T20:42:48+00:00",
+      "actions": [
+        {
+          "date": "2025-09-17",
+          "action": "recommended for approval",
+          "committee": "Special Committee on Real Property Tax Reform"
+        }
+      ]
     },
     {
       "id": 1131,
@@ -12279,7 +12573,14 @@
       ],
       "classification_confidence": 0.06,
       "first_seen": "2026-06-01T20:42:48+00:00",
-      "last_updated": "2026-06-01T20:42:48+00:00"
+      "last_updated": "2026-06-01T20:42:48+00:00",
+      "actions": [
+        {
+          "date": "2025-09-17",
+          "action": "recommended for approval",
+          "committee": "Special Committee on Real Property Tax Reform"
+        }
+      ]
     },
     {
       "id": 1132,
@@ -13102,7 +13403,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:42:57+00:00",
-      "last_updated": "2026-06-01T20:42:57+00:00"
+      "last_updated": "2026-06-01T20:42:57+00:00",
+      "actions": [
+        {
+          "date": "2025-08-19",
+          "action": "recommended for approval",
+          "committee": "Government Relations, Ethics, and Transparency Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1157,
@@ -13200,7 +13508,14 @@
       ],
       "classification_confidence": 0.01,
       "first_seen": "2026-06-01T20:42:59+00:00",
-      "last_updated": "2026-06-01T20:42:59+00:00"
+      "last_updated": "2026-06-01T20:42:59+00:00",
+      "actions": [
+        {
+          "date": "2025-08-19",
+          "action": "recommended for approval",
+          "committee": "Budget, Finance, and Economic Development Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1162,
@@ -13294,7 +13609,14 @@
       ],
       "classification_confidence": 0.028,
       "first_seen": "2026-06-01T20:43:01+00:00",
-      "last_updated": "2026-06-01T20:43:01+00:00"
+      "last_updated": "2026-06-01T20:43:01+00:00",
+      "actions": [
+        {
+          "date": "2025-08-20",
+          "action": "recommended for approval",
+          "committee": "Housing and Land Use Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 480,
@@ -13893,7 +14215,14 @@
       ],
       "classification_confidence": 0.013,
       "first_seen": "2026-06-01T20:43:07+00:00",
-      "last_updated": "2026-06-01T20:43:07+00:00"
+      "last_updated": "2026-06-01T20:43:07+00:00",
+      "actions": [
+        {
+          "date": "2025-08-04",
+          "action": "recommended for approval",
+          "committee": "Water and Infrastructure Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1184,
@@ -13915,7 +14244,14 @@
       ],
       "classification_confidence": 0.085,
       "first_seen": "2026-06-01T20:43:08+00:00",
-      "last_updated": "2026-06-01T20:43:08+00:00"
+      "last_updated": "2026-06-01T20:43:08+00:00",
+      "actions": [
+        {
+          "date": "2025-08-04",
+          "action": "recommended for approval",
+          "committee": "Water Authority, Social Services, and Parks Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1185,
@@ -13935,7 +14271,14 @@
       ],
       "classification_confidence": 0.015,
       "first_seen": "2026-06-01T20:43:08+00:00",
-      "last_updated": "2026-06-01T20:43:08+00:00"
+      "last_updated": "2026-06-01T20:43:08+00:00",
+      "actions": [
+        {
+          "date": "2025-08-05",
+          "action": "recommended for approval",
+          "committee": "Budget, Finance, and Economic Development Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1186,
@@ -15072,7 +15415,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:43:26+00:00",
-      "last_updated": "2026-06-01T20:43:26+00:00"
+      "last_updated": "2026-06-01T20:43:26+00:00",
+      "actions": [
+        {
+          "date": "2025-07-22",
+          "action": "recommended for approval",
+          "committee": "Government Relations, Ethics, and Transparency Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 652,
@@ -15975,7 +16325,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:43:36+00:00",
-      "last_updated": "2026-06-01T20:43:36+00:00"
+      "last_updated": "2026-06-01T20:43:36+00:00",
+      "actions": [
+        {
+          "date": "2025-06-30",
+          "action": "recommended for approval",
+          "committee": "Water and Infrastructure Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1255,
@@ -16768,7 +17125,14 @@
       ],
       "classification_confidence": 0.022,
       "first_seen": "2026-06-01T20:43:45+00:00",
-      "last_updated": "2026-06-01T20:43:45+00:00"
+      "last_updated": "2026-06-01T20:43:45+00:00",
+      "actions": [
+        {
+          "date": "2025-06-17",
+          "action": "recommended for approval",
+          "committee": "Budget, Finance, and Economic Development Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1282,
@@ -16901,7 +17265,14 @@
       ],
       "classification_confidence": 0.067,
       "first_seen": "2026-06-01T20:43:47+00:00",
-      "last_updated": "2026-06-01T20:43:47+00:00"
+      "last_updated": "2026-06-01T20:43:47+00:00",
+      "actions": [
+        {
+          "date": "2025-06-16",
+          "action": "recommended for approval",
+          "committee": "Water and Infrastructure Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1285,
@@ -16919,7 +17290,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:43:47+00:00",
-      "last_updated": "2026-06-01T20:43:47+00:00"
+      "last_updated": "2026-06-01T20:43:47+00:00",
+      "actions": [
+        {
+          "date": "2025-06-17",
+          "action": "recommended for approval",
+          "committee": "Government Relations, Ethics, and Transparency Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1286,
@@ -16939,7 +17317,14 @@
       ],
       "classification_confidence": 0.024,
       "first_seen": "2026-06-01T20:43:47+00:00",
-      "last_updated": "2026-06-01T20:43:47+00:00"
+      "last_updated": "2026-06-01T20:43:47+00:00",
+      "actions": [
+        {
+          "date": "2025-06-17",
+          "action": "recommended for approval",
+          "committee": "Disaster Recovery, International Affairs, and Planning Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1287,
@@ -17072,7 +17457,14 @@
       ],
       "classification_confidence": 0.033,
       "first_seen": "2026-06-01T20:43:49+00:00",
-      "last_updated": "2026-06-01T20:43:49+00:00"
+      "last_updated": "2026-06-01T20:43:49+00:00",
+      "actions": [
+        {
+          "date": "2025-06-05",
+          "action": "recommended for approval",
+          "committee": "Agriculture, Diversification, Environment, & Public Transportation Committee"
+        }
+      ]
     },
     {
       "id": 1293,
@@ -17523,7 +17915,14 @@
       ],
       "classification_confidence": 0.019,
       "first_seen": "2026-06-01T20:43:54+00:00",
-      "last_updated": "2026-06-01T20:43:54+00:00"
+      "last_updated": "2026-06-01T20:43:54+00:00",
+      "actions": [
+        {
+          "date": "2025-05-14",
+          "action": "recommended for approval",
+          "committee": "Disaster Recovery, International Affairs, and Planning Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1305,
@@ -17541,7 +17940,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:43:54+00:00",
-      "last_updated": "2026-06-01T20:43:54+00:00"
+      "last_updated": "2026-06-01T20:43:54+00:00",
+      "actions": [
+        {
+          "date": "2025-06-04",
+          "action": "recommended for approval",
+          "committee": "Disaster Recovery, International Affairs, and Planning Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1306,
@@ -17561,7 +17967,14 @@
       ],
       "classification_confidence": 0.051,
       "first_seen": "2026-06-01T20:43:54+00:00",
-      "last_updated": "2026-06-01T20:43:54+00:00"
+      "last_updated": "2026-06-01T20:43:54+00:00",
+      "actions": [
+        {
+          "date": "2025-06-05",
+          "action": "recommended for approval",
+          "committee": "Agriculture, Diversification, Environment, & Public Transportation Committee"
+        }
+      ]
     },
     {
       "id": 1307,
@@ -17747,7 +18160,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:43:57+00:00",
-      "last_updated": "2026-06-01T20:43:57+00:00"
+      "last_updated": "2026-06-01T20:43:57+00:00",
+      "actions": [
+        {
+          "date": "2025-06-02",
+          "action": "recommended for approval",
+          "committee": "Government Relations, Ethics, and Transparency Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1314,
@@ -17765,7 +18185,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:43:57+00:00",
-      "last_updated": "2026-06-01T20:43:57+00:00"
+      "last_updated": "2026-06-01T20:43:57+00:00",
+      "actions": [
+        {
+          "date": "2025-06-02",
+          "action": "recommended for approval",
+          "committee": "Government Relations, Ethics, and Transparency Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1315,
@@ -17783,7 +18210,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:43:58+00:00",
-      "last_updated": "2026-06-01T20:43:58+00:00"
+      "last_updated": "2026-06-01T20:43:58+00:00",
+      "actions": [
+        {
+          "date": "2025-06-02",
+          "action": "recommended for approval",
+          "committee": "Government Relations, Ethics, and Transparency Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1316,
@@ -17801,7 +18235,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:43:58+00:00",
-      "last_updated": "2026-06-01T20:43:58+00:00"
+      "last_updated": "2026-06-01T20:43:58+00:00",
+      "actions": [
+        {
+          "date": "2025-06-02",
+          "action": "recommended for approval",
+          "committee": "Government Relations, Ethics, and Transparency Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1317,
@@ -17819,7 +18260,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:43:58+00:00",
-      "last_updated": "2026-06-01T20:43:58+00:00"
+      "last_updated": "2026-06-01T20:43:58+00:00",
+      "actions": [
+        {
+          "date": "2025-06-02",
+          "action": "recommended for approval",
+          "committee": "Government Relations, Ethics, and Transparency Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1318,
@@ -17855,7 +18303,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:43:59+00:00",
-      "last_updated": "2026-06-01T20:43:59+00:00"
+      "last_updated": "2026-06-01T20:43:59+00:00",
+      "actions": [
+        {
+          "date": "2025-06-02",
+          "action": "recommended for approval",
+          "committee": "Government Relations, Ethics, and Transparency Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1320,
@@ -18481,7 +18936,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:44:09+00:00",
-      "last_updated": "2026-06-01T20:44:09+00:00"
+      "last_updated": "2026-06-01T20:44:09+00:00",
+      "actions": [
+        {
+          "date": "2025-05-14",
+          "action": "recommended for approval",
+          "committee": "Disaster Recovery, International Affairs, and Planning Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1347,
@@ -18768,7 +19230,14 @@
       ],
       "classification_confidence": 0.036,
       "first_seen": "2026-06-01T20:44:12+00:00",
-      "last_updated": "2026-06-01T20:44:12+00:00"
+      "last_updated": "2026-06-01T20:44:12+00:00",
+      "actions": [
+        {
+          "date": "2025-05-15",
+          "action": "recommended for approval",
+          "committee": "Budget, Finance, and Economic Development Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1355,
@@ -18789,7 +19258,14 @@
       ],
       "classification_confidence": 0.026,
       "first_seen": "2026-06-01T20:44:12+00:00",
-      "last_updated": "2026-06-01T20:44:12+00:00"
+      "last_updated": "2026-06-01T20:44:12+00:00",
+      "actions": [
+        {
+          "date": "2025-05-15",
+          "action": "recommended for approval",
+          "committee": "Budget, Finance, and Economic Development Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1356,
@@ -18810,7 +19286,14 @@
       ],
       "classification_confidence": 0.01,
       "first_seen": "2026-06-01T20:44:13+00:00",
-      "last_updated": "2026-06-01T20:44:13+00:00"
+      "last_updated": "2026-06-01T20:44:13+00:00",
+      "actions": [
+        {
+          "date": "2025-05-15",
+          "action": "recommended for approval",
+          "committee": "Budget, Finance, and Economic Development Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1357,
@@ -18903,7 +19386,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:44:14+00:00",
-      "last_updated": "2026-06-01T20:44:14+00:00"
+      "last_updated": "2026-06-01T20:44:14+00:00",
+      "actions": [
+        {
+          "date": "2025-05-13",
+          "action": "recommended for approval",
+          "committee": "Government Relations, Ethics, and Transparency Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1361,
@@ -19991,7 +20481,14 @@
       ],
       "classification_confidence": 0.005,
       "first_seen": "2026-06-01T20:44:28+00:00",
-      "last_updated": "2026-06-01T20:44:28+00:00"
+      "last_updated": "2026-06-01T20:44:28+00:00",
+      "actions": [
+        {
+          "date": "2025-05-27",
+          "action": "recommended for approval",
+          "committee": "Budget, Finance, and Economic Development Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1397,
@@ -21858,7 +22355,14 @@
       ],
       "classification_confidence": 0.032,
       "first_seen": "2026-06-01T20:44:51+00:00",
-      "last_updated": "2026-06-01T20:44:51+00:00"
+      "last_updated": "2026-06-01T20:44:51+00:00",
+      "actions": [
+        {
+          "date": "2025-03-25",
+          "action": "recommended for approval",
+          "committee": "Budget, Finance, and Economic Development Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1458,
@@ -22286,7 +22790,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:44:54+00:00",
-      "last_updated": "2026-06-01T20:44:54+00:00"
+      "last_updated": "2026-06-01T20:44:54+00:00",
+      "actions": [
+        {
+          "date": "2025-03-17",
+          "action": "recommended for approval",
+          "committee": "Water and Infrastructure Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1466,
@@ -22304,7 +22815,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:44:55+00:00",
-      "last_updated": "2026-06-01T20:44:55+00:00"
+      "last_updated": "2026-06-01T20:44:55+00:00",
+      "actions": [
+        {
+          "date": "2025-03-18",
+          "action": "recommended for approval",
+          "committee": "Government Relations, Ethics, and Transparency Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1467,
@@ -22325,7 +22843,14 @@
       ],
       "classification_confidence": 0.04,
       "first_seen": "2026-06-01T20:44:55+00:00",
-      "last_updated": "2026-06-01T20:44:55+00:00"
+      "last_updated": "2026-06-01T20:44:55+00:00",
+      "actions": [
+        {
+          "date": "2025-03-11",
+          "action": "recommended for approval",
+          "committee": "Budget, Finance, and Economic Development Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1468,
@@ -22343,7 +22868,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:44:56+00:00",
-      "last_updated": "2026-06-01T20:44:56+00:00"
+      "last_updated": "2026-06-01T20:44:56+00:00",
+      "actions": [
+        {
+          "date": "2025-03-18",
+          "action": "recommended for approval",
+          "committee": "Government Relations, Ethics, and Transparency Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1469,
@@ -22361,7 +22893,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:44:56+00:00",
-      "last_updated": "2026-06-01T20:44:56+00:00"
+      "last_updated": "2026-06-01T20:44:56+00:00",
+      "actions": [
+        {
+          "date": "2025-03-18",
+          "action": "recommended for approval",
+          "committee": "Government Relations, Ethics, and Transparency Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1470,
@@ -22379,7 +22918,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:44:56+00:00",
-      "last_updated": "2026-06-01T20:44:56+00:00"
+      "last_updated": "2026-06-01T20:44:56+00:00",
+      "actions": [
+        {
+          "date": "2025-03-17",
+          "action": "recommended for approval",
+          "committee": "Water and Infrastructure Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1471,
@@ -22397,7 +22943,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:44:57+00:00",
-      "last_updated": "2026-06-01T20:44:57+00:00"
+      "last_updated": "2026-06-01T20:44:57+00:00",
+      "actions": [
+        {
+          "date": "2025-03-17",
+          "action": "recommended for approval",
+          "committee": "Water and Infrastructure Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1472,
@@ -22985,7 +23538,14 @@
       ],
       "classification_confidence": 0.015,
       "first_seen": "2026-06-01T20:45:03+00:00",
-      "last_updated": "2026-06-01T20:45:03+00:00"
+      "last_updated": "2026-06-01T20:45:03+00:00",
+      "actions": [
+        {
+          "date": "2025-03-11",
+          "action": "recommended for approval",
+          "committee": "Budget, Finance, and Economic Development Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1487,
@@ -23005,7 +23565,14 @@
       ],
       "classification_confidence": 0.015,
       "first_seen": "2026-06-01T20:45:03+00:00",
-      "last_updated": "2026-06-01T20:45:03+00:00"
+      "last_updated": "2026-06-01T20:45:03+00:00",
+      "actions": [
+        {
+          "date": "2025-02-25",
+          "action": "recommended for approval",
+          "committee": "Water and Infrastructure Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1488,
@@ -23023,7 +23590,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:45:03+00:00",
-      "last_updated": "2026-06-01T20:45:03+00:00"
+      "last_updated": "2026-06-01T20:45:03+00:00",
+      "actions": [
+        {
+          "date": "2025-02-25",
+          "action": "recommended for approval",
+          "committee": "Water Authority, Social Services, and Parks Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1489,
@@ -23043,7 +23617,14 @@
       ],
       "classification_confidence": 0.014,
       "first_seen": "2026-06-01T20:45:04+00:00",
-      "last_updated": "2026-06-01T20:45:04+00:00"
+      "last_updated": "2026-06-01T20:45:04+00:00",
+      "actions": [
+        {
+          "date": "2025-03-11",
+          "action": "recommended for approval",
+          "committee": "Budget, Finance, and Economic Development Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1490,
@@ -23063,7 +23644,14 @@
       ],
       "classification_confidence": 0.017,
       "first_seen": "2026-06-01T20:45:04+00:00",
-      "last_updated": "2026-06-01T20:45:04+00:00"
+      "last_updated": "2026-06-01T20:45:04+00:00",
+      "actions": [
+        {
+          "date": "2025-03-11",
+          "action": "recommended for approval",
+          "committee": "Budget, Finance, and Economic Development Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1491,
@@ -23083,7 +23671,14 @@
       ],
       "classification_confidence": 0.019,
       "first_seen": "2026-06-01T20:45:05+00:00",
-      "last_updated": "2026-06-01T20:45:05+00:00"
+      "last_updated": "2026-06-01T20:45:05+00:00",
+      "actions": [
+        {
+          "date": "2025-03-11",
+          "action": "recommended for approval",
+          "committee": "Budget, Finance, and Economic Development Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1492,
@@ -23104,7 +23699,14 @@
       ],
       "classification_confidence": 0.026,
       "first_seen": "2026-06-01T20:45:05+00:00",
-      "last_updated": "2026-06-01T20:45:05+00:00"
+      "last_updated": "2026-06-01T20:45:05+00:00",
+      "actions": [
+        {
+          "date": "2025-03-11",
+          "action": "recommended for approval",
+          "committee": "Budget, Finance, and Economic Development Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1493,
@@ -23124,7 +23726,14 @@
       ],
       "classification_confidence": 0.014,
       "first_seen": "2026-06-01T20:45:06+00:00",
-      "last_updated": "2026-06-01T20:45:06+00:00"
+      "last_updated": "2026-06-01T20:45:06+00:00",
+      "actions": [
+        {
+          "date": "2025-03-11",
+          "action": "recommended for approval",
+          "committee": "Budget, Finance, and Economic Development Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1494,
@@ -23145,7 +23754,14 @@
       ],
       "classification_confidence": 0.027,
       "first_seen": "2026-06-01T20:45:06+00:00",
-      "last_updated": "2026-06-01T20:45:06+00:00"
+      "last_updated": "2026-06-01T20:45:06+00:00",
+      "actions": [
+        {
+          "date": "2025-03-11",
+          "action": "recommended for approval",
+          "committee": "Budget, Finance, and Economic Development Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1495,
@@ -24043,7 +24659,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:45:16+00:00",
-      "last_updated": "2026-06-01T20:45:16+00:00"
+      "last_updated": "2026-06-01T20:45:16+00:00",
+      "actions": [
+        {
+          "date": "2025-02-18",
+          "action": "recommended for approval",
+          "committee": "Government Relations, Ethics, and Transparency Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1518,
@@ -24063,7 +24686,14 @@
       ],
       "classification_confidence": 0.034,
       "first_seen": "2026-06-01T20:45:16+00:00",
-      "last_updated": "2026-06-01T20:45:16+00:00"
+      "last_updated": "2026-06-01T20:45:16+00:00",
+      "actions": [
+        {
+          "date": "2025-02-18",
+          "action": "recommended for approval",
+          "committee": "Budget, Finance, and Economic Development Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1519,
@@ -24081,7 +24711,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:45:17+00:00",
-      "last_updated": "2026-06-01T20:45:17+00:00"
+      "last_updated": "2026-06-01T20:45:17+00:00",
+      "actions": [
+        {
+          "date": "2025-02-18",
+          "action": "recommended for approval",
+          "committee": "Government Relations, Ethics, and Transparency Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1520,
@@ -24099,7 +24736,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:45:17+00:00",
-      "last_updated": "2026-06-01T20:45:17+00:00"
+      "last_updated": "2026-06-01T20:45:17+00:00",
+      "actions": [
+        {
+          "date": "2025-02-18",
+          "action": "recommended for approval",
+          "committee": "Government Relations, Ethics, and Transparency Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1521,
@@ -24117,7 +24761,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:45:17+00:00",
-      "last_updated": "2026-06-01T20:45:17+00:00"
+      "last_updated": "2026-06-01T20:45:17+00:00",
+      "actions": [
+        {
+          "date": "2025-02-18",
+          "action": "recommended for approval",
+          "committee": "Government Relations, Ethics, and Transparency Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1522,
@@ -24135,7 +24786,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:45:18+00:00",
-      "last_updated": "2026-06-01T20:45:18+00:00"
+      "last_updated": "2026-06-01T20:45:18+00:00",
+      "actions": [
+        {
+          "date": "2025-02-11",
+          "action": "recommended for approval",
+          "committee": "Disaster Recovery, International Affairs, and Planning Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1523,
@@ -24155,7 +24813,14 @@
       ],
       "classification_confidence": 0.054,
       "first_seen": "2026-06-01T20:45:18+00:00",
-      "last_updated": "2026-06-01T20:45:18+00:00"
+      "last_updated": "2026-06-01T20:45:18+00:00",
+      "actions": [
+        {
+          "date": "2025-02-19",
+          "action": "recommended for approval",
+          "committee": "Disaster Recovery, International Affairs, and Planning Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1524,
@@ -24928,7 +25593,14 @@
       ],
       "classification_confidence": 0.012,
       "first_seen": "2026-06-01T20:45:28+00:00",
-      "last_updated": "2026-06-01T20:45:28+00:00"
+      "last_updated": "2026-06-01T20:45:28+00:00",
+      "actions": [
+        {
+          "date": "2025-02-04",
+          "action": "recommended for approval",
+          "committee": "Budget, Finance, and Economic Development Committee (2025-2027)"
+        }
+      ]
     },
     {
       "id": 1549,
@@ -28999,7 +29671,14 @@
       ],
       "classification_confidence": 0.026,
       "first_seen": "2026-06-01T20:46:19+00:00",
-      "last_updated": "2026-06-01T20:46:19+00:00"
+      "last_updated": "2026-06-01T20:46:19+00:00",
+      "actions": [
+        {
+          "date": "2024-12-04",
+          "action": "recommended for approval",
+          "committee": "Disaster, Resilience, International Affairs, and Planning Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1685,
@@ -29019,7 +29698,14 @@
       ],
       "classification_confidence": 0.019,
       "first_seen": "2026-06-01T20:46:20+00:00",
-      "last_updated": "2026-06-01T20:46:20+00:00"
+      "last_updated": "2026-06-01T20:46:20+00:00",
+      "actions": [
+        {
+          "date": "2024-12-03",
+          "action": "recommended for approval",
+          "committee": "Budget, Finance, and Economic Development Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1686,
@@ -29040,7 +29726,14 @@
       ],
       "classification_confidence": 0.032,
       "first_seen": "2026-06-01T20:46:20+00:00",
-      "last_updated": "2026-06-01T20:46:20+00:00"
+      "last_updated": "2026-06-01T20:46:20+00:00",
+      "actions": [
+        {
+          "date": "2024-08-07",
+          "action": "recommended for approval",
+          "committee": "Disaster, Resilience, International Affairs, and Planning Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1687,
@@ -29058,7 +29751,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:20+00:00",
-      "last_updated": "2026-06-01T20:46:20+00:00"
+      "last_updated": "2026-06-01T20:46:20+00:00",
+      "actions": [
+        {
+          "date": "2024-12-05",
+          "action": "recommended for approval",
+          "committee": "Water and Infrastructure Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1688,
@@ -29079,7 +29779,14 @@
       ],
       "classification_confidence": 0.019,
       "first_seen": "2026-06-01T20:46:21+00:00",
-      "last_updated": "2026-06-01T20:46:21+00:00"
+      "last_updated": "2026-06-01T20:46:21+00:00",
+      "actions": [
+        {
+          "date": "2024-12-03",
+          "action": "recommended for approval",
+          "committee": "Budget, Finance, and Economic Development Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1689,
@@ -29099,7 +29806,14 @@
       ],
       "classification_confidence": 0.026,
       "first_seen": "2026-06-01T20:46:21+00:00",
-      "last_updated": "2026-06-01T20:46:21+00:00"
+      "last_updated": "2026-06-01T20:46:21+00:00",
+      "actions": [
+        {
+          "date": "2024-12-02",
+          "action": "recommended for approval",
+          "committee": "Water Authority, Social Services, and Parks Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1690,
@@ -29119,7 +29833,14 @@
       ],
       "classification_confidence": 0.016,
       "first_seen": "2026-06-01T20:46:21+00:00",
-      "last_updated": "2026-06-01T20:46:21+00:00"
+      "last_updated": "2026-06-01T20:46:21+00:00",
+      "actions": [
+        {
+          "date": "2024-12-02",
+          "action": "recommended for approval",
+          "committee": "Housing and Land Use Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1691,
@@ -29139,7 +29860,14 @@
       ],
       "classification_confidence": 0.024,
       "first_seen": "2026-06-01T20:46:22+00:00",
-      "last_updated": "2026-06-01T20:46:22+00:00"
+      "last_updated": "2026-06-01T20:46:22+00:00",
+      "actions": [
+        {
+          "date": "2024-12-05",
+          "action": "recommended for approval",
+          "committee": "Water and Infrastructure Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1692,
@@ -29157,7 +29885,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:22+00:00",
-      "last_updated": "2026-06-01T20:46:22+00:00"
+      "last_updated": "2026-06-01T20:46:22+00:00",
+      "actions": [
+        {
+          "date": "2024-12-04",
+          "action": "recommended for approval",
+          "committee": "Efficiency Solutions and Circular Systems Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1693,
@@ -29177,7 +29912,14 @@
       ],
       "classification_confidence": 0.027,
       "first_seen": "2026-06-01T20:46:23+00:00",
-      "last_updated": "2026-06-01T20:46:23+00:00"
+      "last_updated": "2026-06-01T20:46:23+00:00",
+      "actions": [
+        {
+          "date": "2024-12-05",
+          "action": "recommended for approval",
+          "committee": "Water and Infrastructure Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1694,
@@ -29195,7 +29937,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:23+00:00",
-      "last_updated": "2026-06-01T20:46:23+00:00"
+      "last_updated": "2026-06-01T20:46:23+00:00",
+      "actions": [
+        {
+          "date": "2024-12-04",
+          "action": "recommended for approval",
+          "committee": "Efficiency Solutions and Circular Systems Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1695,
@@ -29213,7 +29962,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:23+00:00",
-      "last_updated": "2026-06-01T20:46:23+00:00"
+      "last_updated": "2026-06-01T20:46:23+00:00",
+      "actions": [
+        {
+          "date": "2024-12-04",
+          "action": "recommended for approval",
+          "committee": "Efficiency Solutions and Circular Systems Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1696,
@@ -29233,7 +29989,14 @@
       ],
       "classification_confidence": 0.027,
       "first_seen": "2026-06-01T20:46:24+00:00",
-      "last_updated": "2026-06-01T20:46:24+00:00"
+      "last_updated": "2026-06-01T20:46:24+00:00",
+      "actions": [
+        {
+          "date": "2024-12-02",
+          "action": "recommended for approval",
+          "committee": "Water Authority, Social Services, and Parks Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1697,
@@ -29728,7 +30491,14 @@
       ],
       "classification_confidence": 0.045,
       "first_seen": "2026-06-01T20:46:33+00:00",
-      "last_updated": "2026-06-01T20:46:33+00:00"
+      "last_updated": "2026-06-01T20:46:33+00:00",
+      "actions": [
+        {
+          "date": "2024-12-03",
+          "action": "recommended for approval",
+          "committee": "Housing and Land Use Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 286,
@@ -30154,7 +30924,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:37+00:00",
-      "last_updated": "2026-06-01T20:46:37+00:00"
+      "last_updated": "2026-06-01T20:46:37+00:00",
+      "actions": [
+        {
+          "date": "2024-11-18",
+          "action": "recommended for approval",
+          "committee": "Efficiency Solutions and Circular Systems Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1735,
@@ -30174,7 +30951,14 @@
       ],
       "classification_confidence": 0.013,
       "first_seen": "2026-06-01T20:46:38+00:00",
-      "last_updated": "2026-06-01T20:46:38+00:00"
+      "last_updated": "2026-06-01T20:46:38+00:00",
+      "actions": [
+        {
+          "date": "2024-11-21",
+          "action": "recommended for approval",
+          "committee": "Budget, Finance, and Economic Development Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1736,
@@ -30212,7 +30996,14 @@
       ],
       "classification_confidence": 0.029,
       "first_seen": "2026-06-01T20:46:39+00:00",
-      "last_updated": "2026-06-01T20:46:39+00:00"
+      "last_updated": "2026-06-01T20:46:39+00:00",
+      "actions": [
+        {
+          "date": "2024-11-21",
+          "action": "recommended for approval",
+          "committee": "Agriculture, Diversification, Environment, and Public Transportation Committee"
+        }
+      ]
     },
     {
       "id": 1738,
@@ -30232,7 +31023,14 @@
       ],
       "classification_confidence": 0.044,
       "first_seen": "2026-06-01T20:46:39+00:00",
-      "last_updated": "2026-06-01T20:46:39+00:00"
+      "last_updated": "2026-06-01T20:46:39+00:00",
+      "actions": [
+        {
+          "date": "2024-11-21",
+          "action": "recommended for approval",
+          "committee": "Agriculture, Diversification, Environment, and Public Transportation Committee"
+        }
+      ]
     },
     {
       "id": 1739,
@@ -30253,7 +31051,14 @@
       ],
       "classification_confidence": 0.01,
       "first_seen": "2026-06-01T20:46:39+00:00",
-      "last_updated": "2026-06-01T20:46:39+00:00"
+      "last_updated": "2026-06-01T20:46:39+00:00",
+      "actions": [
+        {
+          "date": "2024-11-21",
+          "action": "recommended for approval",
+          "committee": "Budget, Finance, and Economic Development Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1740,
@@ -30271,7 +31076,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:40+00:00",
-      "last_updated": "2026-06-01T20:46:40+00:00"
+      "last_updated": "2026-06-01T20:46:40+00:00",
+      "actions": [
+        {
+          "date": "2024-11-18",
+          "action": "recommended for approval",
+          "committee": "Water Authority, Social Services, and Parks Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1741,
@@ -30291,7 +31103,14 @@
       ],
       "classification_confidence": 0.006,
       "first_seen": "2026-06-01T20:46:40+00:00",
-      "last_updated": "2026-06-01T20:46:40+00:00"
+      "last_updated": "2026-06-01T20:46:40+00:00",
+      "actions": [
+        {
+          "date": "2024-11-19",
+          "action": "recommended for approval",
+          "committee": "Government Relations, Ethics, and Transparency Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1742,
@@ -30309,7 +31128,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:40+00:00",
-      "last_updated": "2026-06-01T20:46:40+00:00"
+      "last_updated": "2026-06-01T20:46:40+00:00",
+      "actions": [
+        {
+          "date": "2024-11-19",
+          "action": "recommended for approval",
+          "committee": "Water and Infrastructure Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1743,
@@ -30327,7 +31153,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:41+00:00",
-      "last_updated": "2026-06-01T20:46:41+00:00"
+      "last_updated": "2026-06-01T20:46:41+00:00",
+      "actions": [
+        {
+          "date": "2024-11-19",
+          "action": "recommended for approval",
+          "committee": "Water and Infrastructure Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 333,
@@ -30702,7 +31535,14 @@
       ],
       "classification_confidence": 0.062,
       "first_seen": "2026-06-01T20:46:46+00:00",
-      "last_updated": "2026-06-01T20:46:46+00:00"
+      "last_updated": "2026-06-01T20:46:46+00:00",
+      "actions": [
+        {
+          "date": "2024-08-21",
+          "action": "recommended for approval",
+          "committee": "Housing and Land Use Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1760,
@@ -31333,7 +32173,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:56+00:00",
-      "last_updated": "2026-06-01T20:46:56+00:00"
+      "last_updated": "2026-06-01T20:46:56+00:00",
+      "actions": [
+        {
+          "date": "2024-10-21",
+          "action": "recommended for approval",
+          "committee": "Water and Infrastructure Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1787,
@@ -31351,7 +32198,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:57+00:00",
-      "last_updated": "2026-06-01T20:46:57+00:00"
+      "last_updated": "2026-06-01T20:46:57+00:00",
+      "actions": [
+        {
+          "date": "2024-10-21",
+          "action": "recommended for approval",
+          "committee": "Disaster, Resilience, International Affairs, and Planning Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1788,
@@ -31371,7 +32225,14 @@
       ],
       "classification_confidence": 0.013,
       "first_seen": "2026-06-01T20:46:57+00:00",
-      "last_updated": "2026-06-01T20:46:57+00:00"
+      "last_updated": "2026-06-01T20:46:57+00:00",
+      "actions": [
+        {
+          "date": "2024-10-22",
+          "action": "recommended for approval",
+          "committee": "Budget, Finance, and Economic Development Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1789,
@@ -31391,7 +32252,14 @@
       ],
       "classification_confidence": 0.014,
       "first_seen": "2026-06-01T20:46:58+00:00",
-      "last_updated": "2026-06-01T20:46:58+00:00"
+      "last_updated": "2026-06-01T20:46:58+00:00",
+      "actions": [
+        {
+          "date": "2024-10-22",
+          "action": "recommended for approval",
+          "committee": "Budget, Finance, and Economic Development Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1790,
@@ -31413,7 +32281,14 @@
       ],
       "classification_confidence": 0.022,
       "first_seen": "2026-06-01T20:46:58+00:00",
-      "last_updated": "2026-06-01T20:46:58+00:00"
+      "last_updated": "2026-06-01T20:46:58+00:00",
+      "actions": [
+        {
+          "date": "2024-10-22",
+          "action": "recommended for approval",
+          "committee": "Budget, Finance, and Economic Development Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1791,
@@ -31434,7 +32309,14 @@
       ],
       "classification_confidence": 0.167,
       "first_seen": "2026-06-01T20:46:58+00:00",
-      "last_updated": "2026-06-01T20:46:58+00:00"
+      "last_updated": "2026-06-01T20:46:58+00:00",
+      "actions": [
+        {
+          "date": "2024-10-29",
+          "action": "recommended for approval",
+          "committee": "Budget, Finance, and Economic Development Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1792,
@@ -31455,7 +32337,14 @@
       ],
       "classification_confidence": 0.118,
       "first_seen": "2026-06-01T20:46:59+00:00",
-      "last_updated": "2026-06-01T20:46:59+00:00"
+      "last_updated": "2026-06-01T20:46:59+00:00",
+      "actions": [
+        {
+          "date": "2024-10-29",
+          "action": "recommended for approval",
+          "committee": "Budget, Finance, and Economic Development Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1793,
@@ -31476,7 +32365,14 @@
       ],
       "classification_confidence": 0.042,
       "first_seen": "2026-06-01T20:46:59+00:00",
-      "last_updated": "2026-06-01T20:46:59+00:00"
+      "last_updated": "2026-06-01T20:46:59+00:00",
+      "actions": [
+        {
+          "date": "2024-10-29",
+          "action": "recommended for approval",
+          "committee": "Budget, Finance, and Economic Development Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1794,
@@ -32354,7 +33250,14 @@
       ],
       "classification_confidence": 0.014,
       "first_seen": "2026-06-01T20:47:11+00:00",
-      "last_updated": "2026-06-01T20:47:11+00:00"
+      "last_updated": "2026-06-01T20:47:11+00:00",
+      "actions": [
+        {
+          "date": "2024-10-08",
+          "action": "recommended for approval",
+          "committee": "Budget, Finance, and Economic Development Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1825,
@@ -32390,7 +33293,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:47:13+00:00",
-      "last_updated": "2026-06-01T20:47:13+00:00"
+      "last_updated": "2026-06-01T20:47:13+00:00",
+      "actions": [
+        {
+          "date": "2024-10-08",
+          "action": "recommended for approval",
+          "committee": "Government Relations, Ethics, and Transparency Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1827,
@@ -32520,7 +33430,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:47:15+00:00",
-      "last_updated": "2026-06-01T20:47:15+00:00"
+      "last_updated": "2026-06-01T20:47:15+00:00",
+      "actions": [
+        {
+          "date": "2024-08-06",
+          "action": "recommended for approval",
+          "committee": "Government Relations, Ethics, and Transparency Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1834,
@@ -32541,7 +33458,14 @@
       ],
       "classification_confidence": 0.056,
       "first_seen": "2026-06-01T20:47:16+00:00",
-      "last_updated": "2026-06-01T20:47:16+00:00"
+      "last_updated": "2026-06-01T20:47:16+00:00",
+      "actions": [
+        {
+          "date": "2024-10-10",
+          "action": "recommended for approval",
+          "committee": "Water and Infrastructure Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1835,
@@ -33113,7 +34037,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:47:23+00:00",
-      "last_updated": "2026-06-01T20:47:23+00:00"
+      "last_updated": "2026-06-01T20:47:23+00:00",
+      "actions": [
+        {
+          "date": "2024-09-23",
+          "action": "recommended for approval",
+          "committee": "Water Authority, Social Services, and Parks Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1855,
@@ -33133,7 +34064,14 @@
       ],
       "classification_confidence": 0.024,
       "first_seen": "2026-06-01T20:47:24+00:00",
-      "last_updated": "2026-06-01T20:47:24+00:00"
+      "last_updated": "2026-06-01T20:47:24+00:00",
+      "actions": [
+        {
+          "date": "2024-09-26",
+          "action": "recommended for approval",
+          "committee": "Water and Infrastructure Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1856,
@@ -33154,7 +34092,14 @@
       ],
       "classification_confidence": 0.067,
       "first_seen": "2026-06-01T20:47:24+00:00",
-      "last_updated": "2026-06-01T20:47:24+00:00"
+      "last_updated": "2026-06-01T20:47:24+00:00",
+      "actions": [
+        {
+          "date": "2024-09-24",
+          "action": "recommended for approval",
+          "committee": "Budget, Finance, and Economic Development Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1857,
@@ -33174,7 +34119,14 @@
       ],
       "classification_confidence": 0.02,
       "first_seen": "2026-06-01T20:47:24+00:00",
-      "last_updated": "2026-06-01T20:47:24+00:00"
+      "last_updated": "2026-06-01T20:47:24+00:00",
+      "actions": [
+        {
+          "date": "2024-09-24",
+          "action": "recommended for approval",
+          "committee": "Budget, Finance, and Economic Development Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1858,
@@ -33978,7 +34930,14 @@
       ],
       "classification_confidence": 0.007,
       "first_seen": "2026-06-01T20:47:35+00:00",
-      "last_updated": "2026-06-01T20:47:35+00:00"
+      "last_updated": "2026-06-01T20:47:35+00:00",
+      "actions": [
+        {
+          "date": "2024-09-10",
+          "action": "recommended for approval",
+          "committee": "Budget, Finance, and Economic Development Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1888,
@@ -34014,7 +34973,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:47:36+00:00",
-      "last_updated": "2026-06-01T20:47:36+00:00"
+      "last_updated": "2026-06-01T20:47:36+00:00",
+      "actions": [
+        {
+          "date": "2024-09-10",
+          "action": "recommended for approval",
+          "committee": "Government Relations, Ethics, and Transparency Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1890,
@@ -34034,7 +35000,14 @@
       ],
       "classification_confidence": 0.012,
       "first_seen": "2026-06-01T20:47:36+00:00",
-      "last_updated": "2026-06-01T20:47:36+00:00"
+      "last_updated": "2026-06-01T20:47:36+00:00",
+      "actions": [
+        {
+          "date": "2024-09-10",
+          "action": "recommended for approval",
+          "committee": "Budget, Finance, and Economic Development Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1891,
@@ -34090,7 +35063,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:47:37+00:00",
-      "last_updated": "2026-06-01T20:47:37+00:00"
+      "last_updated": "2026-06-01T20:47:37+00:00",
+      "actions": [
+        {
+          "date": "2024-09-10",
+          "action": "recommended for approval",
+          "committee": "Government Relations, Ethics, and Transparency Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1894,
@@ -34108,7 +35088,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:47:38+00:00",
-      "last_updated": "2026-06-01T20:47:38+00:00"
+      "last_updated": "2026-06-01T20:47:38+00:00",
+      "actions": [
+        {
+          "date": "2024-09-12",
+          "action": "recommended for approval",
+          "committee": "Government Relations, Ethics, and Transparency Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1895,
@@ -34126,7 +35113,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:47:38+00:00",
-      "last_updated": "2026-06-01T20:47:38+00:00"
+      "last_updated": "2026-06-01T20:47:38+00:00",
+      "actions": [
+        {
+          "date": "2024-09-12",
+          "action": "recommended for approval",
+          "committee": "Government Relations, Ethics, and Transparency Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 374,
@@ -34690,7 +35684,14 @@
       ],
       "classification_confidence": 0.086,
       "first_seen": "2026-06-01T20:47:43+00:00",
-      "last_updated": "2026-06-01T20:47:43+00:00"
+      "last_updated": "2026-06-01T20:47:43+00:00",
+      "actions": [
+        {
+          "date": "2024-08-07",
+          "action": "recommended for approval",
+          "committee": "Housing and Land Use Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1908,
@@ -34710,7 +35711,14 @@
       ],
       "classification_confidence": 0.014,
       "first_seen": "2026-06-01T20:47:43+00:00",
-      "last_updated": "2026-06-01T20:47:43+00:00"
+      "last_updated": "2026-06-01T20:47:43+00:00",
+      "actions": [
+        {
+          "date": "2024-08-20",
+          "action": "recommended for approval",
+          "committee": "Budget, Finance, and Economic Development Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1909,
@@ -34730,7 +35738,14 @@
       ],
       "classification_confidence": 0.009,
       "first_seen": "2026-06-01T20:47:43+00:00",
-      "last_updated": "2026-06-01T20:47:43+00:00"
+      "last_updated": "2026-06-01T20:47:43+00:00",
+      "actions": [
+        {
+          "date": "2024-08-20",
+          "action": "recommended for approval",
+          "committee": "Budget, Finance, and Economic Development Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1910,
@@ -34748,7 +35763,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:47:44+00:00",
-      "last_updated": "2026-06-01T20:47:44+00:00"
+      "last_updated": "2026-06-01T20:47:44+00:00",
+      "actions": [
+        {
+          "date": "2024-08-20",
+          "action": "recommended for approval",
+          "committee": "Government Relations, Ethics, and Transparency Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1911,
@@ -34768,7 +35790,14 @@
       ],
       "classification_confidence": 0.006,
       "first_seen": "2026-06-01T20:47:44+00:00",
-      "last_updated": "2026-06-01T20:47:44+00:00"
+      "last_updated": "2026-06-01T20:47:44+00:00",
+      "actions": [
+        {
+          "date": "2024-08-20",
+          "action": "recommended for approval",
+          "committee": "Government Relations, Ethics, and Transparency Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1912,
@@ -34786,7 +35815,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:47:44+00:00",
-      "last_updated": "2026-06-01T20:47:44+00:00"
+      "last_updated": "2026-06-01T20:47:44+00:00",
+      "actions": [
+        {
+          "date": "2024-08-20",
+          "action": "recommended for approval",
+          "committee": "Government Relations, Ethics, and Transparency Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1913,
@@ -34804,7 +35840,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:47:45+00:00",
-      "last_updated": "2026-06-01T20:47:45+00:00"
+      "last_updated": "2026-06-01T20:47:45+00:00",
+      "actions": [
+        {
+          "date": "2024-08-20",
+          "action": "recommended for approval",
+          "committee": "Government Relations, Ethics, and Transparency Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1914,
@@ -35529,7 +36572,14 @@
       ],
       "classification_confidence": 0.027,
       "first_seen": "2026-06-01T20:47:53+00:00",
-      "last_updated": "2026-06-01T20:47:53+00:00"
+      "last_updated": "2026-06-01T20:47:53+00:00",
+      "actions": [
+        {
+          "date": "2024-08-07",
+          "action": "recommended for approval",
+          "committee": "Housing and Land Use Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1936,
@@ -36457,7 +37507,14 @@
       ],
       "classification_confidence": 0.046,
       "first_seen": "2026-06-01T20:48:08+00:00",
-      "last_updated": "2026-06-01T20:48:08+00:00"
+      "last_updated": "2026-06-01T20:48:08+00:00",
+      "actions": [
+        {
+          "date": "2024-06-19",
+          "action": "recommended for approval",
+          "committee": "Housing and Land Use Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1976,
@@ -36477,7 +37534,14 @@
       ],
       "classification_confidence": 0.037,
       "first_seen": "2026-06-01T20:48:08+00:00",
-      "last_updated": "2026-06-01T20:48:08+00:00"
+      "last_updated": "2026-06-01T20:48:08+00:00",
+      "actions": [
+        {
+          "date": "2024-07-09",
+          "action": "recommended for approval",
+          "committee": "Government Relations, Ethics, and Transparency Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1977,
@@ -36497,7 +37561,14 @@
       ],
       "classification_confidence": 0.025,
       "first_seen": "2026-06-01T20:48:08+00:00",
-      "last_updated": "2026-06-01T20:48:08+00:00"
+      "last_updated": "2026-06-01T20:48:08+00:00",
+      "actions": [
+        {
+          "date": "2024-07-25",
+          "action": "recommended for approval",
+          "committee": "Agriculture, Diversification, Environment, and Public Transportation Committee"
+        }
+      ]
     },
     {
       "id": 1978,
@@ -36538,7 +37609,14 @@
       ],
       "classification_confidence": 0.049,
       "first_seen": "2026-06-01T20:48:09+00:00",
-      "last_updated": "2026-06-01T20:48:09+00:00"
+      "last_updated": "2026-06-01T20:48:09+00:00",
+      "actions": [
+        {
+          "date": "2024-07-25",
+          "action": "recommended for approval",
+          "committee": "Agriculture, Diversification, Environment, and Public Transportation Committee"
+        }
+      ]
     },
     {
       "id": 1980,
@@ -36574,7 +37652,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:48:10+00:00",
-      "last_updated": "2026-06-01T20:48:10+00:00"
+      "last_updated": "2026-06-01T20:48:10+00:00",
+      "actions": [
+        {
+          "date": "2024-07-09",
+          "action": "recommended for approval",
+          "committee": "Government Relations, Ethics, and Transparency Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1982,
@@ -36595,7 +37680,14 @@
       ],
       "classification_confidence": 0.034,
       "first_seen": "2026-06-01T20:48:10+00:00",
-      "last_updated": "2026-06-01T20:48:10+00:00"
+      "last_updated": "2026-06-01T20:48:10+00:00",
+      "actions": [
+        {
+          "date": "2024-06-05",
+          "action": "recommended for approval",
+          "committee": "Housing and Land Use Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1983,
@@ -36687,7 +37779,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:48:12+00:00",
-      "last_updated": "2026-06-01T20:48:12+00:00"
+      "last_updated": "2026-06-01T20:48:12+00:00",
+      "actions": [
+        {
+          "date": "2024-07-26",
+          "action": "recommended for approval",
+          "committee": "Government Relations, Ethics, and Transparency Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1988,
@@ -36765,7 +37864,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:48:13+00:00",
-      "last_updated": "2026-06-01T20:48:13+00:00"
+      "last_updated": "2026-06-01T20:48:13+00:00",
+      "actions": [
+        {
+          "date": "2024-07-09",
+          "action": "recommended for approval",
+          "committee": "Government Relations, Ethics, and Transparency Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1992,
@@ -36788,7 +37894,14 @@
       ],
       "classification_confidence": 0.068,
       "first_seen": "2026-06-01T20:48:14+00:00",
-      "last_updated": "2026-06-01T20:48:14+00:00"
+      "last_updated": "2026-06-01T20:48:14+00:00",
+      "actions": [
+        {
+          "date": "2024-04-05",
+          "action": "recommended for approval",
+          "committee": "Housing and Land Use Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 1993,
@@ -37779,7 +38892,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:48:22+00:00",
-      "last_updated": "2026-06-01T20:48:22+00:00"
+      "last_updated": "2026-06-01T20:48:22+00:00",
+      "actions": [
+        {
+          "date": "2024-07-09",
+          "action": "recommended for approval",
+          "committee": "Government Relations, Ethics, and Transparency Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 2016,
@@ -38612,7 +39732,14 @@
       ],
       "classification_confidence": 0.034,
       "first_seen": "2026-06-01T20:48:35+00:00",
-      "last_updated": "2026-06-01T20:48:35+00:00"
+      "last_updated": "2026-06-01T20:48:35+00:00",
+      "actions": [
+        {
+          "date": "2024-06-20",
+          "action": "recommended for approval",
+          "committee": "Water and Infrastructure Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 2051,
@@ -38630,7 +39757,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:48:35+00:00",
-      "last_updated": "2026-06-01T20:48:35+00:00"
+      "last_updated": "2026-06-01T20:48:35+00:00",
+      "actions": [
+        {
+          "date": "2024-06-17",
+          "action": "recommended for approval",
+          "committee": "Disaster, Resilience, International Affairs, and Planning Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 2052,
@@ -38668,7 +39802,14 @@
       ],
       "classification_confidence": 0.02,
       "first_seen": "2026-06-01T20:48:36+00:00",
-      "last_updated": "2026-06-01T20:48:36+00:00"
+      "last_updated": "2026-06-01T20:48:36+00:00",
+      "actions": [
+        {
+          "date": "2024-06-18",
+          "action": "recommended for approval",
+          "committee": "Budget, Finance, and Economic Development Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 2054,
@@ -38798,7 +39939,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:48:38+00:00",
-      "last_updated": "2026-06-01T20:48:38+00:00"
+      "last_updated": "2026-06-01T20:48:38+00:00",
+      "actions": [
+        {
+          "date": "2024-06-06",
+          "action": "recommended for approval",
+          "committee": "Water and Infrastructure Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 2061,
@@ -39747,7 +40895,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:48:48+00:00",
-      "last_updated": "2026-06-01T20:48:48+00:00"
+      "last_updated": "2026-06-01T20:48:48+00:00",
+      "actions": [
+        {
+          "date": "2024-06-04",
+          "action": "recommended for approval",
+          "committee": "Government Relations, Ethics, and Transparency Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 2086,
@@ -39765,7 +40920,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:48:48+00:00",
-      "last_updated": "2026-06-01T20:48:48+00:00"
+      "last_updated": "2026-06-01T20:48:48+00:00",
+      "actions": [
+        {
+          "date": "2024-06-04",
+          "action": "recommended for approval",
+          "committee": "Government Relations, Ethics, and Transparency Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 2087,
@@ -39783,7 +40945,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:48:48+00:00",
-      "last_updated": "2026-06-01T20:48:48+00:00"
+      "last_updated": "2026-06-01T20:48:48+00:00",
+      "actions": [
+        {
+          "date": "2024-06-04",
+          "action": "recommended for approval",
+          "committee": "Government Relations, Ethics, and Transparency Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 2088,
@@ -39801,7 +40970,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:48:49+00:00",
-      "last_updated": "2026-06-01T20:48:49+00:00"
+      "last_updated": "2026-06-01T20:48:49+00:00",
+      "actions": [
+        {
+          "date": "2024-06-04",
+          "action": "recommended for approval",
+          "committee": "Government Relations, Ethics, and Transparency Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 2089,
@@ -39819,7 +40995,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:48:49+00:00",
-      "last_updated": "2026-06-01T20:48:49+00:00"
+      "last_updated": "2026-06-01T20:48:49+00:00",
+      "actions": [
+        {
+          "date": "2024-06-04",
+          "action": "recommended for approval",
+          "committee": "Government Relations, Ethics, and Transparency Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 2090,
@@ -39837,7 +41020,14 @@
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:48:50+00:00",
-      "last_updated": "2026-06-01T20:48:50+00:00"
+      "last_updated": "2026-06-01T20:48:50+00:00",
+      "actions": [
+        {
+          "date": "2024-05-17",
+          "action": "recommended for approval",
+          "committee": "Government Relations, Ethics, and Transparency Committee (2023-2025)"
+        }
+      ]
     },
     {
       "id": 2091,

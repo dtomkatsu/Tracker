@@ -28,6 +28,21 @@ def build(db_path: Path = DEFAULT_DB, site_dir: Path = SITE_DIR) -> Path:
             """
         ).fetchall()
         last_run = last_completed_run(conn)
+        # Per-bill action history for the dashboard's expandable timeline.
+        # Newest action first; the front-end leads with [0] as the latest.
+        action_rows = conn.execute(
+            """
+            SELECT bill_id, action_date, action, committee
+            FROM bill_actions
+            ORDER BY bill_id, action_date DESC, id DESC
+            """
+        ).fetchall()
+
+    actions_by_bill: dict[int, list[dict]] = {}
+    for a in action_rows:
+        actions_by_bill.setdefault(a["bill_id"], []).append(
+            {"date": a["action_date"], "action": a["action"], "committee": a["committee"]}
+        )
 
     bills = []
     for r in rows:
@@ -36,6 +51,9 @@ def build(db_path: Path = DEFAULT_DB, site_dir: Path = SITE_DIR) -> Path:
             d["subjects"] = json.loads(d.get("subjects") or "[]")
         except json.JSONDecodeError:
             d["subjects"] = []
+        acts = actions_by_bill.get(d["id"])
+        if acts:
+            d["actions"] = acts
         bills.append(d)
 
     payload = {

@@ -1326,27 +1326,132 @@
       b.council === "maui" ? "Committee / body"
       : b.raw_subject && b.raw_subject !== fullTitle ? "Summary"
       : "Full title";
+    const st = normalizeStatus(b);
+    const parts = [];
+
+    // Header band — the panel's own identity (county, type, current stage) so it
+    // reads on its own instead of leaning on the collapsed row above it.
+    parts.push(
+      `<div class="dx-head">` +
+        `<span class="county-tag county-${escapeHtml(b.council)}">${escapeHtml(council)}</span>` +
+        `<span class="dx-type">${escapeHtml(b.bill_type)}</span>` +
+        `<span class="dx-status ${st.cls}">${escapeHtml(st.label)}</span>` +
+      `</div>`
+    );
+
     // Progress is already shown in the row's Progress column, so the expanded
     // view skips the (redundant) labeled stepper and leads with the summary.
-    const parts = [];
+    // When the council gives no separate summary, fall back to the full legal
+    // title (the row truncates it; here it shows in full) before giving up.
     if (b.raw_subject) {
       parts.push(
         `<div class="detail-summary"><span class="detail-label">${summaryLabel}</span>${annotate(b.raw_subject)}</div>`
       );
+    } else if (fullTitle) {
+      parts.push(
+        `<div class="detail-summary"><span class="detail-label">Full title</span>${annotate(fullTitle)}</div>`
+      );
     } else {
       parts.push(`<div class="detail-summary muted">No description available from the council source.</div>`);
     }
-    const metaBits = [];
-    if (b.introducer) metaBits.push(`<span><span class="detail-label">Introducer</span>${escapeHtml(b.introducer)}</span>`);
-    if (b.introduced_date) metaBits.push(`<span><span class="detail-label">Introduced</span>${escapeHtml(b.introduced_date)}</span>`);
-    if (lastAction) metaBits.push(`<span><span class="detail-label">Last action</span>${escapeHtml(lastAction)}</span>`);
-    metaBits.push(`<span><a href="${escapeHtml(b.url)}" target="_blank" rel="noopener">View on council site ↗</a></span>`);
-    parts.push(`<div class="detail-meta">${metaBits.join("")}</div>`);
+
+    // Meta chips — labelled facts with inline icons, each in its own card.
+    const trackedSince = (b.first_seen || "").slice(0, 10);
+    const chip = (icon, label, value) =>
+      `<div class="dx-chip"><svg class="dx-chip-ic" aria-hidden="true"><use href="#${icon}"/></svg>` +
+      `<div class="dx-chip-body"><span class="dx-chip-label">${label}</span>` +
+      `<span class="dx-chip-val">${value}</span></div></div>`;
+    const chips = [];
+    if (b.introducer) chips.push(chip("i-user", "Introducer", escapeHtml(b.introducer)));
+    if (b.introduced_date) chips.push(chip("i-calendar", "Introduced", escapeHtml(b.introduced_date)));
+    if (trackedSince) chips.push(chip("i-clock", "Tracked since", escapeHtml(trackedSince)));
+    if (chips.length) parts.push(`<div class="dx-meta">${chips.join("")}</div>`);
+
+    // Subjects — re-shown here with a label so the panel documents how the bill
+    // was classified (the row's pills carry no header).
+    if (pills) {
+      parts.push(
+        `<div class="dx-subjects"><span class="detail-label">Subjects</span>` +
+        `<div class="dx-subjects-pills">${pills}</div></div>`
+      );
+    }
+
+    // Action history. The scraper currently captures only the latest action, so
+    // render that as a one-item timeline; when an `actions[]` array lands (see
+    // the planned schema change) this fills out into the full vertical history.
+    const acts = Array.isArray(b.actions) && b.actions.length
+      ? b.actions
+      : (lastAction ? [{ action: b.last_action || lastAction, date: b.last_action_date || "" }] : []);
+    if (acts.length) {
+      const items = acts.map((a, i) => {
+        const when = a.date ? `<span class="dx-tl-date">${escapeHtml(a.date)}</span>` : "";
+        const text = escapeHtml(a.action || "");
+        return `<li class="dx-tl-item${i === 0 ? " is-latest" : ""}">` +
+          `<span class="dx-tl-dot" aria-hidden="true"></span>` +
+          `<div class="dx-tl-body">${when}<span class="dx-tl-text">${text}</span></div></li>`;
+      }).join("");
+      parts.push(
+        `<div class="dx-timeline"><span class="detail-label">` +
+        `${acts.length > 1 ? "Action history" : "Latest action"}</span>` +
+        `<ul class="dx-tl">${items}</ul></div>`
+      );
+    }
+
+    // Actions — primary link out to the council source plus quick utilities.
+    const isFav = state.favorites.has(favKey(b));
+    parts.push(
+      `<div class="dx-actions">` +
+        `<a class="dx-btn dx-btn-primary" href="${escapeHtml(b.url)}" target="_blank" rel="noopener">` +
+          `<svg aria-hidden="true"><use href="#i-external"/></svg>View on council site</a>` +
+        `<button type="button" class="dx-btn dx-copy">` +
+          `<svg aria-hidden="true"><use href="#i-copy"/></svg>Copy reference</button>` +
+        `<button type="button" class="dx-btn dx-fav${isFav ? " is-fav" : ""}" aria-pressed="${isFav}">` +
+          `<svg aria-hidden="true"><use href="#i-star${isFav ? "" : "-o"}"/></svg>` +
+          `<span class="dx-fav-txt">${isFav ? "Saved" : "Save"}</span></button>` +
+      `</div>`
+    );
+
     // Gutter cells occupy the star+county columns so the expanded content lines
     // up under the bill's Number/Title block instead of floating at the far left.
     // .detail-anim is the grid 0fr→1fr wrapper that animates the open/close.
     detail.innerHTML = `<td class="detail-gutter" colspan="2"></td>` +
       `<td colspan="5"><div class="detail-anim"><div class="detail-inner">${parts.join("")}</div></div></td>`;
+
+    // Copy a plain-text reference (council, number, title, source URL) — handy
+    // for the analyst pasting a bill into notes or a message.
+    const copyBtn = detail.querySelector(".dx-copy");
+    copyBtn.addEventListener("click", async (e) => {
+      e.stopPropagation();
+      const ref = `${council} ${b.bill_number} — ${(head || fullTitle || "").trim()}\n${b.url}`;
+      try {
+        await navigator.clipboard.writeText(ref);
+        copyBtn.classList.add("is-done");
+        copyBtn.querySelector("use").setAttribute("href", "#i-check");
+        setTimeout(() => {
+          copyBtn.classList.remove("is-done");
+          copyBtn.querySelector("use").setAttribute("href", "#i-copy");
+        }, 1400);
+      } catch { /* clipboard blocked — no-op */ }
+    });
+    // The in-panel Save button mirrors the row's star (and vice-versa via re-render).
+    const dxFav = detail.querySelector(".dx-fav");
+    dxFav.addEventListener("click", (e) => {
+      e.stopPropagation();
+      toggleFav(b);
+      const on = state.favorites.has(favKey(b));
+      dxFav.classList.toggle("is-fav", on);
+      dxFav.setAttribute("aria-pressed", String(on));
+      dxFav.querySelector("use").setAttribute("href", on ? "#i-star" : "#i-star-o");
+      dxFav.querySelector(".dx-fav-txt").textContent = on ? "Saved" : "Save";
+      // Keep the row's star in sync.
+      const star = tr.querySelector(".fav-btn");
+      if (star) {
+        star.classList.toggle("is-fav", on);
+        star.setAttribute("aria-pressed", String(on));
+        star.querySelector("use")?.setAttribute("href", on ? "#i-star" : "#i-star-o");
+        star.title = on ? "Remove from favorites" : "Save to favorites";
+      }
+    });
 
     function toggle() {
       const open = !tr.classList.contains("open");
@@ -1391,6 +1496,14 @@
       favBtn.setAttribute("aria-pressed", String(on));
       favBtn.querySelector("use")?.setAttribute("href", on ? "#i-star" : "#i-star-o");
       favBtn.title = on ? "Remove from favorites" : "Save to favorites";
+      // Keep the in-panel Save button in sync if the detail row is open.
+      const dxFav = detail.querySelector(".dx-fav");
+      if (dxFav) {
+        dxFav.classList.toggle("is-fav", on);
+        dxFav.setAttribute("aria-pressed", String(on));
+        dxFav.querySelector("use")?.setAttribute("href", on ? "#i-star" : "#i-star-o");
+        dxFav.querySelector(".dx-fav-txt").textContent = on ? "Saved" : "Save";
+      }
       if (on && !REDUCED_MOTION) {
         favBtn.classList.add("pop");
         favBtn.addEventListener("animationend", () => favBtn.classList.remove("pop"), { once: true });
