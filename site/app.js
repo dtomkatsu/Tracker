@@ -1383,17 +1383,33 @@
       ? b.actions
       : (lastAction ? [{ action: b.last_action || lastAction, date: b.last_action_date || "" }] : []);
     if (acts.length) {
+      // Long histories (Honolulu bills run 14+ steps) dominate the panel's
+      // height, so show only the most recent few and tuck the rest behind a
+      // toggle. The item just above the fold drops its connector so the line
+      // doesn't dangle into the hidden region.
+      const TL_CAP = 4;
+      const capped = acts.length > TL_CAP;
       const items = acts.map((a, i) => {
         const when = a.date ? `<span class="dx-tl-date">${escapeHtml(a.date)}</span>` : "";
         const text = escapeHtml(a.action || "");
-        return `<li class="dx-tl-item${i === 0 ? " is-latest" : ""}">` +
+        const cls = [
+          "dx-tl-item",
+          i === 0 ? "is-latest" : "",
+          capped && i >= TL_CAP ? "dx-tl-extra" : "",
+          capped && i === TL_CAP - 1 ? "dx-tl-foldedge" : "",
+        ].filter(Boolean).join(" ");
+        return `<li class="${cls}">` +
           `<span class="dx-tl-dot" aria-hidden="true"></span>` +
           `<div class="dx-tl-body">${when}<span class="dx-tl-text">${text}</span></div></li>`;
       }).join("");
+      const toggle = capped
+        ? `<button type="button" class="dx-tl-toggle" aria-expanded="false">` +
+          `Show all ${acts.length} actions</button>`
+        : "";
       parts.push(
         `<div class="dx-timeline"><span class="detail-label">` +
         `${acts.length > 1 ? "Action history" : "Latest action"}</span>` +
-        `<ul class="dx-tl">${items}</ul></div>`
+        `<ul class="dx-tl">${items}</ul>${toggle}</div>`
       );
     }
 
@@ -1433,6 +1449,17 @@
         }, 1400);
       } catch { /* clipboard blocked — no-op */ }
     });
+    // Expand/collapse the capped action timeline.
+    const tlToggle = detail.querySelector(".dx-tl-toggle");
+    if (tlToggle) {
+      tlToggle.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const tl = tlToggle.closest(".dx-timeline");
+        const open = tl.classList.toggle("show-all");
+        tlToggle.setAttribute("aria-expanded", String(open));
+        tlToggle.textContent = open ? "Show less" : `Show all ${acts.length} actions`;
+      });
+    }
     // The in-panel Save button mirrors the row's star (and vice-versa via re-render).
     const dxFav = detail.querySelector(".dx-fav");
     dxFav.addEventListener("click", (e) => {

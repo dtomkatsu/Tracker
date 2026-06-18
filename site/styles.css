@@ -743,7 +743,7 @@ tbody .bill-row.open > td { background: var(--primary-bg); border-bottom-color: 
   font-size: 15.5px;
   line-height: 1.6;
   color: var(--text);
-  margin: 4px 0 16px;
+  margin: 4px 0 12px;
   max-width: 92ch;
 }
 
@@ -753,7 +753,7 @@ tbody .bill-row.open > td { background: var(--primary-bg); border-bottom-color: 
   flex-wrap: wrap;
   gap: 10px;
   max-width: 760px;
-  margin: 0 0 16px;
+  margin: 0 0 12px;
 }
 .dx-chip {
   display: flex;
@@ -790,29 +790,35 @@ tbody .bill-row.open > td { background: var(--primary-bg); border-bottom-color: 
 }
 
 /* Subjects */
-.dx-subjects { margin: 0 0 16px; }
+.dx-subjects { margin: 0 0 12px; }
 .dx-subjects-pills { margin-top: 4px; }
 
-/* Action timeline — single item today, forward-compatible to a full history. */
-.dx-timeline { margin: 0 0 18px; }
+/* Action timeline — compact one-line items (date + text on a single row), with
+   long histories capped to the most recent few behind a "Show all" toggle. */
+.dx-timeline { margin: 0 0 14px; }
 .dx-tl { list-style: none; margin: 6px 0 0; padding: 0; }
 .dx-tl-item {
   position: relative;
   display: flex;
   gap: 12px;
-  padding: 0 0 12px 4px;
+  padding: 0 0 8px 4px;
 }
 .dx-tl-item:last-child { padding-bottom: 0; }
-/* Connector line between dots (only when there's more than one action). */
+/* Connector line between dots. Hidden on the real last item, and on the item at
+   the fold when the timeline is capped (so the line doesn't dangle into the
+   collapsed region). */
 .dx-tl-item:not(:last-child)::before {
   content: "";
   position: absolute;
   left: 8px;
-  top: 14px;
-  bottom: 0;
+  top: 13px;
+  bottom: -1px;
   width: 2px;
   background: var(--border-strong);
 }
+.dx-tl-extra { display: none; }
+.dx-timeline.show-all .dx-tl-extra { display: flex; }
+.dx-timeline:not(.show-all) .dx-tl-foldedge::before { display: none; }
 .dx-tl-dot {
   flex: 0 0 auto;
   width: 9px;
@@ -824,14 +830,37 @@ tbody .bill-row.open > td { background: var(--primary-bg); border-bottom-color: 
   z-index: 1;
 }
 .dx-tl-item.is-latest .dx-tl-dot { background: var(--accent); }
-.dx-tl-body { display: flex; flex-direction: column; min-width: 0; }
+.dx-tl-body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 10px;
+  min-width: 0;
+}
 .dx-tl-date {
+  flex: 0 0 auto;
+  min-width: 74px;
   font-size: 11.5px;
   font-weight: 700;
   letter-spacing: .03em;
   color: var(--text-faint);
+  font-variant-numeric: tabular-nums;
 }
-.dx-tl-text { font-size: 14.5px; line-height: 1.45; color: var(--text); }
+.dx-tl-text { font-size: 14px; line-height: 1.4; color: var(--text); }
+.dx-tl-toggle {
+  margin: 8px 0 0 22px;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--link);
+  cursor: pointer;
+}
+.dx-tl-toggle:hover { text-decoration: underline; }
+.dx-tl-toggle:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; border-radius: 3px; }
 
 /* Action buttons */
 .dx-actions {
