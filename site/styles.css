@@ -642,8 +642,17 @@ tbody .bill-row.open > td { background: var(--primary-bg); border-bottom-color: 
 }
 .row-badge.new { background: var(--primary-bg); color: var(--primary-dark); }
 .row-badge.upd { background: rgba(217, 165, 15, 0.16); color: #7a5708; }
+.row-badge.stalled { background: rgba(120, 130, 126, 0.16); color: var(--text-muted); }
 @media (prefers-color-scheme: dark) {
   .row-badge.upd { background: rgba(226, 178, 59, 0.18); color: var(--gold); }
+  .row-badge.stalled { background: rgba(255, 255, 255, 0.10); color: var(--text-muted); }
+}
+
+/* Brief highlight when a bill is opened via a deep link (#bill=…). */
+.bill-row.deep-target > td { animation: deep-flash 2.2s var(--ease-out); }
+@keyframes deep-flash {
+  0%, 35% { background: var(--primary-bg); }
+  100% { background: transparent; }
 }
 
 .title-preview {

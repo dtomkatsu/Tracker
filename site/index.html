@@ -41,6 +41,7 @@
     <symbol id="i-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6"/><path d="M20 4l-9 9"/><path d="M19 14v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h4"/></symbol>
     <symbol id="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></symbol>
     <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><polyline points="7 11 12 16 17 11"/><path d="M5 20h14"/></symbol>
   </svg>
 
   <header class="site-header">
@@ -105,6 +106,8 @@
         <button type="button" id="more-btn" class="tool-btn icon-only" aria-haspopup="true" aria-expanded="false" aria-label="More options"><svg aria-hidden="true"><use href="#i-more"/></svg></button>
         <div id="more-pop" class="tool-pop" hidden role="menu" aria-label="More options">
           <label class="menu-check"><input id="f-classified" type="checkbox" checked> Only classified bills</label>
+          <label class="menu-check"><input id="f-stalled" type="checkbox"> Only stalled (no action 120+ days)</label>
+          <button type="button" id="export-csv" class="menu-item" role="menuitem"><svg aria-hidden="true"><use href="#i-download"/></svg><span class="mi-label">Export current view (CSV)</span></button>
           <button type="button" id="copy-list" class="menu-item" role="menuitem"><svg aria-hidden="true"><use href="#i-link"/></svg><span class="mi-label">Copy link to my list</span></button>
           <button type="button" id="help-btn" class="menu-item" role="menuitem"><svg aria-hidden="true"><use href="#i-info"/></svg><span class="mi-label">Legend &amp; glossary</span></button>
         </div>

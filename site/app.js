@@ -123,10 +123,24 @@
     statuses: new Set(["Active"]),
     search: "",
     onlyClassified: true,
+    onlyStalled: false,
     favorites: loadFavSet(),
     favoritesOnly: false,
     sort: "recent",
   };
+
+  // A bill is "stalled" when it's parked in the early/middle pipeline and hasn't
+  // moved in a long while. Excludes terminal bills (enacted / failed) and ones
+  // that already reached final reading — those aren't "stuck in committee".
+  const STALLED_DAYS = 120;
+  function isStalled(b) {
+    const prog = billProgress(b);
+    if (prog.state === "done" || prog.state === "failed") return false;
+    if (prog.step >= 3) return false; // reached/ passed final reading
+    const d = Date.parse(b.last_action_date || b.introduced_date || "");
+    if (!d) return false;
+    return Date.now() - d > STALLED_DAYS * 86400e3;
+  }
 
   // Sort the filtered list. "recent"/"oldest" key off the latest action date
   // (falling back to introduced / first-seen); "number" is a natural sort.
@@ -585,6 +599,8 @@
     const lu = Date.parse(b.last_updated || "") || 0;
     if (fs && state.dataTs - fs < NEW_WINDOW_MS) return '<span class="row-badge new">New</span>';
     if (lu && state.dataTs - lu < UPDATED_WINDOW_MS) return '<span class="row-badge upd">Updated</span>';
+    // Recent movement takes precedence; a stalled bill is by definition not one.
+    if (isStalled(b)) return '<span class="row-badge stalled" title="No action in 120+ days">Stalled</span>';
     return "";
   }
 
@@ -1113,6 +1129,8 @@
     setFavoritesOnly(false);
     state.onlyClassified = true;
     const cc = document.getElementById("f-classified"); if (cc) cc.checked = true;
+    state.onlyStalled = false;
+    const sf = document.getElementById("f-stalled"); if (sf) sf.checked = false;
     syncListHash();
     renderFilterGroups();
     applyFilters();
@@ -1169,6 +1187,16 @@
       state.onlyClassified = e.target.checked;
       animateNext();
       applyFilters();
+    });
+    document.getElementById("f-stalled")?.addEventListener("change", (e) => {
+      state.onlyStalled = e.target.checked;
+      animateNext();
+      applyFilters();
+    });
+    document.getElementById("export-csv")?.addEventListener("click", () => {
+      document.getElementById("more-pop")?.setAttribute("hidden", "");
+      document.getElementById("more-btn")?.setAttribute("aria-expanded", "false");
+      exportCsv();
     });
     const favBtn = document.getElementById("f-favorites");
     if (favBtn) favBtn.addEventListener("click", () => {
@@ -1259,12 +1287,9 @@
       }
       if (!typeAll && !state.types.has(typeBucket(b.bill_type))) return false;
       if (!statusAll && !state.statuses.has(statusBucket(b))) return false;
+      if (state.onlyStalled && !isStalled(b)) return false;
       if (state.search) {
-        const hay = [b.bill_number, b.title, b.introducer, b.raw_subject]
-          .filter(Boolean)
-          .join(" ")
-          .toLowerCase();
-        if (!hay.includes(state.search)) return false;
+        if (!(b._hay || "").includes(state.search)) return false;
       }
       return true;
     });
@@ -1296,6 +1321,7 @@
 
     const tr = document.createElement("tr");
     tr.className = "bill-row";
+    tr.dataset.key = favKey(b);
     tr.tabIndex = 0;
     tr.setAttribute("role", "button");
     tr.setAttribute("aria-expanded", "false");
@@ -1421,6 +1447,8 @@
           `<svg aria-hidden="true"><use href="#i-external"/></svg>View on council site</a>` +
         `<button type="button" class="dx-btn dx-copy">` +
           `<svg aria-hidden="true"><use href="#i-copy"/></svg>Copy reference</button>` +
+        `<button type="button" class="dx-btn dx-link">` +
+          `<svg aria-hidden="true"><use href="#i-link"/></svg>Copy link</button>` +
         `<button type="button" class="dx-btn dx-fav${isFav ? " is-fav" : ""}" aria-pressed="${isFav}">` +
           `<svg aria-hidden="true"><use href="#i-star${isFav ? "" : "-o"}"/></svg>` +
           `<span class="dx-fav-txt">${isFav ? "Saved" : "Save"}</span></button>` +
@@ -1446,6 +1474,20 @@
         setTimeout(() => {
           copyBtn.classList.remove("is-done");
           copyBtn.querySelector("use").setAttribute("href", "#i-copy");
+        }, 1400);
+      } catch { /* clipboard blocked — no-op */ }
+    });
+    // Copy a shareable dashboard link that re-opens this bill expanded.
+    const linkBtn = detail.querySelector(".dx-link");
+    linkBtn.addEventListener("click", async (e) => {
+      e.stopPropagation();
+      try {
+        await navigator.clipboard.writeText(billDeepLink(b));
+        linkBtn.classList.add("is-done");
+        linkBtn.querySelector("use").setAttribute("href", "#i-check");
+        setTimeout(() => {
+          linkBtn.classList.remove("is-done");
+          linkBtn.querySelector("use").setAttribute("href", "#i-link");
         }, 1400);
       } catch { /* clipboard blocked — no-op */ }
     });
@@ -1593,8 +1635,103 @@
     else render();
   }
 
+  // ---- Export & deep-linking ------------------------------------------------
+
+  function csvCell(v) {
+    const s = String(v == null ? "" : v);
+    return /[",\n\r]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
+  }
+
+  // Download the currently filtered + sorted view as CSV (what you see, in the
+  // order you see it). BOM prefix so Excel reads UTF-8 names correctly.
+  function exportCsv() {
+    const rows = sortBills(filterBills());
+    const cols = [
+      ["County", (b) => COUNCIL_LABEL[b.council] || b.council],
+      ["Number", (b) => b.bill_number],
+      ["Type", (b) => b.bill_type],
+      ["Title", (b) => b.title || billHeadline(b) || ""],
+      ["Introducer", (b) => b.introducer],
+      ["Introduced", (b) => b.introduced_date],
+      ["Status", (b) => normalizeStatus(b).label],
+      ["Last action", (b) => b.last_action],
+      ["Last action date", (b) => b.last_action_date],
+      ["Subjects", (b) => (b.subjects || []).map((s) => SUBJECT_LABEL[s] || s).join("; ")],
+      ["URL", (b) => b.url],
+    ];
+    const lines = [cols.map((c) => csvCell(c[0])).join(",")];
+    for (const b of rows) lines.push(cols.map((c) => csvCell(c[1](b))).join(","));
+    const blob = new Blob(["﻿" + lines.join("\r\n")], { type: "text/csv;charset=utf-8" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = `hawaii-county-bills-${new Date().toISOString().slice(0, 10)}.csv`;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+  }
+
+  // A shareable URL that re-opens the dashboard with one bill expanded.
+  function billDeepLink(b) {
+    return location.origin + location.pathname +
+      "#bill=" + encodeURIComponent(b.council) + ":" + encodeURIComponent(b.bill_number);
+  }
+
+  // Clear every filter so a deep-linked bill can't be hidden from view.
+  function showEverything() {
+    const it = state._items || {};
+    setAll(state.councils, it.council);
+    setAll(state.subjects, it.subject);
+    setAll(state.types, it.type);
+    setAll(state.statuses, it.status);
+    setAll(state.years, it.year);
+    state.onlyClassified = false;
+    state.onlyStalled = false;
+    state.search = "";
+    setFavoritesOnly(false);
+    const cc = document.getElementById("f-classified"); if (cc) cc.checked = false;
+    const sf = document.getElementById("f-stalled"); if (sf) sf.checked = false;
+    const s = document.getElementById("f-search"); if (s) s.value = "";
+    renderFilterGroups();
+  }
+
+  // On load, honor a #bill=<council>:<number> link: reveal, expand and scroll to it.
+  function openBillFromHash() {
+    const m = /[#&]bill=([^:&]+):([^&]+)/.exec(location.hash);
+    if (!m) return;
+    const council = decodeURIComponent(m[1]);
+    const number = decodeURIComponent(m[2]);
+    const bill = state.bills.find((b) => b.council === council && b.bill_number === number);
+    if (!bill) return;
+    showEverything();
+    applyFilters();
+    requestAnimationFrame(() => {
+      const key = favKey(bill);
+      for (const tr of document.querySelectorAll("tr.bill-row")) {
+        if (tr.dataset.key !== key) continue;
+        if (!tr.classList.contains("open")) tr.click();
+        tr.scrollIntoView({ behavior: "smooth", block: "center" });
+        tr.classList.add("deep-target");
+        setTimeout(() => tr.classList.remove("deep-target"), 2200);
+        break;
+      }
+    });
+  }
+
   async function ingest(payload) {
     state.bills = payload.bills;
+    // Precompute a lowercase search haystack per bill once (not per keystroke).
+    // Includes the full action history + committee codes so a search like
+    // "first reading" or a councilmember's name in a vote tally matches.
+    for (const b of state.bills) {
+      const actTxt = (b.actions || [])
+        .map((a) => `${a.action || ""} ${a.committee || ""}`)
+        .join(" ");
+      b._hay = [b.bill_number, b.title, b.introducer, b.raw_subject, actTxt]
+        .filter(Boolean)
+        .join(" ")
+        .toLowerCase();
+    }
     setMeta(payload);
     setStats(payload);
     buildFilters(payload);
@@ -1602,6 +1739,7 @@
     setFavoritesOnly(state.favoritesOnly);
     updateFavCount();
     applyFilters();
+    openBillFromHash();
   }
 
   // Placeholder shimmer rows shown while bills.json downloads (1.7MB — visible
@@ -1637,5 +1775,10 @@
   setInterval(load, 24 * 60 * 60 * 1000);
   document.addEventListener("visibilitychange", () => {
     if (!document.hidden) load();
+  });
+  // Pasting a #bill=… link while already on the page (no reload) should still
+  // open it.
+  window.addEventListener("hashchange", () => {
+    if (/[#&]bill=/.test(location.hash) && state.bills.length) openBillFromHash();
   });
 })();
