@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-17T23:19:56+00:00",
+  "generated_at": "2026-06-19T16:17:17+00:00",
   "last_scrape": {
-    "id": 88,
-    "started_at": "2026-06-17T23:18:02+00:00",
-    "completed_at": "2026-06-17T23:19:35+00:00",
-    "council": "honolulu",
-    "bills_seen": 769,
+    "id": 92,
+    "started_at": "2026-06-19T16:16:40+00:00",
+    "completed_at": "2026-06-19T16:17:17+00:00",
+    "council": "kauai",
+    "bills_seen": 19,
     "bills_new": 0,
-    "bills_updated": 0,
+    "bills_updated": 1,
     "errors": null
   },
   "subjects": [
@@ -23,6 +23,85 @@
     "kauai"
   ],
   "bills": [
+    {
+      "id": 2136,
+      "council": "honolulu",
+      "bill_number": "RES26-151",
+      "title": "APPROVING THE EXPENDITURE OF CLEAN WATER AND NATURAL LANDS FUNDS TO ACQUIRE A PERPETUAL CONSERVATION EASEMENT OVER ONE PARCEL OF LAND, TAX MAP KEY: (1) 3-6-023:006 (CPRs 0001-0008) SITUATED IN WAILUPE, O'AHU, HAWAI'I.",
+      "bill_type": "Resolution",
+      "introducer": "TOMMY  WATERS - By Request",
+      "introduced_date": "2026-06-18",
+      "status": "INTRO",
+      "last_action": "Introduced.",
+      "last_action_date": "2026-06-18",
+      "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3770",
+      "raw_subject": null,
+      "subjects": [
+        "tax"
+      ],
+      "classification_confidence": 0.03,
+      "first_seen": "2026-06-19T16:15:04+00:00",
+      "last_updated": "2026-06-19T16:15:04+00:00",
+      "actions": [
+        {
+          "date": "2026-06-19",
+          "action": "Introduced.",
+          "committee": "INTRO"
+        }
+      ]
+    },
+    {
+      "id": 2137,
+      "council": "honolulu",
+      "bill_number": "RES26-149",
+      "title": "APPROVING THE GRANT OF PERPETUAL SUBSURFACE EASEMENTS TO HAWAIKI SUBMARINE CABLE USA LLC WITHIN PORTIONS OF THE KAHE POINT BEACH PARK, 'EWA, HAWAI'I, TAX MAP KEY NO. (1) 9-2-049:001.",
+      "bill_type": "Resolution",
+      "introducer": "TOMMY  WATERS - By Request",
+      "introduced_date": "2026-06-17",
+      "status": "INTRO",
+      "last_action": "Introduced.",
+      "last_action_date": "2026-06-17",
+      "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3768",
+      "raw_subject": null,
+      "subjects": [
+        "tax"
+      ],
+      "classification_confidence": 0.034,
+      "first_seen": "2026-06-19T16:15:05+00:00",
+      "last_updated": "2026-06-19T16:15:05+00:00",
+      "actions": [
+        {
+          "date": "2026-06-17",
+          "action": "Introduced.",
+          "committee": "INTRO"
+        }
+      ]
+    },
+    {
+      "id": 2138,
+      "council": "honolulu",
+      "bill_number": "RES26-150",
+      "title": "PROPOSING AN AMENDMENT TO CHAPTER 21, REVISED ORDINANCES OF HONOLULU 2021 (THE LAND USE ORDINANCE), RELATING TO LARGE DETACHED DWELLINGS.",
+      "bill_type": "Resolution",
+      "introducer": "TOMMY  WATERS",
+      "introduced_date": "2026-06-17",
+      "status": "INTRO",
+      "last_action": "Introduced.",
+      "last_action_date": "2026-06-17",
+      "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3769",
+      "raw_subject": null,
+      "subjects": [],
+      "classification_confidence": 0.0,
+      "first_seen": "2026-06-19T16:15:05+00:00",
+      "last_updated": "2026-06-19T16:15:05+00:00",
+      "actions": [
+        {
+          "date": "2026-06-18",
+          "action": "Introduced.",
+          "committee": "INTRO"
+        }
+      ]
+    },
     {
       "id": 2131,
       "council": "honolulu",
@@ -701,17 +780,17 @@
       "bill_type": "Bill",
       "introducer": null,
       "introduced_date": null,
-      "status": null,
-      "last_action": "On agenda 2026-04-01",
-      "last_action_date": "2026-04-01",
-      "url": "https://kauai.granicus.com/AgendaViewer.php?view_id=2&clip_id=3053",
+      "status": "In Committee",
+      "last_action": "On agenda 2026-04-08",
+      "last_action_date": "2026-04-08",
+      "url": "https://kauai.granicus.com/AgendaViewer.php?view_id=2&clip_id=3058",
       "raw_subject": "A BILL FOR AN ORDINANCE AMENDING CHAPTER 6, KAUA‘I COUNTY CODE 1987, AS AMENDED, RELATING TO THE COUNTY HOUSING DEVELOPMENT FUND",
       "subjects": [
         "affordable_housing"
       ],
       "classification_confidence": 0.048,
       "first_seen": "2026-05-30T20:42:51+00:00",
-      "last_updated": "2026-06-17T16:17:12+00:00"
+      "last_updated": "2026-06-19T16:17:17+00:00"
     },
     {
       "id": 269,
@@ -963,16 +1042,21 @@
       "bill_type": "Bill",
       "introducer": "Holeka Goro Inaba, Council Member",
       "introduced_date": null,
-      "status": "Passed First Reading",
-      "last_action": "Council:  Bill 156 passes first reading; adopts GOEAC-133 - 06/03/26",
-      "last_action_date": "2026-06-03",
+      "status": "Passed Second Reading",
+      "last_action": "Council:  Bill 156 passes second & final reading - 06/17/26",
+      "last_action_date": "2026-06-17",
       "url": "https://records.hawaiicounty.gov/WebLink/DocView.aspx?id=1129293&dbid=0",
       "raw_subject": "Requires a nonprofit organization applying for County grant funds to certify, under penalty of perjury, that the organization has internal policies relating to management, audits, fiscal procedures, nepotism, and conflicts of interest.",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T20:41:50+00:00",
-      "last_updated": "2026-06-17T23:09:28+00:00",
+      "last_updated": "2026-06-19T16:16:28+00:00",
       "actions": [
+        {
+          "date": "2026-06-17",
+          "action": "Council:  Bill 156 passes second & final reading - 06/17/26",
+          "committee": null
+        },
         {
           "date": "2026-06-03",
           "action": "Council:  Bill 156 passes first reading; adopts GOEAC-133 - 06/03/26",
@@ -1053,9 +1137,9 @@
       "bill_type": "Bill",
       "introducer": "Matt Kaneali'i-Kleinfelder, Council member",
       "introduced_date": null,
-      "status": "Passed First Reading",
-      "last_action": "Council:  Bill 160 passes first reading; adopts FC-154 - 06/03/26",
-      "last_action_date": "2026-06-03",
+      "status": "Passed Second Reading",
+      "last_action": "Council:  Bill 160 passes second & final reading - 06/17/26",
+      "last_action_date": "2026-06-17",
       "url": "https://records.hawaiicounty.gov/WebLink/DocView.aspx?id=1129749&dbid=0",
       "raw_subject": "Appropriates revenues in the Real Property Tax Penalties account ($1,125,000)",
       "subjects": [
@@ -1063,8 +1147,13 @@
       ],
       "classification_confidence": 0.094,
       "first_seen": "2026-05-30T20:41:50+00:00",
-      "last_updated": "2026-06-17T23:09:29+00:00",
+      "last_updated": "2026-06-19T16:16:28+00:00",
       "actions": [
+        {
+          "date": "2026-06-17",
+          "action": "Council:  Bill 160 passes second & final reading - 06/17/26",
+          "committee": null
+        },
         {
           "date": "2026-06-03",
           "action": "Council:  Bill 160 passes first reading; adopts FC-154 - 06/03/26",
@@ -1085,16 +1174,21 @@
       "bill_type": "Bill",
       "introducer": "Matt Kaneali'i-Kleinfelder, Council member",
       "introduced_date": null,
-      "status": "Passed First Reading",
-      "last_action": "Council:  Bill 161 passes first reading; adopts FC-155 - 06/03/26",
-      "last_action_date": "2026-06-03",
+      "status": "Passed Second Reading",
+      "last_action": "Council:  Bill 161 passes second & final reading - 06/17/26",
+      "last_action_date": "2026-06-17",
       "url": "https://records.hawaiicounty.gov/WebLink/DocView.aspx?id=1129751&dbid=0",
       "raw_subject": "Appropriates revenues in the Fund Balance From Previous Year - Reserved account ($443,775.57)",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T20:41:50+00:00",
-      "last_updated": "2026-06-17T23:09:29+00:00",
+      "last_updated": "2026-06-19T16:16:29+00:00",
       "actions": [
+        {
+          "date": "2026-06-17",
+          "action": "Council:  Bill 161 passes second & final reading - 06/17/26",
+          "committee": null
+        },
         {
           "date": "2026-06-03",
           "action": "Council:  Bill 161 passes first reading; adopts FC-155 - 06/03/26",
@@ -1115,9 +1209,9 @@
       "bill_type": "Bill",
       "introducer": "Heather Kimball, Council Member",
       "introduced_date": null,
-      "status": "Passed First Reading",
-      "last_action": "Council:  Bill 166 passes first reading - 06/03/26",
-      "last_action_date": "2026-06-03",
+      "status": "Passed Second Reading",
+      "last_action": "Council:  Bill 166 passes second & final reading - 06/17/26",
+      "last_action_date": "2026-06-17",
       "url": "https://records.hawaiicounty.gov/WebLink/DocView.aspx?id=1130672&dbid=0",
       "raw_subject": "Delays the effective date of Ordinance No. 25-50, relating to transient accommodations, until September 1, 2026.",
       "subjects": [
@@ -1125,8 +1219,13 @@
       ],
       "classification_confidence": 0.024,
       "first_seen": "2026-05-30T20:41:50+00:00",
-      "last_updated": "2026-06-17T23:09:30+00:00",
+      "last_updated": "2026-06-19T16:16:29+00:00",
       "actions": [
+        {
+          "date": "2026-06-17",
+          "action": "Council:  Bill 166 passes second & final reading - 06/17/26",
+          "committee": null
+        },
         {
           "date": "2026-06-03",
           "action": "Council:  Bill 166 passes first reading - 06/03/26",
@@ -1142,16 +1241,21 @@
       "bill_type": "Bill",
       "introducer": "Matt Kaneali'i-Kleinfelder, Council Member",
       "introduced_date": null,
-      "status": "Passed First Reading",
-      "last_action": "Council:  Bill 167 passes first reading - 06/03/26",
-      "last_action_date": "2026-06-03",
+      "status": null,
+      "last_action": "Council:  Bill 167 passes & final reading - 06/17/26",
+      "last_action_date": "2026-06-17",
       "url": "https://records.hawaiicounty.gov/WebLink/DocView.aspx?id=1130794&dbid=0",
       "raw_subject": "Appropriates revenues in the Federal Grants – Justice Assistance Grant-Special Response Team Capability Enhancement Grant account ($35,023)",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T20:41:50+00:00",
-      "last_updated": "2026-06-17T23:09:30+00:00",
+      "last_updated": "2026-06-19T16:16:30+00:00",
       "actions": [
+        {
+          "date": "2026-06-17",
+          "action": "Council:  Bill 167 passes & final reading - 06/17/26",
+          "committee": null
+        },
         {
           "date": "2026-06-03",
           "action": "Council:  Bill 167 passes first reading - 06/03/26",
@@ -1213,18 +1317,33 @@
       "introducer": "Dr. Holeka G. Inaba, Council Member\nAshley L. Kierkiewicz, Council Member",
       "introduced_date": null,
       "status": null,
-      "last_action": "Council:  Bill 152 passes second of three required readings - 06/03/26",
-      "last_action_date": "2026-06-03",
+      "last_action": "Council:  Bill 152 passes 3rd & Final reading - 06/17/26",
+      "last_action_date": "2026-06-17",
       "url": "https://records.hawaiicounty.gov/WebLink/DocView.aspx?id=1128945&dbid=0",
       "raw_subject": "Clarifies that the County Auditor has the same power with respect to employees within the Office of the County Auditor as department heads in the Executive Branch and specifies that the County Auditor may appoint a deputy.",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T20:41:50+00:00",
-      "last_updated": "2026-06-17T23:09:28+00:00",
+      "last_updated": "2026-06-19T16:16:27+00:00",
       "actions": [
+        {
+          "date": "2026-06-17",
+          "action": "Council:  Bill 152 passes 3rd & Final reading - 06/17/26",
+          "committee": null
+        },
+        {
+          "date": "2026-06-03",
+          "action": "Council:  Bill 152 passes 2nd of three required readings - 06/03/26",
+          "committee": null
+        },
         {
           "date": "2026-06-03",
           "action": "Council:  Bill 152 passes second of three required readings - 06/03/26",
+          "committee": null
+        },
+        {
+          "date": "2026-05-20",
+          "action": "Council:  Bill 152 passes 1st of three required readings; adopts GOEAC-126 - 05/20/26",
           "committee": null
         },
         {
@@ -1282,9 +1401,9 @@
       "bill_type": "Bill",
       "introducer": "Dennis \"Fresh\" Onishi, Council Member",
       "introduced_date": null,
-      "status": "Postponed",
-      "last_action": "GOEAC: Postponed to June 16, 2026 - 06/02/26",
-      "last_action_date": "2026-06-02",
+      "status": "Passed First Reading",
+      "last_action": "GOEAC-143: Recommended passage on first reading - 06/16/26",
+      "last_action_date": "2026-06-16",
       "url": "https://records.hawaiicounty.gov/WebLink/DocView.aspx?id=1130363&dbid=0",
       "raw_subject": "Requires Council confirmation for the Housing Administrator.",
       "subjects": [
@@ -1292,8 +1411,13 @@
       ],
       "classification_confidence": 0.032,
       "first_seen": "2026-05-30T20:41:50+00:00",
-      "last_updated": "2026-06-17T23:09:30+00:00",
+      "last_updated": "2026-06-19T16:16:31+00:00",
       "actions": [
+        {
+          "date": "2026-06-16",
+          "action": "GOEAC-143: Recommended passage on first reading - 06/16/26",
+          "committee": null
+        },
         {
           "date": "2026-06-02",
           "action": "GOEAC: Postponed to June 16, 2026 - 06/02/26",
@@ -1309,9 +1433,9 @@
       "bill_type": "Bill",
       "introducer": "Ashley Kierkiewicz, Council Member",
       "introduced_date": null,
-      "status": "Passed First Reading",
-      "last_action": "GOEAC-139:  Recommended passage on first reading - 06/02/26",
-      "last_action_date": "2026-06-02",
+      "status": null,
+      "last_action": "Council:  Bill 165 passes 1st of 3 required readings; adopts GOEAC-139 - 06/17/26",
+      "last_action_date": "2026-06-17",
       "url": "https://records.hawaiicounty.gov/WebLink/DocView.aspx?id=1130366&dbid=0",
       "raw_subject": "Increases the annual allocation dedicated to the Public Access, Open Space, and Natural Resources Preservation maintenance fund from 0.25 percent to 0.5 percent of real property tax revenue; removes the accrual limit for the fund; provides that all expenses from the fund must align with the fund’s purpose",
       "subjects": [
@@ -1319,8 +1443,13 @@
       ],
       "classification_confidence": 0.041,
       "first_seen": "2026-05-30T20:41:50+00:00",
-      "last_updated": "2026-06-17T23:09:28+00:00",
+      "last_updated": "2026-06-19T16:16:26+00:00",
       "actions": [
+        {
+          "date": "2026-06-17",
+          "action": "Council:  Bill 165 passes 1st of 3 required readings; adopts GOEAC-139 - 06/17/26",
+          "committee": null
+        },
         {
           "date": "2026-06-02",
           "action": "GOEAC-139:  Recommended passage on first reading - 06/02/26",
@@ -1369,8 +1498,8 @@
       "introducer": "Rebecca Villegas, Council Member",
       "introduced_date": null,
       "status": "Passed First Reading",
-      "last_action": "PCPWMT-13:  Recommended passage on first reading - 06/02/26",
-      "last_action_date": "2026-06-02",
+      "last_action": "Council:  Bill 162 passes first reading; adopts PCPWMT-13 - 06/17/26",
+      "last_action_date": "2026-06-17",
       "url": "https://records.hawaiicounty.gov/WebLink/DocView.aspx?id=1130351&dbid=0",
       "raw_subject": "Adds a new article to establish signage requirements for paid parking facilities, to include a schedule of rates, notice of any additional fees, hours of operation, and information on towing procedures.",
       "subjects": [
@@ -1378,8 +1507,13 @@
       ],
       "classification_confidence": 0.02,
       "first_seen": "2026-05-30T20:41:50+00:00",
-      "last_updated": "2026-06-17T23:09:27+00:00",
+      "last_updated": "2026-06-19T16:16:26+00:00",
       "actions": [
+        {
+          "date": "2026-06-17",
+          "action": "Council:  Bill 162 passes first reading; adopts PCPWMT-13 - 06/17/26",
+          "committee": null
+        },
         {
           "date": "2026-06-02",
           "action": "PCPWMT-13:  Recommended passage on first reading - 06/02/26",
@@ -1395,9 +1529,9 @@
       "bill_type": "Bill",
       "introducer": "Ashley L. Kierkiewicz, Council Member",
       "introduced_date": null,
-      "status": "Passed First Reading",
-      "last_action": "PCHSW-09:  Recommended passage on first reading - 06/02/26",
-      "last_action_date": "2026-06-02",
+      "status": null,
+      "last_action": "Council:  Bill 157 amended to Draft 3 - 06/17/26",
+      "last_action_date": "2026-06-17",
       "url": "https://records.hawaiicounty.gov/WebLink/DocView.aspx?id=1131512&dbid=0",
       "raw_subject": "Establishes a County Disaster Recovery Program to coordinate short- and long-term recovery efforts following major disasters, led by a recovery officer appointed by the mayor with the responsibility for recovery planning, interagency coordination, community engagement, funding management, and the development of interim and long-term recovery and resilience plans.",
       "subjects": [
@@ -1405,8 +1539,13 @@
       ],
       "classification_confidence": 0.015,
       "first_seen": "2026-05-30T20:41:50+00:00",
-      "last_updated": "2026-06-17T23:09:27+00:00",
+      "last_updated": "2026-06-19T16:16:25+00:00",
       "actions": [
+        {
+          "date": "2026-06-17",
+          "action": "Council:  Bill 157 amended to Draft 3 - 06/17/26",
+          "committee": null
+        },
         {
           "date": "2026-06-02",
           "action": "PCHSW-09:  Recommended passage on first reading - 06/02/26",
@@ -7799,8 +7938,8 @@
       "introducer": "Ashley L. Kierkiewicz, Council Member",
       "introduced_date": "2026-02-03",
       "status": null,
-      "last_action": "PCPLUED: Referred to Planning Director & Windward Planning Commission - 02/03/26",
-      "last_action_date": "2026-02-03",
+      "last_action": "PCPLUED: Withdrawn - 06/16/26",
+      "last_action_date": "2026-06-16",
       "url": "https://records.hawaiicounty.gov/WebLink/DocView.aspx?id=1123778&dbid=0",
       "raw_subject": "Rezones certain areas in Pāhoa to a prospective special zoning district classification to be known as the Downtown Pāhoa Commercial District, which is proposed for establishment via",
       "subjects": [
@@ -7808,8 +7947,13 @@
       ],
       "classification_confidence": 0.012,
       "first_seen": "2026-06-11T21:05:01+00:00",
-      "last_updated": "2026-06-17T23:09:31+00:00",
+      "last_updated": "2026-06-19T16:16:31+00:00",
       "actions": [
+        {
+          "date": "2026-06-16",
+          "action": "PCPLUED: Withdrawn - 06/16/26",
+          "committee": null
+        },
         {
           "date": "2026-02-03",
           "action": "PCPLUED: Referred to Planning Director & Windward Planning Commission - 02/03/26",
@@ -7825,16 +7969,21 @@
       "bill_type": "Bill",
       "introducer": "Ashley L. Kierkiewicz, Council Member",
       "introduced_date": "2026-02-03",
-      "status": null,
-      "last_action": "PCPLUED: Referred to Planning Director & Windward Planning Commission - 02/03/26",
-      "last_action_date": "2026-02-03",
+      "status": "Passed First Reading",
+      "last_action": "PCPLUED-11:  Recommended passage on first reading - 06/16/26",
+      "last_action_date": "2026-06-16",
       "url": "https://records.hawaiicounty.gov/WebLink/DocView.aspx?id=1123780&dbid=0",
       "raw_subject": "Clarifies duties, procedures, and other regulations regarding the Pāhoa Village Design Guidelines and the Pāhoa Design Review Committee; makes other technical and non-substantive amendments.",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-11T21:05:02+00:00",
-      "last_updated": "2026-06-17T23:09:31+00:00",
+      "last_updated": "2026-06-19T16:16:32+00:00",
       "actions": [
+        {
+          "date": "2026-06-16",
+          "action": "PCPLUED-11:  Recommended passage on first reading - 06/16/26",
+          "committee": null
+        },
         {
           "date": "2026-02-03",
           "action": "PCPLUED: Referred to Planning Director & Windward Planning Commission - 02/03/26",
@@ -7851,8 +8000,8 @@
       "introducer": "Ashley L. Kierkiewicz, Council Member",
       "introduced_date": "2026-02-03",
       "status": null,
-      "last_action": "PCPLUED: Referred to Planning Director & Windward Planning Commission - 02/03/26",
-      "last_action_date": "2026-02-03",
+      "last_action": "PCPLUED: Amended to Draft 2 - 06/16/26",
+      "last_action_date": "2026-06-16",
       "url": "https://records.hawaiicounty.gov/WebLink/DocView.aspx?id=1123782&dbid=0",
       "raw_subject": "Creates the Downtown Pāhoa commercial district as a new special zoning district; establishes new permitted uses.",
       "subjects": [
@@ -7860,8 +8009,13 @@
       ],
       "classification_confidence": 0.026,
       "first_seen": "2026-06-11T21:05:02+00:00",
-      "last_updated": "2026-06-17T23:09:31+00:00",
+      "last_updated": "2026-06-19T16:16:32+00:00",
       "actions": [
+        {
+          "date": "2026-06-16",
+          "action": "PCPLUED: Amended to Draft 2 - 06/16/26",
+          "committee": null
+        },
         {
           "date": "2026-02-03",
           "action": "PCPLUED: Referred to Planning Director & Windward Planning Commission - 02/03/26",
