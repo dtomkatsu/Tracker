@@ -267,6 +267,83 @@
     if (payload) mergeFavorites(payload);
   }
 
+  // ---- Shareable filter URLs ------------------------------------------------
+  // The active filter combination is mirrored into the query string so a
+  // filtered view is itself a shareable, bookmarkable link. The list hash
+  // (#l=/#id=) and bill deep-link hash (#bill=) are independent and preserved
+  // alongside it. Only dimensions that deviate from their defaults are emitted.
+  function serializeFilters() {
+    const it = state._items || {};
+    const p = new URLSearchParams();
+    const all = (set, items) => items && set.size === items.length;
+    const dimParam = (key, set, items) => {
+      if (!items || all(set, items)) return;            // at default "all" → omit
+      p.set(key, set.size ? [...set].join(",") : "none");
+    };
+    if (state.search) p.set("q", state.search);
+    dimParam("county", state.councils, it.council);
+    dimParam("type", state.types, it.type);
+    dimParam("subject", state.subjects, it.subject);
+    const statusDefault = state.statuses.size === 1 && state.statuses.has("Active");
+    if (!statusDefault) {
+      p.set("status", all(state.statuses, it.status) ? "all"
+        : state.statuses.size ? [...state.statuses].join(",") : "none");
+    }
+    const newest = it.year?.[0]?.value;
+    const yearDefault = state.years.size === 1 && newest && state.years.has(newest);
+    if (!yearDefault) {
+      p.set("year", all(state.years, it.year) ? "all" : [...state.years].join(","));
+    }
+    if (!state.onlyClassified) p.set("classified", "0");
+    if (state.onlyStalled) p.set("stalled", "1");
+    if (state.favoritesOnly) p.set("fav", "1");
+    return p.toString();
+  }
+  // Write the filter query string without disturbing the hash (lists / #bill=).
+  function syncFilterUrl() {
+    if (!state._items) return;
+    const qs = serializeFilters();
+    history.replaceState(null, "",
+      location.pathname + (qs ? "?" + qs : "") + location.hash);
+  }
+  // Restore filter state from the query string on load (before first render).
+  function applyFilterParams() {
+    const it = state._items || {};
+    const p = new URLSearchParams(location.search);
+    if (![...p.keys()].length) return;
+    const setDim = (key, set, items) => {
+      if (!p.has(key) || !items) return;
+      const v = p.get(key);
+      set.clear();
+      if (v === "none") return;
+      if (v === "all") { items.forEach((x) => set.add(x.value)); return; }
+      const valid = new Set(items.map((x) => x.value));
+      v.split(",").forEach((x) => { if (valid.has(x)) set.add(x); });
+    };
+    if (p.has("q")) {
+      state.search = p.get("q").toLowerCase().trim();
+      const s = document.getElementById("f-search");
+      if (s) s.value = p.get("q");
+      const sc = document.getElementById("f-search-clear");
+      if (sc) sc.hidden = !state.search;
+    }
+    setDim("county", state.councils, it.council);
+    setDim("type", state.types, it.type);
+    setDim("subject", state.subjects, it.subject);
+    setDim("status", state.statuses, it.status);
+    setDim("year", state.years, it.year);
+    if (p.get("classified") === "0") {
+      state.onlyClassified = false;
+      const cc = document.getElementById("f-classified"); if (cc) cc.checked = false;
+    }
+    if (p.get("stalled") === "1") {
+      state.onlyStalled = true;
+      const sf = document.getElementById("f-stalled"); if (sf) sf.checked = true;
+    }
+    if (p.get("fav") === "1") state.favoritesOnly = true;
+    renderFilterGroups();
+  }
+
   // Bill types collapse into 3 plain buckets. Councils emit ~9 raw types, most
   // of them procedural noise a regular reader doesn't care about.
   const TYPE_BUCKETS = ["Laws", "Resolutions", "Procedural & ceremonial"];
@@ -499,6 +576,16 @@
     return s;
   }
 
+  // Wrap occurrences of the search term in <mark>, operating only on the text
+  // between tags so it never corrupts the <abbr> markup that annotate() emits.
+  function highlightHtml(html, term) {
+    if (!term) return html;
+    const re = new RegExp("(" + term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + ")", "ig");
+    return html.split(/(<[^>]+>)/).map((seg) =>
+      seg.startsWith("<") ? seg : seg.replace(re, "<mark>$1</mark>")
+    ).join("");
+  }
+
   function relTime(ts) {
     if (!ts) return "";
     const secs = (Date.now() - new Date(ts).getTime()) / 1000;
@@ -652,6 +739,12 @@
       node.className = opts.pill ? "subject-pill " + it.value : "county-badge";
       node.textContent = it.label;
       label.append(cb, node);
+      if (opts.counts && opts.counts[it.value] != null) {
+        const n = document.createElement("span");
+        n.className = "opt-count";
+        n.textContent = opts.counts[it.value].toLocaleString();
+        label.append(n);
+      }
       c.appendChild(label);
       itemBoxes.push({ cb, value: it.value });
     }
@@ -749,17 +842,31 @@
 
   // Render all five checkbox groups from the stashed item lists + current Sets.
   // Used on load and after a chip removal / reset re-syncs the Sets.
+  // How many bills fall under each filter option, across the whole dataset —
+  // shown beside each checkbox so the size of a choice is visible before
+  // picking it. (Totals, not cross-filtered, so the numbers stay stable.)
+  function filterCounts() {
+    const c = { council: {}, subject: {}, type: {}, status: {} };
+    for (const b of state.bills) {
+      c.council[b.council] = (c.council[b.council] || 0) + 1;
+      const tb = typeBucket(b.bill_type); c.type[tb] = (c.type[tb] || 0) + 1;
+      const sb = statusBucket(b); c.status[sb] = (c.status[sb] || 0) + 1;
+      for (const s of b.subjects || []) c.subject[s] = (c.subject[s] || 0) + 1;
+    }
+    return c;
+  }
   function renderFilterGroups() {
     const it = state._items;
     if (!it) return;
+    const counts = filterCounts();
     // County/Type/Subject/Status are filtered only through the column-header
     // popovers (f-*). On mobile the header collapses to a compact filter bar
     // (see styles.css) but the same buttons/popovers stay the single source.
     const groups = [
-      ["council", it.council, state.councils, undefined],
-      ["subject", it.subject, state.subjects, { pill: true }],
-      ["type", it.type, state.types, undefined],
-      ["status", it.status, state.statuses, undefined],
+      ["council", it.council, state.councils, { counts: counts.council }],
+      ["subject", it.subject, state.subjects, { pill: true, counts: counts.subject }],
+      ["type", it.type, state.types, { counts: counts.type }],
+      ["status", it.status, state.statuses, { counts: counts.status }],
     ];
     for (const [name, items, set, opts] of groups) {
       if (document.getElementById("f-" + name)) renderCheckGroup("f-" + name, items, set, opts);
@@ -824,6 +931,34 @@
   }
 
   // Overflow "⋯" menu in the toolbar (classified toggle, copy link, help).
+  // Light / dark / system theme. The <head> script applies the stored choice
+  // before paint; here we wire the overflow-menu control that cycles it and
+  // keep "system" live to OS changes.
+  function wireThemeToggle() {
+    const btn = document.getElementById("theme-btn");
+    if (!btn) return;
+    const label = btn.querySelector(".mi-label");
+    const order = ["system", "light", "dark"];
+    const names = { system: "System", light: "Light", dark: "Dark" };
+    const mq = window.matchMedia("(prefers-color-scheme: dark)");
+    const stored = () => {
+      try { return localStorage.getItem("tracker:theme") || "system"; } catch { return "system"; }
+    };
+    const apply = (pref) => {
+      const dark = pref === "dark" || (pref === "system" && mq.matches);
+      document.documentElement.dataset.theme = dark ? "dark" : "light";
+      if (label) label.textContent = "Theme: " + names[pref];
+    };
+    apply(stored());
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation(); // cycle without closing the menu
+      const next = order[(order.indexOf(stored()) + 1) % order.length];
+      try { localStorage.setItem("tracker:theme", next); } catch { /* ignore */ }
+      apply(next);
+    });
+    mq.addEventListener?.("change", () => { if (stored() === "system") apply("system"); });
+  }
+
   function wireToolbarMenu() {
     const btn = document.getElementById("more-btn");
     const pop = document.getElementById("more-pop");
@@ -1116,6 +1251,57 @@
     renderFilterGroups();
     applyFilters();
   }
+  // Clicking a subject pill on a row narrows the Subject filter to just it.
+  function filterToSubject(value) {
+    const it = state._items || {};
+    if (!it.subject?.some((x) => x.value === value)) return;
+    state.subjects.clear();
+    state.subjects.add(value);
+    renderFilterGroups();
+    animateNext();
+    applyFilters();
+  }
+  // Wire the masthead numbers to the filters that actually produce them, so the
+  // "225 active this year" stat and the table's result count visibly agree when
+  // you click through (resolves the stat-vs-count confusion). Reuses
+  // showEverything() to open every dimension, then narrows as needed.
+  function wireStatStrip() {
+    const it = state._items || {};
+    const newest = it.year?.[0]?.value;
+    const makeLink = (el, title, go) => {
+      if (!el) return;
+      el.classList.add("stat-link");
+      el.setAttribute("role", "button");
+      el.tabIndex = 0;
+      el.title = title;
+      el.addEventListener("click", () => { animateNext(); go(); });
+      el.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); animateNext(); go(); }
+      });
+    };
+    makeLink(document.getElementById("stat-active")?.closest(".stat"),
+      newest ? `Show all active ${newest} bills` : "Show active bills", () => {
+        showEverything();
+        state.statuses.clear(); state.statuses.add("Active");
+        if (newest) { state.years.clear(); state.years.add(newest); }
+        renderFilterGroups();
+        applyFilters();
+      });
+    makeLink(document.getElementById("stat-total")?.closest(".stat"),
+      "Show every tracked bill", () => { showEverything(); applyFilters(); });
+  }
+  // Arrow-key navigation between rows once a row has focus.
+  function wireKeyboardNav() {
+    document.addEventListener("keydown", (e) => {
+      if (e.key !== "ArrowDown" && e.key !== "ArrowUp") return;
+      const cur = document.activeElement;
+      if (!cur || !cur.classList?.contains("bill-row")) return;
+      e.preventDefault();
+      const rows = [...document.querySelectorAll("#results tbody tr.bill-row")];
+      const next = rows[rows.indexOf(cur) + (e.key === "ArrowDown" ? 1 : -1)];
+      if (next) next.focus();
+    });
+  }
   function resetAllFilters() {
     const it = state._items || {};
     setAll(state.councils, it.council);
@@ -1247,9 +1433,18 @@
       });
     }
     wireToolbarMenu();
+    wireThemeToggle();
+    wireStatStrip();
+    wireKeyboardNav();
     wireSavedPanel();
     wireHelpDialog();
     wireHint();
+    // Delegated row action: clickable subject pills narrow the Subject filter.
+    const tbody = document.querySelector("#results tbody");
+    if (tbody) tbody.addEventListener("click", (e) => {
+      const pill = e.target.closest(".subject-pill[data-subject]");
+      if (pill) filterToSubject(pill.dataset.subject);
+    });
     wireColumnFilter("cf-council-btn", "cf-council-pop");
     wireColumnFilter("cf-subject-btn", "cf-subject-pop");
     wireColumnFilter("cf-type-btn", "cf-type-pop");
@@ -1302,7 +1497,8 @@
     const pills = (b.subjects || [])
       .map(
         (s) =>
-          `<span class="subject-pill ${s}" title="${SUBJECT_LABEL[s] || s}">${SUBJECT_LABEL[s] || s}</span>`
+          `<button type="button" class="subject-pill ${s}" data-subject="${escapeHtml(s)}" ` +
+          `title="Show only ${SUBJECT_LABEL[s] || s} bills">${SUBJECT_LABEL[s] || s}</button>`
       )
       .join("");
 
@@ -1328,11 +1524,11 @@
     tr.innerHTML = `
       <td class="col-fav">${favButtonHtml(b)}</td>
       <td class="col-council" data-label="County"><span class="county-tag county-${escapeHtml(b.council)}">${escapeHtml(council)}</span></td>
-      <td class="col-num" data-label="Number"><a class="bill-link" href="${escapeHtml(b.url)}" target="_blank" rel="noopener">${escapeHtml(b.bill_number)}</a></td>
+      <td class="col-num" data-label="Number"><a class="bill-link" href="${escapeHtml(b.url)}" target="_blank" rel="noopener">${highlightHtml(escapeHtml(b.bill_number), state.search)}</a></td>
       <td class="col-type" data-label="Type">${escapeHtml(b.bill_type)}</td>
       <td class="col-title" data-label="Title">
-        <div class="title-line"><span class="caret" aria-hidden="true">▸</span><span class="title-text">${annotate(head || fullTitle || "")}</span>${rowBadgeHtml(b)}</div>
-        ${sub ? `<div class="title-preview">${annotate(sub)}</div>` : ""}
+        <div class="title-line"><span class="caret" aria-hidden="true">▸</span><span class="title-text">${highlightHtml(annotate(head || fullTitle || ""), state.search)}</span>${rowBadgeHtml(b)}</div>
+        ${sub ? `<div class="title-preview">${highlightHtml(annotate(sub), state.search)}</div>` : ""}
       </td>
       <td class="col-subj" data-label="Subjects">${pills || '<span class="muted">—</span>'}</td>
       <td class="col-status" data-label="Progress" title="${escapeHtml(b.last_action || b.status || "")}">
@@ -1544,7 +1740,8 @@
       }
     }
     tr.addEventListener("click", (e) => {
-      if (e.target.closest("a") || e.target.closest(".fav-btn")) return;
+      // Links, the star, and the clickable subject pills handle their own clicks.
+      if (e.target.closest("a") || e.target.closest(".fav-btn") || e.target.closest(".subject-pill")) return;
       toggle();
     });
     tr.addEventListener("keydown", (e) => {
@@ -1633,6 +1830,7 @@
     animateNextApply = false;
     if (useVT) document.startViewTransition(render);
     else render();
+    syncFilterUrl(); // keep the shareable query string in step with the filters
   }
 
   // ---- Export & deep-linking ------------------------------------------------
@@ -1736,6 +1934,7 @@
     setStats(payload);
     buildFilters(payload);
     await restoreListFromHash();
+    applyFilterParams();           // restore any filters carried in the URL query
     setFavoritesOnly(state.favoritesOnly);
     updateFavCount();
     applyFilters();

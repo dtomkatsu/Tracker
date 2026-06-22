@@ -22,7 +22,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
   <link rel="alternate" type="application/atom+xml" title="All bill updates" href="feeds/all.xml">
-  <link rel="stylesheet" href="styles.css?v=20260613c">
+  <!-- Resolve light/dark before first paint to avoid a flash: stored override
+       wins, otherwise follow the system preference. -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("tracker:theme") || "system";
+        var dark = t === "dark" ||
+          (t === "system" && matchMedia("(prefers-color-scheme: dark)").matches);
+        document.documentElement.dataset.theme = dark ? "dark" : "light";
+      } catch (e) { document.documentElement.dataset.theme = "light"; }
+    })();
+  </script>
+  <link rel="stylesheet" href="styles.css?v=20260622">
 </head>
 <body>
   <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -42,6 +54,7 @@
     <symbol id="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></symbol>
     <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></symbol>
     <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><polyline points="7 11 12 16 17 11"/><path d="M5 20h14"/></symbol>
+    <symbol id="i-theme" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor" stroke="none"/></symbol>
   </svg>
 
   <header class="site-header">
@@ -106,6 +119,7 @@
         <button type="button" id="more-btn" class="tool-btn icon-only" aria-haspopup="true" aria-expanded="false" aria-label="More options"><svg aria-hidden="true"><use href="#i-more"/></svg></button>
         <div id="more-pop" class="tool-pop" hidden role="menu" aria-label="More options">
           <label class="menu-check"><input id="f-classified" type="checkbox" checked> Only classified bills</label>
+          <button type="button" id="theme-btn" class="menu-item" role="menuitem"><svg aria-hidden="true"><use href="#i-theme"/></svg><span class="mi-label">Theme: System</span></button>
           <label class="menu-check"><input id="f-stalled" type="checkbox"> Only stalled (no action 120+ days)</label>
           <button type="button" id="export-csv" class="menu-item" role="menuitem"><svg aria-hidden="true"><use href="#i-download"/></svg><span class="mi-label">Export current view (CSV)</span></button>
           <button type="button" id="copy-list" class="menu-item" role="menuitem"><svg aria-hidden="true"><use href="#i-link"/></svg><span class="mi-label">Copy link to my list</span></button>
@@ -115,7 +129,7 @@
     </div>
 
     <div class="results-strip">
-      <span id="result-count" class="result-count">Loading…</span>
+      <span id="result-count" class="result-count" role="status" aria-live="polite">Loading…</span>
       <div id="active-filters" class="active-filters" hidden></div>
     </div>
 
@@ -211,6 +225,6 @@
 
   <script>window.TRACKER_LIST_API = "https://tracker-lists.dtomkatsu.workers.dev";</script>
   <script src="qr.js?v=20260611"></script>
-  <script src="app.js?v=20260613c"></script>
+  <script src="app.js?v=20260622"></script>
 </body>
 </html>

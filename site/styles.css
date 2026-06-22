@@ -48,8 +48,11 @@
   --shadow-pop: 0 4px 14px rgba(20, 42, 30, .12), 0 2px 4px rgba(20, 42, 30, .08);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
+/* Dark tokens apply whenever data-theme="dark". The <head> script resolves the
+   effective theme (stored override, else system preference) and sets the
+   attribute before first paint — no flash, and no token duplication between a
+   media query and a manual override. */
+:root[data-theme="dark"] {
     --primary: #7cb342;
     --primary-dark: #a8d77c;
     --primary-bg: rgba(124, 179, 66, 0.15);
@@ -82,7 +85,6 @@
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, .3);
     --shadow: 0 1px 3px rgba(0, 0, 0, .35), 0 8px 24px rgba(0, 0, 0, .3);
     --shadow-pop: 0 6px 20px rgba(0, 0, 0, .5);
-  }
 }
 
 * { box-sizing: border-box; }
@@ -643,10 +645,8 @@ tbody .bill-row.open > td { background: var(--primary-bg); border-bottom-color: 
 .row-badge.new { background: var(--primary-bg); color: var(--primary-dark); }
 .row-badge.upd { background: rgba(217, 165, 15, 0.16); color: #7a5708; }
 .row-badge.stalled { background: rgba(120, 130, 126, 0.16); color: var(--text-muted); }
-@media (prefers-color-scheme: dark) {
-  .row-badge.upd { background: rgba(226, 178, 59, 0.18); color: var(--gold); }
-  .row-badge.stalled { background: rgba(255, 255, 255, 0.10); color: var(--text-muted); }
-}
+:root[data-theme="dark"] .row-badge.upd { background: rgba(226, 178, 59, 0.18); color: var(--gold); }
+:root[data-theme="dark"] .row-badge.stalled { background: rgba(255, 255, 255, 0.10); color: var(--text-muted); }
 
 /* Brief highlight when a bill is opened via a deep link (#bill=…). */
 .bill-row.deep-target > td { animation: deep-flash 2.2s var(--ease-out); }
@@ -743,10 +743,8 @@ tbody .bill-row.open > td { background: var(--primary-bg); border-bottom-color: 
 .dx-status.st-law { background: rgba(46, 107, 30, .14); color: var(--primary-dark); }
 .dx-status.st-failed,
 .dx-status.st-stalled { background: rgba(170, 60, 40, .12); color: #9a3b22; }
-@media (prefers-color-scheme: dark) {
-  .dx-status.st-failed,
-  .dx-status.st-stalled { background: rgba(220, 110, 80, .18); color: #efa888; }
-}
+:root[data-theme="dark"] .dx-status.st-failed,
+:root[data-theme="dark"] .dx-status.st-stalled { background: rgba(220, 110, 80, .18); color: #efa888; }
 
 .detail-summary {
   font-size: 15.5px;
@@ -913,7 +911,9 @@ tbody .bill-row.open > td { background: var(--primary-bg); border-bottom-color: 
   display: inline-block;
   padding: 3px 10px;
   margin: 0 3px 3px 0;
+  border: none;
   border-radius: var(--radius-pill);
+  font-family: inherit;
   font-size: 12.5px;
   font-weight: 600;
   letter-spacing: .01em;
@@ -925,6 +925,17 @@ tbody .bill-row.open > td { background: var(--primary-bg); border-bottom-color: 
 .subject-pill.transportation { background: var(--transportation-bg); color: var(--transportation-fg); }
 .subject-pill.food_security { background: var(--food_security-bg); color: var(--food_security-fg); }
 .subject-pill.affordable_housing { background: var(--affordable_housing-bg); color: var(--affordable_housing-fg); }
+/* Row subject pills are buttons that narrow the Subject filter on click. */
+button.subject-pill { cursor: pointer; transition: filter var(--dur-1), box-shadow var(--dur-1); }
+button.subject-pill:hover { filter: brightness(0.96); }
+button.subject-pill:focus-visible { outline: none; box-shadow: 0 0 0 2px var(--ring); }
+:root[data-theme="dark"] button.subject-pill:hover { filter: brightness(1.15); }
+
+/* Search-match highlight */
+mark {
+  background: color-mix(in srgb, var(--gold) 40%, transparent);
+  color: inherit; border-radius: 3px; padding: 0 1px;
+}
 
 /* Filter checkbox groups (mobile mirror + column popovers) */
 .subj-check, .county-check, .chk-all {
@@ -1191,4 +1202,37 @@ footer .meta { display: block; font-size: 13px; margin-top: 8px; }
   .dx-meta { grid-template-columns: 1fr; gap: 8px; }
   .dx-status { margin-left: 0; }
   .dx-actions .dx-btn { flex: 1 1 auto; justify-content: center; }
+}
+
+/* Per-option bill counts in the filter popovers */
+.opt-count {
+  margin-left: auto; padding-left: 10px;
+  font-size: 11.5px; font-weight: 600; color: var(--text-faint);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Masthead stat numbers double as shortcuts to the filter that produces them */
+.stat-link { cursor: pointer; border-radius: 6px; transition: color var(--dur-1); }
+.stat-link:hover { color: var(--primary-dark); }
+.stat-link:hover strong { text-decoration: underline; text-underline-offset: 2px; }
+.stat-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+/* ---- Print: a clean, chrome-free list ------------------------------------ */
+@media print {
+  .toolbar, .filters-mobile, .hint, #active-filters, footer,
+  .site-header .overline, .stat-strip, .live-dot, .col-fav { display: none !important; }
+  body { background: #fff; }
+  :root { --text: #000; --bg: #fff; --paper: #fff; }
+  main { padding: 0; }
+  h1 { font-size: 20pt; margin: 0 0 8pt; }
+  .results-strip { margin: 0 0 6pt; }
+  .table-wrap { max-height: none; overflow: visible; border: none; box-shadow: none; }
+  table { width: 100%; font-size: 9pt; }
+  thead { display: table-header-group; }
+  th.col-filter .cf-caret, .cf-badge { display: none; }
+  tr.bill-row { break-inside: avoid; }
+  .detail-row { display: none; }
+  a { color: #000; text-decoration: none; }
+  * { box-shadow: none !important; }
+  .subject-pill, .county-tag { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }
