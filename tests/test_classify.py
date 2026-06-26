@@ -68,6 +68,43 @@ def test_sma_permit_still_housing_with_strong_term():
     assert "affordable_housing" in c.subjects
 
 
+def test_hart_and_dts_tagged_transportation():
+    # The transit agencies — "rapid transportation" (HART) and "transportation
+    # services" (DTS) — were missed by the old keyword set.
+    assert "transportation" in classify(
+        "RELATING TO THE HONOLULU AUTHORITY FOR RAPID TRANSPORTATION."
+    ).subjects
+    assert "transportation" in classify(
+        "REQUESTING THE DEPARTMENT OF TRANSPORTATION SERVICES TO ACT."
+    ).subjects
+
+
+def test_committee_name_does_not_tag_transportation():
+    # The Maui ADEPT committee name carries "Public Transportation", but its
+    # items (axis deer, biosecurity) are not transportation — bare
+    # "transportation" must not match.
+    c = classify(
+        "AXIS DEER MITIGATION",
+        raw_subject="Agriculture, Diversification, Environment and Public Transportation",
+    )
+    assert "transportation" not in c.subjects
+
+
+def test_gift_disclosure_unclassified():
+    # Gift-acceptance disclosures carry no policy subject even though their
+    # contents mention meals / transportation.
+    c = classify(
+        "ACCEPTING A GIFT OF TRAVEL, LODGING, MEALS, AND GROUND TRANSPORTATION TO THE CITY."
+    )
+    assert c.subjects == []
+
+
+def test_school_meals_food_security():
+    assert "food_security" in classify(
+        "URGING THE STATE TO ESTABLISH UNIVERSAL FREE SCHOOL MEALS."
+    ).subjects
+
+
 def test_unclassified():
     c = classify("Resolution honoring the retirement of John Smith.")
     assert c.subjects == []

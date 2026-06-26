@@ -52,6 +52,30 @@ _RULES: dict[str, list[str]] = {
         r"\bspeed limit\b",
         r"\bcrosswalk\b",
         r"\bvehicle\b",
+        # Target the transit agencies specifically rather than bare
+        # "transportation": the latter rides along in the Maui ADEPT committee
+        # name ("...and Public Transportation") on dozens of unrelated ag/
+        # environment items. These catch HART and the Dept. of Transportation
+        # Services without that contamination.
+        r"\brapid transportation\b",
+        r"\btransportation services\b",
+        r"\bsidewalk\b",
+        r"\bintersection\b",
+        r"\broundabout\b",
+        r"\bmoped\b",
+        r"\bscooter\b",
+        r"\bshuttle\b",
+        r"\bparatransit\b",
+        r"\bmultimodal\b",
+        r"\bmobility\b",
+        r"\bright[- ]of[- ]way\b",
+        r"\bvision zero\b",
+        r"\bharbor\b",
+        r"\bairport\b",
+        r"\bfreight\b",
+        r"\belectric vehicle\b",
+        r"\b(EV|vehicle) charging\b",
+        r"\btraffic calming\b",
     ],
     "food_security": [
         r"\bfood\b",
@@ -69,6 +93,22 @@ _RULES: dict[str, list[str]] = {
         r"\bDA BUX\b",
         r"\baquaculture\b",
         r"\bfish(ery|eries|ing)\b",
+        # "meals" is mostly school/kupuna meal programs once the gift-disclosure
+        # veto removes "gift of ... meals" ethics resolutions. ("garden" is left
+        # to the existing "community garden" — bare it matches botanical gardens;
+        # "ranch" matches Hawaii place names, so livestock covers that instead.)
+        r"\bmeals?\b",
+        r"\bschool (lunch|meal|breakfast)\b",
+        r"\blivestock\b",
+        r"\bpoultry\b",
+        r"\bdairy\b",
+        r"\btaro\b",
+        r"\bkalo\b",
+        r"\bcrop(s|land)?\b",
+        r"\bfood (system|security|access)\b",
+        r"\bfarmers?[' ]?\s*market\b",
+        r"\bcommunity kitchen\b",
+        r"\bfeeding\b",
     ],
     "affordable_housing": [
         r"\baffordable housing\b",
@@ -122,6 +162,12 @@ _COMPILED: dict[str, list[re.Pattern]] = {
 _SMA_RE = re.compile(r"special management area|\bSMA\b", re.IGNORECASE)
 _HOUSING_WEAK = {"dwelling", "single-family", "single family"}
 
+# "ACCEPTING A GIFT OF ..." resolutions are HRS gift disclosures (travel, meals,
+# transportation given to councilmembers) — administrative, not policy. Their
+# contents would otherwise mis-tag them (gift of meals -> food, gift of
+# transportation -> transit), so they're left entirely unclassified.
+_GIFT_RE = re.compile(r"\baccepting a gift\b", re.IGNORECASE)
+
 
 @dataclass
 class Classification:
@@ -138,6 +184,10 @@ def classify(title: str | None, raw_subject: str | None = None) -> Classificatio
     """
     haystack = " ".join(p for p in (title, raw_subject) if p)
     if not haystack.strip():
+        return Classification(subjects=[], confidence=0.0, matched_terms={})
+
+    # Gift-disclosure resolutions carry no policy subject — skip entirely.
+    if _GIFT_RE.search(haystack):
         return Classification(subjects=[], confidence=0.0, matched_terms={})
 
     matched: dict[str, list[str]] = {}

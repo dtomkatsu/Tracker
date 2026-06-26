@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-26T06:04:01+00:00",
+  "generated_at": "2026-06-26T07:58:23+00:00",
   "last_scrape": {
     "id": 92,
     "started_at": "2026-06-19T16:16:40+00:00",
@@ -117,10 +117,8 @@
       "last_action_date": "2026-06-16",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3766",
       "raw_subject": null,
-      "subjects": [
-        "tax"
-      ],
-      "classification_confidence": 0.019,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-17T16:15:03+00:00",
       "last_updated": "2026-06-17T16:15:03+00:00",
       "actions": [
@@ -2110,10 +2108,8 @@
       "last_action_date": "2026-05-22",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3747",
       "raw_subject": null,
-      "subjects": [
-        "transportation"
-      ],
-      "classification_confidence": 0.019,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
       "last_updated": "2026-05-30T07:33:27+00:00",
       "actions": [
@@ -3666,10 +3662,8 @@
       "last_action_date": "2026-05-13",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3713",
       "raw_subject": null,
-      "subjects": [
-        "transportation"
-      ],
-      "classification_confidence": 0.018,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
       "last_updated": "2026-05-30T07:33:27+00:00",
       "actions": [
@@ -5100,10 +5094,8 @@
       "last_action_date": "2026-03-25",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3679",
       "raw_subject": null,
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.023,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
       "last_updated": "2026-05-30T07:33:27+00:00",
       "actions": [
@@ -6495,8 +6487,10 @@
       "last_action_date": "2026-06-05",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3651",
       "raw_subject": null,
-      "subjects": [],
-      "classification_confidence": 0.0,
+      "subjects": [
+        "transportation"
+      ],
+      "classification_confidence": 0.048,
       "first_seen": "2026-05-30T07:33:27+00:00",
       "last_updated": "2026-06-15T16:15:10+00:00",
       "actions": [
@@ -6560,8 +6554,10 @@
       "last_action_date": "2026-06-05",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3652",
       "raw_subject": null,
-      "subjects": [],
-      "classification_confidence": 0.0,
+      "subjects": [
+        "transportation"
+      ],
+      "classification_confidence": 0.048,
       "first_seen": "2026-05-30T07:33:27+00:00",
       "last_updated": "2026-06-15T16:15:10+00:00",
       "actions": [
@@ -7899,10 +7895,8 @@
       "last_action_date": "2026-03-25",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3619",
       "raw_subject": null,
-      "subjects": [
-        "transportation"
-      ],
-      "classification_confidence": 0.019,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
       "last_updated": "2026-05-30T07:33:27+00:00",
       "actions": [
@@ -8245,10 +8239,8 @@
       "last_action_date": "2026-03-25",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3613",
       "raw_subject": null,
-      "subjects": [
-        "transportation"
-      ],
-      "classification_confidence": 0.018,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
       "last_updated": "2026-05-30T07:33:27+00:00",
       "actions": [
@@ -8317,11 +8309,8 @@
       "last_action_date": "2026-02-18",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3615",
       "raw_subject": null,
-      "subjects": [
-        "tax",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.031,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
       "last_updated": "2026-05-30T07:33:27+00:00",
       "actions": [
@@ -13037,10 +13026,8 @@
       "last_action_date": "2025-12-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3556",
       "raw_subject": null,
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.028,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:04+00:00",
       "last_updated": "2026-06-01T20:41:04+00:00",
       "actions": [
@@ -14390,8 +14377,10 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16055",
       "raw_subject": "Water and Infrastructure Committee (2025-2027)",
-      "subjects": [],
-      "classification_confidence": 0.0,
+      "subjects": [
+        "transportation"
+      ],
+      "classification_confidence": 0.017,
       "first_seen": "2026-06-01T20:42:11+00:00",
       "last_updated": "2026-06-01T20:42:11+00:00",
       "actions": [
@@ -18561,8 +18550,10 @@
       "last_action_date": "2025-10-01",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3489",
       "raw_subject": null,
-      "subjects": [],
-      "classification_confidence": 0.0,
+      "subjects": [
+        "transportation"
+      ],
+      "classification_confidence": 0.038,
       "first_seen": "2026-06-01T20:41:04+00:00",
       "last_updated": "2026-06-01T20:41:04+00:00",
       "actions": [
@@ -20936,8 +20927,10 @@
       "last_action_date": "2026-03-10",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3452",
       "raw_subject": "Approves all extensions to the MOS that adhere to the LPA.",
-      "subjects": [],
-      "classification_confidence": 0.0,
+      "subjects": [
+        "transportation"
+      ],
+      "classification_confidence": 0.053,
       "first_seen": "2026-06-01T20:41:04+00:00",
       "last_updated": "2026-06-01T20:41:04+00:00",
       "actions": [
@@ -23692,10 +23685,8 @@
       "last_action_date": "2025-08-06",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3414",
       "raw_subject": null,
-      "subjects": [
-        "transportation"
-      ],
-      "classification_confidence": 0.023,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:04+00:00",
       "last_updated": "2026-06-01T20:41:04+00:00",
       "actions": [
@@ -24058,10 +24049,8 @@
       "last_action_date": "2025-08-06",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3410",
       "raw_subject": null,
-      "subjects": [
-        "food_security"
-      ],
-      "classification_confidence": 0.025,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:04+00:00",
       "last_updated": "2026-06-01T20:41:04+00:00",
       "actions": [
@@ -24699,10 +24688,8 @@
       "last_action_date": "2025-07-09",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3402",
       "raw_subject": null,
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.034,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:04+00:00",
       "last_updated": "2026-06-01T20:41:04+00:00",
       "actions": [
@@ -25950,10 +25937,8 @@
       "last_action_date": "2025-06-23",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3388",
       "raw_subject": null,
-      "subjects": [
-        "food_security"
-      ],
-      "classification_confidence": 0.037,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:04+00:00",
       "last_updated": "2026-06-01T20:41:04+00:00",
       "actions": [
@@ -26193,10 +26178,8 @@
       "last_action_date": "2025-07-09",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3384",
       "raw_subject": null,
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.024,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:04+00:00",
       "last_updated": "2026-06-01T20:41:04+00:00",
       "actions": [
@@ -26318,10 +26301,8 @@
       "last_action_date": "2025-07-09",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3382",
       "raw_subject": null,
-      "subjects": [
-        "tax"
-      ],
-      "classification_confidence": 0.02,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:04+00:00",
       "last_updated": "2026-06-01T20:41:04+00:00",
       "actions": [
@@ -30428,10 +30409,8 @@
       "last_action_date": "2025-05-14",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3333",
       "raw_subject": null,
-      "subjects": [
-        "transportation"
-      ],
-      "classification_confidence": 0.018,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:04+00:00",
       "last_updated": "2026-06-01T20:41:04+00:00",
       "actions": [
@@ -31567,8 +31546,10 @@
       "last_action_date": "2025-06-04",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3313",
       "raw_subject": null,
-      "subjects": [],
-      "classification_confidence": 0.0,
+      "subjects": [
+        "transportation"
+      ],
+      "classification_confidence": 0.056,
       "first_seen": "2026-06-01T20:41:04+00:00",
       "last_updated": "2026-06-01T20:41:04+00:00",
       "actions": [
@@ -32912,10 +32893,8 @@
       "last_action_date": "2025-04-16",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3292",
       "raw_subject": null,
-      "subjects": [
-        "transportation"
-      ],
-      "classification_confidence": 0.019,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:04+00:00",
       "last_updated": "2026-06-01T20:41:04+00:00",
       "actions": [
@@ -35365,8 +35344,10 @@
       "last_action_date": "2025-07-02",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3262",
       "raw_subject": null,
-      "subjects": [],
-      "classification_confidence": 0.0,
+      "subjects": [
+        "transportation"
+      ],
+      "classification_confidence": 0.048,
       "first_seen": "2026-06-01T20:41:04+00:00",
       "last_updated": "2026-06-01T20:41:04+00:00",
       "actions": [
@@ -35440,8 +35421,10 @@
       "last_action_date": "2025-07-02",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3263",
       "raw_subject": null,
-      "subjects": [],
-      "classification_confidence": 0.0,
+      "subjects": [
+        "transportation"
+      ],
+      "classification_confidence": 0.048,
       "first_seen": "2026-06-01T20:41:04+00:00",
       "last_updated": "2026-06-01T20:41:04+00:00",
       "actions": [
@@ -36032,10 +36015,8 @@
       "last_action_date": "2025-03-19",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3252",
       "raw_subject": null,
-      "subjects": [
-        "tax"
-      ],
-      "classification_confidence": 0.018,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:04+00:00",
       "last_updated": "2026-06-01T20:41:04+00:00",
       "actions": [
@@ -39740,9 +39721,10 @@
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15353",
       "raw_subject": "Disaster Recovery, International Affairs, and Planning Committee (2025-2027)",
       "subjects": [
+        "transportation",
         "affordable_housing"
       ],
-      "classification_confidence": 0.045,
+      "classification_confidence": 0.091,
       "first_seen": "2026-06-01T20:45:58+00:00",
       "last_updated": "2026-06-01T20:45:58+00:00"
     },
@@ -39957,10 +39939,8 @@
       "last_action_date": "2025-01-29",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3207",
       "raw_subject": null,
-      "subjects": [
-        "food_security"
-      ],
-      "classification_confidence": 0.02,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:04+00:00",
       "last_updated": "2026-06-01T20:41:04+00:00",
       "actions": [
@@ -41815,8 +41795,10 @@
       "last_action_date": "2025-03-19",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3183",
       "raw_subject": null,
-      "subjects": [],
-      "classification_confidence": 0.0,
+      "subjects": [
+        "transportation"
+      ],
+      "classification_confidence": 0.045,
       "first_seen": "2026-06-01T20:41:04+00:00",
       "last_updated": "2026-06-01T20:41:04+00:00",
       "actions": [
@@ -42353,8 +42335,10 @@
       "last_action_date": "2025-01-29",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3163",
       "raw_subject": null,
-      "subjects": [],
-      "classification_confidence": 0.0,
+      "subjects": [
+        "transportation"
+      ],
+      "classification_confidence": 0.091,
       "first_seen": "2026-06-01T20:41:04+00:00",
       "last_updated": "2026-06-01T20:41:04+00:00",
       "actions": [
@@ -42388,8 +42372,10 @@
       "last_action_date": "2025-01-29",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3164",
       "raw_subject": null,
-      "subjects": [],
-      "classification_confidence": 0.0,
+      "subjects": [
+        "food_security"
+      ],
+      "classification_confidence": 0.048,
       "first_seen": "2026-06-01T20:41:04+00:00",
       "last_updated": "2026-06-01T20:41:04+00:00",
       "actions": [
@@ -43377,9 +43363,10 @@
       "raw_subject": "Disaster, Resilience, International Affairs, and Planning Committee (2023-2025)",
       "subjects": [
         "tax",
+        "transportation",
         "affordable_housing"
       ],
-      "classification_confidence": 0.032,
+      "classification_confidence": 0.048,
       "first_seen": "2026-06-01T20:46:20+00:00",
       "last_updated": "2026-06-01T20:46:20+00:00",
       "actions": [
@@ -43767,8 +43754,10 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15284",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [],
-      "classification_confidence": 0.0,
+      "subjects": [
+        "food_security"
+      ],
+      "classification_confidence": 0.042,
       "first_seen": "2026-06-01T20:46:26+00:00",
       "last_updated": "2026-06-01T20:46:26+00:00"
     },
@@ -45054,10 +45043,8 @@
       "last_action_date": "2024-12-11",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3141",
       "raw_subject": null,
-      "subjects": [
-        "tax"
-      ],
-      "classification_confidence": 0.024,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:04+00:00",
       "last_updated": "2026-06-01T20:41:04+00:00",
       "actions": [
@@ -47595,10 +47582,8 @@
       "last_action_date": "2024-11-07",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3122",
       "raw_subject": null,
-      "subjects": [
-        "transportation"
-      ],
-      "classification_confidence": 0.019,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:04+00:00",
       "last_updated": "2026-06-01T20:41:04+00:00",
       "actions": [
@@ -53418,9 +53403,10 @@
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=14957",
       "raw_subject": "Agriculture, Diversification, Environment, and Public Transportation Committee",
       "subjects": [
+        "transportation",
         "food_security"
       ],
-      "classification_confidence": 0.059,
+      "classification_confidence": 0.118,
       "first_seen": "2026-06-01T20:48:06+00:00",
       "last_updated": "2026-06-01T20:48:06+00:00"
     },
@@ -54723,10 +54709,8 @@
       "last_action_date": "2024-08-07",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3043",
       "raw_subject": null,
-      "subjects": [
-        "food_security"
-      ],
-      "classification_confidence": 0.021,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:04+00:00",
       "last_updated": "2026-06-01T20:41:04+00:00",
       "actions": [
@@ -56797,8 +56781,10 @@
       "last_action_date": "2024-07-10",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3021",
       "raw_subject": null,
-      "subjects": [],
-      "classification_confidence": 0.0,
+      "subjects": [
+        "transportation"
+      ],
+      "classification_confidence": 0.071,
       "first_seen": "2026-06-01T20:41:04+00:00",
       "last_updated": "2026-06-01T20:41:04+00:00",
       "actions": [
@@ -58026,10 +58012,8 @@
       "last_action_date": "2024-07-10",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/2997",
       "raw_subject": null,
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.024,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:04+00:00",
       "last_updated": "2026-06-01T20:41:04+00:00",
       "actions": [
