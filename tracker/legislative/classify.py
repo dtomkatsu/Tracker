@@ -75,7 +75,8 @@ _RULES: dict[str, list[str]] = {
         r"\bhousing\b",
         r"\bADU\b",
         r"\baccessory dwelling\b",
-        r"\bohana( unit| dwelling)?\b",
+        r"\bdwelling\b",
+        r"\bohana\b",
         r"\brent(al|s|er|ers)?\b",
         r"\bzoning\b",
         r"\bdensity\b",
@@ -90,6 +91,22 @@ _RULES: dict[str, list[str]] = {
         r"\bworkforce housing\b",
         r"\bTOD\b",
         r"\btransit[- ]oriented\b",
+        # Land-use / planning language that carries housing & development bills
+        # whose titles never say "housing" outright (the common miss).
+        r"\bland use\b",
+        r"\bsubdivision\b",
+        r"\bgeneral plan\b",
+        r"\bresidential\b",
+        r"\bapartment\b",
+        r"\bsingle[- ]family\b",
+        r"\bmulti[- ]?family\b",
+        r"\bduplex\b",
+        r"\bcondominium\b",
+        r"\bplanned unit development\b",
+        r"\binfill\b",
+        r"\btenant(s)?\b",
+        r"\blandlord(s)?\b",
+        r"\beviction(s)?\b",
     ],
 }
 
@@ -97,6 +114,13 @@ _COMPILED: dict[str, list[re.Pattern]] = {
     subject: [re.compile(p, re.IGNORECASE) for p in patterns]
     for subject, patterns in _RULES.items()
 }
+
+# Special Management Area (coastal) major permits routinely read "construction
+# of a single-family dwelling" but are one-off, individual development permits —
+# not housing policy. Don't let those generic terms alone file them under
+# affordable_housing; a stronger housing term still can.
+_SMA_RE = re.compile(r"special management area|\bSMA\b", re.IGNORECASE)
+_HOUSING_WEAK = {"dwelling", "single-family", "single family"}
 
 
 @dataclass
@@ -125,6 +149,13 @@ def classify(title: str | None, raw_subject: str | None = None) -> Classificatio
                 hits.append(m.group(0))
         if hits:
             matched[subject] = sorted(set(hits))
+
+    # Veto housing on coastal individual-permit (SMA) bills matched only on the
+    # weak "dwelling / single-family" terms.
+    if "affordable_housing" in matched and _SMA_RE.search(haystack):
+        strong = [t for t in matched["affordable_housing"] if t.lower() not in _HOUSING_WEAK]
+        if not strong:
+            del matched["affordable_housing"]
 
     subjects = [s for s in SUBJECTS if s in matched]
     confidence = sum(len(v) for v in matched.values()) / max(len(haystack.split()), 1)

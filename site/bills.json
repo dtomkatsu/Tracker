@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-19T16:17:17+00:00",
+  "generated_at": "2026-06-26T06:04:01+00:00",
   "last_scrape": {
     "id": 92,
     "started_at": "2026-06-19T16:16:40+00:00",
@@ -90,8 +90,10 @@
       "last_action_date": "2026-06-17",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3769",
       "raw_subject": null,
-      "subjects": [],
-      "classification_confidence": 0.0,
+      "subjects": [
+        "affordable_housing"
+      ],
+      "classification_confidence": 0.05,
       "first_seen": "2026-06-19T16:15:05+00:00",
       "last_updated": "2026-06-19T16:15:05+00:00",
       "actions": [
@@ -478,8 +480,10 @@
       "last_action_date": "2026-03-11",
       "url": "https://kauai.granicus.com/AgendaViewer.php?view_id=2&clip_id=3037",
       "raw_subject": "Authorizing The Mayor And The Director Of Finance Of The County Of Kaua‘i To Enter Into An Intergovernmental Agreement With The State Of Hawai‘i And Department Of Health For A Loan From The State Water Pollution Control Revolving Fund For The Residential Cesspool Conversion Program (County Of Kaua‘i Residential Cesspool Conversion Program 2), Project No. RCC00KA-02",
-      "subjects": [],
-      "classification_confidence": 0.0,
+      "subjects": [
+        "affordable_housing"
+      ],
+      "classification_confidence": 0.009,
       "first_seen": "2026-06-08T16:17:45+00:00",
       "last_updated": "2026-06-08T16:17:45+00:00"
     },
@@ -1276,8 +1280,10 @@
       "last_action_date": "2026-04-07",
       "url": "https://records.hawaiicounty.gov/WebLink/DocView.aspx?id=1113328&dbid=0",
       "raw_subject": "ADOPTS THE COUNTY OF HAWAI‘I GENERAL PLAN 2045 AND REPEALS ORDINANCE NO. 05-025, AS AMENDED",
-      "subjects": [],
-      "classification_confidence": 0.0,
+      "subjects": [
+        "affordable_housing"
+      ],
+      "classification_confidence": 0.033,
       "first_seen": "2026-05-30T20:41:50+00:00",
       "last_updated": "2026-06-17T23:09:33+00:00",
       "actions": [
@@ -1845,9 +1851,10 @@
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3752",
       "raw_subject": "Temporarily entitles the owner of certain owner-occupied condominium units to a real property tax home exemption. Applies retroactively to the tax year beginning July 1, 2025, and thereafter.",
       "subjects": [
-        "tax"
+        "tax",
+        "affordable_housing"
       ],
-      "classification_confidence": 0.121,
+      "classification_confidence": 0.152,
       "first_seen": "2026-05-30T07:33:26+00:00",
       "last_updated": "2026-06-05T16:15:05+00:00",
       "actions": [
@@ -2922,9 +2929,10 @@
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3723",
       "raw_subject": null,
       "subjects": [
-        "food_security"
+        "food_security",
+        "affordable_housing"
       ],
-      "classification_confidence": 0.026,
+      "classification_confidence": 0.051,
       "first_seen": "2026-05-30T07:33:26+00:00",
       "last_updated": "2026-06-05T16:15:05+00:00",
       "actions": [
@@ -3388,8 +3396,10 @@
       "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3716",
       "raw_subject": null,
-      "subjects": [],
-      "classification_confidence": 0.0,
+      "subjects": [
+        "affordable_housing"
+      ],
+      "classification_confidence": 0.05,
       "first_seen": "2026-05-30T07:33:27+00:00",
       "last_updated": "2026-06-05T16:15:05+00:00",
       "actions": [
@@ -7153,8 +7163,10 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16268",
       "raw_subject": "Disaster Recovery, International Affairs, and Planning Committee (2025-2027)",
-      "subjects": [],
-      "classification_confidence": 0.0,
+      "subjects": [
+        "affordable_housing"
+      ],
+      "classification_confidence": 0.067,
       "first_seen": "2026-05-30T07:50:34+00:00",
       "last_updated": "2026-05-30T07:50:34+00:00"
     },
@@ -8502,8 +8514,10 @@
       "last_action_date": "2026-02-18",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3610",
       "raw_subject": null,
-      "subjects": [],
-      "classification_confidence": 0.0,
+      "subjects": [
+        "affordable_housing"
+      ],
+      "classification_confidence": 0.05,
       "first_seen": "2026-05-30T07:33:27+00:00",
       "last_updated": "2026-05-30T07:33:27+00:00",
       "actions": [
@@ -9441,8 +9455,10 @@
       "last_action_date": "2026-04-16",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3595",
       "raw_subject": null,
-      "subjects": [],
-      "classification_confidence": 0.0,
+      "subjects": [
+        "affordable_housing"
+      ],
+      "classification_confidence": 0.1,
       "first_seen": "2026-05-30T07:33:27+00:00",
       "last_updated": "2026-05-30T07:33:27+00:00",
       "actions": [
@@ -10047,8 +10063,10 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16212",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [],
-      "classification_confidence": 0.0,
+      "subjects": [
+        "affordable_housing"
+      ],
+      "classification_confidence": 0.037,
       "first_seen": "2026-06-01T20:41:23+00:00",
       "last_updated": "2026-06-01T20:41:23+00:00"
     },
@@ -10378,8 +10396,10 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16199",
       "raw_subject": "Water and Infrastructure Committee (2025-2027)",
-      "subjects": [],
-      "classification_confidence": 0.0,
+      "subjects": [
+        "affordable_housing"
+      ],
+      "classification_confidence": 0.056,
       "first_seen": "2026-06-01T20:41:26+00:00",
       "last_updated": "2026-06-01T20:41:26+00:00"
     },
@@ -10681,8 +10701,10 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16183",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [],
-      "classification_confidence": 0.0,
+      "subjects": [
+        "affordable_housing"
+      ],
+      "classification_confidence": 0.05,
       "first_seen": "2026-06-01T20:41:28+00:00",
       "last_updated": "2026-06-01T20:41:28+00:00"
     },
@@ -11557,8 +11579,10 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16162",
       "raw_subject": "Water Authority, Social Services, and Parks Committee (2025-2027)",
-      "subjects": [],
-      "classification_confidence": 0.0,
+      "subjects": [
+        "affordable_housing"
+      ],
+      "classification_confidence": 0.059,
       "first_seen": "2026-06-01T20:41:41+00:00",
       "last_updated": "2026-06-01T20:41:41+00:00"
     },
@@ -12042,8 +12066,10 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16124",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [],
-      "classification_confidence": 0.0,
+      "subjects": [
+        "affordable_housing"
+      ],
+      "classification_confidence": 0.026,
       "first_seen": "2026-06-01T20:41:48+00:00",
       "last_updated": "2026-06-01T20:41:48+00:00"
     },
@@ -13797,9 +13823,10 @@
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16056",
       "raw_subject": "Water Authority, Social Services, and Parks Committee (2025-2027)",
       "subjects": [
-        "tax"
+        "tax",
+        "affordable_housing"
       ],
-      "classification_confidence": 0.018,
+      "classification_confidence": 0.036,
       "first_seen": "2026-06-01T20:42:06+00:00",
       "last_updated": "2026-06-01T20:42:06+00:00",
       "actions": [
@@ -13987,8 +14014,10 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16066",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [],
-      "classification_confidence": 0.0,
+      "subjects": [
+        "affordable_housing"
+      ],
+      "classification_confidence": 0.029,
       "first_seen": "2026-06-01T20:42:10+00:00",
       "last_updated": "2026-06-01T20:42:10+00:00"
     },
@@ -15341,9 +15370,10 @@
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16022",
       "raw_subject": "Kōmike Aloha ʻĀina (2025-2027)",
       "subjects": [
-        "transportation"
+        "transportation",
+        "affordable_housing"
       ],
-      "classification_confidence": 0.017,
+      "classification_confidence": 0.034,
       "first_seen": "2026-06-01T20:42:18+00:00",
       "last_updated": "2026-06-01T20:42:18+00:00",
       "actions": [
@@ -16411,9 +16441,10 @@
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15973",
       "raw_subject": "Water Authority, Social Services, and Parks Committee (2025-2027)",
       "subjects": [
-        "tax"
+        "tax",
+        "affordable_housing"
       ],
-      "classification_confidence": 0.031,
+      "classification_confidence": 0.062,
       "first_seen": "2026-06-01T20:42:30+00:00",
       "last_updated": "2026-06-01T20:42:30+00:00"
     },
@@ -18713,9 +18744,10 @@
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15918",
       "raw_subject": "Council of the County of Maui ",
       "subjects": [
-        "tax"
+        "tax",
+        "affordable_housing"
       ],
-      "classification_confidence": 0.037,
+      "classification_confidence": 0.074,
       "first_seen": "2026-06-01T20:42:55+00:00",
       "last_updated": "2026-06-01T20:42:55+00:00"
     },
@@ -19902,9 +19934,10 @@
       "raw_subject": "Council of the County of Maui ",
       "subjects": [
         "tax",
-        "food_security"
+        "food_security",
+        "affordable_housing"
       ],
-      "classification_confidence": 0.044,
+      "classification_confidence": 0.067,
       "first_seen": "2026-06-01T20:43:04+00:00",
       "last_updated": "2026-06-01T20:43:04+00:00"
     },
@@ -21574,8 +21607,10 @@
       "last_action_date": "2026-02-05",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3447",
       "raw_subject": null,
-      "subjects": [],
-      "classification_confidence": 0.0,
+      "subjects": [
+        "affordable_housing"
+      ],
+      "classification_confidence": 0.05,
       "first_seen": "2026-06-01T20:41:04+00:00",
       "last_updated": "2026-06-01T20:41:04+00:00",
       "actions": [
@@ -25659,9 +25694,10 @@
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15714",
       "raw_subject": "Disaster Recovery, International Affairs, and Planning Committee (2025-2027)",
       "subjects": [
-        "transportation"
+        "transportation",
+        "affordable_housing"
       ],
-      "classification_confidence": 0.019,
+      "classification_confidence": 0.038,
       "first_seen": "2026-06-01T20:43:54+00:00",
       "last_updated": "2026-06-01T20:43:54+00:00",
       "actions": [
@@ -26076,8 +26112,10 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15710",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [],
-      "classification_confidence": 0.0,
+      "subjects": [
+        "affordable_housing"
+      ],
+      "classification_confidence": 0.061,
       "first_seen": "2026-06-01T20:43:59+00:00",
       "last_updated": "2026-06-01T20:43:59+00:00"
     },
@@ -29014,9 +29052,10 @@
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15629",
       "raw_subject": "Council of the County of Maui ",
       "subjects": [
-        "transportation"
+        "transportation",
+        "affordable_housing"
       ],
-      "classification_confidence": 0.016,
+      "classification_confidence": 0.031,
       "first_seen": "2026-06-01T20:44:30+00:00",
       "last_updated": "2026-06-01T20:44:30+00:00"
     },
@@ -31781,9 +31820,10 @@
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3306",
       "raw_subject": "Reclassifies certain lands in Haleʻiwa, Oahu from the State Land Use Agricultural District to the State Land Use Urban District, subject to certain conditions.",
       "subjects": [
-        "food_security"
+        "food_security",
+        "affordable_housing"
       ],
-      "classification_confidence": 0.017,
+      "classification_confidence": 0.034,
       "first_seen": "2026-06-01T20:41:04+00:00",
       "last_updated": "2026-06-01T20:41:04+00:00",
       "actions": [
@@ -33021,9 +33061,10 @@
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15525",
       "raw_subject": "Council of the County of Maui ",
       "subjects": [
-        "transportation"
+        "transportation",
+        "affordable_housing"
       ],
-      "classification_confidence": 0.019,
+      "classification_confidence": 0.038,
       "first_seen": "2026-06-01T20:44:59+00:00",
       "last_updated": "2026-06-01T20:44:59+00:00"
     },
@@ -36105,9 +36146,10 @@
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15458",
       "raw_subject": "Council of the County of Maui ",
       "subjects": [
-        "tax"
+        "tax",
+        "affordable_housing"
       ],
-      "classification_confidence": 0.03,
+      "classification_confidence": 0.061,
       "first_seen": "2026-06-01T20:45:24+00:00",
       "last_updated": "2026-06-01T20:45:24+00:00"
     },
@@ -40037,8 +40079,10 @@
       "last_action_date": "2026-01-22",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3201",
       "raw_subject": null,
-      "subjects": [],
-      "classification_confidence": 0.0,
+      "subjects": [
+        "affordable_housing"
+      ],
+      "classification_confidence": 0.053,
       "first_seen": "2026-06-01T20:41:04+00:00",
       "last_updated": "2026-06-01T20:41:04+00:00",
       "actions": [
@@ -40292,8 +40336,10 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15338",
       "raw_subject": "Water Authority, Social Services, and Parks Committee (2025-2027)",
-      "subjects": [],
-      "classification_confidence": 0.0,
+      "subjects": [
+        "affordable_housing"
+      ],
+      "classification_confidence": 0.053,
       "first_seen": "2026-06-01T20:46:03+00:00",
       "last_updated": "2026-06-01T20:46:03+00:00"
     },
@@ -43517,9 +43563,10 @@
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15275",
       "raw_subject": "Water and Infrastructure Committee (2023-2025)",
       "subjects": [
-        "food_security"
+        "food_security",
+        "affordable_housing"
       ],
-      "classification_confidence": 0.027,
+      "classification_confidence": 0.054,
       "first_seen": "2026-06-01T20:46:23+00:00",
       "last_updated": "2026-06-01T20:46:23+00:00",
       "actions": [
@@ -43848,9 +43895,10 @@
       "raw_subject": "Council of the County of Maui ",
       "subjects": [
         "tax",
-        "food_security"
+        "food_security",
+        "affordable_housing"
       ],
-      "classification_confidence": 0.047,
+      "classification_confidence": 0.07,
       "first_seen": "2026-06-01T20:46:28+00:00",
       "last_updated": "2026-06-01T20:46:28+00:00"
     },
@@ -45486,9 +45534,10 @@
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15186",
       "raw_subject": "Council of the County of Maui ",
       "subjects": [
-        "tax"
+        "tax",
+        "affordable_housing"
       ],
-      "classification_confidence": 0.03,
+      "classification_confidence": 0.061,
       "first_seen": "2026-06-01T20:46:48+00:00",
       "last_updated": "2026-06-01T20:46:48+00:00"
     },
@@ -48964,9 +49013,10 @@
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3105",
       "raw_subject": "Allows an owners’ association to apply for the automatic sprinkler system tax credit on behalf of eligible owners within the existing high-rise residential building. Applies to the tax years beginning July 1, 2026 and thereafter.",
       "subjects": [
-        "tax"
+        "tax",
+        "affordable_housing"
       ],
-      "classification_confidence": 0.025,
+      "classification_confidence": 0.05,
       "first_seen": "2026-06-01T20:41:03+00:00",
       "last_updated": "2026-06-01T20:41:03+00:00",
       "actions": [
@@ -51406,8 +51456,10 @@
       "last_action_date": "2025-01-29",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3076",
       "raw_subject": null,
-      "subjects": [],
-      "classification_confidence": 0.0,
+      "subjects": [
+        "affordable_housing"
+      ],
+      "classification_confidence": 0.074,
       "first_seen": "2026-06-01T20:41:04+00:00",
       "last_updated": "2026-06-01T20:41:04+00:00",
       "actions": [
@@ -51595,8 +51647,10 @@
       "last_action_date": "2025-01-29",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3073",
       "raw_subject": null,
-      "subjects": [],
-      "classification_confidence": 0.0,
+      "subjects": [
+        "affordable_housing"
+      ],
+      "classification_confidence": 0.053,
       "first_seen": "2026-06-01T20:41:04+00:00",
       "last_updated": "2026-06-01T20:41:04+00:00",
       "actions": [
@@ -52682,9 +52736,10 @@
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=14989",
       "raw_subject": "Council of the County of Maui ",
       "subjects": [
-        "tax"
+        "tax",
+        "affordable_housing"
       ],
-      "classification_confidence": 0.017,
+      "classification_confidence": 0.034,
       "first_seen": "2026-06-01T20:47:58+00:00",
       "last_updated": "2026-06-01T20:47:58+00:00"
     },
@@ -53477,9 +53532,10 @@
       "raw_subject": "Council of the County of Maui ",
       "subjects": [
         "tax",
-        "food_security"
+        "food_security",
+        "affordable_housing"
       ],
-      "classification_confidence": 0.041,
+      "classification_confidence": 0.061,
       "first_seen": "2026-06-01T20:48:07+00:00",
       "last_updated": "2026-06-01T20:48:07+00:00"
     },
@@ -53773,8 +53829,10 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=14944",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [],
-      "classification_confidence": 0.0,
+      "subjects": [
+        "affordable_housing"
+      ],
+      "classification_confidence": 0.023,
       "first_seen": "2026-06-01T20:48:12+00:00",
       "last_updated": "2026-06-01T20:48:12+00:00"
     },
@@ -53857,9 +53915,10 @@
       "raw_subject": "Council of the County of Maui ",
       "subjects": [
         "tax",
-        "food_security"
+        "food_security",
+        "affordable_housing"
       ],
-      "classification_confidence": 0.036,
+      "classification_confidence": 0.055,
       "first_seen": "2026-06-01T20:48:13+00:00",
       "last_updated": "2026-06-01T20:48:13+00:00"
     },
@@ -54149,9 +54208,10 @@
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3047",
       "raw_subject": "Establishes an empty homes tax as a supplemental real property tax on dwelling units that are vacant for a certain number of days each year and provides exemptions from the empty homes tax. Requires residential property owners to annually submit a property status declaration. Provides the Department of Budget and Fiscal Services with rulemaking authority. Establishes violations and penalties, including foreclosure of real properties having delinquent empty homes taxes and penalties for at least three consecutive years after notice.",
       "subjects": [
-        "tax"
+        "tax",
+        "affordable_housing"
       ],
-      "classification_confidence": 0.036,
+      "classification_confidence": 0.06,
       "first_seen": "2026-06-01T20:41:03+00:00",
       "last_updated": "2026-06-01T20:41:03+00:00",
       "actions": [
@@ -54361,9 +54421,10 @@
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3050",
       "raw_subject": "Establishes a real property tax exemption for real property whose assessed valuations exceed an unspecified percentage of the previous tax year’s assessed value and for which a homeowner’s exemption has been claimed for an unspecified number of years. Allows the real property tax exemption to continue to apply if the real property is inherited in sole ownership by a single family member who is eligible for the home exemption with respect to that real property, and the real property continues to be held in sole ownership. Effective upon the enactment of certain State legislation.",
       "subjects": [
-        "tax"
+        "tax",
+        "affordable_housing"
       ],
-      "classification_confidence": 0.04,
+      "classification_confidence": 0.051,
       "first_seen": "2026-06-01T20:41:03+00:00",
       "last_updated": "2026-06-01T20:41:03+00:00",
       "actions": [
@@ -55363,9 +55424,10 @@
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=14905",
       "raw_subject": "Disaster Recovery, International Affairs, and Planning Committee (2025-2027)",
       "subjects": [
-        "transportation"
+        "transportation",
+        "affordable_housing"
       ],
-      "classification_confidence": 0.023,
+      "classification_confidence": 0.047,
       "first_seen": "2026-06-01T20:48:20+00:00",
       "last_updated": "2026-06-01T20:48:20+00:00"
     },
@@ -55813,9 +55875,10 @@
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=14888",
       "raw_subject": "Council of the County of Maui ",
       "subjects": [
-        "transportation"
+        "transportation",
+        "affordable_housing"
       ],
-      "classification_confidence": 0.02,
+      "classification_confidence": 0.041,
       "first_seen": "2026-06-01T20:48:23+00:00",
       "last_updated": "2026-06-01T20:48:23+00:00"
     },

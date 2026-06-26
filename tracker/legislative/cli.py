@@ -54,6 +54,61 @@ def cmd_notify(args: argparse.Namespace) -> int:
     return 0 if ok else 1
 
 
+def cmd_reclassify(args: argparse.Namespace) -> int:
+    """Re-run the keyword classifier over bills already in the DB and update
+    their subject tags in place.
+
+    No network access — it only re-reads each bill's stored title + raw_subject,
+    so it's safe to run when the scraping sources are unavailable. Use after
+    editing the rules in classify.py to re-tag the existing inventory, then
+    rebuild site/bills.json.
+    """
+    from tracker.legislative.classify import classify
+    from tracker.legislative.db import connect, init_schema
+
+    total = changed = 0
+    gained: dict[str, int] = {}
+    examples: list[dict] = []
+    with connect(args.db) as conn:
+        init_schema(conn)
+        rows = conn.execute(
+            "SELECT id, council, bill_number, title, raw_subject, subjects FROM bills"
+        ).fetchall()
+        for r in rows:
+            total += 1
+            old = set(json.loads(r["subjects"] or "[]"))
+            cls = classify(r["title"], r["raw_subject"])
+            new = set(cls.subjects)
+            if new == old:
+                continue
+            changed += 1
+            for s in new - old:
+                gained[s] = gained.get(s, 0) + 1
+            if (new - old) and len(examples) < args.show:
+                examples.append({
+                    "council": r["council"],
+                    "bill": r["bill_number"],
+                    "added": sorted(new - old),
+                    "removed": sorted(old - new),
+                    "title": (r["title"] or "")[:90],
+                })
+            if not args.dry_run:
+                conn.execute(
+                    "UPDATE bills SET subjects = ?, classification_confidence = ? "
+                    "WHERE id = ?",
+                    (json.dumps(cls.subjects), cls.confidence, r["id"]),
+                )
+    print(json.dumps({
+        "db": str(args.db),
+        "dry_run": args.dry_run,
+        "bills": total,
+        "changed": changed,
+        "newly_tagged_by_subject": gained,
+        "examples": examples,
+    }, indent=2, ensure_ascii=False))
+    return 0
+
+
 def cmd_dump_agendas(args: argparse.Namespace) -> int:
     """Save raw agenda text from the Granicus councils (kauai, hawaii) as test
     fixtures, so title-parsing rules can be checked against real documents."""
@@ -111,6 +166,14 @@ def main(argv: list[str] | None = None) -> int:
     np.add_argument("--webhook", help="Slack webhook URL (or SLACK_WEBHOOK_URL env)")
     np.add_argument("--dry-run", action="store_true")
     np.set_defaults(fn=cmd_notify)
+
+    rp = sub.add_parser(
+        "reclassify",
+        help="re-tag stored bills with the current keyword rules (no network)",
+    )
+    rp.add_argument("--dry-run", action="store_true", help="report changes without writing")
+    rp.add_argument("--show", type=int, default=20, help="number of example changes to print")
+    rp.set_defaults(fn=cmd_reclassify)
 
     da = sub.add_parser(
         "dump-agendas", help="save raw Granicus agenda text as test fixtures"
