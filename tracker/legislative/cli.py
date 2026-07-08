@@ -32,6 +32,7 @@ def cmd_scrape(args: argparse.Namespace) -> int:
                 db_path=args.db,
                 since=_parse_date(args.since),
                 force_actions=args.refetch_actions,
+                refetch_agendas=args.refetch_agendas,
             )
         ]
     print(json.dumps(results, indent=2))
@@ -151,6 +152,12 @@ def main(argv: list[str] | None = None) -> int:
         action="store_true",
         help="fetch action history for every bill, not just new/updated "
         "(heavier one-time backfill; single-council only)",
+    )
+    sp.add_argument(
+        "--refetch-agendas",
+        action="store_true",
+        help="re-fetch Granicus agendas already in the cache (use after "
+        "changing agenda-parsing rules; single-council only)",
     )
     sp.set_defaults(fn=cmd_scrape)
 

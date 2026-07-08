@@ -78,8 +78,10 @@ def _iso_from_mdy(s: str) -> str | None:
 class HawaiiCountyAdapter(CouncilAdapter):
     council_id = "hawaii"
 
-    def __init__(self, term_year: int | None = None):
+    def __init__(self, term_year: int | None = None, agenda_store=None):
         self.term_year = term_year or date.today().year
+        # Passed through to the Granicus agenda scrape (see granicus.py).
+        self.agenda_store = agenda_store
         self._s: requests.Session | None = None
 
     # ---- HTTP --------------------------------------------------------------
@@ -240,7 +242,7 @@ class HawaiiCountyAdapter(CouncilAdapter):
     def _active_from_granicus(self, since: date | None) -> dict[str, BillRecord]:
         active: dict[str, BillRecord] = {}
         try:
-            gran = GranicusAdapter.for_council("hawaii")
+            gran = GranicusAdapter.for_council("hawaii", agenda_store=self.agenda_store)
             for b in gran.fetch_bills(since=since):
                 active[b.bill_number] = b
         except Exception as e:
