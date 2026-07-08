@@ -76,7 +76,7 @@ def scrape_council(
         try:
             for bill in adapter.fetch_bills(since=since):
                 seen += 1
-                cls = classify(bill.title, bill.raw_subject)
+                cls = classify(bill.title, bill.raw_subject, bill.bill_type)
                 bill_id, is_new, was_updated = upsert_bill(
                     conn, bill, cls.subjects, cls.confidence
                 )

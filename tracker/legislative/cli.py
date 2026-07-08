@@ -72,12 +72,13 @@ def cmd_reclassify(args: argparse.Namespace) -> int:
     with connect(args.db) as conn:
         init_schema(conn)
         rows = conn.execute(
-            "SELECT id, council, bill_number, title, raw_subject, subjects FROM bills"
+            "SELECT id, council, bill_number, title, bill_type, raw_subject, subjects "
+            "FROM bills"
         ).fetchall()
         for r in rows:
             total += 1
             old = set(json.loads(r["subjects"] or "[]"))
-            cls = classify(r["title"], r["raw_subject"])
+            cls = classify(r["title"], r["raw_subject"], r["bill_type"])
             new = set(cls.subjects)
             if new == old:
                 continue
