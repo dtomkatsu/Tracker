@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-26T07:58:23+00:00",
+  "generated_at": "2026-07-08T05:29:10+00:00",
   "last_scrape": {
     "id": 92,
     "started_at": "2026-06-19T16:16:40+00:00",
@@ -315,8 +315,10 @@
       "last_action_date": "2026-06-09",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3761",
       "raw_subject": null,
-      "subjects": [],
-      "classification_confidence": 0.0,
+      "subjects": [
+        "affordable_housing"
+      ],
+      "classification_confidence": 0.1,
       "first_seen": "2026-06-12T16:15:03+00:00",
       "last_updated": "2026-06-12T16:15:03+00:00",
       "actions": [
@@ -498,10 +500,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16321",
       "raw_subject": "Housing and Land Use Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.071,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-12T16:15:06+00:00",
       "last_updated": "2026-06-12T16:15:06+00:00"
     },
@@ -519,10 +519,9 @@
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16323",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
       "subjects": [
-        "tax",
-        "affordable_housing"
+        "tax"
       ],
-      "classification_confidence": 0.071,
+      "classification_confidence": 0.048,
       "first_seen": "2026-06-12T16:15:06+00:00",
       "last_updated": "2026-06-12T16:15:06+00:00"
     },
@@ -1538,10 +1537,8 @@
       "last_action_date": "2026-06-17",
       "url": "https://records.hawaiicounty.gov/WebLink/DocView.aspx?id=1131512&dbid=0",
       "raw_subject": "Establishes a County Disaster Recovery Program to coordinate short- and long-term recovery efforts following major disasters, led by a recovery officer appointed by the mayor with the responsibility for recovery planning, interagency coordination, community engagement, funding management, and the development of interim and long-term recovery and resilience plans.",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.015,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-05-30T20:41:50+00:00",
       "last_updated": "2026-06-19T16:16:25+00:00",
       "actions": [
@@ -2194,10 +2191,8 @@
       "last_action_date": "2026-05-18",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3746",
       "raw_subject": null,
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.071,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
       "last_updated": "2026-05-30T07:33:27+00:00",
       "actions": [
@@ -2312,10 +2307,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16313",
       "raw_subject": "Water Authority, Social Services, and Parks Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.056,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:28:23+00:00",
       "last_updated": "2026-05-30T07:28:23+00:00"
     },
@@ -2467,10 +2460,8 @@
       "last_action_date": "2026-06-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3742",
       "raw_subject": null,
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.062,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
       "last_updated": "2026-06-05T16:15:05+00:00",
       "actions": [
@@ -2504,10 +2495,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16314",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.042,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-05T16:15:07+00:00",
       "last_updated": "2026-06-05T16:15:07+00:00"
     },
@@ -3352,10 +3341,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16300",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.026,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:28:26+00:00",
       "last_updated": "2026-05-30T07:28:26+00:00"
     },
@@ -3449,10 +3436,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16298",
       "raw_subject": "Housing and Land Use Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.043,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:50:24+00:00",
       "last_updated": "2026-05-30T07:50:24+00:00"
     },
@@ -3504,11 +3489,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16296",
       "raw_subject": "Water and Infrastructure Committee (2025-2027)",
-      "subjects": [
-        "tax",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.111,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:50:24+00:00",
       "last_updated": "2026-05-30T07:50:24+00:00"
     },
@@ -3952,10 +3934,8 @@
       "last_action_date": "2026-05-13",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3705",
       "raw_subject": null,
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.071,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
       "last_updated": "2026-05-30T07:33:27+00:00",
       "actions": [
@@ -4266,10 +4246,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16286",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.038,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:50:26+00:00",
       "last_updated": "2026-05-30T07:50:26+00:00"
     },
@@ -4286,10 +4264,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16287",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.048,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:50:27+00:00",
       "last_updated": "2026-05-30T07:50:27+00:00"
     },
@@ -4306,10 +4282,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16288",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.042,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-05T16:15:08+00:00",
       "last_updated": "2026-06-05T16:15:08+00:00"
     },
@@ -5740,10 +5714,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16278",
       "raw_subject": "Housing and Land Use Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.071,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:50:29+00:00",
       "last_updated": "2026-05-30T07:50:29+00:00"
     },
@@ -5823,10 +5795,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16277",
       "raw_subject": "Kōmike Aloha ʻĀina (2025-2027)",
-      "subjects": [
-        "food_security"
-      ],
-      "classification_confidence": 0.111,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:50:30+00:00",
       "last_updated": "2026-05-30T07:50:30+00:00"
     },
@@ -6030,10 +6000,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16275",
       "raw_subject": "Housing and Land Use Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.062,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:50:30+00:00",
       "last_updated": "2026-05-30T07:50:30+00:00"
     },
@@ -6050,10 +6018,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16276",
       "raw_subject": "Housing and Land Use Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.062,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:50:31+00:00",
       "last_updated": "2026-05-30T07:50:31+00:00"
     },
@@ -7159,10 +7125,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16268",
       "raw_subject": "Disaster Recovery, International Affairs, and Planning Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.067,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:50:34+00:00",
       "last_updated": "2026-05-30T07:50:34+00:00"
     },
@@ -7291,10 +7255,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16264",
       "raw_subject": "Special Committee on Real Property Tax Reform",
-      "subjects": [
-        "tax"
-      ],
-      "classification_confidence": 0.136,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:50:34+00:00",
       "last_updated": "2026-05-30T07:50:34+00:00"
     },
@@ -7311,10 +7273,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16265",
       "raw_subject": "Special Committee on Real Property Tax Reform",
-      "subjects": [
-        "tax"
-      ],
-      "classification_confidence": 0.214,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:50:35+00:00",
       "last_updated": "2026-05-30T07:50:35+00:00"
     },
@@ -7331,10 +7291,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16266",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.028,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:50:35+00:00",
       "last_updated": "2026-05-30T07:50:35+00:00"
     },
@@ -7351,11 +7309,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16258",
       "raw_subject": "Special Committee on Real Property Tax Reform",
-      "subjects": [
-        "tax",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.16,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:50:36+00:00",
       "last_updated": "2026-05-30T07:50:36+00:00"
     },
@@ -7372,10 +7327,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16259",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.059,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:50:36+00:00",
       "last_updated": "2026-05-30T07:50:36+00:00"
     },
@@ -7392,10 +7345,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16260",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.115,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:50:37+00:00",
       "last_updated": "2026-05-30T07:50:37+00:00"
     },
@@ -7448,10 +7399,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16255",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.056,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:50:38+00:00",
       "last_updated": "2026-05-30T07:50:38+00:00"
     },
@@ -7469,10 +7418,9 @@
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16256",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
       "subjects": [
-        "tax",
-        "affordable_housing"
+        "tax"
       ],
-      "classification_confidence": 0.075,
+      "classification_confidence": 0.061,
       "first_seen": "2026-05-30T07:50:39+00:00",
       "last_updated": "2026-05-30T07:50:39+00:00"
     },
@@ -7591,10 +7539,9 @@
       "raw_subject": "Housing and Land Use Committee (2025-2027)",
       "subjects": [
         "tax",
-        "food_security",
-        "affordable_housing"
+        "food_security"
       ],
-      "classification_confidence": 0.071,
+      "classification_confidence": 0.056,
       "first_seen": "2026-05-30T07:50:39+00:00",
       "last_updated": "2026-05-30T07:50:39+00:00"
     },
@@ -8578,8 +8525,10 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16237",
       "raw_subject": "Water and Infrastructure Committee (2025-2027)",
-      "subjects": [],
-      "classification_confidence": 0.0,
+      "subjects": [
+        "transportation"
+      ],
+      "classification_confidence": 0.125,
       "first_seen": "2026-06-01T20:41:12+00:00",
       "last_updated": "2026-06-01T20:41:12+00:00"
     },
@@ -8597,10 +8546,9 @@
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16238",
       "raw_subject": "Agriculture, Diversification, Environment, & Public Transportation Committee",
       "subjects": [
-        "transportation",
-        "food_security"
+        "transportation"
       ],
-      "classification_confidence": 0.2,
+      "classification_confidence": 0.25,
       "first_seen": "2026-06-01T20:41:13+00:00",
       "last_updated": "2026-06-01T20:41:13+00:00"
     },
@@ -8988,10 +8936,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16234",
       "raw_subject": "Agriculture, Diversification, Environment, & Public Transportation Committee",
-      "subjects": [
-        "food_security"
-      ],
-      "classification_confidence": 0.05,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:13+00:00",
       "last_updated": "2026-06-01T20:41:13+00:00"
     },
@@ -9233,8 +9179,10 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16223",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [],
-      "classification_confidence": 0.0,
+      "subjects": [
+        "transportation"
+      ],
+      "classification_confidence": 0.05,
       "first_seen": "2026-06-01T20:41:17+00:00",
       "last_updated": "2026-06-01T20:41:17+00:00"
     },
@@ -9776,10 +9724,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16213",
       "raw_subject": "Disaster Recovery, International Affairs, and Planning Committee (2025-2027)",
-      "subjects": [
-        "transportation"
-      ],
-      "classification_confidence": 0.083,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:19+00:00",
       "last_updated": "2026-06-01T20:41:19+00:00"
     },
@@ -10161,10 +10107,9 @@
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16200",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
       "subjects": [
-        "tax",
-        "affordable_housing"
+        "tax"
       ],
-      "classification_confidence": 0.048,
+      "classification_confidence": 0.036,
       "first_seen": "2026-06-01T20:41:24+00:00",
       "last_updated": "2026-06-01T20:41:24+00:00"
     },
@@ -10181,10 +10126,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16201",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.028,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:24+00:00",
       "last_updated": "2026-06-01T20:41:24+00:00"
     },
@@ -10201,10 +10144,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16202",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.032,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:25+00:00",
       "last_updated": "2026-06-01T20:41:25+00:00"
     },
@@ -10345,10 +10286,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16197",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.062,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:25+00:00",
       "last_updated": "2026-06-01T20:41:25+00:00"
     },
@@ -10365,10 +10304,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16198",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.042,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:26+00:00",
       "last_updated": "2026-06-01T20:41:26+00:00"
     },
@@ -10650,10 +10587,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16181",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.024,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:27+00:00",
       "last_updated": "2026-06-01T20:41:27+00:00"
     },
@@ -10670,10 +10605,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16182",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.024,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:28+00:00",
       "last_updated": "2026-06-01T20:41:28+00:00"
     },
@@ -10768,10 +10701,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16187",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.021,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:30+00:00",
       "last_updated": "2026-06-01T20:41:30+00:00"
     },
@@ -10824,10 +10755,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16190",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.062,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:31+00:00",
       "last_updated": "2026-06-01T20:41:31+00:00"
     },
@@ -10940,11 +10869,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16172",
       "raw_subject": "Special Committee on Real Property Tax Reform",
-      "subjects": [
-        "tax",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.125,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:33+00:00",
       "last_updated": "2026-06-01T20:41:33+00:00",
       "actions": [
@@ -10968,11 +10894,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16173",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "transportation",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.056,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:33+00:00",
       "last_updated": "2026-06-01T20:41:33+00:00",
       "actions": [
@@ -10996,10 +10919,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16174",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.006,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:34+00:00",
       "last_updated": "2026-06-01T20:41:34+00:00",
       "actions": [
@@ -11494,10 +11415,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16158",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.026,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:40+00:00",
       "last_updated": "2026-06-01T20:41:40+00:00"
     },
@@ -11568,10 +11487,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16162",
       "raw_subject": "Water Authority, Social Services, and Parks Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.059,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:41+00:00",
       "last_updated": "2026-06-01T20:41:41+00:00"
     },
@@ -11979,8 +11896,10 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16128",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [],
-      "classification_confidence": 0.0,
+      "subjects": [
+        "tax"
+      ],
+      "classification_confidence": 0.045,
       "first_seen": "2026-06-01T20:41:47+00:00",
       "last_updated": "2026-06-01T20:41:47+00:00"
     },
@@ -12133,10 +12052,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16112",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.029,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:50+00:00",
       "last_updated": "2026-06-01T20:41:50+00:00"
     },
@@ -12153,10 +12070,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16113",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.036,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:50+00:00",
       "last_updated": "2026-06-01T20:41:50+00:00"
     },
@@ -12321,10 +12236,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16110",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.018,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:54+00:00",
       "last_updated": "2026-06-01T20:41:54+00:00"
     },
@@ -12341,10 +12254,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16111",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.029,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:54+00:00",
       "last_updated": "2026-06-01T20:41:54+00:00"
     },
@@ -12606,10 +12517,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16104",
       "raw_subject": "Special Committee on Real Property Tax Reform",
-      "subjects": [
-        "tax"
-      ],
-      "classification_confidence": 0.053,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:55+00:00",
       "last_updated": "2026-06-01T20:41:55+00:00",
       "actions": [
@@ -12633,10 +12542,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16105",
       "raw_subject": "Special Committee on Real Property Tax Reform",
-      "subjects": [
-        "tax"
-      ],
-      "classification_confidence": 0.047,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:55+00:00",
       "last_updated": "2026-06-01T20:41:55+00:00",
       "actions": [
@@ -12660,11 +12567,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16106",
       "raw_subject": "Special Committee on Real Property Tax Reform",
-      "subjects": [
-        "tax",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.085,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:55+00:00",
       "last_updated": "2026-06-01T20:41:55+00:00",
       "actions": [
@@ -13056,10 +12960,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16089",
       "raw_subject": "Housing and Land Use Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.021,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:59+00:00",
       "last_updated": "2026-06-01T20:41:59+00:00",
       "actions": [
@@ -13131,10 +13033,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16086",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.02,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:59+00:00",
       "last_updated": "2026-06-01T20:41:59+00:00"
     },
@@ -13151,10 +13051,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16087",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.019,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:42:00+00:00",
       "last_updated": "2026-06-01T20:42:00+00:00"
     },
@@ -13208,10 +13106,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16032",
       "raw_subject": "Agriculture, Diversification, Environment, & Public Transportation Committee",
-      "subjects": [
-        "food_security"
-      ],
-      "classification_confidence": 0.077,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:42:00+00:00",
       "last_updated": "2026-06-01T20:42:00+00:00"
     },
@@ -13249,11 +13145,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16082",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "transportation",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.017,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:42:01+00:00",
       "last_updated": "2026-06-01T20:42:01+00:00",
       "actions": [
@@ -13277,10 +13170,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16083",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.056,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:42:01+00:00",
       "last_updated": "2026-06-01T20:42:01+00:00",
       "actions": [
@@ -13304,10 +13195,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16084",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.009,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:42:02+00:00",
       "last_updated": "2026-06-01T20:42:02+00:00",
       "actions": [
@@ -13403,10 +13292,8 @@
       "last_action_date": "2026-01-28",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3553",
       "raw_subject": null,
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.029,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:04+00:00",
       "last_updated": "2026-06-01T20:41:04+00:00",
       "actions": [
@@ -13440,10 +13327,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16080",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.024,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:42:02+00:00",
       "last_updated": "2026-06-01T20:42:02+00:00"
     },
@@ -13809,11 +13694,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16056",
       "raw_subject": "Water Authority, Social Services, and Parks Committee (2025-2027)",
-      "subjects": [
-        "tax",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.036,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:42:06+00:00",
       "last_updated": "2026-06-01T20:42:06+00:00",
       "actions": [
@@ -13857,10 +13739,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16058",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.013,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:42:07+00:00",
       "last_updated": "2026-06-01T20:42:07+00:00",
       "actions": [
@@ -13884,10 +13764,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16059",
       "raw_subject": "Special Committee on Real Property Tax Reform",
-      "subjects": [
-        "tax"
-      ],
-      "classification_confidence": 0.041,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:42:07+00:00",
       "last_updated": "2026-06-01T20:42:07+00:00",
       "actions": [
@@ -13911,12 +13789,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16060",
       "raw_subject": "Disaster Recovery, International Affairs, and Planning Committee (2025-2027)",
-      "subjects": [
-        "tax",
-        "transportation",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.091,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:42:08+00:00",
       "last_updated": "2026-06-01T20:42:08+00:00",
       "actions": [
@@ -14041,10 +13915,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16068",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.015,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:42:10+00:00",
       "last_updated": "2026-06-01T20:42:10+00:00"
     },
@@ -14377,10 +14249,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16055",
       "raw_subject": "Water and Infrastructure Committee (2025-2027)",
-      "subjects": [
-        "transportation"
-      ],
-      "classification_confidence": 0.017,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:42:11+00:00",
       "last_updated": "2026-06-01T20:42:11+00:00",
       "actions": [
@@ -14643,8 +14513,10 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16052",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [],
-      "classification_confidence": 0.0,
+      "subjects": [
+        "affordable_housing"
+      ],
+      "classification_confidence": 0.211,
       "first_seen": "2026-06-01T20:42:13+00:00",
       "last_updated": "2026-06-01T20:42:13+00:00"
     },
@@ -14804,10 +14676,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16036",
       "raw_subject": "Agriculture, Diversification, Environment, & Public Transportation Committee",
-      "subjects": [
-        "food_security"
-      ],
-      "classification_confidence": 0.056,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:42:16+00:00",
       "last_updated": "2026-06-01T20:42:16+00:00"
     },
@@ -15319,11 +15189,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16033",
       "raw_subject": "Disaster Recovery, International Affairs, and Planning Committee (2025-2027)",
-      "subjects": [
-        "transportation",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.04,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:42:17+00:00",
       "last_updated": "2026-06-01T20:42:17+00:00"
     },
@@ -15358,11 +15225,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16022",
       "raw_subject": "Kōmike Aloha ʻĀina (2025-2027)",
-      "subjects": [
-        "transportation",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.034,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:42:18+00:00",
       "last_updated": "2026-06-01T20:42:18+00:00",
       "actions": [
@@ -15404,12 +15268,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16024",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "tax",
-        "transportation",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.025,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:42:18+00:00",
       "last_updated": "2026-06-01T20:42:18+00:00",
       "actions": [
@@ -15433,11 +15293,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16025",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "food_security",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.016,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:42:19+00:00",
       "last_updated": "2026-06-01T20:42:19+00:00",
       "actions": [
@@ -15461,11 +15318,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16026",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "tax",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.013,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:42:19+00:00",
       "last_updated": "2026-06-01T20:42:19+00:00",
       "actions": [
@@ -15749,10 +15603,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16017",
       "raw_subject": "Water and Infrastructure Committee (2025-2027)",
-      "subjects": [
-        "transportation"
-      ],
-      "classification_confidence": 0.043,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:42:22+00:00",
       "last_updated": "2026-06-01T20:42:22+00:00",
       "actions": [
@@ -15801,10 +15653,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16013",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.048,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:42:23+00:00",
       "last_updated": "2026-06-01T20:42:23+00:00"
     },
@@ -15877,10 +15727,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16003",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.03,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:42:25+00:00",
       "last_updated": "2026-06-01T20:42:25+00:00"
     },
@@ -16363,10 +16211,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15988",
       "raw_subject": "Housing and Land Use Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.022,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:42:29+00:00",
       "last_updated": "2026-06-01T20:42:29+00:00",
       "actions": [
@@ -16409,10 +16255,9 @@
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15972",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
       "subjects": [
-        "tax",
-        "affordable_housing"
+        "tax"
       ],
-      "classification_confidence": 0.179,
+      "classification_confidence": 0.19,
       "first_seen": "2026-06-01T20:42:30+00:00",
       "last_updated": "2026-06-01T20:42:30+00:00"
     },
@@ -16451,10 +16296,9 @@
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15975",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
       "subjects": [
-        "tax",
-        "affordable_housing"
+        "tax"
       ],
-      "classification_confidence": 0.118,
+      "classification_confidence": 0.1,
       "first_seen": "2026-06-01T20:42:31+00:00",
       "last_updated": "2026-06-01T20:42:31+00:00"
     },
@@ -16583,10 +16427,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15982",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.031,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:42:33+00:00",
       "last_updated": "2026-06-01T20:42:33+00:00"
     },
@@ -16641,10 +16483,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15985",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.029,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:42:34+00:00",
       "last_updated": "2026-06-01T20:42:34+00:00"
     },
@@ -16722,10 +16562,9 @@
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15971",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
       "subjects": [
-        "tax",
-        "affordable_housing"
+        "tax"
       ],
-      "classification_confidence": 0.222,
+      "classification_confidence": 0.273,
       "first_seen": "2026-06-01T20:42:36+00:00",
       "last_updated": "2026-06-01T20:42:36+00:00"
     },
@@ -17043,12 +16882,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15933",
       "raw_subject": "Housing and Land Use Committee (2025-2027)",
-      "subjects": [
-        "tax",
-        "food_security",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.125,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:42:41+00:00",
       "last_updated": "2026-06-01T20:42:41+00:00",
       "actions": [
@@ -17073,10 +16908,9 @@
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15946",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
       "subjects": [
-        "transportation",
-        "affordable_housing"
+        "transportation"
       ],
-      "classification_confidence": 0.08,
+      "classification_confidence": 0.056,
       "first_seen": "2026-06-01T20:42:42+00:00",
       "last_updated": "2026-06-01T20:42:42+00:00"
     },
@@ -17306,10 +17140,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15945",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.032,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:42:42+00:00",
       "last_updated": "2026-06-01T20:42:42+00:00"
     },
@@ -17848,10 +17680,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15898",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.023,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:42:44+00:00",
       "last_updated": "2026-06-01T20:42:44+00:00"
     },
@@ -17868,10 +17698,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15927",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.024,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:42:44+00:00",
       "last_updated": "2026-06-01T20:42:44+00:00",
       "actions": [
@@ -17895,11 +17723,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15928",
       "raw_subject": "Housing and Land Use Committee (2025-2027)",
-      "subjects": [
-        "transportation",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.077,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:42:44+00:00",
       "last_updated": "2026-06-01T20:42:44+00:00",
       "actions": [
@@ -17923,10 +17748,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15929",
       "raw_subject": "Disaster Recovery, International Affairs, and Planning Committee (2025-2027)",
-      "subjects": [
-        "transportation"
-      ],
-      "classification_confidence": 0.049,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:42:45+00:00",
       "last_updated": "2026-06-01T20:42:45+00:00",
       "actions": [
@@ -17950,11 +17773,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15930",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "tax",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.035,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:42:45+00:00",
       "last_updated": "2026-06-01T20:42:45+00:00",
       "actions": [
@@ -17978,10 +17798,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15931",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.008,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:42:46+00:00",
       "last_updated": "2026-06-01T20:42:46+00:00",
       "actions": [
@@ -18048,10 +17866,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15935",
       "raw_subject": "Special Committee on Real Property Tax Reform",
-      "subjects": [
-        "tax"
-      ],
-      "classification_confidence": 0.062,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:42:47+00:00",
       "last_updated": "2026-06-01T20:42:47+00:00",
       "actions": [
@@ -18093,11 +17909,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15937",
       "raw_subject": "Special Committee on Real Property Tax Reform",
-      "subjects": [
-        "tax",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.082,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:42:48+00:00",
       "last_updated": "2026-06-01T20:42:48+00:00",
       "actions": [
@@ -18121,10 +17934,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15938",
       "raw_subject": "Special Committee on Real Property Tax Reform",
-      "subjects": [
-        "tax"
-      ],
-      "classification_confidence": 0.06,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:42:48+00:00",
       "last_updated": "2026-06-01T20:42:48+00:00",
       "actions": [
@@ -18587,10 +18398,8 @@
       "last_action_date": "2025-11-05",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3487",
       "raw_subject": null,
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.024,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:04+00:00",
       "last_updated": "2026-06-01T20:41:04+00:00",
       "actions": [
@@ -18755,11 +18564,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15919",
       "raw_subject": "Disaster Recovery, International Affairs, and Planning Committee (2025-2027)",
-      "subjects": [
-        "transportation",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.057,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:42:55+00:00",
       "last_updated": "2026-06-01T20:42:55+00:00"
     },
@@ -19066,10 +18872,9 @@
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15908",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
       "subjects": [
-        "food_security",
-        "affordable_housing"
+        "food_security"
       ],
-      "classification_confidence": 0.061,
+      "classification_confidence": 0.038,
       "first_seen": "2026-06-01T20:42:55+00:00",
       "last_updated": "2026-06-01T20:42:55+00:00"
     },
@@ -19124,10 +18929,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15901",
       "raw_subject": "Water Authority, Social Services, and Parks Committee (2025-2027)",
-      "subjects": [
-        "tax"
-      ],
-      "classification_confidence": 0.059,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:42:57+00:00",
       "last_updated": "2026-06-01T20:42:57+00:00"
     },
@@ -19144,10 +18947,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15902",
       "raw_subject": "Agriculture, Diversification, Environment, & Public Transportation Committee",
-      "subjects": [
-        "food_security"
-      ],
-      "classification_confidence": 0.071,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:42:57+00:00",
       "last_updated": "2026-06-01T20:42:57+00:00"
     },
@@ -19312,10 +19113,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15891",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.023,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:42:58+00:00",
       "last_updated": "2026-06-01T20:42:58+00:00"
     },
@@ -19372,10 +19171,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15894",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.01,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:42:59+00:00",
       "last_updated": "2026-06-01T20:42:59+00:00",
       "actions": [
@@ -19435,10 +19232,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15886",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "transportation"
-      ],
-      "classification_confidence": 0.019,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:43:00+00:00",
       "last_updated": "2026-06-01T20:43:00+00:00"
     },
@@ -19473,10 +19268,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15888",
       "raw_subject": "Housing and Land Use Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.028,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:43:01+00:00",
       "last_updated": "2026-06-01T20:43:01+00:00",
       "actions": [
@@ -19501,10 +19294,9 @@
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3471",
       "raw_subject": "For properties located in the Central Kakaako industrial zone claiming the Central Kakaako industrial zone limited development real property tax exemption, increases the maximum floor area ratio recertification threshold from 1.5 to 3.5 for properties with inadequate infrastructure, as determined and certified by the Hawaii Community Development Authority. Effective retroactively to January 1, 2025.",
       "subjects": [
-        "tax",
-        "affordable_housing"
+        "tax"
       ],
-      "classification_confidence": 0.085,
+      "classification_confidence": 0.068,
       "first_seen": "2026-06-01T20:41:04+00:00",
       "last_updated": "2026-06-01T20:41:04+00:00",
       "actions": [
@@ -20410,10 +20202,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15862",
       "raw_subject": "Water and Infrastructure Committee (2025-2027)",
-      "subjects": [
-        "transportation"
-      ],
-      "classification_confidence": 0.013,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:43:07+00:00",
       "last_updated": "2026-06-01T20:43:07+00:00",
       "actions": [
@@ -20437,12 +20227,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15863",
       "raw_subject": "Water Authority, Social Services, and Parks Committee (2025-2027)",
-      "subjects": [
-        "tax",
-        "transportation",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.085,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:43:08+00:00",
       "last_updated": "2026-06-01T20:43:08+00:00",
       "actions": [
@@ -20466,10 +20252,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15864",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.015,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:43:08+00:00",
       "last_updated": "2026-06-01T20:43:08+00:00",
       "actions": [
@@ -20605,10 +20389,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15850",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.037,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:43:11+00:00",
       "last_updated": "2026-06-01T20:43:11+00:00"
     },
@@ -20625,10 +20407,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15851",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.03,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:43:11+00:00",
       "last_updated": "2026-06-01T20:43:11+00:00"
     },
@@ -20646,10 +20426,9 @@
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15853",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
       "subjects": [
-        "transportation",
-        "affordable_housing"
+        "transportation"
       ],
-      "classification_confidence": 0.039,
+      "classification_confidence": 0.023,
       "first_seen": "2026-06-01T20:43:11+00:00",
       "last_updated": "2026-06-01T20:43:11+00:00"
     },
@@ -20667,10 +20446,9 @@
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15854",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
       "subjects": [
-        "transportation",
-        "affordable_housing"
+        "transportation"
       ],
-      "classification_confidence": 0.067,
+      "classification_confidence": 0.043,
       "first_seen": "2026-06-01T20:43:12+00:00",
       "last_updated": "2026-06-01T20:43:12+00:00"
     },
@@ -20854,10 +20632,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15843",
       "raw_subject": "Housing and Land Use Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.047,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:43:14+00:00",
       "last_updated": "2026-06-01T20:43:14+00:00"
     },
@@ -21146,10 +20922,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15833",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.077,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:43:15+00:00",
       "last_updated": "2026-06-01T20:43:15+00:00"
     },
@@ -21476,10 +21250,8 @@
       "last_action_date": "2025-09-03",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3444",
       "raw_subject": "Requires an applicant for a special management area minor permit to present the subject project to the neighborhood board of the district where the project is located or, if no such neighborhood board exists, then an appropriate community association. Requires the applicant provide written notice of the presentation to owners of all properties adjoining the proposed development. Provides that the presentation requirement will be deemed satisfied if, upon written request of the applicant to present, the neighborhood board or community association fails to provide the applicant with an opportunity to present within 60 days of a written request, or the neighborhood board or community association provides the applicant with written notice that it has no objection to the proposed development.",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.008,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:04+00:00",
       "last_updated": "2026-06-01T20:41:04+00:00",
       "actions": [
@@ -21573,10 +21345,8 @@
       "last_action_date": "2025-08-06",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3446",
       "raw_subject": null,
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.04,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:04+00:00",
       "last_updated": "2026-06-01T20:41:04+00:00",
       "actions": [
@@ -22708,10 +22478,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15798",
       "raw_subject": "Special Committee on Real Property Tax Reform",
-      "subjects": [
-        "tax"
-      ],
-      "classification_confidence": 0.167,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:43:28+00:00",
       "last_updated": "2026-06-01T20:43:28+00:00"
     },
@@ -22802,10 +22570,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15793",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.04,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:43:30+00:00",
       "last_updated": "2026-06-01T20:43:30+00:00"
     },
@@ -22822,10 +22588,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15794",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.037,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:43:31+00:00",
       "last_updated": "2026-06-01T20:43:31+00:00"
     },
@@ -22842,10 +22606,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15785",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.083,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:43:31+00:00",
       "last_updated": "2026-06-01T20:43:31+00:00"
     },
@@ -22862,10 +22624,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15787",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.071,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:43:32+00:00",
       "last_updated": "2026-06-01T20:43:32+00:00"
     },
@@ -22882,10 +22642,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15788",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.083,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:43:32+00:00",
       "last_updated": "2026-06-01T20:43:32+00:00"
     },
@@ -23214,10 +22972,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15784",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.036,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:43:33+00:00",
       "last_updated": "2026-06-01T20:43:33+00:00"
     },
@@ -23349,11 +23105,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15780",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "food_security",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.05,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:43:34+00:00",
       "last_updated": "2026-06-01T20:43:34+00:00"
     },
@@ -23431,10 +23184,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15767",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.018,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:43:36+00:00",
       "last_updated": "2026-06-01T20:43:36+00:00"
     },
@@ -24159,10 +23910,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15752",
       "raw_subject": "Agriculture, Diversification, Environment, & Public Transportation Committee",
-      "subjects": [
-        "food_security"
-      ],
-      "classification_confidence": 0.091,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:43:43+00:00",
       "last_updated": "2026-06-01T20:43:43+00:00"
     },
@@ -24179,10 +23928,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15753",
       "raw_subject": "Agriculture, Diversification, Environment, & Public Transportation Committee",
-      "subjects": [
-        "food_security"
-      ],
-      "classification_confidence": 0.091,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:43:43+00:00",
       "last_updated": "2026-06-01T20:43:43+00:00"
     },
@@ -24237,10 +23984,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15756",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.023,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:43:44+00:00",
       "last_updated": "2026-06-01T20:43:44+00:00"
     },
@@ -24327,10 +24072,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15751",
       "raw_subject": "Government Relations, Ethics, and Transparency Committee (2025-2027)",
-      "subjects": [
-        "tax"
-      ],
-      "classification_confidence": 0.028,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:43:44+00:00",
       "last_updated": "2026-06-01T20:43:44+00:00"
     },
@@ -24495,10 +24238,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15743",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.022,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:43:45+00:00",
       "last_updated": "2026-06-01T20:43:45+00:00",
       "actions": [
@@ -24736,10 +24477,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15740",
       "raw_subject": "Water and Infrastructure Committee (2025-2027)",
-      "subjects": [
-        "tax"
-      ],
-      "classification_confidence": 0.067,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:43:47+00:00",
       "last_updated": "2026-06-01T20:43:47+00:00",
       "actions": [
@@ -24788,10 +24527,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15742",
       "raw_subject": "Disaster Recovery, International Affairs, and Planning Committee (2025-2027)",
-      "subjects": [
-        "transportation"
-      ],
-      "classification_confidence": 0.024,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:43:47+00:00",
       "last_updated": "2026-06-01T20:43:47+00:00",
       "actions": [
@@ -24833,10 +24570,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15745",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "tax"
-      ],
-      "classification_confidence": 0.043,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:43:48+00:00",
       "last_updated": "2026-06-01T20:43:48+00:00"
     },
@@ -24853,8 +24588,10 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15746",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [],
-      "classification_confidence": 0.0,
+      "subjects": [
+        "affordable_housing"
+      ],
+      "classification_confidence": 0.08,
       "first_seen": "2026-06-01T20:43:48+00:00",
       "last_updated": "2026-06-01T20:43:48+00:00"
     },
@@ -24919,11 +24656,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15734",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "food_security",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.045,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:43:49+00:00",
       "last_updated": "2026-06-01T20:43:49+00:00"
     },
@@ -24940,10 +24674,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15735",
       "raw_subject": "Agriculture, Diversification, Environment, & Public Transportation Committee",
-      "subjects": [
-        "food_security"
-      ],
-      "classification_confidence": 0.033,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:43:49+00:00",
       "last_updated": "2026-06-01T20:43:49+00:00",
       "actions": [
@@ -25024,10 +24756,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15732",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.045,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-05T16:15:10+00:00",
       "last_updated": "2026-06-05T16:15:10+00:00"
     },
@@ -25234,10 +24964,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15731",
       "raw_subject": "Agriculture, Diversification, Environment, & Public Transportation Committee",
-      "subjects": [
-        "food_security"
-      ],
-      "classification_confidence": 0.167,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:43:52+00:00",
       "last_updated": "2026-06-01T20:43:52+00:00"
     },
@@ -25680,11 +25408,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15714",
       "raw_subject": "Disaster Recovery, International Affairs, and Planning Committee (2025-2027)",
-      "subjects": [
-        "transportation",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.038,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:43:54+00:00",
       "last_updated": "2026-06-01T20:43:54+00:00",
       "actions": [
@@ -25733,10 +25458,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15716",
       "raw_subject": "Agriculture, Diversification, Environment, & Public Transportation Committee",
-      "subjects": [
-        "food_security"
-      ],
-      "classification_confidence": 0.051,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:43:54+00:00",
       "last_updated": "2026-06-01T20:43:54+00:00",
       "actions": [
@@ -26685,10 +26408,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15675",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.067,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:44:06+00:00",
       "last_updated": "2026-06-01T20:44:06+00:00"
     },
@@ -26705,10 +26426,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15677",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.071,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:44:07+00:00",
       "last_updated": "2026-06-01T20:44:07+00:00"
     },
@@ -26725,10 +26444,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15678",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.043,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:44:07+00:00",
       "last_updated": "2026-06-01T20:44:07+00:00"
     },
@@ -26745,10 +26462,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15679",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.077,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:44:07+00:00",
       "last_updated": "2026-06-01T20:44:07+00:00"
     },
@@ -26765,10 +26480,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15680",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.077,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:44:08+00:00",
       "last_updated": "2026-06-01T20:44:08+00:00"
     },
@@ -26823,10 +26536,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15674",
       "raw_subject": "Water Authority, Social Services, and Parks Committee (2025-2027)",
-      "subjects": [
-        "food_security"
-      ],
-      "classification_confidence": 0.056,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:44:09+00:00",
       "last_updated": "2026-06-01T20:44:09+00:00"
     },
@@ -27244,10 +26955,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15659",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.036,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:44:12+00:00",
       "last_updated": "2026-06-01T20:44:12+00:00",
       "actions": [
@@ -27271,11 +26980,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15660",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "tax",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.026,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:44:12+00:00",
       "last_updated": "2026-06-01T20:44:12+00:00",
       "actions": [
@@ -27299,11 +27005,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15661",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "transportation",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.01,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:44:13+00:00",
       "last_updated": "2026-06-01T20:44:13+00:00",
       "actions": [
@@ -28523,10 +28226,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15633",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.034,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:44:22+00:00",
       "last_updated": "2026-06-01T20:44:22+00:00"
     },
@@ -28720,10 +28421,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15630",
       "raw_subject": "Agriculture, Diversification, Environment, & Public Transportation Committee",
-      "subjects": [
-        "food_security"
-      ],
-      "classification_confidence": 0.1,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:44:24+00:00",
       "last_updated": "2026-06-01T20:44:24+00:00"
     },
@@ -28796,10 +28495,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15614",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.021,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:44:25+00:00",
       "last_updated": "2026-06-01T20:44:25+00:00"
     },
@@ -28929,12 +28626,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15623",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "tax",
-        "transportation",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.005,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:44:28+00:00",
       "last_updated": "2026-06-01T20:44:28+00:00",
       "actions": [
@@ -29012,10 +28705,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15628",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.025,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:44:29+00:00",
       "last_updated": "2026-06-01T20:44:29+00:00"
     },
@@ -29032,11 +28723,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15629",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "transportation",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.031,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:44:30+00:00",
       "last_updated": "2026-06-01T20:44:30+00:00"
     },
@@ -29230,10 +28918,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15609",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.077,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:44:31+00:00",
       "last_updated": "2026-06-01T20:44:31+00:00"
     },
@@ -29321,10 +29007,9 @@
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15600",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
       "subjects": [
-        "tax",
-        "affordable_housing"
+        "tax"
       ],
-      "classification_confidence": 0.061,
+      "classification_confidence": 0.038,
       "first_seen": "2026-06-01T20:44:31+00:00",
       "last_updated": "2026-06-01T20:44:31+00:00"
     },
@@ -29510,10 +29195,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15593",
       "raw_subject": "Water and Infrastructure Committee (2025-2027)",
-      "subjects": [
-        "transportation"
-      ],
-      "classification_confidence": 0.043,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:44:34+00:00",
       "last_updated": "2026-06-01T20:44:34+00:00"
     },
@@ -29567,10 +29250,9 @@
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15597",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
       "subjects": [
-        "transportation",
-        "affordable_housing"
+        "transportation"
       ],
-      "classification_confidence": 0.04,
+      "classification_confidence": 0.023,
       "first_seen": "2026-06-01T20:44:35+00:00",
       "last_updated": "2026-06-01T20:44:35+00:00"
     },
@@ -29842,10 +29524,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15591",
       "raw_subject": "Water Authority, Social Services, and Parks Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.056,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:44:36+00:00",
       "last_updated": "2026-06-01T20:44:36+00:00"
     },
@@ -30145,10 +29825,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15580",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.019,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:44:41+00:00",
       "last_updated": "2026-06-01T20:44:41+00:00"
     },
@@ -30203,10 +29881,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15583",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.023,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:44:42+00:00",
       "last_updated": "2026-06-01T20:44:42+00:00"
     },
@@ -30243,10 +29919,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15585",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.022,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:44:42+00:00",
       "last_updated": "2026-06-01T20:44:42+00:00"
     },
@@ -30303,10 +29977,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15588",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.022,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:44:44+00:00",
       "last_updated": "2026-06-01T20:44:44+00:00"
     },
@@ -31246,10 +30918,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15552",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.018,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:44:48+00:00",
       "last_updated": "2026-06-01T20:44:48+00:00"
     },
@@ -31619,10 +31289,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15546",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.047,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:44:51+00:00",
       "last_updated": "2026-06-01T20:44:51+00:00"
     },
@@ -31639,10 +31307,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15547",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.032,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:44:51+00:00",
       "last_updated": "2026-06-01T20:44:51+00:00",
       "actions": [
@@ -31760,10 +31426,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15535",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.037,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:44:54+00:00",
       "last_updated": "2026-06-01T20:44:54+00:00"
     },
@@ -31780,10 +31444,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15536",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.024,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:44:54+00:00",
       "last_updated": "2026-06-01T20:44:54+00:00"
     },
@@ -32597,11 +32259,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15528",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "tax",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.04,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:44:55+00:00",
       "last_updated": "2026-06-01T20:44:55+00:00",
       "actions": [
@@ -32981,10 +32640,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15522",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.012,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:44:58+00:00",
       "last_updated": "2026-06-01T20:44:58+00:00"
     },
@@ -33349,10 +33006,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15516",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.012,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:45:00+00:00",
       "last_updated": "2026-06-01T20:45:00+00:00"
     },
@@ -33517,10 +33172,8 @@
       "last_action_date": "2025-04-16",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3282",
       "raw_subject": null,
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.031,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:04+00:00",
       "last_updated": "2026-06-01T20:41:04+00:00",
       "actions": [
@@ -33554,10 +33207,8 @@
       "last_action_date": "2025-04-16",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3283",
       "raw_subject": null,
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.027,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:04+00:00",
       "last_updated": "2026-06-01T20:41:04+00:00",
       "actions": [
@@ -33649,10 +33300,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15503",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.015,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:45:03+00:00",
       "last_updated": "2026-06-01T20:45:03+00:00",
       "actions": [
@@ -33676,10 +33325,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15504",
       "raw_subject": "Water and Infrastructure Committee (2025-2027)",
-      "subjects": [
-        "tax"
-      ],
-      "classification_confidence": 0.015,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:45:03+00:00",
       "last_updated": "2026-06-01T20:45:03+00:00",
       "actions": [
@@ -33728,10 +33375,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15506",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.014,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:45:04+00:00",
       "last_updated": "2026-06-01T20:45:04+00:00",
       "actions": [
@@ -33755,10 +33400,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15507",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.017,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:45:04+00:00",
       "last_updated": "2026-06-01T20:45:04+00:00",
       "actions": [
@@ -33782,10 +33425,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15508",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.019,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:45:05+00:00",
       "last_updated": "2026-06-01T20:45:05+00:00",
       "actions": [
@@ -33809,11 +33450,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15509",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "tax",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.026,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:45:05+00:00",
       "last_updated": "2026-06-01T20:45:05+00:00",
       "actions": [
@@ -33837,10 +33475,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15510",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.014,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:45:06+00:00",
       "last_updated": "2026-06-01T20:45:06+00:00",
       "actions": [
@@ -33864,11 +33500,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15511",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "tax",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.027,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:45:06+00:00",
       "last_updated": "2026-06-01T20:45:06+00:00",
       "actions": [
@@ -34345,10 +33978,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15497",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.158,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:45:08+00:00",
       "last_updated": "2026-06-01T20:45:08+00:00"
     },
@@ -34365,10 +33996,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15498",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.231,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:45:09+00:00",
       "last_updated": "2026-06-01T20:45:09+00:00"
     },
@@ -34546,10 +34175,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15490",
       "raw_subject": "Disaster Recovery, International Affairs, and Planning Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.083,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:45:10+00:00",
       "last_updated": "2026-06-01T20:45:10+00:00"
     },
@@ -34585,10 +34212,9 @@
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15488",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
       "subjects": [
-        "tax",
-        "affordable_housing"
+        "tax"
       ],
-      "classification_confidence": 0.062,
+      "classification_confidence": 0.053,
       "first_seen": "2026-06-01T20:45:11+00:00",
       "last_updated": "2026-06-01T20:45:11+00:00"
     },
@@ -34725,10 +34351,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15481",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.077,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:45:12+00:00",
       "last_updated": "2026-06-01T20:45:12+00:00"
     },
@@ -34745,10 +34369,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15482",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.032,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:45:12+00:00",
       "last_updated": "2026-06-01T20:45:12+00:00"
     },
@@ -34785,10 +34407,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15484",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.029,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:45:13+00:00",
       "last_updated": "2026-06-01T20:45:13+00:00"
     },
@@ -34806,10 +34426,9 @@
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15485",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
       "subjects": [
-        "tax",
-        "affordable_housing"
+        "tax"
       ],
-      "classification_confidence": 0.088,
+      "classification_confidence": 0.074,
       "first_seen": "2026-06-01T20:45:13+00:00",
       "last_updated": "2026-06-01T20:45:13+00:00"
     },
@@ -34826,10 +34445,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15486",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.037,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:45:14+00:00",
       "last_updated": "2026-06-01T20:45:14+00:00"
     },
@@ -34846,10 +34463,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15487",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.056,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:45:14+00:00",
       "last_updated": "2026-06-01T20:45:14+00:00"
     },
@@ -35619,10 +35234,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15469",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.034,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:45:16+00:00",
       "last_updated": "2026-06-01T20:45:16+00:00",
       "actions": [
@@ -35746,10 +35359,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15474",
       "raw_subject": "Disaster Recovery, International Affairs, and Planning Committee (2025-2027)",
-      "subjects": [
-        "tax"
-      ],
-      "classification_confidence": 0.054,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:45:18+00:00",
       "last_updated": "2026-06-01T20:45:18+00:00",
       "actions": [
@@ -35919,10 +35530,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15460",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.067,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:45:20+00:00",
       "last_updated": "2026-06-01T20:45:20+00:00"
     },
@@ -35975,10 +35584,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15464",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.037,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:45:21+00:00",
       "last_updated": "2026-06-01T20:45:21+00:00"
     },
@@ -35995,10 +35602,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15466",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.059,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:45:22+00:00",
       "last_updated": "2026-06-01T20:45:22+00:00"
     },
@@ -36050,10 +35655,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15454",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.024,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:45:22+00:00",
       "last_updated": "2026-06-01T20:45:22+00:00"
     },
@@ -36392,10 +35995,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15445",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.036,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:45:25+00:00",
       "last_updated": "2026-06-01T20:45:25+00:00"
     },
@@ -36412,10 +36013,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15446",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.038,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:45:25+00:00",
       "last_updated": "2026-06-01T20:45:25+00:00"
     },
@@ -36487,10 +36086,9 @@
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15452",
       "raw_subject": "Housing and Land Use Committee (2025-2027)",
       "subjects": [
-        "transportation",
-        "affordable_housing"
+        "transportation"
       ],
-      "classification_confidence": 0.071,
+      "classification_confidence": 0.045,
       "first_seen": "2026-06-01T20:45:27+00:00",
       "last_updated": "2026-06-01T20:45:27+00:00"
     },
@@ -36507,10 +36105,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15453",
       "raw_subject": "Agriculture, Diversification, Environment, & Public Transportation Committee",
-      "subjects": [
-        "food_security"
-      ],
-      "classification_confidence": 0.056,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:45:27+00:00",
       "last_updated": "2026-06-01T20:45:27+00:00"
     },
@@ -36842,10 +36438,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15411",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.012,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:45:28+00:00",
       "last_updated": "2026-06-01T20:45:28+00:00",
       "actions": [
@@ -37057,10 +36651,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15422",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.01,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:45:32+00:00",
       "last_updated": "2026-06-01T20:45:32+00:00"
     },
@@ -37879,10 +37471,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15401",
       "raw_subject": "Housing and Land Use Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.091,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:45:41+00:00",
       "last_updated": "2026-06-01T20:45:41+00:00"
     },
@@ -37917,10 +37507,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15397",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.019,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:45:41+00:00",
       "last_updated": "2026-06-01T20:45:41+00:00"
     },
@@ -39418,10 +39006,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15358",
       "raw_subject": "Water Authority, Social Services, and Parks Committee (2025-2027)",
-      "subjects": [
-        "transportation"
-      ],
-      "classification_confidence": 0.056,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:45:55+00:00",
       "last_updated": "2026-06-01T20:45:55+00:00"
     },
@@ -40096,10 +39682,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15340",
       "raw_subject": "Agriculture, Diversification, Environment, & Public Transportation Committee",
-      "subjects": [
-        "food_security"
-      ],
-      "classification_confidence": 0.059,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:45:59+00:00",
       "last_updated": "2026-06-01T20:45:59+00:00"
     },
@@ -40116,11 +39700,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15341",
       "raw_subject": "Agriculture, Diversification, Environment, & Public Transportation Committee",
-      "subjects": [
-        "transportation",
-        "food_security"
-      ],
-      "classification_confidence": 0.167,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:45:59+00:00",
       "last_updated": "2026-06-01T20:45:59+00:00"
     },
@@ -40137,10 +39718,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15342",
       "raw_subject": "Agriculture, Diversification, Environment, & Public Transportation Committee",
-      "subjects": [
-        "food_security"
-      ],
-      "classification_confidence": 0.04,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:45:59+00:00",
       "last_updated": "2026-06-01T20:45:59+00:00"
     },
@@ -40157,10 +39736,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15344",
       "raw_subject": "Agriculture, Diversification, Environment, & Public Transportation Committee",
-      "subjects": [
-        "food_security"
-      ],
-      "classification_confidence": 0.043,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:00+00:00",
       "last_updated": "2026-06-01T20:46:00+00:00"
     },
@@ -40235,10 +39812,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15334",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.087,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:01+00:00",
       "last_updated": "2026-06-01T20:46:01+00:00"
     },
@@ -40255,10 +39830,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15335",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.029,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:02+00:00",
       "last_updated": "2026-06-01T20:46:02+00:00"
     },
@@ -40276,10 +39849,9 @@
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15336",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
       "subjects": [
-        "transportation",
-        "affordable_housing"
+        "transportation"
       ],
-      "classification_confidence": 0.042,
+      "classification_confidence": 0.024,
       "first_seen": "2026-06-01T20:46:02+00:00",
       "last_updated": "2026-06-01T20:46:02+00:00"
     },
@@ -40296,10 +39868,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15337",
       "raw_subject": "Agriculture, Diversification, Environment, & Public Transportation Committee",
-      "subjects": [
-        "food_security"
-      ],
-      "classification_confidence": 0.059,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:02+00:00",
       "last_updated": "2026-06-01T20:46:02+00:00"
     },
@@ -40316,10 +39886,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15338",
       "raw_subject": "Water Authority, Social Services, and Parks Committee (2025-2027)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.053,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:03+00:00",
       "last_updated": "2026-06-01T20:46:03+00:00"
     },
@@ -40623,10 +40191,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15322",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.017,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:06+00:00",
       "last_updated": "2026-06-01T20:46:06+00:00"
     },
@@ -40681,10 +40247,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15325",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "tax"
-      ],
-      "classification_confidence": 0.014,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:07+00:00",
       "last_updated": "2026-06-01T20:46:07+00:00"
     },
@@ -43306,11 +42870,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15266",
       "raw_subject": "Disaster, Resilience, International Affairs, and Planning Committee (2023-2025)",
-      "subjects": [
-        "tax",
-        "transportation"
-      ],
-      "classification_confidence": 0.026,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:19+00:00",
       "last_updated": "2026-06-01T20:46:19+00:00",
       "actions": [
@@ -43334,10 +42895,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15267",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.019,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:20+00:00",
       "last_updated": "2026-06-01T20:46:20+00:00",
       "actions": [
@@ -43361,12 +42920,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15268",
       "raw_subject": "Disaster, Resilience, International Affairs, and Planning Committee (2023-2025)",
-      "subjects": [
-        "tax",
-        "transportation",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.048,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:20+00:00",
       "last_updated": "2026-06-01T20:46:20+00:00",
       "actions": [
@@ -43415,11 +42970,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15270",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2023-2025)",
-      "subjects": [
-        "transportation",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.019,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:21+00:00",
       "last_updated": "2026-06-01T20:46:21+00:00",
       "actions": [
@@ -43443,10 +42995,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15271",
       "raw_subject": "Water Authority, Social Services, and Parks Committee (2023-2025)",
-      "subjects": [
-        "transportation"
-      ],
-      "classification_confidence": 0.026,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:21+00:00",
       "last_updated": "2026-06-01T20:46:21+00:00",
       "actions": [
@@ -43470,10 +43020,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15272",
       "raw_subject": "Housing and Land Use Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.016,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:21+00:00",
       "last_updated": "2026-06-01T20:46:21+00:00",
       "actions": [
@@ -43497,10 +43045,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15273",
       "raw_subject": "Water and Infrastructure Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.024,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:22+00:00",
       "last_updated": "2026-06-01T20:46:22+00:00",
       "actions": [
@@ -43549,11 +43095,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15275",
       "raw_subject": "Water and Infrastructure Committee (2023-2025)",
-      "subjects": [
-        "food_security",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.054,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:23+00:00",
       "last_updated": "2026-06-01T20:46:23+00:00",
       "actions": [
@@ -43627,10 +43170,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15278",
       "raw_subject": "Water Authority, Social Services, and Parks Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.027,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:24+00:00",
       "last_updated": "2026-06-01T20:46:24+00:00",
       "actions": [
@@ -44051,10 +43592,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15249",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.045,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:32+00:00",
       "last_updated": "2026-06-01T20:46:32+00:00"
     },
@@ -44071,10 +43610,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15250",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.077,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:32+00:00",
       "last_updated": "2026-06-01T20:46:32+00:00"
     },
@@ -44091,10 +43628,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15251",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.077,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:32+00:00",
       "last_updated": "2026-06-01T20:46:32+00:00"
     },
@@ -44111,10 +43646,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15252",
       "raw_subject": "Housing and Land Use Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.1,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:33+00:00",
       "last_updated": "2026-06-01T20:46:33+00:00"
     },
@@ -44131,11 +43664,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15239",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "tax",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.045,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:33+00:00",
       "last_updated": "2026-06-01T20:46:33+00:00",
       "actions": [
@@ -44336,10 +43866,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15235",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.019,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:33+00:00",
       "last_updated": "2026-06-01T20:46:33+00:00"
     },
@@ -44356,10 +43884,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15236",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.019,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:34+00:00",
       "last_updated": "2026-06-01T20:46:34+00:00"
     },
@@ -44394,10 +43920,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15238",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.019,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:35+00:00",
       "last_updated": "2026-06-01T20:46:35+00:00"
     },
@@ -44814,10 +44338,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15218",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.013,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:38+00:00",
       "last_updated": "2026-06-01T20:46:38+00:00",
       "actions": [
@@ -44859,10 +44381,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15220",
       "raw_subject": "Agriculture, Diversification, Environment, and Public Transportation Committee",
-      "subjects": [
-        "food_security"
-      ],
-      "classification_confidence": 0.029,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:39+00:00",
       "last_updated": "2026-06-01T20:46:39+00:00",
       "actions": [
@@ -44886,10 +44406,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15221",
       "raw_subject": "Agriculture, Diversification, Environment, and Public Transportation Committee",
-      "subjects": [
-        "food_security"
-      ],
-      "classification_confidence": 0.044,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:39+00:00",
       "last_updated": "2026-06-01T20:46:39+00:00",
       "actions": [
@@ -44913,11 +44431,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15222",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2023-2025)",
-      "subjects": [
-        "tax",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.01,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:39+00:00",
       "last_updated": "2026-06-01T20:46:39+00:00",
       "actions": [
@@ -44966,10 +44481,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15224",
       "raw_subject": "Government Relations, Ethics, and Transparency Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.006,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:40+00:00",
       "last_updated": "2026-06-01T20:46:40+00:00",
       "actions": [
@@ -45246,10 +44759,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15205",
       "raw_subject": "Agriculture, Diversification, Environment, and Public Transportation Committee",
-      "subjects": [
-        "food_security"
-      ],
-      "classification_confidence": 0.024,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:43+00:00",
       "last_updated": "2026-06-01T20:46:43+00:00"
     },
@@ -45266,10 +44777,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15206",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.083,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:44+00:00",
       "last_updated": "2026-06-01T20:46:44+00:00"
     },
@@ -45413,10 +44922,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15200",
       "raw_subject": "Housing and Land Use Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.025,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:46+00:00",
       "last_updated": "2026-06-01T20:46:46+00:00"
     },
@@ -45451,13 +44958,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15183",
       "raw_subject": "Housing and Land Use Committee (2023-2025)",
-      "subjects": [
-        "tax",
-        "transportation",
-        "food_security",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.062,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:46+00:00",
       "last_updated": "2026-06-01T20:46:46+00:00",
       "actions": [
@@ -45725,11 +45227,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15197",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "tax",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.056,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:52+00:00",
       "last_updated": "2026-06-01T20:46:52+00:00"
     },
@@ -45747,10 +45246,9 @@
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15171",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2023-2025)",
       "subjects": [
-        "transportation",
-        "affordable_housing"
+        "transportation"
       ],
-      "classification_confidence": 0.074,
+      "classification_confidence": 0.05,
       "first_seen": "2026-06-01T20:46:52+00:00",
       "last_updated": "2026-06-01T20:46:52+00:00"
     },
@@ -45785,10 +45283,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15174",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.025,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:53+00:00",
       "last_updated": "2026-06-01T20:46:53+00:00"
     },
@@ -45938,10 +45434,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15169",
       "raw_subject": "Housing and Land Use Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.029,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:56+00:00",
       "last_updated": "2026-06-01T20:46:56+00:00"
     },
@@ -46139,10 +45633,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15168",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.024,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:56+00:00",
       "last_updated": "2026-06-01T20:46:56+00:00"
     },
@@ -46292,10 +45784,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15146",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.013,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:57+00:00",
       "last_updated": "2026-06-01T20:46:57+00:00",
       "actions": [
@@ -46319,10 +45809,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15147",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.014,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:58+00:00",
       "last_updated": "2026-06-01T20:46:58+00:00",
       "actions": [
@@ -46346,12 +45834,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15148",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2023-2025)",
-      "subjects": [
-        "tax",
-        "transportation",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.022,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:58+00:00",
       "last_updated": "2026-06-01T20:46:58+00:00",
       "actions": [
@@ -46375,11 +45859,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15149",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2023-2025)",
-      "subjects": [
-        "tax",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.167,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:58+00:00",
       "last_updated": "2026-06-01T20:46:58+00:00",
       "actions": [
@@ -46403,11 +45884,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15150",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2023-2025)",
-      "subjects": [
-        "tax",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.118,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:59+00:00",
       "last_updated": "2026-06-01T20:46:59+00:00",
       "actions": [
@@ -46431,11 +45909,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15151",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2023-2025)",
-      "subjects": [
-        "tax",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.042,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:46:59+00:00",
       "last_updated": "2026-06-01T20:46:59+00:00",
       "actions": [
@@ -46571,10 +46046,9 @@
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15159",
       "raw_subject": "Council of the County of Maui ",
       "subjects": [
-        "transportation",
-        "affordable_housing"
+        "transportation"
       ],
-      "classification_confidence": 0.074,
+      "classification_confidence": 0.062,
       "first_seen": "2026-06-01T20:47:02+00:00",
       "last_updated": "2026-06-01T20:47:02+00:00"
     },
@@ -46719,10 +46193,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15167",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.03,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:47:05+00:00",
       "last_updated": "2026-06-01T20:47:05+00:00"
     },
@@ -47422,10 +46894,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15129",
       "raw_subject": "Disaster, Resilience, International Affairs, and Planning Committee (2023-2025)",
-      "subjects": [
-        "tax"
-      ],
-      "classification_confidence": 0.031,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:47:10+00:00",
       "last_updated": "2026-06-01T20:47:10+00:00"
     },
@@ -47442,10 +46912,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15130",
       "raw_subject": "Disaster, Resilience, International Affairs, and Planning Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.059,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:47:10+00:00",
       "last_updated": "2026-06-01T20:47:10+00:00"
     },
@@ -47654,10 +47122,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15128",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.045,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:47:11+00:00",
       "last_updated": "2026-06-01T20:47:11+00:00"
     },
@@ -47727,10 +47193,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15113",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.014,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:47:11+00:00",
       "last_updated": "2026-06-01T20:47:11+00:00",
       "actions": [
@@ -47833,10 +47297,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15118",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.023,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:47:14+00:00",
       "last_updated": "2026-06-01T20:47:14+00:00"
     },
@@ -47853,10 +47315,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15119",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.023,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:47:14+00:00",
       "last_updated": "2026-06-01T20:47:14+00:00"
     },
@@ -47934,11 +47394,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15123",
       "raw_subject": "Water and Infrastructure Committee (2023-2025)",
-      "subjects": [
-        "food_security",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.056,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:47:16+00:00",
       "last_updated": "2026-06-01T20:47:16+00:00",
       "actions": [
@@ -47982,11 +47439,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15126",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2023-2025)",
-      "subjects": [
-        "tax",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.19,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:47:17+00:00",
       "last_updated": "2026-06-01T20:47:17+00:00"
     },
@@ -48283,11 +47737,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15108",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2023-2025)",
-      "subjects": [
-        "tax",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.263,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:47:18+00:00",
       "last_updated": "2026-06-01T20:47:18+00:00"
     },
@@ -48541,10 +47992,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15094",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.024,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:47:22+00:00",
       "last_updated": "2026-06-01T20:47:22+00:00"
     },
@@ -48561,10 +48010,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15095",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.05,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:47:22+00:00",
       "last_updated": "2026-06-01T20:47:22+00:00"
     },
@@ -48746,10 +48193,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15086",
       "raw_subject": "Water and Infrastructure Committee (2023-2025)",
-      "subjects": [
-        "tax"
-      ],
-      "classification_confidence": 0.024,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:47:24+00:00",
       "last_updated": "2026-06-01T20:47:24+00:00",
       "actions": [
@@ -48773,11 +48218,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15087",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2023-2025)",
-      "subjects": [
-        "tax",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.067,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:47:24+00:00",
       "last_updated": "2026-06-01T20:47:24+00:00",
       "actions": [
@@ -48801,10 +48243,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15088",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.02,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:47:24+00:00",
       "last_updated": "2026-06-01T20:47:24+00:00",
       "actions": [
@@ -49542,10 +48982,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15071",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.029,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:47:29+00:00",
       "last_updated": "2026-06-01T20:47:29+00:00"
     },
@@ -49580,10 +49018,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15073",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.053,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:47:30+00:00",
       "last_updated": "2026-06-01T20:47:30+00:00"
     },
@@ -49618,10 +49054,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15067",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.024,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:47:31+00:00",
       "last_updated": "2026-06-01T20:47:31+00:00"
     },
@@ -49656,10 +49090,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15069",
       "raw_subject": "Housing and Land Use Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.111,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:47:31+00:00",
       "last_updated": "2026-06-01T20:47:31+00:00"
     },
@@ -49676,10 +49108,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15070",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.036,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:47:32+00:00",
       "last_updated": "2026-06-01T20:47:32+00:00"
     },
@@ -49696,10 +49126,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15061",
       "raw_subject": "Agriculture, Diversification, Environment, and Public Transportation Committee",
-      "subjects": [
-        "food_security"
-      ],
-      "classification_confidence": 0.158,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:47:32+00:00",
       "last_updated": "2026-06-01T20:47:32+00:00"
     },
@@ -49838,10 +49266,9 @@
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3097",
       "raw_subject": null,
       "subjects": [
-        "food_security",
-        "affordable_housing"
+        "food_security"
       ],
-      "classification_confidence": 0.1,
+      "classification_confidence": 0.05,
       "first_seen": "2026-06-01T20:41:04+00:00",
       "last_updated": "2026-06-01T20:41:04+00:00",
       "actions": [
@@ -49974,10 +49401,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15048",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.025,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:47:35+00:00",
       "last_updated": "2026-06-01T20:47:35+00:00"
     },
@@ -49994,10 +49419,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15049",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.007,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:47:35+00:00",
       "last_updated": "2026-06-01T20:47:35+00:00",
       "actions": [
@@ -50064,10 +49487,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15052",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.012,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:47:36+00:00",
       "last_updated": "2026-06-01T20:47:36+00:00",
       "actions": [
@@ -50575,11 +49996,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15044",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2023-2025)",
-      "subjects": [
-        "tax",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.333,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:47:41+00:00",
       "last_updated": "2026-06-01T20:47:41+00:00"
     },
@@ -50781,10 +50199,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15035",
       "raw_subject": "Agriculture, Diversification, Environment, and Public Transportation Committee",
-      "subjects": [
-        "food_security"
-      ],
-      "classification_confidence": 0.05,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:47:41+00:00",
       "last_updated": "2026-06-01T20:47:41+00:00"
     },
@@ -50838,10 +50254,9 @@
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3081",
       "raw_subject": null,
       "subjects": [
-        "transportation",
-        "affordable_housing"
+        "transportation"
       ],
-      "classification_confidence": 0.133,
+      "classification_confidence": 0.067,
       "first_seen": "2026-06-01T20:41:04+00:00",
       "last_updated": "2026-06-01T20:41:04+00:00",
       "actions": [
@@ -51127,10 +50542,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15020",
       "raw_subject": "Agriculture, Diversification, Environment, and Public Transportation Committee",
-      "subjects": [
-        "food_security"
-      ],
-      "classification_confidence": 0.091,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:47:42+00:00",
       "last_updated": "2026-06-01T20:47:42+00:00"
     },
@@ -51147,12 +50560,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15021",
       "raw_subject": "Housing and Land Use Committee (2023-2025)",
-      "subjects": [
-        "tax",
-        "food_security",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.086,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:47:43+00:00",
       "last_updated": "2026-06-01T20:47:43+00:00",
       "actions": [
@@ -51176,10 +50585,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15022",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.014,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:47:43+00:00",
       "last_updated": "2026-06-01T20:47:43+00:00",
       "actions": [
@@ -51203,10 +50610,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15023",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.009,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:47:43+00:00",
       "last_updated": "2026-06-01T20:47:43+00:00",
       "actions": [
@@ -51255,10 +50660,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15025",
       "raw_subject": "Government Relations, Ethics, and Transparency Committee (2023-2025)",
-      "subjects": [
-        "food_security"
-      ],
-      "classification_confidence": 0.006,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:47:44+00:00",
       "last_updated": "2026-06-01T20:47:44+00:00",
       "actions": [
@@ -51895,10 +51298,8 @@
       "last_action_date": "2025-06-18",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3072",
       "raw_subject": "Delegates the authority to take action on special management area major permits for certain types of development from the City Council to the Director of Planning and Permitting. Makes conforming amendments consistent with Act 229, Session Laws of Hawaii 2023, amending the State of Hawaii Coastal Zone Management Act.",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.018,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:03+00:00",
       "last_updated": "2026-06-01T20:41:03+00:00",
       "actions": [
@@ -52158,10 +51559,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15001",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.027,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:47:50+00:00",
       "last_updated": "2026-06-01T20:47:50+00:00"
     },
@@ -52178,10 +51577,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15003",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.028,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:47:51+00:00",
       "last_updated": "2026-06-01T20:47:51+00:00"
     },
@@ -52474,11 +51871,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=14975",
       "raw_subject": "Housing and Land Use Committee (2023-2025)",
-      "subjects": [
-        "tax",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.027,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:47:53+00:00",
       "last_updated": "2026-06-01T20:47:53+00:00",
       "actions": [
@@ -52520,10 +51914,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=14978",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.025,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:47:54+00:00",
       "last_updated": "2026-06-01T20:47:54+00:00"
     },
@@ -52854,8 +52246,10 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=14972",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [],
-      "classification_confidence": 0.0,
+      "subjects": [
+        "affordable_housing"
+      ],
+      "classification_confidence": 0.074,
       "first_seen": "2026-06-01T20:48:00+00:00",
       "last_updated": "2026-06-01T20:48:00+00:00"
     },
@@ -52956,10 +52350,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=14971",
       "raw_subject": "Housing and Land Use Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.222,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:48:02+00:00",
       "last_updated": "2026-06-01T20:48:02+00:00"
     },
@@ -53170,10 +52562,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=14960",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.037,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:48:03+00:00",
       "last_updated": "2026-06-01T20:48:03+00:00"
     },
@@ -53190,10 +52580,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=14961",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.029,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:48:03+00:00",
       "last_updated": "2026-06-01T20:48:03+00:00"
     },
@@ -53211,10 +52599,9 @@
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=14962",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2023-2025)",
       "subjects": [
-        "tax",
-        "affordable_housing"
+        "tax"
       ],
-      "classification_confidence": 0.174,
+      "classification_confidence": 0.188,
       "first_seen": "2026-06-01T20:48:03+00:00",
       "last_updated": "2026-06-01T20:48:03+00:00"
     },
@@ -53324,10 +52711,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=14959",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.1,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:48:05+00:00",
       "last_updated": "2026-06-01T20:48:05+00:00"
     },
@@ -53381,11 +52766,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=14956",
       "raw_subject": "Agriculture, Diversification, Environment, and Public Transportation Committee",
-      "subjects": [
-        "transportation",
-        "food_security"
-      ],
-      "classification_confidence": 0.154,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:48:05+00:00",
       "last_updated": "2026-06-01T20:48:05+00:00"
     },
@@ -53402,11 +52784,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=14957",
       "raw_subject": "Agriculture, Diversification, Environment, and Public Transportation Committee",
-      "subjects": [
-        "transportation",
-        "food_security"
-      ],
-      "classification_confidence": 0.118,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:48:06+00:00",
       "last_updated": "2026-06-01T20:48:06+00:00"
     },
@@ -53496,10 +52875,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=14930",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.028,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:48:07+00:00",
       "last_updated": "2026-06-01T20:48:07+00:00"
     },
@@ -53558,11 +52935,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=14933",
       "raw_subject": "Housing and Land Use Committee (2023-2025)",
-      "subjects": [
-        "tax",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.046,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:48:08+00:00",
       "last_updated": "2026-06-01T20:48:08+00:00",
       "actions": [
@@ -53586,10 +52960,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=14934",
       "raw_subject": "Government Relations, Ethics, and Transparency Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.037,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:48:08+00:00",
       "last_updated": "2026-06-01T20:48:08+00:00",
       "actions": [
@@ -53613,10 +52985,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=14935",
       "raw_subject": "Agriculture, Diversification, Environment, and Public Transportation Committee",
-      "subjects": [
-        "food_security"
-      ],
-      "classification_confidence": 0.025,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:48:08+00:00",
       "last_updated": "2026-06-01T20:48:08+00:00",
       "actions": [
@@ -53640,10 +53010,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=14936",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.023,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:48:09+00:00",
       "last_updated": "2026-06-01T20:48:09+00:00"
     },
@@ -53660,11 +53028,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=14937",
       "raw_subject": "Agriculture, Diversification, Environment, and Public Transportation Committee",
-      "subjects": [
-        "food_security",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.049,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:48:09+00:00",
       "last_updated": "2026-06-01T20:48:09+00:00",
       "actions": [
@@ -53731,11 +53096,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=14940",
       "raw_subject": "Housing and Land Use Committee (2023-2025)",
-      "subjects": [
-        "tax",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.034,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:48:10+00:00",
       "last_updated": "2026-06-01T20:48:10+00:00",
       "actions": [
@@ -53795,10 +53157,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=14943",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.021,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:48:11+00:00",
       "last_updated": "2026-06-01T20:48:11+00:00"
     },
@@ -53899,12 +53259,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=14948",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "tax",
-        "food_security",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.055,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:48:13+00:00",
       "last_updated": "2026-06-01T20:48:13+00:00"
     },
@@ -53946,13 +53302,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=14950",
       "raw_subject": "Housing and Land Use Committee (2023-2025)",
-      "subjects": [
-        "tax",
-        "transportation",
-        "food_security",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.068,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:48:14+00:00",
       "last_updated": "2026-06-01T20:48:14+00:00",
       "actions": [
@@ -54037,10 +53388,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=14925",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.03,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:48:15+00:00",
       "last_updated": "2026-06-01T20:48:15+00:00"
     },
@@ -54818,10 +54167,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=14919",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.043,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:48:18+00:00",
       "last_updated": "2026-06-01T20:48:18+00:00"
     },
@@ -54913,10 +54260,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=14918",
       "raw_subject": "Disaster, Resilience, International Affairs, and Planning Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.056,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:48:18+00:00",
       "last_updated": "2026-06-01T20:48:18+00:00"
     },
@@ -55952,10 +55297,9 @@
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=14893",
       "raw_subject": "Council of the County of Maui ",
       "subjects": [
-        "food_security",
-        "affordable_housing"
+        "food_security"
       ],
-      "classification_confidence": 0.054,
+      "classification_confidence": 0.032,
       "first_seen": "2026-06-01T20:48:25+00:00",
       "last_updated": "2026-06-01T20:48:25+00:00"
     },
@@ -56210,10 +55554,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=14877",
       "raw_subject": "Housing and Land Use Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.071,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:48:30+00:00",
       "last_updated": "2026-06-01T20:48:30+00:00"
     },
@@ -56374,10 +55716,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=14875",
       "raw_subject": "Housing and Land Use Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.03,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:48:33+00:00",
       "last_updated": "2026-06-01T20:48:33+00:00"
     },
@@ -56394,10 +55734,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=14865",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.071,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:48:33+00:00",
       "last_updated": "2026-06-01T20:48:33+00:00"
     },
@@ -56904,10 +56242,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=14853",
       "raw_subject": "Water and Infrastructure Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.034,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:48:35+00:00",
       "last_updated": "2026-06-01T20:48:35+00:00",
       "actions": [
@@ -56974,10 +56310,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=14856",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.02,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:48:36+00:00",
       "last_updated": "2026-06-01T20:48:36+00:00",
       "actions": [
@@ -57075,10 +56409,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=14861",
       "raw_subject": "Council of the County of Maui ",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.021,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:48:38+00:00",
       "last_updated": "2026-06-01T20:48:38+00:00"
     },
@@ -57797,10 +57129,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=14831",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.043,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:48:43+00:00",
       "last_updated": "2026-06-01T20:48:43+00:00"
     },
@@ -57817,10 +57147,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=14832",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.115,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:48:43+00:00",
       "last_updated": "2026-06-01T20:48:43+00:00"
     },
@@ -57837,10 +57165,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=14828",
       "raw_subject": "Housing and Land Use Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.029,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:48:44+00:00",
       "last_updated": "2026-06-01T20:48:44+00:00"
     },
@@ -58295,10 +57621,8 @@
       "last_action_date": "2024-08-07",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/2993",
       "raw_subject": null,
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.034,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:04+00:00",
       "last_updated": "2026-06-01T20:41:04+00:00"
     },
@@ -58315,11 +57639,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=14805",
       "raw_subject": "Agriculture, Diversification, Environment, and Public Transportation Committee",
-      "subjects": [
-        "food_security",
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.143,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:48:45+00:00",
       "last_updated": "2026-06-01T20:48:45+00:00"
     },
@@ -58336,10 +57657,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=14806",
       "raw_subject": "Agriculture, Diversification, Environment, and Public Transportation Committee",
-      "subjects": [
-        "food_security"
-      ],
-      "classification_confidence": 0.071,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:48:45+00:00",
       "last_updated": "2026-06-01T20:48:45+00:00"
     },
@@ -58356,10 +57675,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=14807",
       "raw_subject": "Agriculture, Diversification, Environment, and Public Transportation Committee",
-      "subjects": [
-        "food_security"
-      ],
-      "classification_confidence": 0.154,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:48:45+00:00",
       "last_updated": "2026-06-01T20:48:45+00:00"
     },
@@ -58672,10 +57989,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=14803",
       "raw_subject": "Government Relations, Ethics, and Transparency Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.048,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:48:51+00:00",
       "last_updated": "2026-06-01T20:48:51+00:00"
     },
@@ -58746,10 +58061,8 @@
       "last_action_date": null,
       "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=14793",
       "raw_subject": "Budget, Finance, and Economic Development Committee (2023-2025)",
-      "subjects": [
-        "affordable_housing"
-      ],
-      "classification_confidence": 0.071,
+      "subjects": [],
+      "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:48:52+00:00",
       "last_updated": "2026-06-01T20:48:52+00:00"
     },

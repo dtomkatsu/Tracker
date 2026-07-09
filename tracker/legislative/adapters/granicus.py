@@ -293,24 +293,36 @@ class GranicusAdapter(CouncilAdapter):
         host: str,
         view_ids: list[int],
         mode: str = "html",
-        max_meetings: int = 60,
+        max_meetings: int = 250,
+        agenda_store=None,
     ):
         self.council_id = council_id
         self.host = host
         self.view_ids = view_ids
         self.mode = mode
+        # Safety cap against a runaway publisher listing — the real bound on
+        # coverage is the caller's `since` window. (This used to be 30, which
+        # silently shrank the "2-year term" window to the last ~2 months.)
         self.max_meetings = max_meetings
+        # db.AgendaStore (or None). With a store, each agenda is fetched once:
+        # settled agendas are skipped on later runs and their cached mentions
+        # merged back in, so a daily run costs a handful of fetches while
+        # fetch_bills still reports the full since-window inventory.
+        self.agenda_store = agenda_store
 
     @classmethod
-    def for_council(cls, council_id: str) -> "GranicusAdapter":
+    def for_council(cls, council_id: str, agenda_store=None) -> "GranicusAdapter":
         """Granicus agenda config per council, kept in one place so the scraper,
         the Hawaii County Laserfiche adapter, and the dump-agendas CLI agree."""
         if council_id == "kauai":
-            return cls("kauai", "kauai.granicus.com", [2], mode="html", max_meetings=30)
+            return cls(
+                "kauai", "kauai.granicus.com", [2], mode="html",
+                agenda_store=agenda_store,
+            )
         if council_id == "hawaii":
             return cls(
                 "hawaii", "hawaiicounty.granicus.com", [1, 2],
-                mode="pdf", max_meetings=30,
+                mode="pdf", agenda_store=agenda_store,
             )
         raise ValueError(f"no Granicus config for council: {council_id}")
 
@@ -454,6 +466,16 @@ class GranicusAdapter(CouncilAdapter):
                 meetings.sort(key=lambda m: m[0], reverse=True)
                 meetings = meetings[: self.max_meetings]
 
+                # Already-fetched agendas whose meetings are settled don't
+                # need re-reading — their cached mentions are merged back in
+                # by fetch_bills. (dump-agendas builds adapters without a
+                # store, so it always fetches.)
+                if self.agenda_store is not None:
+                    meetings = [
+                        (d, u) for d, u in meetings
+                        if not self.agenda_store.is_fresh(u, d)
+                    ]
+
                 for mdate, agenda_url in meetings:
                     try:
                         text = self._agenda_text(ctx, page, agenda_url)
@@ -465,26 +487,47 @@ class GranicusAdapter(CouncilAdapter):
                 browser.close()
 
     def fetch_bills(self, since: date | None = None) -> Iterator[BillRecord]:
+        # Parse whatever agendas need (re-)fetching; with a store, persist each
+        # parse and then assemble the full since-window from the cache, so
+        # skipped agendas still contribute their mentions.
+        parsed: list[dict] = []
+        for mdate, agenda_url, text in self.iter_raw_agendas(since=since):
+            mens = self._parse_agenda(text, mdate, agenda_url)
+            if self.agenda_store is not None:
+                self.agenda_store.save(agenda_url, mdate, mens)
+            else:
+                parsed.extend(mens)
+        if self.agenda_store is not None:
+            mentions = self.agenda_store.load(since.isoformat() if since else None)
+        else:
+            mentions = parsed
+
         # Per bill: keep the longest (best) title and summary ever seen, plus
         # the latest meeting date and the stage from that latest meeting.
+        # Every dated appearance also becomes an action — for these councils
+        # the agenda trail IS the only obtainable action history.
         merged: dict[str, dict] = {}
-        for mdate, agenda_url, text in self.iter_raw_agendas(since=since):
-            for men in self._parse_agenda(text, mdate, agenda_url):
-                key = men["bill_number"]
-                cur = merged.get(key)
-                if cur is None:
-                    merged[key] = men
-                    continue
-                # Best (longest) title / summary wins.
-                if len(men["title"] or "") > len(cur["title"] or ""):
-                    cur["title"] = men["title"]
-                if len(men.get("summary") or "") > len(cur.get("summary") or ""):
-                    cur["summary"] = men["summary"]
-                # Latest meeting drives date / stage / link.
-                if (men["date"] or "") >= (cur["date"] or ""):
-                    cur["date"] = men["date"]
-                    cur["stage"] = men["stage"] or cur["stage"]
-                    cur["url"] = men["url"]
+        appearances: dict[str, set[tuple[str, str]]] = {}
+        for men in mentions:
+            key = men["bill_number"]
+            if men["date"]:
+                appearances.setdefault(key, set()).add(
+                    (men["date"], men["stage"] or "On agenda")
+                )
+            cur = merged.get(key)
+            if cur is None:
+                merged[key] = men
+                continue
+            # Best (longest) title / summary wins.
+            if len(men["title"] or "") > len(cur["title"] or ""):
+                cur["title"] = men["title"]
+            if len(men.get("summary") or "") > len(cur.get("summary") or ""):
+                cur["summary"] = men["summary"]
+            # Latest meeting drives date / stage / link.
+            if (men["date"] or "") >= (cur["date"] or ""):
+                cur["date"] = men["date"]
+                cur["stage"] = men["stage"] or cur["stage"]
+                cur["url"] = men["url"]
 
         for men in merged.values():
             yield BillRecord(
@@ -502,6 +545,15 @@ class GranicusAdapter(CouncilAdapter):
                 # legal title) is the bill's best plain-English description;
                 # fall back to the title where the agenda has no summary.
                 raw_subject=men.get("summary") or men["title"],
+                actions=[
+                    ActionRecord(
+                        council=self.council_id,
+                        bill_number=men["bill_number"],
+                        action_date=d,
+                        action=stage,
+                    )
+                    for d, stage in sorted(appearances.get(men["bill_number"], ()))
+                ],
             )
 
     def fetch_actions(self, bill_number: str) -> Iterator[ActionRecord]:
