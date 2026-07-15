@@ -2,9 +2,18 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>tag:dtomkatsu.github.io,2026:feeds/maui.xml</id>
   <title>Bill Tracker — Maui</title>
-  <updated>2026-07-13T16:15:12+00:00</updated>
+  <updated>2026-07-15T16:15:15+00:00</updated>
   <link rel="self" href="https://dtomkatsu.github.io/Tracker/feeds/maui.xml"/>
   <link rel="alternate" href="https://dtomkatsu.github.io/Tracker/"/>
+  <entry>
+    <id>tag:dtomkatsu.github.io,2026:maui-wassp-1-22-rule-7-b/2026-07-15T16:15:15+00:00</id>
+    <title>New: WASSP-1(22) Rule 7(B) (Maui) — Agenda Ready</title>
+    <updated>2026-07-15T16:15:15+00:00</updated>
+    <link rel="alternate" href="https://mauicounty.legistar.com/Gateway.aspx?M=L&amp;ID=14996"/>
+    <content type="html">&lt;p&gt;&lt;strong&gt;ENHANCING COUNTY MENTAL HEALTH CRISIS RESPONSE   (WASSP-1(22))&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Water Authority, Social Services, and Parks Committee (2023-2025)&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://mauicounty.legistar.com/Gateway.aspx?M=L&amp;amp;ID=14996"&gt;View on the council site&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
   <entry>
     <id>tag:dtomkatsu.github.io,2026:maui-wassp-1-21-rule-7-b/2026-07-13T16:15:12+00:00</id>
     <title>New: WASSP-1(21) Rule 7(B) (Maui) — Agenda Ready</title>

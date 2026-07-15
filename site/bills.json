@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-07-13T16:17:52+00:00",
+  "generated_at": "2026-07-15T16:17:14+00:00",
   "last_scrape": {
-    "id": 100,
-    "started_at": "2026-07-13T16:17:04+00:00",
-    "completed_at": "2026-07-13T16:17:51+00:00",
+    "id": 104,
+    "started_at": "2026-07-15T16:16:52+00:00",
+    "completed_at": "2026-07-15T16:17:13+00:00",
     "council": "kauai",
-    "bills_seen": 105,
-    "bills_new": 20,
-    "bills_updated": 2,
+    "bills_seen": 108,
+    "bills_new": 3,
+    "bills_updated": 0,
     "errors": null
   },
   "subjects": [
@@ -23,6 +23,106 @@
     "kauai"
   ],
   "bills": [
+    {
+      "id": 2351,
+      "council": "kauai",
+      "bill_number": "Resolution 2025-01",
+      "title": "RESOLUTION APPOINTING THE COUNTY CLERK OF THE COUNTY OF KAUA‘I",
+      "bill_type": "Resolution",
+      "introducer": null,
+      "introduced_date": null,
+      "status": null,
+      "last_action": "On agenda 2024-12-02",
+      "last_action_date": "2024-12-02",
+      "url": "https://kauai.granicus.com/AgendaViewer.php?view_id=2&clip_id=2779",
+      "raw_subject": "RESOLUTION APPOINTING THE COUNTY CLERK OF THE COUNTY OF KAUA‘I",
+      "subjects": [],
+      "classification_confidence": 0.0,
+      "first_seen": "2026-07-15T16:17:13+00:00",
+      "last_updated": "2026-07-15T16:17:13+00:00",
+      "actions": [
+        {
+          "date": "2024-12-02",
+          "action": "On agenda",
+          "committee": null
+        }
+      ]
+    },
+    {
+      "id": 2352,
+      "council": "kauai",
+      "bill_number": "Resolution 2025-02",
+      "title": "RESOLUTION ADOPTING THE RULES OF THE KAUA‘I",
+      "bill_type": "Resolution",
+      "introducer": null,
+      "introduced_date": null,
+      "status": null,
+      "last_action": "On agenda 2024-12-02",
+      "last_action_date": "2024-12-02",
+      "url": "https://kauai.granicus.com/AgendaViewer.php?view_id=2&clip_id=2779",
+      "raw_subject": "RESOLUTION ADOPTING THE RULES OF THE KAUA‘I",
+      "subjects": [],
+      "classification_confidence": 0.0,
+      "first_seen": "2026-07-15T16:17:13+00:00",
+      "last_updated": "2026-07-15T16:17:13+00:00",
+      "actions": [
+        {
+          "date": "2024-12-02",
+          "action": "On agenda",
+          "committee": null
+        }
+      ]
+    },
+    {
+      "id": 2353,
+      "council": "kauai",
+      "bill_number": "Resolution 2025-03",
+      "title": "RESOLUTION RELATING TO THE APPOINTMENT OF THE CHAIRPERSONS, VICE CHAIRPERSONS, AND MEMBERS OF THE SEVERAL STANDING COMMITTEES OF THE KAUA‘I",
+      "bill_type": "Resolution",
+      "introducer": null,
+      "introduced_date": null,
+      "status": null,
+      "last_action": "On agenda 2024-12-02",
+      "last_action_date": "2024-12-02",
+      "url": "https://kauai.granicus.com/AgendaViewer.php?view_id=2&clip_id=2779",
+      "raw_subject": "RESOLUTION RELATING TO THE APPOINTMENT OF THE CHAIRPERSONS, VICE CHAIRPERSONS, AND MEMBERS OF THE SEVERAL STANDING COMMITTEES OF THE KAUA‘I",
+      "subjects": [],
+      "classification_confidence": 0.0,
+      "first_seen": "2026-07-15T16:17:13+00:00",
+      "last_updated": "2026-07-15T16:17:13+00:00",
+      "actions": [
+        {
+          "date": "2024-12-02",
+          "action": "On agenda",
+          "committee": null
+        }
+      ]
+    },
+    {
+      "id": 2348,
+      "council": "honolulu",
+      "bill_number": "BILL052(26)",
+      "title": "RELATING TO STREETS, SIDEWALKS, MALLS, AND OTHER PUBLIC PLACES.",
+      "bill_type": "Bill",
+      "introducer": "TOMMY  WATERS",
+      "introduced_date": "2026-07-14",
+      "status": "INTRO",
+      "last_action": "Introduced.",
+      "last_action_date": "2026-07-14",
+      "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3793",
+      "raw_subject": "Increases the fines for violations of ROH Chapter 13, Article 6, relating to peddling.",
+      "subjects": [],
+      "classification_confidence": 0.0,
+      "first_seen": "2026-07-15T16:15:06+00:00",
+      "last_updated": "2026-07-15T16:15:06+00:00",
+      "actions": [
+        {
+          "date": "2026-07-14",
+          "action": "Introduced.",
+          "committee": "INTRO"
+        }
+      ]
+    },
     {
       "id": 2328,
       "council": "kauai",
@@ -102,6 +202,11 @@
         {
           "date": "2025-03-12",
           "action": "In Committee",
+          "committee": null
+        },
+        {
+          "date": "2025-03-06",
+          "action": "On agenda",
           "committee": null
         }
       ]
@@ -557,6 +662,33 @@
           "date": "2026-07-08",
           "action": "On agenda",
           "committee": null
+        }
+      ]
+    },
+    {
+      "id": 2349,
+      "council": "honolulu",
+      "bill_number": "BILL051(26)",
+      "title": "RELATING TO PARKING.",
+      "bill_type": "Bill",
+      "introducer": "TOMMY  WATERS",
+      "introduced_date": "2026-07-13",
+      "status": "INTRO",
+      "last_action": "Introduced.",
+      "last_action_date": "2026-07-13",
+      "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3792",
+      "raw_subject": "Requires the DTS Director to mark with a warning certain parking restricted areas along curbs within one-quarter mile of any public access to a hiking trail.",
+      "subjects": [
+        "transportation"
+      ],
+      "classification_confidence": 0.034,
+      "first_seen": "2026-07-15T16:15:06+00:00",
+      "last_updated": "2026-07-15T16:15:06+00:00",
+      "actions": [
+        {
+          "date": "2026-07-13",
+          "action": "Introduced.",
+          "committee": "INTRO"
         }
       ]
     },
@@ -5475,16 +5607,21 @@
       "bill_type": "Resolution",
       "introducer": "MATT  WEYER, ESTHER  KIAʻĀINA",
       "introduced_date": "2026-07-08",
-      "status": "INTRO",
-      "last_action": "Introduced.",
-      "last_action_date": "2026-07-08",
+      "status": "EES",
+      "last_action": "Postponed to a date and time to be determined by the Committee Chair.\n",
+      "last_action_date": "2026-07-14",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3787",
       "raw_subject": null,
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-07-10T16:15:14+00:00",
-      "last_updated": "2026-07-10T16:15:14+00:00",
+      "last_updated": "2026-07-15T16:15:09+00:00",
       "actions": [
+        {
+          "date": "2026-07-14",
+          "action": "Postponed to a date and time to be determined by the Committee Chair. 4 AYES: DOS SANTOS-TAM, TULBA, TUPOLA, WEYER",
+          "committee": "EES"
+        },
         {
           "date": "2026-07-09",
           "action": "Introduced.",
@@ -5500,9 +5637,9 @@
       "bill_type": "Bill",
       "introducer": "ANDRIA  TUPOLA, VAL  OKIMOTO",
       "introduced_date": "2026-07-01",
-      "status": "CCL",
-      "last_action": "Passed first reading.",
-      "last_action_date": "2026-07-08",
+      "status": "BUD",
+      "last_action": "Postponed to a date and time to be determined by the Committee Chair.\n",
+      "last_action_date": "2026-07-14",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3781",
       "raw_subject": "Specifies certain percentages of TAT revenues to be deposited into the Parks Maintenance and Recreation Services Revolving Fund and the Botanical Gardens and Urban Forestry Revolving Fund. Takes effect upon the date of the bill’s approval; or (2) the date on which Bill 33 (2026), or any amended version thereof, has been enacted into law and taken effect, whichever occurs later.",
       "subjects": [
@@ -5510,8 +5647,13 @@
       ],
       "classification_confidence": 0.015,
       "first_seen": "2026-07-10T16:15:10+00:00",
-      "last_updated": "2026-07-10T16:15:10+00:00",
+      "last_updated": "2026-07-15T16:15:06+00:00",
       "actions": [
+        {
+          "date": "2026-07-15",
+          "action": "Postponed to a date and time to be determined by the Committee Chair. 6 AYES: CORDERO, KIAʻĀINA, NISHIMOTO, OKIMOTO, TULBA, WATERS",
+          "committee": "BUD"
+        },
         {
           "date": "2026-07-08",
           "action": "Passed first reading. 8 AYES: CORDERO, DOS SANTOS-TAM, KIAʻĀINA, NISHIMOTO, OKIMOTO, TUPOLA, WATERS, WEYER 1 ABSENT: TULBA",
@@ -5532,16 +5674,21 @@
       "bill_type": "Bill",
       "introducer": "TYLER  DOS SANTOS-TAM",
       "introduced_date": "2026-07-01",
-      "status": "CCL",
-      "last_action": "Passed first reading.",
-      "last_action_date": "2026-07-08",
+      "status": "BUD",
+      "last_action": "CR-197(26)\nReported out for passage on second reading and scheduling of a public hearing.",
+      "last_action_date": "2026-07-14",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3783",
       "raw_subject": "Repeals Chapter 6, Article 59, Revised Ordinances of Honolulu 2021 (“Land Conservation Fund”). Takes effect on July 1, 2028, and provides that all ordinances and resolutions, or portions thereof, that are in conflict or inconsistent with this bill are also repealed.",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-07-10T16:15:10+00:00",
-      "last_updated": "2026-07-10T16:15:10+00:00",
+      "last_updated": "2026-07-15T16:15:07+00:00",
       "actions": [
+        {
+          "date": "2026-07-15",
+          "action": "Reported out for passage on second reading and scheduling of a public hearing. CR-197(26) 5 AYES: CORDERO, KIAʻĀINA, NISHIMOTO, OKIMOTO, WATERS 1 ABSENT: TULBA",
+          "committee": "BUD"
+        },
         {
           "date": "2026-07-08",
           "action": "Passed first reading. 8 AYES: CORDERO, DOS SANTOS-TAM, KIAʻĀINA, NISHIMOTO, OKIMOTO, TUPOLA, WATERS, WEYER 1 ABSENT: TULBA",
@@ -5587,9 +5734,9 @@
       "bill_type": "Resolution",
       "introducer": "TYLER  DOS SANTOS-TAM",
       "introduced_date": "2026-07-01",
-      "status": "INTRO",
-      "last_action": "Introduced.",
-      "last_action_date": "2026-07-01",
+      "status": "EES",
+      "last_action": "CR-201(26)\nReported out for adoption.",
+      "last_action_date": "2026-07-14",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3784",
       "raw_subject": null,
       "subjects": [
@@ -5597,8 +5744,13 @@
       ],
       "classification_confidence": 0.048,
       "first_seen": "2026-07-10T16:15:14+00:00",
-      "last_updated": "2026-07-10T16:15:14+00:00",
+      "last_updated": "2026-07-15T16:15:09+00:00",
       "actions": [
+        {
+          "date": "2026-07-14",
+          "action": "Reported out for adoption. CR-201(26) 4 AYES: DOS SANTOS-TAM, TULBA, TUPOLA, WEYER",
+          "committee": "EES"
+        },
         {
           "date": "2026-07-01",
           "action": "Introduced.",
@@ -5614,9 +5766,9 @@
       "bill_type": "Bill",
       "introducer": "ESTHER  KIAʻĀINA",
       "introduced_date": "2026-06-30",
-      "status": "CCL",
-      "last_action": "Passed first reading.",
-      "last_action_date": "2026-07-08",
+      "status": "BUD",
+      "last_action": "CR-193(26)\nReported out for passage on second reading and scheduling of a public hearing.",
+      "last_action_date": "2026-07-14",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3776",
       "raw_subject": "Specifies certain percentages of TAT revenues to be deposited into the Parks Maintenance and Recreation Services Revolving Fund, the Honolulu Zoo Fund, and the Botanical Gardens and Urban Forestry Revolving Fund. Takes effect upon the date of the bill’s approval; or (2) the date on which Bill 33 (2026), CD1, or any amended version thereof, has been enacted into law and taken effect, whichever occurs later.",
       "subjects": [
@@ -5624,8 +5776,13 @@
       ],
       "classification_confidence": 0.014,
       "first_seen": "2026-07-10T16:15:10+00:00",
-      "last_updated": "2026-07-10T16:15:10+00:00",
+      "last_updated": "2026-07-15T16:15:07+00:00",
       "actions": [
+        {
+          "date": "2026-07-15",
+          "action": "Reported out for passage on second reading and scheduling of a public hearing. CR-193(26) 6 AYES: CORDERO, KIAʻĀINA, NISHIMOTO*, OKIMOTO, TULBA, WATERS",
+          "committee": "BUD"
+        },
         {
           "date": "2026-07-08",
           "action": "Passed first reading. 8 AYES: CORDERO, DOS SANTOS-TAM, KIAʻĀINA, NISHIMOTO, OKIMOTO, TUPOLA, WATERS, WEYER 1 ABSENT: TULBA",
@@ -5646,9 +5803,9 @@
       "bill_type": "Bill",
       "introducer": "TOMMY  WATERS",
       "introduced_date": "2026-06-30",
-      "status": "CCL",
-      "last_action": "Passed first reading.",
-      "last_action_date": "2026-07-08",
+      "status": "BUD",
+      "last_action": "CR-194(26)\nReported out for passage on second reading and scheduling of a public hearing.",
+      "last_action_date": "2026-07-14",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3777",
       "raw_subject": "Amends the real property tax homeowner’s exemption base amount. Applies to tax years beginning July 1, 2028 and thereafter.",
       "subjects": [
@@ -5656,8 +5813,13 @@
       ],
       "classification_confidence": 0.167,
       "first_seen": "2026-07-10T16:15:10+00:00",
-      "last_updated": "2026-07-10T16:15:10+00:00",
+      "last_updated": "2026-07-15T16:15:07+00:00",
       "actions": [
+        {
+          "date": "2026-07-15",
+          "action": "Reported out for passage on second reading and scheduling of a public hearing. CR-194(26) 6 AYES: CORDERO, KIAʻĀINA, NISHIMOTO, OKIMOTO, TULBA, WATERS",
+          "committee": "BUD"
+        },
         {
           "date": "2026-07-08",
           "action": "Passed first reading. 8 AYES: CORDERO, DOS SANTOS-TAM, KIAʻĀINA, NISHIMOTO, OKIMOTO, TUPOLA, WATERS, WEYER 1 ABSENT: TULBA",
@@ -5678,9 +5840,9 @@
       "bill_type": "Bill",
       "introducer": "TOMMY  WATERS",
       "introduced_date": "2026-06-30",
-      "status": "CCL",
-      "last_action": "Passed first reading.",
-      "last_action_date": "2026-07-08",
+      "status": "BUD",
+      "last_action": "CR-195(26)\nReported out for passage on second reading and scheduling of a public hearing.",
+      "last_action_date": "2026-07-14",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3778",
       "raw_subject": "Increases and makes uniform the real property tax homeowner’s exemption amount for taxpayers 65 years of age or over, to apply to all income levels and age brackets for taxpayers 65 years of age or over. Applies to tax years beginning July 1 2028, and thereafter.",
       "subjects": [
@@ -5688,8 +5850,13 @@
       ],
       "classification_confidence": 0.078,
       "first_seen": "2026-07-10T16:15:10+00:00",
-      "last_updated": "2026-07-10T16:15:10+00:00",
+      "last_updated": "2026-07-15T16:15:07+00:00",
       "actions": [
+        {
+          "date": "2026-07-15",
+          "action": "Reported out for passage on second reading and scheduling of a public hearing. CR-195(26) 6 AYES: CORDERO, KIAʻĀINA, NISHIMOTO, OKIMOTO, TULBA, WATERS",
+          "committee": "BUD"
+        },
         {
           "date": "2026-07-08",
           "action": "Passed first reading. 8 AYES: CORDERO, DOS SANTOS-TAM, KIAʻĀINA, NISHIMOTO, OKIMOTO, TUPOLA, WATERS, WEYER 1 ABSENT: TULBA",
@@ -5710,9 +5877,9 @@
       "bill_type": "Bill",
       "introducer": "TOMMY  WATERS",
       "introduced_date": "2026-06-30",
-      "status": "CCL",
-      "last_action": "Passed first reading.",
-      "last_action_date": "2026-07-08",
+      "status": "BUD",
+      "last_action": "CR-196(26)\nReported out for passage on second reading and scheduling of a public hearing.",
+      "last_action_date": "2026-07-14",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3779",
       "raw_subject": "Reduces the vehicle weight tax rates for motor vehicles designed primarily for carrying passengers; trucks and noncommercial vehicles having a net weight of 6,500 pounds or less; and vehicles designed for carrying property or for purposes other than carrying passengers. Takes effect on July 1, 2027.",
       "subjects": [
@@ -5721,8 +5888,13 @@
       ],
       "classification_confidence": 0.038,
       "first_seen": "2026-07-10T16:15:10+00:00",
-      "last_updated": "2026-07-10T16:15:10+00:00",
+      "last_updated": "2026-07-15T16:15:07+00:00",
       "actions": [
+        {
+          "date": "2026-07-15",
+          "action": "Reported out for passage on second reading and scheduling of a public hearing. CR-196(26) 6 AYES: CORDERO, KIAʻĀINA, NISHIMOTO, OKIMOTO, TULBA, WATERS",
+          "committee": "BUD"
+        },
         {
           "date": "2026-07-08",
           "action": "Passed first reading. 8 AYES: CORDERO, DOS SANTOS-TAM, KIAʻĀINA, NISHIMOTO, OKIMOTO, TUPOLA, WATERS, WEYER 1 ABSENT: TULBA",
@@ -5880,9 +6052,9 @@
       "bill_type": "Resolution",
       "introducer": "TOMMY  WATERS - By Request",
       "introduced_date": "2026-06-24",
-      "status": "CCL/PH",
-      "last_action": "Public hearing closed and referred to Committee.",
-      "last_action_date": "2026-07-08",
+      "status": "BUD",
+      "last_action": "CR-198(26)\nReported out for adoption as amended in CD1 form.",
+      "last_action_date": "2026-07-14",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3773",
       "raw_subject": null,
       "subjects": [
@@ -5890,8 +6062,13 @@
       ],
       "classification_confidence": 0.115,
       "first_seen": "2026-07-10T16:15:15+00:00",
-      "last_updated": "2026-07-10T16:15:15+00:00",
+      "last_updated": "2026-07-15T16:15:09+00:00",
       "actions": [
+        {
+          "date": "2026-07-15",
+          "action": "Reported out for adoption as amended in CD1 form. CR-198(26) 6 AYES: CORDERO, KIAʻĀINA, NISHIMOTO, OKIMOTO, TULBA, WATERS",
+          "committee": "BUD"
+        },
         {
           "date": "2026-07-08",
           "action": "Public hearing closed and referred to Committee.",
@@ -5917,16 +6094,21 @@
       "bill_type": "Resolution",
       "introducer": "TOMMY  WATERS - By Request",
       "introduced_date": "2026-06-24",
-      "status": "CCL/PH",
-      "last_action": "Public hearing closed and referred to Committee.",
-      "last_action_date": "2026-07-08",
+      "status": "BUD",
+      "last_action": "CR-199(26)\nReported out for adoption.",
+      "last_action_date": "2026-07-14",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3774",
       "raw_subject": null,
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-07-10T16:15:15+00:00",
-      "last_updated": "2026-07-10T16:15:15+00:00",
+      "last_updated": "2026-07-15T16:15:09+00:00",
       "actions": [
+        {
+          "date": "2026-07-15",
+          "action": "Reported out for adoption. CR-199(26) 6 AYES: CORDERO, KIAʻĀINA, NISHIMOTO, OKIMOTO, TULBA, WATERS",
+          "committee": "BUD"
+        },
         {
           "date": "2026-07-08",
           "action": "Public hearing closed and referred to Committee.",
@@ -8050,9 +8232,9 @@
       "bill_type": "Bill",
       "introducer": "Dennis \"Fresh\" Onishi, Council Member",
       "introduced_date": null,
-      "status": null,
-      "last_action": null,
-      "last_action_date": null,
+      "status": "Passed First Reading",
+      "last_action": "Council:  Bill 164, Draft 2 passes first reading; adopts GOEAC-143 - 07/08/26",
+      "last_action_date": "2026-07-08",
       "url": "https://records.hawaiicounty.gov/WebLink/DocView.aspx?id=1132726&dbid=0",
       "raw_subject": "Requires Council confirmation for the Housing Administrator.",
       "subjects": [
@@ -8060,8 +8242,13 @@
       ],
       "classification_confidence": 0.032,
       "first_seen": "2026-05-30T20:41:50+00:00",
-      "last_updated": "2026-07-13T16:17:00+00:00",
+      "last_updated": "2026-07-15T16:16:48+00:00",
       "actions": [
+        {
+          "date": "2026-07-08",
+          "action": "Council:  Bill 164, Draft 2 passes first reading; adopts GOEAC-143 - 07/08/26",
+          "committee": null
+        },
         {
           "date": "2026-07-08",
           "action": "On agenda",
@@ -8098,8 +8285,8 @@
       "introducer": "Ashley L. Kierkiewicz, Council Member",
       "introduced_date": null,
       "status": null,
-      "last_action": null,
-      "last_action_date": null,
+      "last_action": "Council:  Bill 165, Draft 2 passes 2nd of 3 required readings - 07/08/26",
+      "last_action_date": "2026-07-08",
       "url": "https://records.hawaiicounty.gov/WebLink/DocView.aspx?id=1132728&dbid=0",
       "raw_subject": "Increases the annual allocation dedicated to the Public Access, Open Space, and Natural Resources Preservation maintenance fund from 0.25 percent to 0.5 percent of real property tax revenue; removes the accrual limit for the fund; provides that all expenses from the fund must align with the fund’s purpose",
       "subjects": [
@@ -8107,8 +8294,13 @@
       ],
       "classification_confidence": 0.041,
       "first_seen": "2026-05-30T20:41:50+00:00",
-      "last_updated": "2026-07-13T16:17:00+00:00",
+      "last_updated": "2026-07-15T16:16:49+00:00",
       "actions": [
+        {
+          "date": "2026-07-08",
+          "action": "Council:  Bill 165, Draft 2 passes 2nd of 3 required readings - 07/08/26",
+          "committee": null
+        },
         {
           "date": "2026-07-08",
           "action": "On agenda",
@@ -8817,9 +9009,9 @@
       "bill_type": "Bill",
       "introducer": "TYLER  DOS SANTOS-TAM",
       "introduced_date": "2026-05-28",
-      "status": "CCL/PH",
-      "last_action": "Committee report adopted.  Bill passed second reading as amended, public hearing closed and referred to committee.",
-      "last_action_date": "2026-07-08",
+      "status": "BUD",
+      "last_action": "Cancelled and not considered.",
+      "last_action_date": "2026-07-14",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3752",
       "raw_subject": "Temporarily entitles the owner of certain owner-occupied condominium units to a real property tax home exemption. Applies retroactively to the tax year beginning July 1, 2025, and thereafter.",
       "subjects": [
@@ -8828,8 +9020,18 @@
       ],
       "classification_confidence": 0.152,
       "first_seen": "2026-05-30T07:33:26+00:00",
-      "last_updated": "2026-07-10T16:15:11+00:00",
+      "last_updated": "2026-07-15T16:15:07+00:00",
       "actions": [
+        {
+          "date": "2026-07-16",
+          "action": "Second reading notice published in the Honolulu Star-Advertiser.",
+          "committee": "PUBLISH"
+        },
+        {
+          "date": "2026-07-15",
+          "action": "Cancelled and not considered.",
+          "committee": "BUD"
+        },
         {
           "date": "2026-07-08",
           "action": "Committee report adopted.  Bill passed second reading as amended, public hearing closed and referred to committee. 8 AYES: CORDERO, DOS SANTOS-TAM, KIAʻĀINA, NISHIMOTO, OKIMOTO, TUPOLA, WATERS, WEYER 1 ABSENT: TULBA",
@@ -8865,9 +9067,9 @@
       "bill_type": "Bill",
       "introducer": "TYLER  DOS SANTOS-TAM, AUGIE  TULBA",
       "introduced_date": "2026-05-28",
-      "status": "CCL/PH",
-      "last_action": "Committee report adopted.  Bill passed second reading, public hearing closed and referred to committee.",
-      "last_action_date": "2026-07-08",
+      "status": "PUBLISH",
+      "last_action": "Second reading notice published in the Honolulu Star-Advertiser.",
+      "last_action_date": "2026-07-16",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3753",
       "raw_subject": "Conforms ROH provisions to House Bill 2021, HD2, SD2, CD1, Relating to Transportation. Adds definitions for “Electric Bicycle,” “Class 1 Electric Bicycle,” Class 2 Electric Bicycle,” Class 3 Electric Bicycle, “Electric Micro-mobility Device, “High-speed Electric Device,” and “Electric Motorcycle.” Substitutes the term “electric bicycle” for the terms “bicycle with motor,” “motorized bicycles,” and similar terms. Substitutes the term “motor-driven cycle” for the term “motor scooter.” Regulates riding electric bicycles on sidewalks under certain circumstances. Prohibits on bikeways: (1) driving a vehicle, other than a bicycle, electric foot scooter, or electric micro-mobility device, with specified\nexceptions; and (2) operating mopeds or electric motorcycles. Prohibits a person under the age of sixteen from operating a class 2 or class 3 electric bicycle without direct supervision. Repeals as preempted: (1) certain safe driving requirements for the operation of electric bicycles on public streets, paths, or tra",
       "subjects": [
@@ -8875,8 +9077,13 @@
       ],
       "classification_confidence": 0.027,
       "first_seen": "2026-05-30T07:33:26+00:00",
-      "last_updated": "2026-07-10T16:15:11+00:00",
+      "last_updated": "2026-07-15T16:15:07+00:00",
       "actions": [
+        {
+          "date": "2026-07-16",
+          "action": "Second reading notice published in the Honolulu Star-Advertiser.",
+          "committee": "PUBLISH"
+        },
         {
           "date": "2026-07-08",
           "action": "Committee report adopted.  Bill passed second reading, public hearing closed and referred to committee. 8 AYES: CORDERO, DOS SANTOS-TAM, KIAʻĀINA, NISHIMOTO, OKIMOTO, TUPOLA, WATERS, WEYER 1 ABSENT: TULBA",
@@ -9193,16 +9400,21 @@
       "bill_type": "Resolution",
       "introducer": "TOMMY  WATERS - By Request",
       "introduced_date": "2026-05-18",
-      "status": "CCL/PH",
-      "last_action": "Public hearing closed and referred to Committee.",
-      "last_action_date": "2026-07-08",
+      "status": "EES",
+      "last_action": "CR-200(26)\nReported out for adoption as amended in CD1 form.",
+      "last_action_date": "2026-07-14",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3745",
       "raw_subject": null,
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:27+00:00",
-      "last_updated": "2026-07-10T16:15:17+00:00",
+      "last_updated": "2026-07-15T16:15:09+00:00",
       "actions": [
+        {
+          "date": "2026-07-14",
+          "action": "Reported out for adoption as amended in CD1 form. CR-200(26) 4 AYES: DOS SANTOS-TAM, TULBA, TUPOLA, WEYER",
+          "committee": "EES"
+        },
         {
           "date": "2026-07-08",
           "action": "Public hearing closed and referred to Committee.",
@@ -10511,16 +10723,21 @@
       "bill_type": "Bill",
       "introducer": "TYLER  DOS SANTOS-TAM",
       "introduced_date": "2026-04-30",
-      "status": "CCL/PH",
-      "last_action": "Committee report adopted.  Bill passed second reading, public hearing closed and referred to committee.",
-      "last_action_date": "2026-07-08",
+      "status": "PUBLISH",
+      "last_action": "Second reading notice published in the Honolulu Star-Advertiser.",
+      "last_action_date": "2026-07-16",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3715",
       "raw_subject": "Repeals and amends provisions governing curbside tellers.",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:26+00:00",
-      "last_updated": "2026-07-10T16:15:11+00:00",
+      "last_updated": "2026-07-15T16:15:07+00:00",
       "actions": [
+        {
+          "date": "2026-07-16",
+          "action": "Second reading notice published in the Honolulu Star-Advertiser.",
+          "committee": "PUBLISH"
+        },
         {
           "date": "2026-07-08",
           "action": "Committee report adopted.  Bill passed second reading, public hearing closed and referred to committee. 7 AYES: CORDERO, DOS SANTOS-TAM, KIAʻĀINA, NISHIMOTO, OKIMOTO, TUPOLA, WATERS 2 ABSENT: TULBA, WEYER",
@@ -12519,9 +12736,9 @@
       "bill_type": "Bill",
       "introducer": "ANDRIA  TUPOLA",
       "introduced_date": "2026-03-17",
-      "status": "CCL/PH",
-      "last_action": "Committee report adopted.  Bill passed second reading as amended, public hearing closed and referred to committee.",
-      "last_action_date": "2026-07-08",
+      "status": "PUBLISH",
+      "last_action": "Second reading notice published in the Honolulu Star-Advertiser.",
+      "last_action_date": "2026-07-16",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3669",
       "raw_subject": "Amends provisions relating to the use of City parks for farmers' markets and food distribution events conducted by nonprofit organizations.",
       "subjects": [
@@ -12529,8 +12746,13 @@
       ],
       "classification_confidence": 0.083,
       "first_seen": "2026-05-30T07:33:26+00:00",
-      "last_updated": "2026-07-10T16:15:12+00:00",
+      "last_updated": "2026-07-15T16:15:08+00:00",
       "actions": [
+        {
+          "date": "2026-07-16",
+          "action": "Second reading notice published in the Honolulu Star-Advertiser.",
+          "committee": "PUBLISH"
+        },
         {
           "date": "2026-07-08",
           "action": "Committee report adopted.  Bill passed second reading as amended, public hearing closed and referred to committee. 7 AYES: CORDERO, DOS SANTOS-TAM, KIAʻĀINA, OKIMOTO, TUPOLA, WATERS, WEYER 2 ABSENT: NISHIMOTO, TULBA",
@@ -12571,16 +12793,21 @@
       "bill_type": "Bill",
       "introducer": "ANDRIA  TUPOLA",
       "introduced_date": "2026-03-17",
-      "status": "CCL/PH",
-      "last_action": "Committee report adopted.  Bill passed second reading as amended, public hearing closed and referred to committee.",
-      "last_action_date": "2026-07-08",
+      "status": "PUBLISH",
+      "last_action": "Second reading notice published in the Honolulu Star-Advertiser.",
+      "last_action_date": "2026-07-16",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3670",
       "raw_subject": "Allows the DPR Director to establish a program to allow for improved stewardship of cultural sites in City parks. Establishes the process for including cultural sites in City parks in the program and requires a stewardship plan. Provides the DPR Director with rulemaking authority. Imposes fines for violations.",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:26+00:00",
-      "last_updated": "2026-07-10T16:15:12+00:00",
+      "last_updated": "2026-07-15T16:15:08+00:00",
       "actions": [
+        {
+          "date": "2026-07-16",
+          "action": "Second reading notice published in the Honolulu Star-Advertiser.",
+          "committee": "PUBLISH"
+        },
         {
           "date": "2026-07-08",
           "action": "Committee report adopted.  Bill passed second reading as amended, public hearing closed and referred to committee. 7 AYES: CORDERO, DOS SANTOS-TAM, KIAʻĀINA, OKIMOTO, TUPOLA, WATERS, WEYER 2 ABSENT: NISHIMOTO, TULBA",
@@ -12621,16 +12848,21 @@
       "bill_type": "Bill",
       "introducer": "TOMMY  WATERS, ANDRIA  TUPOLA",
       "introduced_date": "2026-03-17",
-      "status": "CCL/PH",
-      "last_action": "Committee report adopted.  Bill passed second reading as amended, public hearing closed and referred to committee.",
-      "last_action_date": "2026-07-08",
+      "status": "PUBLISH",
+      "last_action": "Second reading notice published in the Honolulu Star-Advertiser.",
+      "last_action_date": "2026-07-16",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3671",
       "raw_subject": "Repeals certain specific fees and charges for the use of botanical gardens, public parks, and recreational facilities. Authorizes the DPR Director to establish fees and charges by rule for the commercial and noncommercial use of parks; recreational facilities; and botanical gardens under the jurisdiction of the DPR and requires that the fees and charges collected (except those derived from the use of the Hanauma Bay Nature Preserve) be deposited into a fund designated by the DPR Director. Provides the DPR Director with rulemaking authority. Establishes reporting requirements. Takes effect upon approval; provided that fees established by ROH articles and sections to be repealed will remain in effect until the DPR Director adopts rules.",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:26+00:00",
-      "last_updated": "2026-07-10T16:15:12+00:00",
+      "last_updated": "2026-07-15T16:15:08+00:00",
       "actions": [
+        {
+          "date": "2026-07-16",
+          "action": "Second reading notice published in the Honolulu Star-Advertiser.",
+          "committee": "PUBLISH"
+        },
         {
           "date": "2026-07-08",
           "action": "Committee report adopted.  Bill passed second reading as amended, public hearing closed and referred to committee. 7 AYES: CORDERO, KIAʻĀINA, NISHIMOTO, OKIMOTO, TUPOLA, WATERS, WEYER 2 ABSENT: DOS SANTOS-TAM, TULBA",
@@ -12671,9 +12903,9 @@
       "bill_type": "Bill",
       "introducer": "ANDRIA  TUPOLA",
       "introduced_date": "2026-03-17",
-      "status": "CCL/PH",
-      "last_action": "Committee report adopted.  Bill passed second reading as amended, public hearing closed and referred to committee.",
-      "last_action_date": "2026-07-08",
+      "status": "BUD",
+      "last_action": "See: Proposed draft version OCS2026-0422/7/7/2026 1:16 PM\nAmended to CD2 and postponed to a date and time to be determined by the Committee Chair.",
+      "last_action_date": "2026-07-14",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3672",
       "raw_subject": "Establishes a special fund to be called the Parks Maintenance and Recreation Services Revolving Fund for the deposit of all revenues and proceeds generated by the DPR relating to the use of lands dedicated for park use or for park maintenance and recreation services, or otherwise earmarked for the restoration, operation, or maintenance of beaches and parks under the jurisdiction of the DPR, to be expended for DPR operations, parks maintenance and recreational facilities, and programs under the jurisdiction of the DPR. Establishes a special fund to be called the Botanical Gardens and Urban Forestry Revolving Fund for the deposit of all revenues and proceeds relating to the use of lands dedicated for botanical gardens, community gardens, and urban forestry programs and operations generated by the DPR, or otherwise earmarked for the restoration, operation, or maintenance of gardens and park and street trees under the jurisdiction of the DPR, to be expended for the operations of the DPR's Division of Urban Forest",
       "subjects": [
@@ -12681,8 +12913,18 @@
       ],
       "classification_confidence": 0.006,
       "first_seen": "2026-05-30T07:33:26+00:00",
-      "last_updated": "2026-07-10T16:15:12+00:00",
+      "last_updated": "2026-07-15T16:15:08+00:00",
       "actions": [
+        {
+          "date": "2026-07-16",
+          "action": "Second reading notice published in the Honolulu Star-Advertiser.",
+          "committee": "PUBLISH"
+        },
+        {
+          "date": "2026-07-15",
+          "action": "Amended to CD2 and postponed to a date and time to be determined by the Committee Chair. See: Proposed draft version OCS2026-0422/7/7/2026 1:16 PM 6 AYES: CORDERO, KIAʻĀINA, NISHIMOTO, OKIMOTO, TULBA, WATERS",
+          "committee": "BUD"
+        },
         {
           "date": "2026-07-08",
           "action": "Committee report adopted.  Bill passed second reading as amended, public hearing closed and referred to committee. 8 AYES: CORDERO, DOS SANTOS-TAM, KIAʻĀINA, NISHIMOTO, OKIMOTO, TUPOLA, WATERS, WEYER 1 ABSENT: TULBA",
@@ -12893,9 +13135,9 @@
       "bill_type": "Bill",
       "introducer": "TYLER  DOS SANTOS-TAM",
       "introduced_date": "2026-03-10",
-      "status": "CCL/PH",
-      "last_action": "Committee report adopted.  Bill passed second reading, public hearing closed and referred to committee.",
-      "last_action_date": "2026-07-08",
+      "status": "BUD",
+      "last_action": "Postponed to a date and time to be determined by the Committee Chair.\n",
+      "last_action_date": "2026-07-14",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3667",
       "raw_subject": "Amends the requirements for filing a claim for a continued RPT exemption for low-income rental housing.",
       "subjects": [
@@ -12904,8 +13146,18 @@
       ],
       "classification_confidence": 0.19,
       "first_seen": "2026-05-30T07:33:26+00:00",
-      "last_updated": "2026-07-10T16:15:12+00:00",
+      "last_updated": "2026-07-15T16:15:08+00:00",
       "actions": [
+        {
+          "date": "2026-07-16",
+          "action": "Second reading notice published in the Honolulu Star-Advertiser.",
+          "committee": "PUBLISH"
+        },
+        {
+          "date": "2026-07-15",
+          "action": "Postponed to a date and time to be determined by the Committee Chair. 6 AYES: CORDERO, KIAʻĀINA, NISHIMOTO, OKIMOTO, TULBA, WATERS",
+          "committee": "BUD"
+        },
         {
           "date": "2026-07-08",
           "action": "Committee report adopted.  Bill passed second reading, public hearing closed and referred to committee. 8 AYES: CORDERO, DOS SANTOS-TAM, KIAʻĀINA, NISHIMOTO, OKIMOTO, TUPOLA, WATERS, WEYER 1 ABSENT: TULBA",
@@ -13621,16 +13873,21 @@
       "bill_type": "Bill",
       "introducer": "TOMMY  WATERS - By Request",
       "introduced_date": "2026-03-02",
-      "status": "CCL",
-      "last_action": "Bill 22, CD2, FD1 (Ordinance 26-18) Passed final reading, the Mayor’s veto to the contrary notwithstanding on all lined items as indicated in the Ordinance. \nEnter into the Council Journal. MM-85(26) - Returning vetoed certain portions of Bill 22 (2026), CD2, FD1",
-      "last_action_date": "2026-07-08",
+      "status": "PUBLISH",
+      "last_action": "Final reading notice published in the Honolulu Star-Advertiser.",
+      "last_action_date": "2026-07-17",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3647",
       "raw_subject": "Appropriates funds for the Executive Operating Budget for Fiscal Year 2027.",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-05-30T07:33:26+00:00",
-      "last_updated": "2026-07-10T16:15:12+00:00",
+      "last_updated": "2026-07-15T16:15:08+00:00",
       "actions": [
+        {
+          "date": "2026-07-17",
+          "action": "Final reading notice published in the Honolulu Star-Advertiser.",
+          "committee": "PUBLISH"
+        },
         {
           "date": "2026-07-08",
           "action": "Enter into the Council Journal. MM-85(26) - Returning vetoed certain portions of Bill 22 (2026), CD2, FD1 Bill 22, CD2, FD1 (Ordinance 26-18) Passed final reading, the Mayor’s veto to the contrary notwithstanding on all lined items as indicated in the Ordinance. 6 AYES: CORDERO, KIAʻĀINA, NISHIMOTO, OKIMOTO, TUPOLA, WATERS 2 NOES: DOS SANTOS-TAM, WEYER 1 ABSENT: TULBA",
@@ -15051,9 +15308,9 @@
       "bill_type": "Bill",
       "introducer": "ANDRIA  TUPOLA",
       "introduced_date": "2026-02-11",
-      "status": "CCL/PH",
-      "last_action": "Committee report adopted.  Bill passed second reading as amended, public hearing closed and referred to committee.",
-      "last_action_date": "2026-07-08",
+      "status": "PUBLISH",
+      "last_action": "Second reading notice published in the Honolulu Star-Advertiser.",
+      "last_action_date": "2026-07-16",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3626",
       "raw_subject": "Amends various development standards, building construction standards, and other requirements and benefits for affordable rental housing projects developed under ROH Chapter 32.",
       "subjects": [
@@ -15061,8 +15318,13 @@
       ],
       "classification_confidence": 0.115,
       "first_seen": "2026-05-30T07:33:27+00:00",
-      "last_updated": "2026-07-10T16:15:13+00:00",
+      "last_updated": "2026-07-15T16:15:08+00:00",
       "actions": [
+        {
+          "date": "2026-07-16",
+          "action": "Second reading notice published in the Honolulu Star-Advertiser.",
+          "committee": "PUBLISH"
+        },
         {
           "date": "2026-07-08",
           "action": "Committee report adopted.  Bill passed second reading as amended, public hearing closed and referred to committee. 6 AYES: CORDERO, DOS SANTOS-TAM, OKIMOTO, TUPOLA, WATERS, WEYER 2 NOES: KIAʻĀINA, NISHIMOTO 1 ABSENT: TULBA",
@@ -15527,9 +15789,9 @@
       "bill_type": "Bill",
       "introducer": "Ashley L. Kierkiewicz, Council Member",
       "introduced_date": "2026-02-03",
-      "status": null,
-      "last_action": null,
-      "last_action_date": null,
+      "status": "Passed First Reading",
+      "last_action": "Council:  Bill 126, Draft 3 passes first reading; adopts PCPLUED-12 - 07/08/26",
+      "last_action_date": "2026-07-08",
       "url": "https://records.hawaiicounty.gov/WebLink/DocView.aspx?id=1132722&dbid=0",
       "raw_subject": "Creates the Downtown Pāhoa commercial district as a new special zoning district; establishes new permitted uses.",
       "subjects": [
@@ -15537,8 +15799,13 @@
       ],
       "classification_confidence": 0.026,
       "first_seen": "2026-06-11T21:05:02+00:00",
-      "last_updated": "2026-07-13T16:16:40+00:00",
+      "last_updated": "2026-07-15T16:16:26+00:00",
       "actions": [
+        {
+          "date": "2026-07-08",
+          "action": "Council:  Bill 126, Draft 3 passes first reading; adopts PCPLUED-12 - 07/08/26",
+          "committee": null
+        },
         {
           "date": "2026-07-08",
           "action": "On agenda",
@@ -22355,18 +22622,23 @@
       "bill_type": "Bill",
       "introducer": "VAL  OKIMOTO",
       "introduced_date": "2025-10-21",
-      "status": "CCL",
-      "last_action": "Passed first reading.",
-      "last_action_date": "2025-11-05",
+      "status": "BUD",
+      "last_action": "Postponed to a date and time to be determined by the Committee Chair.\n",
+      "last_action_date": "2026-07-14",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3531",
       "raw_subject": "Establishes a valuation cap (either 2 percent of the preceding tax year’s assessed value of the real property or the rate of inflation per year, whichever is lower) for real property owned and occupied by a taxpayer 65 years or age or older. Specifies certain exceptions to the valuation cap. Effective for tax years beginning July 1, 2027.",
       "subjects": [
         "tax"
       ],
-      "classification_confidence": 0.016,
+      "classification_confidence": 0.032,
       "first_seen": "2026-06-01T20:41:04+00:00",
-      "last_updated": "2026-06-01T20:41:04+00:00",
+      "last_updated": "2026-07-15T16:15:05+00:00",
       "actions": [
+        {
+          "date": "2026-07-14",
+          "action": "Postponed to a date and time to be determined by the Committee Chair. 6 AYES: CORDERO, KIAʻĀINA, NISHIMOTO, OKIMOTO, TULBA, WATERS",
+          "committee": "BUD"
+        },
         {
           "date": "2025-11-06",
           "action": "Passed first reading. 9 AYES: CORDERO, DOS SANTOS-TAM, KIAʻĀINA, NISHIMOTO, OKIMOTO, TULBA, TUPOLA, WATERS, WEYER",
@@ -22387,9 +22659,9 @@
       "bill_type": "Bill",
       "introducer": "VAL  OKIMOTO - By Request",
       "introduced_date": "2025-10-21",
-      "status": "CCL",
-      "last_action": "Passed first reading.",
-      "last_action_date": "2025-11-05",
+      "status": "BUD",
+      "last_action": "CR-192(26)\nReported out for passage on second reading and scheduling of a public hearing.",
+      "last_action_date": "2026-07-14",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3532",
       "raw_subject": "Amends the definition of income in ROH § 8-13.1 to clarify that only the titleholder’s income (and not the income of a non-titleholder who is included on a joint income tax return) will be considered when calculating income eligibility for the County Tax Credit.",
       "subjects": [
@@ -22397,8 +22669,13 @@
       ],
       "classification_confidence": 0.02,
       "first_seen": "2026-06-01T20:41:04+00:00",
-      "last_updated": "2026-06-01T20:41:04+00:00",
+      "last_updated": "2026-07-15T16:15:06+00:00",
       "actions": [
+        {
+          "date": "2026-07-14",
+          "action": "Reported out for passage on second reading and scheduling of a public hearing. CR-192(26) 6 AYES: CORDERO, KIAʻĀINA, NISHIMOTO, OKIMOTO, TULBA, WATERS",
+          "committee": "BUD"
+        },
         {
           "date": "2025-11-06",
           "action": "Passed first reading. 9 AYES: CORDERO, DOS SANTOS-TAM, KIAʻĀINA, NISHIMOTO, OKIMOTO, TULBA, TUPOLA, WATERS, WEYER",
@@ -60640,6 +60917,24 @@
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:47:52+00:00",
       "last_updated": "2026-06-01T20:47:52+00:00"
+    },
+    {
+      "id": 2350,
+      "council": "maui",
+      "bill_number": "WASSP-1(22) Rule 7(B)",
+      "title": "ENHANCING COUNTY MENTAL HEALTH CRISIS RESPONSE   (WASSP-1(22))",
+      "bill_type": "Rule 7(B)",
+      "introducer": null,
+      "introduced_date": "2024-08-23",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=14996",
+      "raw_subject": "Water Authority, Social Services, and Parks Committee (2023-2025)",
+      "subjects": [],
+      "classification_confidence": 0.0,
+      "first_seen": "2026-07-15T16:15:15+00:00",
+      "last_updated": "2026-07-15T16:15:15+00:00"
     },
     {
       "id": 401,
