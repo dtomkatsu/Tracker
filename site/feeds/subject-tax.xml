@@ -2,9 +2,29 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>tag:dtomkatsu.github.io,2026:feeds/subject-tax.xml</id>
   <title>Bill Tracker — Tax bills</title>
-  <updated>2026-07-17T16:15:35+00:00</updated>
+  <updated>2026-07-20T16:15:38+00:00</updated>
   <link rel="self" href="https://dtomkatsu.github.io/Tracker/feeds/subject-tax.xml"/>
   <link rel="alternate" href="https://dtomkatsu.github.io/Tracker/"/>
+  <entry>
+    <id>tag:dtomkatsu.github.io,2026:hawaii-bill-163/2026-07-20T16:15:38+00:00</id>
+    <title>Bill 163 (Hawaiʻi County): On agenda 2026-07-23</title>
+    <updated>2026-07-20T16:15:38+00:00</updated>
+    <link rel="alternate" href="https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&amp;event_id=2040"/>
+    <content type="html">&lt;p&gt;&lt;strong&gt;AMENDS CHAPTER 19, ARTICLE 8, OF THE HAWAIʻI COUNTY CODE 1983 (2016 EDITION, AS AMENDED), RELATING TO REAL PROPERTY TAXES&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Establishes a new real property tax dedication for certain properties that are owned by a descendant of a person who owned the property at least one hundred years ago to be subject to the minimum tax.&lt;/p&gt;
+&lt;p&gt;Latest action: On agenda 2026-07-23&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&amp;amp;event_id=2040"&gt;View on the council site&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:dtomkatsu.github.io,2026:hawaii-bill-165/2026-07-20T16:15:38+00:00</id>
+    <title>Bill 165 (Hawaiʻi County): On agenda 2026-07-23</title>
+    <updated>2026-07-20T16:15:38+00:00</updated>
+    <link rel="alternate" href="https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&amp;event_id=2040"/>
+    <content type="html">&lt;p&gt;&lt;strong&gt;INITIATES AN AMENDMENT TO ARTICLE X OF THE CHARTER OF THE COUNTY OF HAWAI‘I (2024 EDITION), RELATING TO PUBLIC ACCESS, OPEN SPACE, AND NATURAL RESOURCES PRESERVATION&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Increases the annual allocation dedicated to the Public Access, Open Space, and Natural Resources Preservation maintenance fund from 0.25 percent to 0.5 percent of real property tax revenue; removes the accrual limit for the fund; provides that all expenses from the fund must align with the fund’s purpose&lt;/p&gt;
+&lt;p&gt;Latest action: On agenda 2026-07-23&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&amp;amp;event_id=2040"&gt;View on the council site&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
   <entry>
     <id>tag:dtomkatsu.github.io,2026:hawaii-bill-175/2026-07-17T16:15:35+00:00</id>
     <title>New: Bill 175 (Hawaiʻi County) — On agenda 2026-07-22</title>
@@ -50,22 +70,22 @@
     <id>tag:dtomkatsu.github.io,2026:hawaii-bill-163/2026-07-17T16:15:35+00:00</id>
     <title>Bill 163 (Hawaiʻi County): Passed First Reading → —</title>
     <updated>2026-07-17T16:15:35+00:00</updated>
-    <link rel="alternate" href="https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&amp;clip_id=3809"/>
+    <link rel="alternate" href="https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&amp;event_id=2040"/>
     <content type="html">&lt;p&gt;&lt;strong&gt;AMENDS CHAPTER 19, ARTICLE 8, OF THE HAWAIʻI COUNTY CODE 1983 (2016 EDITION, AS AMENDED), RELATING TO REAL PROPERTY TAXES&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Establishes a new real property tax dedication for certain properties that are owned by a descendant of a person who owned the property at least one hundred years ago to be subject to the minimum tax.&lt;/p&gt;
 &lt;p&gt;Status: Passed First Reading → —&lt;/p&gt;
 &lt;p&gt;Latest action: On agenda 2026-07-08&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&amp;amp;clip_id=3809"&gt;View on the council site&lt;/a&gt;&lt;/p&gt;</content>
+&lt;p&gt;&lt;a href="https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&amp;amp;event_id=2040"&gt;View on the council site&lt;/a&gt;&lt;/p&gt;</content>
   </entry>
   <entry>
     <id>tag:dtomkatsu.github.io,2026:hawaii-bill-165/2026-07-17T16:15:35+00:00</id>
     <title>Bill 165 (Hawaiʻi County): On agenda 2026-07-08</title>
     <updated>2026-07-17T16:15:35+00:00</updated>
-    <link rel="alternate" href="https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&amp;clip_id=3809"/>
+    <link rel="alternate" href="https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&amp;event_id=2040"/>
     <content type="html">&lt;p&gt;&lt;strong&gt;INITIATES AN AMENDMENT TO ARTICLE X OF THE CHARTER OF THE COUNTY OF HAWAI‘I (2024 EDITION), RELATING TO PUBLIC ACCESS, OPEN SPACE, AND NATURAL RESOURCES PRESERVATION&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Increases the annual allocation dedicated to the Public Access, Open Space, and Natural Resources Preservation maintenance fund from 0.25 percent to 0.5 percent of real property tax revenue; removes the accrual limit for the fund; provides that all expenses from the fund must align with the fund’s purpose&lt;/p&gt;
 &lt;p&gt;Latest action: On agenda 2026-07-08&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&amp;amp;clip_id=3809"&gt;View on the council site&lt;/a&gt;&lt;/p&gt;</content>
+&lt;p&gt;&lt;a href="https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&amp;amp;event_id=2040"&gt;View on the council site&lt;/a&gt;&lt;/p&gt;</content>
   </entry>
   <entry>
     <id>tag:dtomkatsu.github.io,2026:hawaii-bill-160/2026-07-17T16:15:35+00:00</id>
@@ -410,11 +430,11 @@
     <id>tag:dtomkatsu.github.io,2026:hawaii-bill-165/2026-07-15T16:16:49+00:00</id>
     <title>Bill 165 (Hawaiʻi County): Council:  Bill 165, Draft 2 passes 2nd of 3 required readings - 07/08/26</title>
     <updated>2026-07-15T16:16:49+00:00</updated>
-    <link rel="alternate" href="https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&amp;clip_id=3809"/>
+    <link rel="alternate" href="https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&amp;event_id=2040"/>
     <content type="html">&lt;p&gt;&lt;strong&gt;INITIATES AN AMENDMENT TO ARTICLE X OF THE CHARTER OF THE COUNTY OF HAWAI‘I (2024 EDITION), RELATING TO PUBLIC ACCESS, OPEN SPACE, AND NATURAL RESOURCES PRESERVATION&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Increases the annual allocation dedicated to the Public Access, Open Space, and Natural Resources Preservation maintenance fund from 0.25 percent to 0.5 percent of real property tax revenue; removes the accrual limit for the fund; provides that all expenses from the fund must align with the fund’s purpose&lt;/p&gt;
 &lt;p&gt;Latest action: Council:  Bill 165, Draft 2 passes 2nd of 3 required readings - 07/08/26&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&amp;amp;clip_id=3809"&gt;View on the council site&lt;/a&gt;&lt;/p&gt;</content>
+&lt;p&gt;&lt;a href="https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&amp;amp;event_id=2040"&gt;View on the council site&lt;/a&gt;&lt;/p&gt;</content>
   </entry>
   <entry>
     <id>tag:dtomkatsu.github.io,2026:honolulu-res26-154/2026-07-15T16:15:09+00:00</id>
@@ -532,26 +552,5 @@ Reported out for passage on second reading and scheduling of a public hearing.&l
 &lt;p&gt;Latest action: CR-192(26)
 Reported out for passage on second reading and scheduling of a public hearing.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://hnldoc.ehawaii.gov/hnldoc/measure/3532"&gt;View on the council site&lt;/a&gt;&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <id>tag:dtomkatsu.github.io,2026:honolulu-bill067-25/2026-07-15T16:15:05+00:00</id>
-    <title>BILL067(25) (Honolulu): CCL → BUD</title>
-    <updated>2026-07-15T16:15:05+00:00</updated>
-    <link rel="alternate" href="https://hnldoc.ehawaii.gov/hnldoc/measure/3531"/>
-    <content type="html">&lt;p&gt;&lt;strong&gt;RELATING TO REAL PROPERTY TAXATION.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Establishes a valuation cap (either 2 percent of the preceding tax year’s assessed value of the real property or the rate of inflation per year, whichever is lower) for real property owned and occupied by a taxpayer 65 years or age or older. Specifies certain exceptions to the valuation cap. Effective for tax years beginning July 1, 2027.&lt;/p&gt;
-&lt;p&gt;Status: CCL → BUD&lt;/p&gt;
-&lt;p&gt;Latest action: Postponed to a date and time to be determined by the Committee Chair.
-&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://hnldoc.ehawaii.gov/hnldoc/measure/3531"&gt;View on the council site&lt;/a&gt;&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <id>tag:dtomkatsu.github.io,2026:kauai-bill-2941/2026-07-13T16:17:51+00:00</id>
-    <title>New: Bill 2941 (Kauaʻi) — In Committee</title>
-    <updated>2026-07-13T16:17:51+00:00</updated>
-    <link rel="alternate" href="https://kauai.granicus.com/AgendaViewer.php?view_id=2&amp;clip_id=2812"/>
-    <content type="html">&lt;p&gt;&lt;strong&gt;A BILL FOR AN ORDINANCE AMENDING ORDINANCE NO. B-2024-896, AS AMENDED, RELATING TO THE OPERATING BUDGET OF THE COUNTY OF KAUA‘I, STATE OF HAWAI‘I, FOR THE FISCAL YEAR JULY 1, 2024 THROUGH JUNE 30, 2025, BY REVISING THE AMOUNTS ESTIMATED IN THE GENERAL FUND, HIGHWAY FUND, G.E. TAX FUND, SOLID WASTE FUND, SEWER FUND, AND GOLF FUND (HGEA Temporary Hazard Pay)&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Latest action: On agenda 2025-03-12&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://kauai.granicus.com/AgendaViewer.php?view_id=2&amp;amp;clip_id=2812"&gt;View on the council site&lt;/a&gt;&lt;/p&gt;</content>
   </entry>
 </feed>

@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-07-17T16:15:49+00:00",
+  "generated_at": "2026-07-20T16:15:52+00:00",
   "last_scrape": {
-    "id": 108,
-    "started_at": "2026-07-17T16:15:35+00:00",
-    "completed_at": "2026-07-17T16:15:49+00:00",
+    "id": 112,
+    "started_at": "2026-07-20T16:15:38+00:00",
+    "completed_at": "2026-07-20T16:15:51+00:00",
     "council": "kauai",
     "bills_seen": 108,
     "bills_new": 0,
@@ -2842,17 +2842,22 @@
       "introducer": null,
       "introduced_date": null,
       "status": null,
-      "last_action": "On agenda 2026-07-07",
-      "last_action_date": "2026-07-07",
-      "url": "https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=1&clip_id=3803",
+      "last_action": "On agenda 2026-07-23",
+      "last_action_date": "2026-07-23",
+      "url": "https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&event_id=2040",
       "raw_subject": "Director Initiated) (Area: 6,467 acres) The Leeward Planning Commission forwards its favorable recommendation to revert the current zoning of 3.331 acres from Village Commercial to Double-Family Residential and 3.227 acres from Multiple-Family Residentia",
       "subjects": [
         "affordable_housing"
       ],
       "classification_confidence": 0.021,
       "first_seen": "2026-07-10T16:23:38+00:00",
-      "last_updated": "2026-07-17T16:15:35+00:00",
+      "last_updated": "2026-07-20T16:15:38+00:00",
       "actions": [
+        {
+          "date": "2026-07-23",
+          "action": "On agenda",
+          "committee": null
+        },
         {
           "date": "2026-07-07",
           "action": "LAAC-43:  Recommended passage on first reading - 07/07/026",
@@ -5691,6 +5696,24 @@
       ]
     },
     {
+      "id": 2362,
+      "council": "maui",
+      "bill_number": "WAI-1(10) Rule 7(B)",
+      "title": "DISCUSSION ON RESOLUTION 26-116, RELATING TO THE ACQUISITION OF WATER SYSTEM ASSETS FROM LAUNIUPOKO WATER CO., INC. AND OLOWALU WATER COMPANY, INC.  (WAI-1(10))",
+      "bill_type": "Rule 7(B)",
+      "introducer": null,
+      "introduced_date": "2026-07-10",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16340",
+      "raw_subject": "Water and Infrastructure Committee (2025-2027)",
+      "subjects": [],
+      "classification_confidence": 0.0,
+      "first_seen": "2026-07-20T16:15:06+00:00",
+      "last_updated": "2026-07-20T16:15:06+00:00"
+    },
+    {
       "id": 2146,
       "council": "honolulu",
       "bill_number": "RES26-162",
@@ -8489,17 +8512,22 @@
       "introducer": null,
       "introduced_date": null,
       "status": null,
-      "last_action": "On agenda 2026-07-08",
-      "last_action_date": "2026-07-08",
-      "url": "https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&clip_id=3809",
+      "last_action": "On agenda 2026-07-23",
+      "last_action_date": "2026-07-23",
+      "url": "https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&event_id=2040",
       "raw_subject": "Requires Council confirmation for the Housing Administrator.",
       "subjects": [
         "affordable_housing"
       ],
       "classification_confidence": 0.032,
       "first_seen": "2026-05-30T20:41:50+00:00",
-      "last_updated": "2026-07-17T16:15:35+00:00",
+      "last_updated": "2026-07-20T16:15:38+00:00",
       "actions": [
+        {
+          "date": "2026-07-23",
+          "action": "On agenda",
+          "committee": null
+        },
         {
           "date": "2026-07-08",
           "action": "Council:  Bill 164, Draft 2 passes first reading; adopts GOEAC-143 - 07/08/26",
@@ -8541,17 +8569,22 @@
       "introducer": null,
       "introduced_date": null,
       "status": null,
-      "last_action": "On agenda 2026-07-08",
-      "last_action_date": "2026-07-08",
-      "url": "https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&clip_id=3809",
+      "last_action": "On agenda 2026-07-23",
+      "last_action_date": "2026-07-23",
+      "url": "https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&event_id=2040",
       "raw_subject": "Increases the annual allocation dedicated to the Public Access, Open Space, and Natural Resources Preservation maintenance fund from 0.25 percent to 0.5 percent of real property tax revenue; removes the accrual limit for the fund; provides that all expenses from the fund must align with the fund’s purpose",
       "subjects": [
         "tax"
       ],
       "classification_confidence": 0.041,
       "first_seen": "2026-05-30T20:41:50+00:00",
-      "last_updated": "2026-07-17T16:15:35+00:00",
+      "last_updated": "2026-07-20T16:15:38+00:00",
       "actions": [
+        {
+          "date": "2026-07-23",
+          "action": "On agenda",
+          "committee": null
+        },
         {
           "date": "2026-07-08",
           "action": "Council:  Bill 165, Draft 2 passes 2nd of 3 required readings - 07/08/26",
@@ -8593,17 +8626,22 @@
       "introducer": null,
       "introduced_date": null,
       "status": null,
-      "last_action": "On agenda 2026-07-08",
-      "last_action_date": "2026-07-08",
-      "url": "https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&clip_id=3809",
+      "last_action": "On agenda 2026-07-23",
+      "last_action_date": "2026-07-23",
+      "url": "https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&event_id=2040",
       "raw_subject": "Establishes a new real property tax dedication for certain properties that are owned by a descendant of a person who owned the property at least one hundred years ago to be subject to the minimum tax.",
       "subjects": [
         "tax"
       ],
       "classification_confidence": 0.054,
       "first_seen": "2026-05-30T20:41:50+00:00",
-      "last_updated": "2026-07-17T16:15:35+00:00",
+      "last_updated": "2026-07-20T16:15:38+00:00",
       "actions": [
+        {
+          "date": "2026-07-23",
+          "action": "On agenda",
+          "committee": null
+        },
         {
           "date": "2026-07-08",
           "action": "Council:  Bill 163, Draft 2 passes first reading; adopts FC-158 - 07/08/26",
@@ -16051,15 +16089,20 @@
       "introducer": null,
       "introduced_date": "2026-02-03",
       "status": null,
-      "last_action": "On agenda 2026-07-08",
-      "last_action_date": "2026-07-08",
-      "url": "https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&clip_id=3809",
+      "last_action": "On agenda 2026-07-23",
+      "last_action_date": "2026-07-23",
+      "url": "https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&event_id=2040",
       "raw_subject": "Clarifies duties, procedures, and other regulations regarding the Pāhoa Village Design Guidelines and the Pāhoa Design Review Committee; makes other technical and non-substantive amendments.",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-11T21:05:02+00:00",
-      "last_updated": "2026-07-17T16:15:35+00:00",
+      "last_updated": "2026-07-20T16:15:38+00:00",
       "actions": [
+        {
+          "date": "2026-07-23",
+          "action": "On agenda",
+          "committee": null
+        },
         {
           "date": "2026-07-08",
           "action": "Council:  Bill 125 passes first reading; adopts PCPLUED-11 - 07/08/26",
@@ -16101,17 +16144,22 @@
       "introducer": null,
       "introduced_date": "2026-02-03",
       "status": null,
-      "last_action": "On agenda 2026-07-08",
-      "last_action_date": "2026-07-08",
-      "url": "https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&clip_id=3809",
+      "last_action": "On agenda 2026-07-23",
+      "last_action_date": "2026-07-23",
+      "url": "https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&event_id=2040",
       "raw_subject": "Creates the Downtown Pāhoa commercial district as a new special zoning district; establishes new permitted uses.",
       "subjects": [
         "affordable_housing"
       ],
       "classification_confidence": 0.026,
       "first_seen": "2026-06-11T21:05:02+00:00",
-      "last_updated": "2026-07-17T16:15:35+00:00",
+      "last_updated": "2026-07-20T16:15:38+00:00",
       "actions": [
+        {
+          "date": "2026-07-23",
+          "action": "On agenda",
+          "committee": null
+        },
         {
           "date": "2026-07-08",
           "action": "Council:  Bill 126, Draft 3 passes first reading; adopts PCPLUED-12 - 07/08/26",
