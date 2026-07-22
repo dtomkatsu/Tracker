@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-07-20T16:15:52+00:00",
+  "generated_at": "2026-07-22T16:15:51+00:00",
   "last_scrape": {
-    "id": 112,
-    "started_at": "2026-07-20T16:15:38+00:00",
-    "completed_at": "2026-07-20T16:15:51+00:00",
+    "id": 116,
+    "started_at": "2026-07-22T16:15:40+00:00",
+    "completed_at": "2026-07-22T16:15:50+00:00",
     "council": "kauai",
     "bills_seen": 108,
     "bills_new": 0,
@@ -23,6 +23,33 @@
     "kauai"
   ],
   "bills": [
+    {
+      "id": 2363,
+      "council": "honolulu",
+      "bill_number": "RES26-168",
+      "title": "GRANTING A SPECIAL MANAGEMENT AREA MAJOR PERMIT TO ALLOW FOR THE CONSTRUCTION OF A NEW COMMERCIAL BUILDING WITH A PARKING LOT, CARETAKER DWELLING, AND ASSOCIATED IMPROVEMENTS IN NĀNĀKULI, OʻAHU.",
+      "bill_type": "Resolution",
+      "introducer": "TOMMY  WATERS - By Request",
+      "introduced_date": "2026-07-21",
+      "status": "INTRO",
+      "last_action": "Introduced.",
+      "last_action_date": "2026-07-21",
+      "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3796",
+      "raw_subject": null,
+      "subjects": [
+        "transportation"
+      ],
+      "classification_confidence": 0.034,
+      "first_seen": "2026-07-22T16:15:03+00:00",
+      "last_updated": "2026-07-22T16:15:03+00:00",
+      "actions": [
+        {
+          "date": "2026-07-21",
+          "action": "Introduced.",
+          "committee": "INTRO"
+        }
+      ]
+    },
     {
       "id": 2356,
       "council": "hawaii",
@@ -185,6 +212,24 @@
       ]
     },
     {
+      "id": 2364,
+      "council": "maui",
+      "bill_number": "WASSP-1(22)  Rule 7(B)",
+      "title": "UPDATE ON KĪPŪOLA KAUHALE, MAUI’S FIRST KAUHALE COMMUNITY  (WASSP-1(22))",
+      "bill_type": "Rule 7(B)",
+      "introducer": null,
+      "introduced_date": "2026-07-16",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16350",
+      "raw_subject": "Water Authority, Social Services, and Parks Committee (2025-2027)",
+      "subjects": [],
+      "classification_confidence": 0.0,
+      "first_seen": "2026-07-22T16:15:06+00:00",
+      "last_updated": "2026-07-22T16:15:06+00:00"
+    },
+    {
       "id": 2351,
       "council": "kauai",
       "bill_number": "Resolution 2025-01",
@@ -333,6 +378,24 @@
           "committee": "INTRO"
         }
       ]
+    },
+    {
+      "id": 2365,
+      "council": "maui",
+      "bill_number": "DRIP-9(12)",
+      "title": "ACQUISITION OF MAUI LAND & PINEAPPLE COMPANY, INC.’S WATER INFRASTRUCTURE ASSETS IN WEST MAUI AND UPCOUNTRY  (DRIP-9(12))",
+      "bill_type": "Rule 7(B)",
+      "introducer": null,
+      "introduced_date": "2026-07-14",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16345",
+      "raw_subject": "Disaster Recovery, International Affairs, and Planning Committee (2025-2027)",
+      "subjects": [],
+      "classification_confidence": 0.0,
+      "first_seen": "2026-07-22T16:15:07+00:00",
+      "last_updated": "2026-07-22T16:15:07+00:00"
     },
     {
       "id": 2328,
@@ -5894,6 +5957,24 @@
       ]
     },
     {
+      "id": 2366,
+      "council": "maui",
+      "bill_number": "BFED-63 Bill 96 (2026)",
+      "title": "BILL 96 (2026), AMENDING CHAPTER 3.04, MAUI COUNTY CODE, ON CARRYOVER SAVINGS AND COUNCIL-INITIATED APPROPRIATIONS (BFED-63)",
+      "bill_type": "Bill",
+      "introducer": null,
+      "introduced_date": "2026-07-07",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16337",
+      "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
+      "subjects": [],
+      "classification_confidence": 0.0,
+      "first_seen": "2026-07-22T16:15:09+00:00",
+      "last_updated": "2026-07-22T16:15:09+00:00"
+    },
+    {
       "id": 2139,
       "council": "honolulu",
       "bill_number": "BILL049(26)",
@@ -7132,6 +7213,27 @@
       "classification_confidence": 0.048,
       "first_seen": "2026-06-12T16:15:06+00:00",
       "last_updated": "2026-06-12T16:15:06+00:00"
+    },
+    {
+      "id": 2367,
+      "council": "maui",
+      "bill_number": "HLU-17 BILL 89 (2026)",
+      "title": "BILL 89 (2026), BILL 90 (2026), AND BILL 91 (2026), DISTRICT BOUNDARY AMENDMENT, COMMUNITY PLAN AMENDMENT, AND CHANGE IN ZONING FOR A 6.097-ACRE PORTION OF TAX MAP KEY (2) 2-7-007:008, HAMAKUALOA, HAWAIʻI (HAʻIKŪ FIRE STATION)  (HLU-17)",
+      "bill_type": "Bill",
+      "introducer": null,
+      "introduced_date": "2026-06-08",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16322",
+      "raw_subject": "Housing and Land Use Committee (2025-2027)",
+      "subjects": [
+        "tax",
+        "affordable_housing"
+      ],
+      "classification_confidence": 0.056,
+      "first_seen": "2026-07-22T16:15:10+00:00",
+      "last_updated": "2026-07-22T16:15:10+00:00"
     },
     {
       "id": 2107,
@@ -39359,6 +39461,24 @@
       "last_updated": "2026-06-01T20:44:35+00:00"
     },
     {
+      "id": 2368,
+      "council": "maui",
+      "bill_number": "GREAT-9 Bill 55 (2025)",
+      "title": "BILL 55 (2025), ON CODE OF ETHICS VIOLATIONS AND PENALTIES  (GREAT-9)",
+      "bill_type": "Bill",
+      "introducer": null,
+      "introduced_date": "2025-05-05",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=15596",
+      "raw_subject": "Government Relations, Ethics, and Transparency Committee (2025-2027)",
+      "subjects": [],
+      "classification_confidence": 0.0,
+      "first_seen": "2026-07-22T16:15:15+00:00",
+      "last_updated": "2026-07-22T16:15:15+00:00"
+    },
+    {
       "id": 739,
       "council": "honolulu",
       "bill_number": "RES25-136",
@@ -63006,19 +63126,19 @@
       "id": 1971,
       "council": "maui",
       "bill_number": "WASSP-1(21)",
-      "title": "AVIAN INFLUENZA (BIRD FLU): UPDATES AND PREVENTION METHODS  (WASSP-1(21))",
+      "title": "UPDATE ON KONA LOW STORMS’ IMPACT ON MAUI COUNTY PARKS  (WASSP-1(21))",
       "bill_type": "Rule 7(B)",
       "introducer": null,
       "introduced_date": "2024-08-09",
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=14955",
-      "raw_subject": "Water Authority, Social Services, and Parks Committee (2023-2025)",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16341",
+      "raw_subject": "Water Authority, Social Services, and Parks Committee (2025-2027)",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:48:06+00:00",
-      "last_updated": "2026-06-01T20:48:06+00:00"
+      "last_updated": "2026-07-22T16:15:08+00:00"
     },
     {
       "id": 2327,
