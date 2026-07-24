@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-07-22T16:15:51+00:00",
+  "generated_at": "2026-07-24T16:15:55+00:00",
   "last_scrape": {
-    "id": 116,
-    "started_at": "2026-07-22T16:15:40+00:00",
-    "completed_at": "2026-07-22T16:15:50+00:00",
+    "id": 120,
+    "started_at": "2026-07-24T16:15:43+00:00",
+    "completed_at": "2026-07-24T16:15:55+00:00",
     "council": "kauai",
-    "bills_seen": 108,
-    "bills_new": 0,
+    "bills_seen": 110,
+    "bills_new": 2,
     "bills_updated": 0,
     "errors": null
   },
@@ -23,6 +23,56 @@
     "kauai"
   ],
   "bills": [
+    {
+      "id": 2373,
+      "council": "kauai",
+      "bill_number": "Resolution 2026-24",
+      "title": "RESOLUTION URGING THE COUNTY ADMINISTRATION AND DEPARTMENT OF PUBLIC WORKS TO PRIORITIZE WASTE DIVERSION, CURBSIDE RECYCLING, AND A MATERIALS RECOVERY FACILITY AS THE KEKAHA LANDFILL NEARS CAPACITY Proposed Draft Bill (No. 3000) – A BILL FOR AN ORDINANCE APPROVING A COLLECTIVE BARGAINING AGREEMENT FOR BARGAINING UNIT 15 BETWEEN JULY 1, 2025 AND JUNE 30, 2029 Proposed Draft Bill (No. 3001) – A BILL",
+      "bill_type": "Resolution",
+      "introducer": null,
+      "introduced_date": null,
+      "status": null,
+      "last_action": "On agenda 2026-07-29",
+      "last_action_date": "2026-07-29",
+      "url": "https://kauai.granicus.com/AgendaViewer.php?view_id=2&event_id=1607",
+      "raw_subject": "RESOLUTION URGING THE COUNTY ADMINISTRATION AND DEPARTMENT OF PUBLIC WORKS TO PRIORITIZE WASTE DIVERSION, CURBSIDE RECYCLING, AND A MATERIALS RECOVERY FACILITY AS THE KEKAHA LANDFILL NEARS CAPACITY Proposed Draft Bill (No. 3000) – A BILL FOR AN ORDINANCE APPROVING A COLLECTIVE BARGAINING AGREEMENT FOR BARGAINING UNIT 15 BETWEEN JULY 1, 2025 AND JUNE 30, 2029 Proposed Draft Bill (No. 3001) – A BILL",
+      "subjects": [],
+      "classification_confidence": 0.0,
+      "first_seen": "2026-07-24T16:15:55+00:00",
+      "last_updated": "2026-07-24T16:15:55+00:00",
+      "actions": [
+        {
+          "date": "2026-07-29",
+          "action": "On agenda",
+          "committee": null
+        }
+      ]
+    },
+    {
+      "id": 2374,
+      "council": "kauai",
+      "bill_number": "Resolution 2026-23",
+      "title": "RESOLUTION CONFIRMING MAYORAL APPOINTMENT TO THE SALARY COMMISSION (Duane Kalani Kaipo Keale)",
+      "bill_type": "Resolution",
+      "introducer": null,
+      "introduced_date": null,
+      "status": null,
+      "last_action": "On agenda 2026-07-29",
+      "last_action_date": "2026-07-29",
+      "url": "https://kauai.granicus.com/AgendaViewer.php?view_id=2&event_id=1607",
+      "raw_subject": "RESOLUTION CONFIRMING MAYORAL APPOINTMENT TO THE SALARY COMMISSION (Duane Kalani Kaipo Keale)",
+      "subjects": [],
+      "classification_confidence": 0.0,
+      "first_seen": "2026-07-24T16:15:55+00:00",
+      "last_updated": "2026-07-24T16:15:55+00:00",
+      "actions": [
+        {
+          "date": "2026-07-29",
+          "action": "On agenda",
+          "committee": null
+        }
+      ]
+    },
     {
       "id": 2363,
       "council": "honolulu",
@@ -61,12 +111,12 @@
       "status": null,
       "last_action": "On agenda 2026-07-22",
       "last_action_date": "2026-07-22",
-      "url": "https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=1&event_id=2036",
+      "url": "https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&clip_id=3814",
       "raw_subject": "Requires that a fiscal impact statement prepared by the finance director be submitted with Council bills that have fiscal implications.",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-07-17T16:15:35+00:00",
-      "last_updated": "2026-07-17T16:15:35+00:00",
+      "last_updated": "2026-07-24T16:15:43+00:00",
       "actions": [
         {
           "date": "2026-07-22",
@@ -86,7 +136,7 @@
       "status": null,
       "last_action": "On agenda 2026-07-22",
       "last_action_date": "2026-07-22",
-      "url": "https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=1&event_id=2036",
+      "url": "https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&clip_id=3814",
       "raw_subject": "Appropriates revenues in the revenues in the State Motor Vehicle Weight Tax account ($6,282.72) and appropriates the same to the Vehicle Registration Other Current Expenses account. Funds will be used for expenses associated with programming and updating the County’s motor vehicle registration system.",
       "subjects": [
         "tax",
@@ -94,7 +144,7 @@
       ],
       "classification_confidence": 0.032,
       "first_seen": "2026-07-17T16:15:35+00:00",
-      "last_updated": "2026-07-17T16:15:35+00:00",
+      "last_updated": "2026-07-24T16:15:43+00:00",
       "actions": [
         {
           "date": "2026-07-22",
@@ -114,7 +164,7 @@
       "status": null,
       "last_action": "On agenda 2026-07-22",
       "last_action_date": "2026-07-22",
-      "url": "https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=1&event_id=2036",
+      "url": "https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&clip_id=3814",
       "raw_subject": "Establishes a new “bed and breakfast home” property tax class for any property that is a vacation rental and the owner’s principal residence; establishes a three percent annual assessment increase cap for the new tax class",
       "subjects": [
         "tax",
@@ -122,7 +172,7 @@
       ],
       "classification_confidence": 0.062,
       "first_seen": "2026-07-17T16:15:35+00:00",
-      "last_updated": "2026-07-17T16:15:35+00:00",
+      "last_updated": "2026-07-24T16:15:43+00:00",
       "actions": [
         {
           "date": "2026-07-22",
@@ -142,12 +192,12 @@
       "status": null,
       "last_action": "On agenda 2026-07-22",
       "last_action_date": "2026-07-22",
-      "url": "https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=1&event_id=2036",
+      "url": "https://hawaiicounty.granicus.com/AgendaViewer.php?view_id=2&clip_id=3814",
       "raw_subject": "Appropriates revenues in the revenues in the State Grants – Kona Low Small Business Recovery Grant account ($500,000) and appropriates the same to the Kona Low Small Business Recovery Grant Program account. Funds will be used to support one-time relief to eligible Hawaiʻi Island small businesses that sustained material and economic or physical damage from the Kona Low Storm.",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-07-17T16:15:35+00:00",
-      "last_updated": "2026-07-17T16:15:35+00:00",
+      "last_updated": "2026-07-24T16:15:43+00:00",
       "actions": [
         {
           "date": "2026-07-22",
@@ -228,6 +278,42 @@
       "classification_confidence": 0.0,
       "first_seen": "2026-07-22T16:15:06+00:00",
       "last_updated": "2026-07-22T16:15:06+00:00"
+    },
+    {
+      "id": 2369,
+      "council": "maui",
+      "bill_number": "GREAT-15 Bill 99 (2026)",
+      "title": "BILL 99 (2026), TO ESTABLISH PROHIBITIONS CONCERNING NEPOTISM (GREAT-15)",
+      "bill_type": "Bill",
+      "introducer": null,
+      "introduced_date": "2026-07-16",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16348",
+      "raw_subject": "Government Relations, Ethics, and Transparency Committee (2025-2027)",
+      "subjects": [],
+      "classification_confidence": 0.0,
+      "first_seen": "2026-07-24T16:15:08+00:00",
+      "last_updated": "2026-07-24T16:15:08+00:00"
+    },
+    {
+      "id": 2370,
+      "council": "maui",
+      "bill_number": "GREAT-16 Bill 100 (2026)",
+      "title": "BILL 100 (2026), TO ESTABLISH COMPREHENSIVE LOBBYIST REGULATIONS  (GREAT-16)",
+      "bill_type": "Bill",
+      "introducer": null,
+      "introduced_date": "2026-07-16",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16349",
+      "raw_subject": "Government Relations, Ethics, and Transparency Committee (2025-2027)",
+      "subjects": [],
+      "classification_confidence": 0.0,
+      "first_seen": "2026-07-24T16:15:09+00:00",
+      "last_updated": "2026-07-24T16:15:09+00:00"
     },
     {
       "id": 2351,
@@ -5955,6 +6041,24 @@
           "committee": "INTRO"
         }
       ]
+    },
+    {
+      "id": 2371,
+      "council": "maui",
+      "bill_number": "KAʻĀ-1(15) Rule 7(B)",
+      "title": "COUNTY HUMAN RESOURCES REVIEW AND STRATEGIC PLANNING  (KAʻĀ-1(15))",
+      "bill_type": "Rule 7(B)",
+      "introducer": null,
+      "introduced_date": "2026-07-08",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16339",
+      "raw_subject": "Kōmike Aloha ʻĀina (2025-2027)",
+      "subjects": [],
+      "classification_confidence": 0.0,
+      "first_seen": "2026-07-24T16:15:09+00:00",
+      "last_updated": "2026-07-24T16:15:09+00:00"
     },
     {
       "id": 2366,
@@ -23035,6 +23139,24 @@
       "last_updated": "2026-06-01T20:42:15+00:00"
     },
     {
+      "id": 2372,
+      "council": "maui",
+      "bill_number": "BFED-20(20)",
+      "title": "TRANSIENT ACCOMMODATIONS TAX: BILLING, COLLECTION, AND SYSTEM UPDATE (BFED-20(20))",
+      "bill_type": "Rule 7(B)",
+      "introducer": null,
+      "introduced_date": "2025-10-27",
+      "status": "Agenda Ready",
+      "last_action": null,
+      "last_action_date": null,
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16038",
+      "raw_subject": "Budget, Finance, and Economic Development Committee (2025-2027)",
+      "subjects": [],
+      "classification_confidence": 0.0,
+      "first_seen": "2026-07-24T16:15:11+00:00",
+      "last_updated": "2026-07-24T16:15:11+00:00"
+    },
+    {
       "id": 574,
       "council": "honolulu",
       "bill_number": "RES25-301",
@@ -32503,16 +32625,21 @@
       "bill_type": "Resolution",
       "introducer": "TOMMY  WATERS, ANDRIA  TUPOLA",
       "introduced_date": "2025-07-16",
-      "status": "INTRO",
-      "last_action": "Introduced.",
-      "last_action_date": "2025-07-16",
+      "status": "FILE",
+      "last_action": "Filed pursuant to ROH SEC 1-2.5 which sets a one-year filing period on pending resolutions.",
+      "last_action_date": "2026-07-16",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3411",
       "raw_subject": null,
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:04+00:00",
-      "last_updated": "2026-06-01T20:41:04+00:00",
+      "last_updated": "2026-07-24T16:15:05+00:00",
       "actions": [
+        {
+          "date": "2026-07-16",
+          "action": "Filed pursuant to ROH SEC 1-2.5 which sets a one-year filing period on pending resolutions.",
+          "committee": "FILE"
+        },
         {
           "date": "2025-07-16",
           "action": "Introduced.",
@@ -32528,16 +32655,21 @@
       "bill_type": "Resolution",
       "introducer": "TOMMY  WATERS, ANDRIA  TUPOLA",
       "introduced_date": "2025-07-16",
-      "status": "INTRO",
-      "last_action": "Introduced.",
-      "last_action_date": "2025-07-16",
+      "status": "FILE",
+      "last_action": "Filed pursuant to ROH SEC 1-2.5 which sets a one-year filing period on pending resolutions.",
+      "last_action_date": "2026-07-16",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3412",
       "raw_subject": null,
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:04+00:00",
-      "last_updated": "2026-06-01T20:41:04+00:00",
+      "last_updated": "2026-07-24T16:15:06+00:00",
       "actions": [
+        {
+          "date": "2026-07-16",
+          "action": "Filed pursuant to ROH SEC 1-2.5 which sets a one-year filing period on pending resolutions.",
+          "committee": "FILE"
+        },
         {
           "date": "2025-07-16",
           "action": "Introduced.",
@@ -32675,16 +32807,21 @@
       "bill_type": "Resolution",
       "introducer": "RADIANT  CORDERO",
       "introduced_date": "2025-07-16",
-      "status": "EES",
-      "last_action": "Postponed to a date and time to be determined by the Committee Chair.\n",
-      "last_action_date": "2025-07-22",
+      "status": "FILE",
+      "last_action": "Filed pursuant to ROH SEC 1-2.5 which sets a one-year filing period on pending resolutions.",
+      "last_action_date": "2026-07-16",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3416",
       "raw_subject": null,
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:41:04+00:00",
-      "last_updated": "2026-06-01T20:41:04+00:00",
+      "last_updated": "2026-07-24T16:15:06+00:00",
       "actions": [
+        {
+          "date": "2026-07-16",
+          "action": "Filed pursuant to ROH SEC 1-2.5 which sets a one-year filing period on pending resolutions.",
+          "committee": "FILE"
+        },
         {
           "date": "2025-07-22",
           "action": "Postponed to a date and time to be determined by the Committee Chair. 3 AYES: DOS SANTOS-TAM, TULBA, WEYER 1 ABSENT: TUPOLA",
@@ -46346,8 +46483,8 @@
       "introducer": "ANDRIA  TUPOLA, RADIANT  CORDERO",
       "introduced_date": "2025-02-20",
       "status": "MAYOR",
-      "last_action": "Deadline for Mayor to return Bill is 07/24/26.\nTransmitted to Mayor for his approval or otherwise.",
-      "last_action_date": "2026-07-10",
+      "last_action": "Returned approved.",
+      "last_action_date": "2026-07-23",
       "url": "https://hnldoc.ehawaii.gov/hnldoc/measure/3245",
       "raw_subject": "Creates a new Down Payment Loan Assistance Revolving Fund to receive and expend moneys to assist prospective homebuyers who reside in the City, do not own real property, and have an annual household income at 120 percent or below of the AMI of the City, as determined by HUD. Effective on July 1, 2025.",
       "subjects": [
@@ -46355,8 +46492,13 @@
       ],
       "classification_confidence": 0.018,
       "first_seen": "2026-06-01T20:41:04+00:00",
-      "last_updated": "2026-07-13T16:15:02+00:00",
+      "last_updated": "2026-07-24T16:15:04+00:00",
       "actions": [
+        {
+          "date": "2026-07-23",
+          "action": "Returned approved.",
+          "committee": "MAYOR"
+        },
         {
           "date": "2026-07-10",
           "action": "Transmitted to Mayor for his approval or otherwise. Deadline for Mayor to return Bill is 07/24/26.",
@@ -61923,19 +62065,19 @@
       "id": 1932,
       "council": "maui",
       "bill_number": "WASSP-1(22)",
-      "title": "ENHANCING COUNTY MENTAL HEALTH CRISIS RESPONSE   (WASSP-1(22))",
+      "title": "UPDATE ON KĪPŪOLA KAUHALE, MAUI’S FIRST KAUHALE COMMUNITY  (WASSP-1(22))",
       "bill_type": "Rule 7(B)",
       "introducer": null,
       "introduced_date": "2024-08-23",
       "status": "Agenda Ready",
       "last_action": null,
       "last_action_date": null,
-      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=14996",
-      "raw_subject": "Water Authority, Social Services, and Parks Committee (2023-2025)",
+      "url": "https://mauicounty.legistar.com/Gateway.aspx?M=L&ID=16350",
+      "raw_subject": "Water Authority, Social Services, and Parks Committee (2025-2027)",
       "subjects": [],
       "classification_confidence": 0.0,
       "first_seen": "2026-06-01T20:47:52+00:00",
-      "last_updated": "2026-06-01T20:47:52+00:00"
+      "last_updated": "2026-07-24T16:15:09+00:00"
     },
     {
       "id": 2350,
